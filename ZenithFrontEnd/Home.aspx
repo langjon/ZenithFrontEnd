@@ -18,6 +18,9 @@
     </form>
 
     <p>Welcome</p>
+    <div>
+        <a href="/Login.aspx">Login</a>
+    </div>
         <div id="output" runat="server">
 
         </div>
