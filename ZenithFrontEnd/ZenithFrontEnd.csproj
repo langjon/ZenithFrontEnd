@@ -69,9 +69,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CreateAccount.aspx" />
+    <Content Include="css\main.css" />
+    <Content Include="images\box-16.png" />
+    <Content Include="images\cart-16.png" />
+    <Content Include="images\cart-24.png" />
+    <Content Include="images\house-16.png" />
+    <Content Include="images\house-24.png" />
+    <Content Include="images\user-16.png" />
+    <Content Include="images\user-24.png" />
+    <Content Include="images\wp-logo.jpg" />
+    <Content Include="Product.aspx" />
     <Content Include="Login.aspx" />
-    <Content Include="Home.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CreateAccount.aspx.cs">
@@ -81,19 +92,19 @@
     <Compile Include="CreateAccount.aspx.designer.cs">
       <DependentUpon>CreateAccount.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Product.aspx.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product.aspx.designer.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Home.aspx.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Home.aspx.designer.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

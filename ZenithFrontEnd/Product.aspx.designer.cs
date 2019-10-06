@@ -10,7 +10,7 @@
 namespace ZenithFrontEnd {
     
     
-    public partial class Product {
+    public partial class index {
         
         /// <summary>
         /// form1 control.

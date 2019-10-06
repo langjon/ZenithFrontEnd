@@ -9,14 +9,9 @@ using System.Web.UI.WebControls;
 
 namespace ZenithFrontEnd
 {
-    public partial class index : System.Web.UI.Page
+    public partial class Product : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void Login_Click(object sender, EventArgs e)
         {
             using (SqlConnection con = new SqlConnection(@"Server=zenithcapstone.database.windows.net;Database=ZenithCapstoneDB;User=zenith;Password=C@pst0ne!;Trusted_Connection=False;Encrypt=True"))
             {
@@ -40,15 +35,22 @@ namespace ZenithFrontEnd
                     //textbox value is stored in Session 
                     Session["Username"] = txtUsername.Text;
                     Session["Pwd"] = txtpwd.Text;
-                    Response.Redirect("Home.aspx");
+                    Response.Redirect("Product.aspx");
                 }
                 else
                 {
+                    errorMessages.InnerHtml = "<div id='loginError' runat='server'> <p>Either username or password was incorrect. Please try logging in again. </p> </div> ";
                     Console.WriteLine("Invalid username or password");
                 }
             }
-             
+
         }
 
+        protected void Create_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CreateAccount.aspx");
+        }
     }
+
+ 
 }
