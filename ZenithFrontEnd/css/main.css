@@ -83,6 +83,12 @@ li a:hover {
     float:left;
 }
 
+#addressDiv {
+    margin-right: 15%;
+    width: 30%;
+    float: right;
+}
+
 label {
     font-weight: bold;
     font-size: 1.1em;
