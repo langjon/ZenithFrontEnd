@@ -74,12 +74,14 @@
                 <br />
                 <label for="txtpwd">PROVINCE/STATE</label>
                 <br />
-                <asp:TextBox CssClass="textbox" ID="TextBox7" runat="server" required="required"></asp:TextBox>
+                <asp:DropDownList ID="ProvDropDown" runat="server" required="required" DataSourceID="ZenithProvSqlDataSource" DataTextField="StateProvCode" DataValueField="StateProvID"></asp:DropDownList>
+                <asp:SqlDataSource ID="ZenithProvSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:ZenithCapstoneDBConnectionString %>" SelectCommand="SELECT DISTINCT [StateProvCode], [StateProvID] FROM [StateProv] ORDER BY [StateProvCode]"></asp:SqlDataSource>
                 <br />
                 <br />
                 <label for="txtpwd">COUNTRY</label>
                 <br />
-                <asp:TextBox CssClass="textbox" ID="TextBox8" runat="server" required="required"></asp:TextBox>
+                <asp:DropDownList ID="CountryDropDown" runat="server" required="required" DataSourceID="ZenithCountrySqlDataSource" DataTextField="DescriptionTiny" DataValueField="CountryID"></asp:DropDownList>
+                <asp:SqlDataSource ID="ZenithCountrySqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:ZenithCapstoneDBConnectionString %>" SelectCommand="SELECT DISTINCT [DescriptionTiny] FROM [Countries]"></asp:SqlDataSource>
                 <br />
                 <br />
                 <label for="txtpwd">POSTAL/ZIP</label>
