@@ -81,7 +81,7 @@
                 <label for="txtpwd">COUNTRY</label>
                 <br />
                 <asp:DropDownList ID="CountryDropDown" runat="server" required="required" DataSourceID="ZenithCountrySqlDataSource" DataTextField="DescriptionTiny" DataValueField="CountryID"></asp:DropDownList>
-                <asp:SqlDataSource ID="ZenithCountrySqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:ZenithCapstoneDBConnectionString %>" SelectCommand="SELECT DISTINCT [DescriptionTiny] FROM [Countries]"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="ZenithCountrySqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:ZenithCapstoneDBConnectionString %>" SelectCommand="SELECT DISTINCT [DescriptionTiny], [CountryID] FROM [Countries]"></asp:SqlDataSource>
                 <br />
                 <br />
                 <label for="txtpwd">POSTAL/ZIP</label>
