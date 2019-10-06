@@ -5,7 +5,7 @@
     color:#3C4047;
 }
 
-ul {
+.mainNav {
     list-style-type: none;
     margin: 0;
     padding-left: 15%;
@@ -124,7 +124,6 @@ label {
     font-size: 0.8em;
     padding-top: 10px;
     cursor: default;
-    bottom: 0px;
 }
     #btnCreate:focus {
         box-shadow: 0 0 5px rgba(81, 203, 238, 1);
@@ -138,3 +137,46 @@ label {
     color: darkred;
 }
 
+#copyright-area {
+    background-color: #333;
+    height: 30px;
+    font-size: 0.8em;
+    text-decoration: none;
+    color: darkgrey;
+    padding-top: 15px;
+    padding-left: 2%;
+    position: absolute;
+    bottom: 0;
+    width: 98%;
+}
+
+#contactInfo {
+    position: absolute;
+    bottom: 31px;
+    width: 100%;
+}
+
+.footerList {
+    list-style-type: none;
+    margin: 0;
+    margin-top: 20%;
+    width: 20%;
+    height: 300px;
+    float: left;
+    background-color: steelblue;
+    box-shadow: 1px 0 5px rgb(0, 0, 0);
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+}
+
+.footerNav {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+    .footerNav li a:hover {
+        background-color: steelblue;
+        text-decoration: underline;
+    }
