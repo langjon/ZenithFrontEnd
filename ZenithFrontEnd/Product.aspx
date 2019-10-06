@@ -36,6 +36,35 @@
         <div>
         </div>
     </form>
+
+    
+    <table style="width: 99.5%; text-align: center;">
+	
+        <tr>
+            <td>
+			<h3>BOX</h3>
+                   <a href="boxSize.htm"><img src="images/BOX-HSC.jpg" width="200" height="204"></a>
+            </td>
+            <td></td>
+            <td>
+                <h3>RETAIL READY</h3>
+				<a href="../html-link.htm"><img src="images/BOX-4-Sided-Rollover-Tray.jpg" width="200" height="204"></a>
+            </td>
+            <td></td>
+            <td>
+                <h3> DISPLAY</h3>
+                 <a href="../html-link.htm"><img src="images/Display.jpg" width="200" height="204"></a>
+            </td>
+        </tr>
+        <br />
+    </table>
+    <br />
+    <br />
+    <h4 style="text-align: center;"><a href="~/api.html">HELP</a></p></h4>
+    
+
+	<h4><a href="~/api.html">GET QUOTATION</a></p></h4>
     
 </body>
 </html>
+
