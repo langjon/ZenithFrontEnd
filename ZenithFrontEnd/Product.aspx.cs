@@ -13,17 +13,7 @@ namespace ZenithFrontEnd
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Session value is assign on the text box  
-            if (Session["Username"] != null)
-            {
-                txtUsername.Text = Session["Username"].ToString();
-
-                output.InnerHtml = "<p>" + Session["Username".ToString()] + "</p>";
-            }
-            if (Session["Pwd"] != null)
-            {
-                txtpwd.Text = Session["Pwd"].ToString();
-            }
+          
         }
     }
 }

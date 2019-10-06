@@ -23,17 +23,19 @@
             <img class="nav-icon" src="images/BOX-16.png" />BUILD</a></li>
     </ul>
 
-    <form id="form1" runat="server">
-        <div>
-            Username:-<asp:TextBox ID="txtUsername" runat="server"></asp:TextBox>
-            <br />
-            <br />
-            Password:-<asp:TextBox ID="txtpwd" runat="server"></asp:TextBox>
-            <br />
+     <div class="pageTitle">
+        <p>PRODUCTS</p>
+    </div>
 
-        </div>
-    </form>
     <div id="output" runat="server">
     </div>
+
+
+
+    <form id="form1" runat="server">
+        <div>
+        </div>
+    </form>
+    
 </body>
 </html>
