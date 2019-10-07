@@ -87,6 +87,7 @@
     <Content Include="Options.aspx" />
     <Content Include="Product.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="Quantity.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -128,6 +129,13 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quantity.aspx.cs">
+      <DependentUpon>Quantity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quantity.aspx.designer.cs">
+      <DependentUpon>Quantity.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

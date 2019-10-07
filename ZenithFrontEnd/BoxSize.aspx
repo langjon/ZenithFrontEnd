@@ -89,7 +89,7 @@
  </table>
  
 <br /><br />
-	<input type="submit" value="NEXT" >
+	<a href="Options.aspx">NEXT</a>
 </form>
 </td>
 	

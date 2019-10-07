@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Options.aspx.cs" Inherits="ZenithFrontEnd.Options" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Quantity.aspx.cs" Inherits="ZenithFrontEnd.Quantity" %>
 
 
 <!DOCTYPE html>
@@ -23,75 +23,60 @@
 
     <div style="height:400px">
         <div class="pageTitle">
-            <p>OPTIONS</p>
+            <p>QUANTITY</p>
         </div>
-          <table style="text-align: left;">
+          <table >
 <form>
-    <tr>
-        <td>
-             SIDES
-            </td>
-        <td>
-            <input type="radio" name="side" value="oneSide">1 SIDE<br>
-            </td>
-        <td>
-            <input type="radio" name="side" value="twoSides">2 SIDES<br>
-            </td>
-        </tr>
-    <tr><td></td></tr>
-    <tr><td></td></tr>
+<p>Please select the Quantity:</p>
+<tr>
+    <td>
+  <input type="radio" name="quantity" value="1">1
+  </td>
+  <td>
+  <input type="radio" name="quantity" value="50">50
+  </td>
+  <td>
+  <input type="radio" name="quantity" value="1000">1000
+  </td>
+  </tr>
   
- <tr>
-        <td>
-             FINISH
-            </td>
-        <td>
-            <input type="radio" name="finish" value="gloss">GLOSS<br>
-            </td>
-        <td>
-            <input type="radio" name="finish" value="matte">MATTE<br>
-            </td>
-        </tr>
-    <tr><td></td></tr>
-    <tr><td></td></tr>
+<tr>
+<td>
+  <input type="radio" name="quantity" value="10"> 10<br>
+  </td>
+  <td>
+  <input type="radio" name="quantity" value="100">100<br>
+  </td>
+  <td>
+  <input type="radio" name="quantity" value="2000"> 2000 <br>
+  </td>
+ </tr>
 
- <tr>
-        <td>
-             MATERIAL
-            </td>
-        <td>
-            <input type="radio" name="material" value="PremiumWhite">PREMIUM WHITE<br>
-            </td>
-        <td>
-            <input type="radio" name="material" value="white">WHITE<br>
-            </td>
-      <td>
-            <input type="radio" name="material" value="kraft">KRAFT<br>
-            </td>
-        </tr>
-    <tr><td></td></tr>
-    <tr><td></td></tr>
+<tr>
+<td>
+  <input type="radio" name="quantity" value="25"> 25<br>
+  </td>
+  <td>
+  <input type="radio" name="quantity" value="500">500<br>
+  </td>
+  <td>
+  <input type="radio" name="quantity" value="5000"> 5000<br>
+  </td>
+ </tr>
 
     <tr>
-        <td>
-             WALL TYPE
-            </td>
-        <td>
-            <input type="radio" name="wallType" value="single">SINGLE<br>
-            </td>
-        <td>
-            <input type="radio" name="wallType" value="double">DOUBLE<br>
-            </td>
-      <td>
-            <input type="radio" name="wallType" value="triple">TRIPLE<br>
-            </td>
-        </tr>
-    <tr><td></td></tr>
-    <tr><td></td></tr>
+ <td>
+ CUSTOM QANTITY<input type="text" name="quantity">
+ </td>
+ </tr>
+ <br />
+ <br />
  </table>
+ 
+<br /><br />
 	<a href="Options.aspx">NEXT</a>
 </form>
-</td>
+
 
        
                
@@ -171,4 +156,3 @@
     </div>
 </body>
 </html>
-

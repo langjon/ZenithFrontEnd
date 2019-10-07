@@ -30,19 +30,15 @@
         <tr>
             <td>
 			<h3>BOX</h3>
-                   <a href="boxSize.aspx"><img src="images/BOX-HSC.jpg" width="200" height="204"></a>
+                   <a href="boxSize.aspx"><img src="images/BOX-HSC.jpg" width="50" height="150"></a>
                 
             </td>
             <td></td>
             <td>
                 <h3>RETAIL READY</h3>
-				<a href="boxSize.aspx"><img src="images/BOX-4-Sided-Rollover-Tray.jpg"width="200" height="204"></a>
+				<a href="boxSize.aspx"><img src="images/BOX-4-Sided-Rollover-Tray.jpg" width="50" height="150"></a>
             </td>
             <td></td>
-            <td>
-                <h3> DISPLAY</h3>
-                 <a href="boxSize.aspx"><img src="images/Display.jpg" width="200" height="204"></a>
-           </td>
         </tr>
         <br />
     </table>
