@@ -2,12 +2,9 @@
 
 <!DOCTYPE html>
 
-
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>C&B Packaging - Products</title>
-
+    <title>C&B Packaging - Create Account</title>
     <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
@@ -22,26 +19,13 @@
         <li class="navbar-right"><a href="Product.aspx">
             <img class="nav-icon" src="images/BOX-16.png" />BUILD</a></li>
     </ul>
-    <div id="errorMessages" runat="server">
-    </div>
-    <div style="height: 400px">
 
-     <div class="pageTitle">
-        <p>PRODUCTS</p>
-    </div>
-
-    <div id="output" runat="server">
-    </div>
-
-
-
-    <form id="form1" runat="server">
-        <div>
+    <div style="height:500px">
+        <div class="pageTitle">
+            <p>PRODUCTS</p>
         </div>
-    </form>
-
     
-    <table style="width: 99.5%; text-align: center;">
+    <table style="width: 99.5%;text-align: center;">
 	
         <tr>
             <td>
@@ -52,19 +36,18 @@
             <td></td>
             <td>
                 <h3>RETAIL READY</h3>
-				<a href="boxSize.aspx"><img src="images/BOX-4-Sided-Rollover-Tray.jpg" width="200" height="204"></a>
+				<a href="boxSize.aspx"><img src="images/BOX-4-Sided-Rollover-Tray.jpg"width="200" height="204"></a>
             </td>
             <td></td>
             <td>
                 <h3> DISPLAY</h3>
-                <%-- <a href="boxSize.aspx"><img src="images/Display.jpg" width="200" height="204"></a>--%>
-           <img src="images/Display.jpg" width="200" height="204">
-                </td>
+                 <a href="boxSize.aspx"><img src="images/Display.jpg" width="200" height="204"></a>
+           </td>
         </tr>
         <br />
     </table>
-    <br />
-    <br />
+        </div>
+    
      <footer id="contactInfo" role="contentinfo">
         <div>
             <section>

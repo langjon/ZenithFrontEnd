@@ -84,6 +84,7 @@
     <Content Include="images\user-16.png" />
     <Content Include="images\user-24.png" />
     <Content Include="images\wp-logo.jpg" />
+    <Content Include="Options.aspx" />
     <Content Include="Product.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Web.config">
@@ -104,6 +105,13 @@
     </Compile>
     <Compile Include="CreateAccount.aspx.designer.cs">
       <DependentUpon>CreateAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Options.aspx.cs">
+      <DependentUpon>Options.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Options.aspx.designer.cs">
+      <DependentUpon>Options.aspx</DependentUpon>
     </Compile>
     <Compile Include="Product.aspx.cs">
       <DependentUpon>Product.aspx</DependentUpon>
