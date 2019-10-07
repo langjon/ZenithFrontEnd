@@ -25,10 +25,11 @@
             <p>BOX SIZE</p>
         </div>
  
-        <table style="width: 99.5%; text-align: left;">
+        <table>
 <form>
 <p>Please select the size in inches:</p>
 <tr>
+
 <td>
   <input type="radio" name="size" value="6x6x6"> 6 x 6 x 6<br>
   </td>
@@ -81,7 +82,7 @@
     <tr><td></td></tr>
  <tr>
  <td>
- CUSTOM <input type="text" name="size">
+ CUSTOM BOX SIZE <input type="text" name="size">
  </td>
  </tr>
  <br />

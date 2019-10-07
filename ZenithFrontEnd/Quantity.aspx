@@ -25,9 +25,9 @@
         <div class="pageTitle">
             <p>QUANTITY</p>
         </div>
-          <table >
+          <table style="width: 99.5%" text-align: center;">
 <form>
-<p>Please select the Quantity:</p>
+<%--<p>Please select the Quantity:</p>
 <tr>
     <td>
   <input type="radio" name="quantity" value="1">1
@@ -74,11 +74,53 @@
  </table>
  
 <br /><br />
-	<a href="Options.aspx">NEXT</a>
+	<a href="Options.aspx">NEXT</a>--%>
+
+    <tr>
+        <td>
+            <input type="radio" name="quantity" value="1">1<br>
+            </td>
+        <td>
+            <input type="radio" name="quantity" value="50">50<br>
+            </td>
+        <td>
+            <input type="radio" name="quantity" value="1000">1000<br>
+            </td>
+        </tr>
+    <tr><td></td></tr>
+    <tr><td></td></tr>
+  
+<tr>
+        <td>
+            <input type="radio" name="quantity" value="10">10<br>
+            </td>
+        <td>
+            <input type="radio" name="quantity" value="100">100<br>
+            </td>
+        <td>
+            <input type="radio" name="quantity" value="2000">2000<br>
+            </td>
+        </tr>
+    <tr><td></td></tr>
+    <tr><td></td></tr>
+
+ <tr>
+        <td>
+            <input type="radio" name="quantity" value="25">25<br>
+            </td>
+        <td>
+            <input type="radio" name="quantity" value="500">500<br>
+            </td>
+        <td>
+            <input type="radio" name="quantity" value="5000">5000<br>
+            </td>
+        </tr>
+    <tr><td></td></tr>
+    <tr><td></td></tr>
+
+ </table>
+	<a href="x">NEXT</a>
 </form>
-
-
-       
                
     </div>
     <div>
