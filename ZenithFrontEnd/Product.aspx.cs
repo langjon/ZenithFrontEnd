@@ -13,7 +13,10 @@ namespace ZenithFrontEnd
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-          
+            if (Session["Username"] != null)
+            {
+                output.InnerHtml = "<p>" + Session["Username".ToString()] + "</p>";
+            }
         }
     }
 }

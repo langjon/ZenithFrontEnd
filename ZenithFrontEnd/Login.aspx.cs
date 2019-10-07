@@ -43,14 +43,6 @@ namespace ZenithFrontEnd
                     Console.WriteLine("Invalid username or password");
                 }
             }
-
-        }
-
-        protected void Create_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("CreateAccount.aspx");
         }
     }
-
- 
 }

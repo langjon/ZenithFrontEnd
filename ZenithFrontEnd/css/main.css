@@ -17,6 +17,10 @@
     box-shadow: 0 2px 5px rgb(0, 0, 0);
 }
 
+div img {
+    width: 80%;
+}
+
 li {
     float: left;
 }
@@ -131,6 +135,7 @@ label {
     }
 #loginError {
     border: thin solid red;
+    background-color: white;
     background-color: rgba(255, 0, 0, 0.2);
     margin: 2%;
     padding-left: 2%;
@@ -166,7 +171,6 @@ label {
     box-shadow: 1px 0 5px rgb(0, 0, 0);
     padding-left: 2.5%;
     padding-right: 2.5%;
-    
 }
 
 .footerNav {

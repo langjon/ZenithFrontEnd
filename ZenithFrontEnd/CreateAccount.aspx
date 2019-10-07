@@ -34,7 +34,7 @@
                 <br />
                 <label for="txtpwd">PASSWORD</label>
                 <br />
-                <asp:TextBox TextMode="Password" CssClass="textbox" ID="txtpwd" runat="server" required="required"></asp:TextBox>
+                <asp:TextBox TextMode="Password" CssClass="textbox" ID="txtPwd" runat="server" required="required"></asp:TextBox>
                 <br />
                 <br />
                 <label for="txtpwd">CONFIRM PASSWORD</label>
@@ -44,47 +44,45 @@
                 <br />
                 <label for="txtpwd">FIRST NAME</label>
                 <br />
-                <asp:TextBox CssClass="textbox" ID="TextBox2" runat="server" required="required"></asp:TextBox>
+                <asp:TextBox CssClass="textbox" ID="txtFirstName" runat="server" required="required"></asp:TextBox>
                 <br />
                 <br />
                 <label for="txtpwd">LAST NAME</label>
                 <br />
-                <asp:TextBox CssClass="textbox" ID="TextBox3" runat="server" required="required"></asp:TextBox>
+                <asp:TextBox CssClass="textbox" ID="txtLastName" runat="server" required="required"></asp:TextBox>
                 <br />
                 <br />
                 <label for="txtpwd">PHONE NUMBER</label>
                 <br />
-                <asp:TextBox CssClass="textbox" ID="TextBox4" runat="server" required="required"></asp:TextBox>
+                <asp:TextBox CssClass="textbox" ID="txtPhone" runat="server" required="required"></asp:TextBox>
                 <br />
                 <br />
                 <label for="txtpwd">EMAIL</label>
                 <br />
-                <asp:TextBox CssClass="textbox" ID="TextBox1" runat="server" required="required"></asp:TextBox>
+                <asp:TextBox CssClass="textbox" ID="txtEmail" runat="server" required="required"></asp:TextBox>
             </div>
             <div id="addressDiv">
                 <label for="txtpwd">COMPANY NAME</label>
                 <br />
-                <asp:TextBox CssClass="textbox" ID="TextBox5" runat="server" required="required"></asp:TextBox>
+                <asp:TextBox CssClass="textbox" ID="txtCompany" runat="server" required="required"></asp:TextBox>
                 <br />
                 <br />
                 <label for="txtpwd">STREET ADDRESS</label>
                 <br />
-                <asp:TextBox CssClass="textbox" ID="TextBox6" runat="server" required="required"></asp:TextBox>
+                <asp:TextBox CssClass="textbox" ID="txtStAddress" runat="server" required="required"></asp:TextBox>
                 <br />
                 <br />
                 <label for="txtpwd">PROVINCE/STATE</label>
-                <br />
-                <asp:TextBox CssClass="textbox" ID="TextBox7" runat="server" required="required"></asp:TextBox>
-                <br />
-                <br />
+                <asp:DropDownList ID="dropProvince" runat="server" required="required" DataSourceID="ZenithProvSqlDataSource" DataTextField="StateProvCode" DataValueField="StateProvCode"></asp:DropDownList>
+                <asp:SqlDataSource ID="ZenithProvSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:ZenithCapstoneDBConnectionString %>" SelectCommand="SELECT DISTINCT [StateProvCode] FROM [StateProv] ORDER BY [StateProvCode]"></asp:SqlDataSource>
                 <label for="txtpwd">COUNTRY</label>
-                <br />
-                <asp:TextBox CssClass="textbox" ID="TextBox8" runat="server" required="required"></asp:TextBox>
+                <asp:DropDownList ID="dropCountry" runat="server" required="required" DataSourceID="ZenithCountrySqlDataSource" DataTextField="CountryShortName" DataValueField="CountryShortName"></asp:DropDownList>
+                <asp:SqlDataSource ID="ZenithCountrySqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:ZenithCapstoneDBConnectionString %>" SelectCommand="SELECT [CountryShortName] FROM [Countries]"></asp:SqlDataSource>
                 <br />
                 <br />
                 <label for="txtpwd">POSTAL/ZIP</label>
                 <br />
-                <asp:TextBox CssClass="textbox" ID="TextBox9" runat="server" required="required"></asp:TextBox>
+                <asp:TextBox CssClass="textbox" ID="txtPostal" runat="server" required="required"></asp:TextBox>
                 <br />
                 <br />
                 <asp:Button CssClass="btnLogin" ID="Button1" runat="server" OnClick="Create_Click" Text="CREATE" />
