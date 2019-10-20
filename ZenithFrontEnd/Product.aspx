@@ -6,8 +6,22 @@
 <head runat="server">
     <title>C&B Packaging - Create Account</title>
     <link rel="stylesheet" href="css/main.css" />
+    <style type="text/css">
+        .auto-style1 {
+            width: 44%;
+            height: 196px;
+        }
+        .auto-style2 {
+            width: 50%;
+            height: 246px;
+        }
+        .auto-style4 {
+            width: 613px;
+        }
+    </style>
 </head>
 <body>
+    <form id="form1" runat="server">
     <img id="logo" src="images/wp-logo.jpg" alt="CB Logo" />
     <ul class="mainNav">
         <li><a href="https://cbdisplaypac.ca/">
@@ -28,21 +42,22 @@
     <table style="text-align: center;">
 	
         <tr>
-            <td>
+            <td class="auto-style4">
 			<h3>BOX</h3>
-                   <a href="boxSize.aspx"><img src="images/BOX-HSC.jpg" width="50" height="150"></a>
+                   <a href="Size.aspx"><img src="images/BOX-HSC.jpg" class="auto-style1"></a>
                 
             </td>
             <td></td>
-            <td>
+            <td class="auto-style4">
+                <h3>&nbsp;</h3>
                 <h3>RETAIL READY</h3>
-				<a href="boxSize.aspx"><img src="images/BOX-4-Sided-Rollover-Tray.jpg" width="50" height="150"></a>
+				<a href="Size.aspx"><img src="images/BOX-4-Sided-Rollover-Tray.jpg" class="auto-style2"></a>
             </td>
-            <td></td>
-            <%--<td>
+            <td>
+                &nbsp;</td>
+           <%-- <td>
                 <h3> DISPLAY</h3>
-                 <a href="../html-link.htm"><img src="images/Display.jpg" width="200" height="204"></a>
-            </td>--%>
+                 &nbsp;</td>--%>
         </tr>
         <br />
     </table>
@@ -119,6 +134,7 @@
             </div>
         </div>
     </footer>
+    </form>
 </body>
 </html>
 

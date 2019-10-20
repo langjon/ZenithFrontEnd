@@ -1,5 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Quantity.aspx.cs" Inherits="ZenithFrontEnd.Quantity" %>
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Size.aspx.cs" Inherits="ZenithFrontEnd.Size" %>
 
 <!DOCTYPE html>
 
@@ -39,21 +38,6 @@
             margin-left: 55px;
             margin-right: 94px;
         }
-        .auto-style10 {
-            border-style: none;
-            border-color: inherit;
-            border-width: medium;
-            border-radius: 5px;
-            height: 30px;
-            width: 73px;
-            background-color: steelblue;
-            color: white;
-            outline: none;
-            user-select: none;
-            float: right;
-            margin-left: 55px;
-            margin-right: 94px;
-        }
         .auto-style0 {
             border-style: none;
             border-color: inherit;
@@ -68,13 +52,34 @@
             float: left;
             margin-left: 57px;
         }
-        .auto-style11 {
+        .auto-style10 {
             border-style: none;
             border-color: inherit;
             border-width: medium;
             border-radius: 5px;
             height: 30px;
-            width: 81px;
+            width: 61px;
+            background-color: steelblue;
+            color: white;
+            outline: none;
+            user-select: none;
+            float: right;
+            margin-left: 55px;
+            margin-right: 94px;
+        }
+        .auto-style12 {
+            margin-left: 320px;
+        }
+        .auto-style14 {
+            margin-left: 228px;
+        }
+        .auto-style15 {
+            border-style: none;
+            border-color: inherit;
+            border-width: medium;
+            border-radius: 5px;
+            height: 30px;
+            width: 70px;
             background-color: steelblue;
             color: white;
             outline: none;
@@ -104,39 +109,46 @@
             <p>BUILD YOUR BOX</p>
         </div>
 
-        <div id="quantityDiv">
+        <div id="sizeDiv">
             <form id="form1" runat="server">
                 <div style="font-size: large; font-weight: bold">
-                     <p class="auto-style2">Quantity<asp:RadioButtonList width= "100%" ID="quantityRadioBtn" runat="server" OnSelectedIndexChanged="quantityRadioBtn_SelectedIndexChanged" RepeatDirection="Horizontal"  RepeatColumns="3" CellPadding="3" CellSpacing="2" CssClass="auto-style14" Font-Names="Arial" Font-Size="Medium" style="margin-left: 241px">
-                            <asp:ListItem >1</asp:ListItem>
-                            <asp:ListItem>50</asp:ListItem>
-                            <asp:ListItem>1000</asp:ListItem>
-                            <asp:ListItem>10</asp:ListItem>
-                            <asp:ListItem>100</asp:ListItem>
-                            <asp:ListItem>2000</asp:ListItem>
-                            <asp:ListItem>25</asp:ListItem>
-                            <asp:ListItem>500</asp:ListItem>
-                            <asp:ListItem>5000</asp:ListItem>
+                     <p class="auto-style2">Size<asp:RadioButtonList width= "100%" ID="sizeRadioBtn" runat="server" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged" RepeatDirection="Horizontal"  RepeatColumns="3" CellPadding="3" CellSpacing="2" CssClass="auto-style14" Font-Names="Arial" Font-Size="Medium">
+                            <asp:ListItem >6 x 6 x 6 in</asp:ListItem>
+                            <asp:ListItem>8 x 8 x 8 in</asp:ListItem>
+                            <asp:ListItem>10 x 10 x10 in </asp:ListItem>
+                            <asp:ListItem>12 x 12 x 8 in</asp:ListItem>
+                            <asp:ListItem>12 x 12 x 12 in</asp:ListItem>
+                            <asp:ListItem>12 x 12 x 4 in</asp:ListItem>
+                            <asp:ListItem>12 x 12 x 6 in</asp:ListItem>
+                            <asp:ListItem>14 x14 x 14 in</asp:ListItem>
+                            <asp:ListItem>16 x 16 x 12 in</asp:ListItem>
+                            <asp:ListItem>16 x 16 x 16 in</asp:ListItem>
+                            <asp:ListItem>24 x 12 x 12 in</asp:ListItem>
+                            <asp:ListItem>24 x 16 x 16 in</asp:ListItem>
                         </asp:RadioButtonList>
                       
                      </p>
-                     <p class="auto-style12">
+                    <p class="auto-style12">
                         &nbsp;&nbsp;&nbsp;
-                     <p>&nbsp;</p>
+                      
                      <p class="auto-style6">
-                     <label for="customQuantity">
-                     Custom Quantity:</label>
+                     <label for="customSize">
+                     Custom Size:</label>
                      </p>
                      <p class="auto-style4">
                      <br />
-                     <asp:TextBox CssClass="auto-style3" ID="txtCustom" runat="server" Width="34px"></asp:TextBox>&nbsp; pcs.</p>
+                     <asp:TextBox CssClass="auto-style3" ID="txtCustom" runat="server" Width="34px"></asp:TextBox>&nbsp;x
+                     <asp:TextBox CssClass="auto-style3" ID="txtCustom0" runat="server" Width="34px"></asp:TextBox>&nbsp;x&nbsp;
+                     <asp:TextBox CssClass="auto-style3" ID="txtCustom1" runat="server" Width="34px"></asp:TextBox> in</label>
+                   
+                     </p>
                      <p class="auto-style9">
-                         <a id="btnNext" href="ProductReview.aspx" class="auto-style3" style="font-size: large; color: #FFFFFF; font-weight: normal;">NEXT</a>
+                         <a id="btnNext" href="options.aspx" class="auto-style3" style="font-size: large; color: #FFFFFF; font-weight: normal;">NEXT</a>
                          </p>
                      <p class="auto-style10">
-                         <a id="btnBack" href="options.aspx" class="textbox" style="font-size: large; color: #FFFFFF; font-weight: normal;">BACK</a>
+                         <a id="btnBack" href="Product.aspx" class="textbox" style="font-size: large; color: #FFFFFF; font-weight: normal;">BACK</a>
                          </p>
-                          <a id="btnHelp" href="Help.aspx"  class="auto-style11" style="padding: inherit; font-size: large; color: #FFFFFF; text-align: center; font-weight: normal; font-family: Arial; ">HELP</a>
+                         <a id="btnHelp" href="Help.aspx"  class="auto-style15" style="padding: inherit; font-size: large; color: #FFFFFF; text-align: center; font-weight: normal; font-family: Arial; ">HELP</a>
                      <br />
                      <br />
                      </p>

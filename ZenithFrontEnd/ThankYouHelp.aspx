@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Quantity.aspx.cs" Inherits="ZenithFrontEnd.Quantity" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ThankYouHelp.aspx.cs" Inherits="ZenithFrontEnd.ThankYouHelp" %>
 
 
 <!DOCTYPE html>
@@ -9,20 +9,9 @@
 
     <link rel="stylesheet" href="css/main.css" />
     <style type="text/css">
-        .auto-style2 {
-            font-weight: bold;
-            font-size: 1.3em;
-            margin-left: 258px;
-        }
         .auto-style3 {
             border-radius: 5px;
             padding-left: 7px;
-        }
-        .auto-style4 {
-            margin-left: 360px;
-        }
-        .auto-style6 {
-            margin-left: 240px;
         }
         .auto-style9 {
             border-style: none;
@@ -30,7 +19,7 @@
             border-width: medium;
             border-radius: 5px;
             height: 30px;
-            width: 71px;
+            width: 115px;
             background-color: steelblue;
             color: white;
             outline: none;
@@ -39,50 +28,10 @@
             margin-left: 55px;
             margin-right: 94px;
         }
-        .auto-style10 {
-            border-style: none;
-            border-color: inherit;
-            border-width: medium;
-            border-radius: 5px;
-            height: 30px;
-            width: 73px;
-            background-color: steelblue;
-            color: white;
-            outline: none;
-            user-select: none;
-            float: right;
-            margin-left: 55px;
-            margin-right: 94px;
+        .auto-style12 {
+            margin-left: 320px;
         }
-        .auto-style0 {
-            border-style: none;
-            border-color: inherit;
-            border-width: medium;
-            border-radius: 5px;
-            height: 30px;
-            width: 130px;
-            background-color: steelblue;
-            color: white;
-            outline: none;
-            user-select: none;
-            float: left;
-            margin-left: 57px;
-        }
-        .auto-style11 {
-            border-style: none;
-            border-color: inherit;
-            border-width: medium;
-            border-radius: 5px;
-            height: 30px;
-            width: 81px;
-            background-color: steelblue;
-            color: white;
-            outline: none;
-            user-select: none;
-            float: left;
-            margin-left: 57px;
-        }
-    </style>
+        </style>
     </head>
 <body>
     <img id="logo" src="images/wp-logo.jpg" alt="CB Logo" />
@@ -100,43 +49,18 @@
     </div>
     <div style="height: 700px">
 
-        <div class="pageTitle">
-            <p>BUILD YOUR BOX</p>
-        </div>
-
-        <div id="quantityDiv">
+        <div id="ThankYouDiv">
             <form id="form1" runat="server">
                 <div style="font-size: large; font-weight: bold">
-                     <p class="auto-style2">Quantity<asp:RadioButtonList width= "100%" ID="quantityRadioBtn" runat="server" OnSelectedIndexChanged="quantityRadioBtn_SelectedIndexChanged" RepeatDirection="Horizontal"  RepeatColumns="3" CellPadding="3" CellSpacing="2" CssClass="auto-style14" Font-Names="Arial" Font-Size="Medium" style="margin-left: 241px">
-                            <asp:ListItem >1</asp:ListItem>
-                            <asp:ListItem>50</asp:ListItem>
-                            <asp:ListItem>1000</asp:ListItem>
-                            <asp:ListItem>10</asp:ListItem>
-                            <asp:ListItem>100</asp:ListItem>
-                            <asp:ListItem>2000</asp:ListItem>
-                            <asp:ListItem>25</asp:ListItem>
-                            <asp:ListItem>500</asp:ListItem>
-                            <asp:ListItem>5000</asp:ListItem>
-                        </asp:RadioButtonList>
-                      
-                     </p>
-                     <p class="auto-style12">
+                    <p style="font-family: 'Arial Black'; font-size: xx-large; font-weight: bolder; color: #4682B4; text-align: center"> &nbsp;</p>
+                    <p style="font-family: 'Arial Black'; font-size: xx-large; font-weight: bolder; color: #4682B4; text-align: center"> THANK YOU! </p>
+                    <p style="text-align: center; font-size: large; font-family: Arial; font-style: normal">Your question has been submitted. We will get back to you within 3 to 5 business days</p>
+                    <p class="auto-style12">
                         &nbsp;&nbsp;&nbsp;
-                     <p>&nbsp;</p>
-                     <p class="auto-style6">
-                     <label for="customQuantity">
-                     Custom Quantity:</label>
-                     </p>
-                     <p class="auto-style4">
-                     <br />
-                     <asp:TextBox CssClass="auto-style3" ID="txtCustom" runat="server" Width="34px"></asp:TextBox>&nbsp; pcs.</p>
+                      
                      <p class="auto-style9">
-                         <a id="btnNext" href="ProductReview.aspx" class="auto-style3" style="font-size: large; color: #FFFFFF; font-weight: normal;">NEXT</a>
+                         <a id="btnNext" href="product.aspx" class="auto-style3" style="font-size: large; color: #FFFFFF; font-weight: normal; text-align: center; vertical-align: middle;">MAIN PAGE</a>
                          </p>
-                     <p class="auto-style10">
-                         <a id="btnBack" href="options.aspx" class="textbox" style="font-size: large; color: #FFFFFF; font-weight: normal;">BACK</a>
-                         </p>
-                          <a id="btnHelp" href="Help.aspx"  class="auto-style11" style="padding: inherit; font-size: large; color: #FFFFFF; text-align: center; font-weight: normal; font-family: Arial; ">HELP</a>
                      <br />
                      <br />
                      </p>
@@ -216,4 +140,5 @@
     </footer>
 </body>
 </html>
+
 

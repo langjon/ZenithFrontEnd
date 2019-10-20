@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Quantity.aspx.cs" Inherits="ZenithFrontEnd.Quantity" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ProductReview.aspx.cs" Inherits="ZenithFrontEnd.ProductReview" %>
 
 
 <!DOCTYPE html>
@@ -14,23 +14,13 @@
             font-size: 1.3em;
             margin-left: 258px;
         }
-        .auto-style3 {
-            border-radius: 5px;
-            padding-left: 7px;
-        }
-        .auto-style4 {
-            margin-left: 360px;
-        }
-        .auto-style6 {
-            margin-left: 240px;
-        }
         .auto-style9 {
             border-style: none;
             border-color: inherit;
             border-width: medium;
             border-radius: 5px;
-            height: 30px;
-            width: 71px;
+            height: 34px;
+            width: 104px;
             background-color: steelblue;
             color: white;
             outline: none;
@@ -45,7 +35,7 @@
             border-width: medium;
             border-radius: 5px;
             height: 30px;
-            width: 73px;
+            width: 68px;
             background-color: steelblue;
             color: white;
             outline: none;
@@ -53,6 +43,29 @@
             float: right;
             margin-left: 55px;
             margin-right: 94px;
+        }
+        .auto-style11 {
+            font-weight: bold;
+            font-size: 1.3em;
+            margin-left: 355px;
+            width: 637px;
+        }
+        .auto-style12 {
+            font-weight: bold;
+            font-size: 1.3em;
+            margin-left: 353px;
+            width: 628px;
+        }
+        .auto-style13 {
+            font-weight: bold;
+            font-size: 1.3em;
+            margin-left: 350px;
+        }
+        .auto-style14 {
+            font-weight: bold;
+            font-size: 1.3em;
+            margin-left: 353px;
+            width: 645px;
         }
         .auto-style0 {
             border-style: none;
@@ -68,19 +81,20 @@
             float: left;
             margin-left: 57px;
         }
-        .auto-style11 {
+        .auto-style15 {
             border-style: none;
             border-color: inherit;
             border-width: medium;
             border-radius: 5px;
-            height: 30px;
-            width: 81px;
+            height: 27px;
+            width: 97px;
             background-color: steelblue;
             color: white;
             outline: none;
             user-select: none;
             float: left;
             margin-left: 57px;
+            top: auto;
         }
     </style>
     </head>
@@ -101,42 +115,40 @@
     <div style="height: 700px">
 
         <div class="pageTitle">
-            <p>BUILD YOUR BOX</p>
+            <p>YOUR PRODUCT SPECIFICATION</p>
         </div>
 
-        <div id="quantityDiv">
+        <div id="prodSpec">
             <form id="form1" runat="server">
                 <div style="font-size: large; font-weight: bold">
-                     <p class="auto-style2">Quantity<asp:RadioButtonList width= "100%" ID="quantityRadioBtn" runat="server" OnSelectedIndexChanged="quantityRadioBtn_SelectedIndexChanged" RepeatDirection="Horizontal"  RepeatColumns="3" CellPadding="3" CellSpacing="2" CssClass="auto-style14" Font-Names="Arial" Font-Size="Medium" style="margin-left: 241px">
-                            <asp:ListItem >1</asp:ListItem>
-                            <asp:ListItem>50</asp:ListItem>
-                            <asp:ListItem>1000</asp:ListItem>
-                            <asp:ListItem>10</asp:ListItem>
-                            <asp:ListItem>100</asp:ListItem>
-                            <asp:ListItem>2000</asp:ListItem>
-                            <asp:ListItem>25</asp:ListItem>
-                            <asp:ListItem>500</asp:ListItem>
-                            <asp:ListItem>5000</asp:ListItem>
-                        </asp:RadioButtonList>
-                      
+                    <p class="auto-style11">Size&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Material&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
+&nbsp;&nbsp;
+                    </p>
+                    <p class="auto-style14">Sides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Finish&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                         <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
+&nbsp;&nbsp;
+                    </p>
+                    <p class="auto-style12">Wall Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Label ID="Label5" runat="server" Text="Label"></asp:Label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Quantity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Label ID="Label6" runat="server" Text="Label"></asp:Label>
+                    </p>
+                    <p class="auto-style13">Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Label ID="Label7" runat="server" Text="Label"></asp:Label>
+                    </p>
+                    <p class="auto-style2">&nbsp;&nbsp;&nbsp;
                      </p>
-                     <p class="auto-style12">
-                        &nbsp;&nbsp;&nbsp;
-                     <p>&nbsp;</p>
-                     <p class="auto-style6">
-                     <label for="customQuantity">
-                     Custom Quantity:</label>
-                     </p>
-                     <p class="auto-style4">
-                     <br />
-                     <asp:TextBox CssClass="auto-style3" ID="txtCustom" runat="server" Width="34px"></asp:TextBox>&nbsp; pcs.</p>
                      <p class="auto-style9">
-                         <a id="btnNext" href="ProductReview.aspx" class="auto-style3" style="font-size: large; color: #FFFFFF; font-weight: normal;">NEXT</a>
-                         </p>
+                         <a id="btnCheckout" href="checkout.aspx"  style="font-size: large; color: #FFFFFF; font-weight: normal; vertical-align: middle; text-align: justify;">  CHECKOUT</a></p>
                      <p class="auto-style10">
-                         <a id="btnBack" href="options.aspx" class="textbox" style="font-size: large; color: #FFFFFF; font-weight: normal;">BACK</a>
+                         <a id="btnBack" href="product.aspx" class="textbox" style="font-size: large; color: #FFFFFF; font-weight: normal; vertical-align: middle; text-align: center;">BACK</a>
                          </p>
-                          <a id="btnHelp" href="Help.aspx"  class="auto-style11" style="padding: inherit; font-size: large; color: #FFFFFF; text-align: center; font-weight: normal; font-family: Arial; ">HELP</a>
+                    <a id="btnHelp" href="Help.aspx"  class="auto-style15" style="padding: inherit; font-size: large; color: #FFFFFF; text-align: center; font-weight: normal; font-family: Arial; ">HELP</a><br />
                      <br />
                      <br />
                      </p>
@@ -216,4 +228,3 @@
     </footer>
 </body>
 </html>
-

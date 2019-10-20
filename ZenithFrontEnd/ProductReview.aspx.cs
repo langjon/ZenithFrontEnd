@@ -7,14 +7,9 @@ using System.Web.UI.WebControls;
 
 namespace ZenithFrontEnd
 {
-    public partial class Quantity : System.Web.UI.Page
+    public partial class ProductReview : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void quantityRadioBtn_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

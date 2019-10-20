@@ -13,5 +13,10 @@ namespace ZenithFrontEnd
         {
 
         }
+
+        protected void wallRadioBtn_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

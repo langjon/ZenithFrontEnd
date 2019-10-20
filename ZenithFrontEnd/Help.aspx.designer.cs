@@ -10,7 +10,7 @@
 namespace ZenithFrontEnd {
     
     
-    public partial class Options {
+    public partial class Help {
         
         /// <summary>
         /// errorMessages control.
@@ -31,39 +31,39 @@ namespace ZenithFrontEnd {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// sideRadioBtn control.
+        /// name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList sideRadioBtn;
+        protected global::System.Web.UI.WebControls.TextBox name;
         
         /// <summary>
-        /// finishRadioBtn control.
+        /// email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList finishRadioBtn;
+        protected global::System.Web.UI.WebControls.TextBox email;
         
         /// <summary>
-        /// materialRadioBtn control.
+        /// phone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList materialRadioBtn;
+        protected global::System.Web.UI.WebControls.TextBox phone;
         
         /// <summary>
-        /// wallRadioBtn control.
+        /// company control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList wallRadioBtn;
+        protected global::System.Web.UI.WebControls.TextBox company;
     }
 }

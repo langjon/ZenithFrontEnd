@@ -10,7 +10,7 @@
 namespace ZenithFrontEnd {
     
     
-    public partial class Options {
+    public partial class Size {
         
         /// <summary>
         /// errorMessages control.
@@ -31,39 +31,39 @@ namespace ZenithFrontEnd {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// sideRadioBtn control.
+        /// sizeRadioBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList sideRadioBtn;
+        protected global::System.Web.UI.WebControls.RadioButtonList sizeRadioBtn;
         
         /// <summary>
-        /// finishRadioBtn control.
+        /// txtCustom control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList finishRadioBtn;
+        protected global::System.Web.UI.WebControls.TextBox txtCustom;
         
         /// <summary>
-        /// materialRadioBtn control.
+        /// txtCustom0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList materialRadioBtn;
+        protected global::System.Web.UI.WebControls.TextBox txtCustom0;
         
         /// <summary>
-        /// wallRadioBtn control.
+        /// txtCustom1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList wallRadioBtn;
+        protected global::System.Web.UI.WebControls.TextBox txtCustom1;
     }
 }
