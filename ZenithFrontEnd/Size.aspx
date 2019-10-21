@@ -112,19 +112,19 @@
         <div id="sizeDiv">
             <form id="form1" runat="server">
                 <div style="font-size: large; font-weight: bold">
-                     <p class="auto-style2">Size<asp:RadioButtonList width= "100%" ID="sizeRadioBtn" runat="server" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged" RepeatDirection="Horizontal"  RepeatColumns="3" CellPadding="3" CellSpacing="2" CssClass="auto-style14" Font-Names="Arial" Font-Size="Medium">
-                            <asp:ListItem >6 x 6 x 6 in</asp:ListItem>
-                            <asp:ListItem>8 x 8 x 8 in</asp:ListItem>
-                            <asp:ListItem>10 x 10 x10 in </asp:ListItem>
-                            <asp:ListItem>12 x 12 x 8 in</asp:ListItem>
-                            <asp:ListItem>12 x 12 x 12 in</asp:ListItem>
-                            <asp:ListItem>12 x 12 x 4 in</asp:ListItem>
-                            <asp:ListItem>12 x 12 x 6 in</asp:ListItem>
-                            <asp:ListItem>14 x14 x 14 in</asp:ListItem>
-                            <asp:ListItem>16 x 16 x 12 in</asp:ListItem>
-                            <asp:ListItem>16 x 16 x 16 in</asp:ListItem>
-                            <asp:ListItem>24 x 12 x 12 in</asp:ListItem>
-                            <asp:ListItem>24 x 16 x 16 in</asp:ListItem>
+                     <p class="auto-style2">Size<asp:RadioButtonList width= "100%" ID="sizeRadioBtn" runat="server" OnSelectedIndexChanged="sizeRadioBtn_SelectedIndexChanged" AutoPostBack="true" RepeatDirection="Horizontal"  RepeatColumns="3" CellPadding="3" CellSpacing="2" CssClass="auto-style14" Font-Names="Arial" Font-Size="Medium">
+                            <asp:ListItem>   6 x 6 x 6 in       </asp:ListItem>
+                            <asp:ListItem>   8 x 8 x 8 in       </asp:ListItem>
+                            <asp:ListItem>   10 x 10 x 10 in    </asp:ListItem>
+                            <asp:ListItem>   12 x 12 x 8 in     </asp:ListItem>
+                            <asp:ListItem>   12 x 12 x 12 in    </asp:ListItem>
+                            <asp:ListItem>   12 x 12 x 4 in     </asp:ListItem>
+                            <asp:ListItem>   12 x 12 x 6 in     </asp:ListItem>
+                            <asp:ListItem>   14 x 14 x 14 in    </asp:ListItem>
+                            <asp:ListItem>   16 x 16 x 12 in    </asp:ListItem>
+                            <asp:ListItem>   16 x 16 x 16 in    </asp:ListItem>
+                            <asp:ListItem>   24 x 12 x 12 in    </asp:ListItem>
+                            <asp:ListItem>   24 x 16 x 16 in    </asp:ListItem>
                         </asp:RadioButtonList>
                       
                      </p>
@@ -132,23 +132,29 @@
                         &nbsp;&nbsp;&nbsp;
                       
                      <p class="auto-style6">
+                        
                      <label for="customSize">
                      Custom Size:</label>
                      </p>
                      <p class="auto-style4">
                      <br />
-                     <asp:TextBox CssClass="auto-style3" ID="txtCustom" runat="server" Width="34px"></asp:TextBox>&nbsp;x
-                     <asp:TextBox CssClass="auto-style3" ID="txtCustom0" runat="server" Width="34px"></asp:TextBox>&nbsp;x&nbsp;
-                     <asp:TextBox CssClass="auto-style3" ID="txtCustom1" runat="server" Width="34px"></asp:TextBox> in</label>
+                     <asp:TextBox CssClass="auto-style3" ID="txtCustom" runat="server" Width="34px" MaxLength="5"></asp:TextBox>&nbsp;x
+                     <asp:TextBox CssClass="auto-style3" ID="txtCustom0" runat="server" Width="34px" MaxLength="5"></asp:TextBox>&nbsp;x&nbsp;
+                     <asp:TextBox CssClass="auto-style3" ID="txtCustom1" runat="server" Width="34px" MaxLength="5"></asp:TextBox> in
                    
-                     </p>
+                         </p>
                      <p class="auto-style9">
-                         <a id="btnNext" href="options.aspx" class="auto-style3" style="font-size: large; color: #FFFFFF; font-weight: normal;">NEXT</a>
+                         <a id="btnNext" href="options.aspx" class="auto-style3" style="font-size: large; color: #FFFFFF; font-weight: normal;">NEXT</a> 
+                          
                          </p>
                      <p class="auto-style10">
                          <a id="btnBack" href="Product.aspx" class="textbox" style="font-size: large; color: #FFFFFF; font-weight: normal;">BACK</a>
                          </p>
                          <a id="btnHelp" href="Help.aspx"  class="auto-style15" style="padding: inherit; font-size: large; color: #FFFFFF; text-align: center; font-weight: normal; font-family: Arial; ">HELP</a>
+                   
+                         <asp:Button ID="btSize" runat="server" Text="Select Custom Size" OnClick="btnSelectSize_Click" />
+                   
+                     <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
                      <br />
                      <br />
                      </p>

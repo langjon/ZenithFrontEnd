@@ -11,7 +11,8 @@ namespace ZenithFrontEnd
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["Size"] !=null )
+                LabelSize.Text = Session["Size"].ToString();
         }
     }
 }
