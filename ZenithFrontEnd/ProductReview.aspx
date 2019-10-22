@@ -116,13 +116,18 @@
 
         <div class="pageTitle">
             <p>YOUR PRODUCT SPECIFICATION</p>
+            <p>&nbsp;</p>
         </div>
 
         <div id="prodSpec">
             <form id="form1" runat="server">
                 <div style="font-size: large; font-weight: bold">
+                    
+                   
+                        <asp:ImageButton class="auto-style2" ID="boxType" runat="server" Height="230px" Width="247px"/>
+                  
                     <p class="auto-style11">Size&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Label ID="LabelSize" runat="server" Text="Please select Size"></asp:Label>
+                        <asp:Label ID="LabelSize"  runat="server" Text="Please select Size"></asp:Label>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Material&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:Label ID="LabelMaterial" runat="server" Text="Please select Material"></asp:Label>
 &nbsp;&nbsp;

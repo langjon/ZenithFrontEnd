@@ -11,7 +11,12 @@ namespace ZenithFrontEnd
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["Size"] !=null )
+            if (Session["BoxImage"] != null)
+            {
+                //LabelBoxType.Text = Session["BoxType"].ToString();
+                boxType.ImageUrl= Session["BoxImage"].ToString();
+            }
+            if (Session["Size"] != null)
                 LabelSize.Text = Session["Size"].ToString();
             if (Session["Material"] != null)
                 LabelMaterial.Text = Session["Material"].ToString();

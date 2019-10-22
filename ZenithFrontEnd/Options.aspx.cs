@@ -13,25 +13,36 @@ namespace ZenithFrontEnd
         {
             if (!IsPostBack)
             {
+                finishRadioBtn.Enabled = false;
             }
-
+            
         }
 
         protected void sideRadioBtn_SelectedIndexChanged(object sender, EventArgs e)
         {
             Session["Side"] = sideRadioBtn.SelectedItem.ToString();
         }
-
+        protected void materialRadioBtn_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Session["Material"] = materialRadioBtn.SelectedItem.ToString();
+            if (materialRadioBtn.SelectedIndex == 0 )
+            {
+                finishRadioBtn.Enabled = true;
+            }
+            else
+            {
+                finishRadioBtn.Enabled = false;
+                finishRadioBtn.ClearSelection();
+                Session["Finish"] = "N/A";
+            }
+        }
         protected void finishRadioBtn_SelectedIndexChanged(object sender, EventArgs e)
         {
             Session["Finish"] = finishRadioBtn.SelectedItem.ToString();
 
         }
 
-        protected void materialRadioBtn_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Session["Material"] = materialRadioBtn.SelectedItem.ToString();
-        }
+        
         protected void wallRadioBtn_SelectedIndexChanged(object sender, EventArgs e)
         {
             Session["Wall"] = wallRadioBtn.SelectedItem.ToString();
