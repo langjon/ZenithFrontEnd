@@ -17,7 +17,7 @@ namespace ZenithFrontEnd
                 if (Session["Size"] == null)
                     Label1.Text = "Please select size";
                 else
-                    Label1.Text = Session["Size"].ToString();
+                    Label1.Text = "You selected: " + Session["Size"].ToString();
             }
            
         }
@@ -54,7 +54,7 @@ namespace ZenithFrontEnd
                         {
                             customSize = txtCustom.Text + " x " + txtCustom0.Text + " x " + txtCustom1.Text + " in";
                             Label1.Text = customSize;
-                            Session["Size"] = customSize;
+                            Session["Size"] = "Custom size:" + customSize;
                             btSize.Text = "Select Standard Size from above list";
                         }
                     }

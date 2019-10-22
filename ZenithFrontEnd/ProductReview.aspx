@@ -47,14 +47,14 @@
         .auto-style11 {
             font-weight: bold;
             font-size: 1.3em;
-            margin-left: 355px;
-            width: 710px;
+            margin-left: 295px;
+            width: 901px;
         }
         .auto-style12 {
             font-weight: bold;
             font-size: 1.3em;
-            margin-left: 353px;
-            width: 730px;
+            margin-left: 298px;
+            width: 955px;
         }
         .auto-style13 {
             font-weight: bold;
@@ -64,8 +64,8 @@
         .auto-style14 {
             font-weight: bold;
             font-size: 1.3em;
-            margin-left: 353px;
-            width: 723px;
+            margin-left: 297px;
+            width: 900px;
         }
         .auto-style0 {
             border-style: none;
@@ -139,14 +139,14 @@
                         <asp:Label ID="LabelQuantity" runat="server" Text="Please select Quantity"></asp:Label>
                     </p>
                     <p class="auto-style13">Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Label ID="LabelPrice" runat="server" Text="Please select Price"></asp:Label>
+                        <asp:Label ID="LabelPrice" runat="server" Text="Total Price is: "></asp:Label>
                     </p>
                     <p class="auto-style2">&nbsp;&nbsp;&nbsp;
                      </p>
                      <p class="auto-style9">
                          <a id="btnCheckout" href="checkout.aspx"  style="font-size: large; color: #FFFFFF; font-weight: normal; vertical-align: middle; text-align: justify;">  CHECKOUT</a></p>
                      <p class="auto-style10">
-                         <a id="btnBack" href="product.aspx" class="textbox" style="font-size: large; color: #FFFFFF; font-weight: normal; vertical-align: middle; text-align: center;">BACK</a>
+                         <a id="btnBack" href="quantity.aspx" class="textbox" style="font-size: large; color: #FFFFFF; font-weight: normal; vertical-align: middle; text-align: center;">BACK</a>
                          </p>
                     <a id="btnHelp" href="Help.aspx"  class="auto-style15" style="padding: inherit; font-size: large; color: #FFFFFF; text-align: center; font-weight: normal; font-family: Arial; ">HELP</a><br />
                      <br />

@@ -107,22 +107,21 @@
         <div id="quantityDiv">
             <form id="form1" runat="server">
                 <div style="font-size: large; font-weight: bold">
-                     <p class="auto-style2">Quantity<asp:RadioButtonList width= "100%" ID="quantityRadioBtn" runat="server" OnSelectedIndexChanged="quantityRadioBtn_SelectedIndexChanged" RepeatDirection="Horizontal"  RepeatColumns="3" CellPadding="3" CellSpacing="2" CssClass="auto-style14" Font-Names="Arial" Font-Size="Medium" style="margin-left: 241px">
-                            <asp:ListItem >1</asp:ListItem>
-                            <asp:ListItem>50</asp:ListItem>
-                            <asp:ListItem>1000</asp:ListItem>
-                            <asp:ListItem>10</asp:ListItem>
-                            <asp:ListItem>100</asp:ListItem>
-                            <asp:ListItem>2000</asp:ListItem>
-                            <asp:ListItem>25</asp:ListItem>
-                            <asp:ListItem>500</asp:ListItem>
-                            <asp:ListItem>5000</asp:ListItem>
+                     <p class="auto-style2">Quantity<asp:RadioButtonList width= "100%" ID="quantityRadioBtn" runat="server" OnSelectedIndexChanged="quantityRadioBtn_SelectedIndexChanged" AutoPostBack="true"  RepeatDirection="Horizontal"  RepeatColumns="3" CellPadding="3" CellSpacing="2" CssClass="auto-style14" Font-Names="Arial" Font-Size="Medium" style="margin-left: 241px">
+                            <asp:ListItem>  1       </asp:ListItem>
+                            <asp:ListItem>  50      </asp:ListItem>
+                            <asp:ListItem>  1000    </asp:ListItem>
+                            <asp:ListItem>  10      </asp:ListItem>
+                            <asp:ListItem>  100     </asp:ListItem>
+                            <asp:ListItem>  2000    </asp:ListItem>
+                            <asp:ListItem>  25      </asp:ListItem>
+                            <asp:ListItem>  500     </asp:ListItem>
+                            <asp:ListItem>  5000    </asp:ListItem>
                         </asp:RadioButtonList>
                       
                      </p>
                      <p class="auto-style12">
                         &nbsp;&nbsp;&nbsp;
-                     <p>&nbsp;</p>
                      <p class="auto-style6">
                      <label for="customQuantity">
                      Custom Quantity:</label>
@@ -130,6 +129,10 @@
                      <p class="auto-style4">
                      <br />
                      <asp:TextBox CssClass="auto-style3" ID="txtCustom" runat="server" Width="34px"></asp:TextBox>&nbsp; pcs.</p>
+                     <p class="auto-style8">
+                          <asp:Button ID="BtnSelectQty" class="auto-style11" runat="server" Text="Select Custom Quantity" Width="291px" OnClick="BtnSelectQty_Click" />
+                          <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+                     </p>
                      <p class="auto-style9">
                          <a id="btnNext" href="ProductReview.aspx" class="auto-style3" style="font-size: large; color: #FFFFFF; font-weight: normal;">NEXT</a>
                          </p>
