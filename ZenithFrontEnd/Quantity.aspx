@@ -99,13 +99,15 @@
     <div id="errorMessages" runat="server">
     </div>
     <div style="height: 700px">
-
+                    <form id="form1" runat="server">
         <div class="pageTitle">
             <p>BUILD YOUR BOX</p>
         </div>
-
+         <div>
+             <asp:ImageButton ID="selectedBox"  class="auto-style1"  runat="server" Height="134px" Width="160px"/>                
+        </div>
         <div id="quantityDiv">
-            <form id="form1" runat="server">
+
                 <div style="font-size: large; font-weight: bold">
                      <p class="auto-style2">Quantity<asp:RadioButtonList width= "100%" ID="quantityRadioBtn" runat="server" OnSelectedIndexChanged="quantityRadioBtn_SelectedIndexChanged" AutoPostBack="true"  RepeatDirection="Horizontal"  RepeatColumns="3" CellPadding="3" CellSpacing="2" CssClass="auto-style14" Font-Names="Arial" Font-Size="Medium" style="margin-left: 241px">
                             <asp:ListItem>  1       </asp:ListItem>

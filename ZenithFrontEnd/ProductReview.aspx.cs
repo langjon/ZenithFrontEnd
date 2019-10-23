@@ -28,6 +28,8 @@ namespace ZenithFrontEnd
                 LabelWallType.Text = Session["Wall"].ToString();
             if (Session["Quantity"] != null)
                 LabelQuantity.Text = Session["Quantity"].ToString();
+            if (Session["Price"] != null)
+                LabelPrice.Text = Session["Price"].ToString();
         }
     }
 }

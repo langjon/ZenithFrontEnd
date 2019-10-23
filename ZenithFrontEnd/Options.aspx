@@ -79,32 +79,35 @@
     <div id="errorMessages" runat="server">
     </div>
     <div style="height: 700px">
-
+         <form id="form1" runat="server">
         <div class="pageTitle">
             <p>BUILD YOUR BOX</p>
         </div>
-
+        <div>
+             <asp:ImageButton ID="selectedBox"  class="auto-style1"  runat="server" Height="134px" Width="160px"/>                
+        </div>
         <div id="sidesDiv">
-            <form id="form1" runat="server">
+           
                 <div style="font-size: large; font-weight: bold">
-                    <p class="auto-style2">Sides<asp:RadioButtonList ID="sideRadioBtn" runat="server" RepeatDirection="Horizontal"  RepeatColumns="3" CellPadding="4" CellSpacing="5" CssClass="auto-style14" Font-Names="Arial" Font-Size="Medium" style="margin-left: 261px" OnSelectedIndexChanged="sideRadioBtn_SelectedIndexChanged" AutoPostBack="true">
-                        <asp:ListItem>1 Side</asp:ListItem>
-                        <asp:ListItem>2 Sides</asp:ListItem>
+                    <p class="auto-style2">Printing<asp:RadioButtonList ID="sideRadioBtn" runat="server" RepeatDirection="Horizontal"  RepeatColumns="3" CellPadding="4" CellSpacing="5" CssClass="auto-style14" Font-Names="Arial" Font-Size="Medium" style="margin-left: 189px" OnSelectedIndexChanged="sideRadioBtn_SelectedIndexChanged" AutoPostBack="true">
+                        <asp:ListItem>Outside Only</asp:ListItem>
+                        <asp:ListItem>Inside Only</asp:ListItem>
+                        <asp:ListItem>Both Sides</asp:ListItem>
                         </asp:RadioButtonList>
                     </p>
-                     <p class="auto-style2">Material<asp:RadioButtonList ID="materialRadioBtn" runat="server" RepeatDirection="Horizontal"  RepeatColumns="3" CellPadding="4" CellSpacing="5" CssClass="auto-style14" Font-Names="Arial" Font-Size="Medium" style="margin-left: 271px" OnSelectedIndexChanged="materialRadioBtn_SelectedIndexChanged" AutoPostBack="true">
+                     <p class="auto-style2">Material<asp:RadioButtonList ID="materialRadioBtn" runat="server" RepeatDirection="Horizontal"  RepeatColumns="3" CellPadding="4" CellSpacing="5" CssClass="auto-style14" Font-Names="Arial" Font-Size="Medium" style="margin-left: 194px" OnSelectedIndexChanged="materialRadioBtn_SelectedIndexChanged" AutoPostBack="true">
                         <asp:ListItem>Premium White</asp:ListItem>
                         <asp:ListItem>Kraft</asp:ListItem>
                           <asp:ListItem>White</asp:ListItem>
                         </asp:RadioButtonList>
                     </p>
-                    <p class="auto-style2">Finish<asp:RadioButtonList ID="finishRadioBtn" runat="server" RepeatDirection="Horizontal"  RepeatColumns="3" CellPadding="4" CellSpacing="5" CssClass="auto-style14" Font-Names="Arial" Font-Size="Medium" style="margin-left: 270px" OnSelectedIndexChanged="finishRadioBtn_SelectedIndexChanged" AutoPostBack="true">
+                    <p class="auto-style2">Finish<asp:RadioButtonList ID="finishRadioBtn" runat="server" RepeatDirection="Horizontal"  RepeatColumns="3" CellPadding="4" CellSpacing="5" CssClass="auto-style14" Font-Names="Arial" Font-Size="Medium" style="margin-left: 192px" OnSelectedIndexChanged="finishRadioBtn_SelectedIndexChanged" AutoPostBack="true">
                         <asp:ListItem>Gloss</asp:ListItem>
                         <asp:ListItem>Matte</asp:ListItem>
                         </asp:RadioButtonList>
                     </p>
                     
-                    <p class="auto-style2">Wall Type<asp:RadioButtonList ID="wallRadioBtn" runat="server" RepeatDirection="Horizontal"  RepeatColumns="3" CellPadding="4" CellSpacing="5" CssClass="auto-style14" Font-Names="Arial" Font-Size="Medium" style="margin-left: 280px" OnSelectedIndexChanged="wallRadioBtn_SelectedIndexChanged" AutoPostBack="true">
+                    <p class="auto-style2">Wall Type<asp:RadioButtonList ID="wallRadioBtn" runat="server" RepeatDirection="Horizontal"  RepeatColumns="3" CellPadding="4" CellSpacing="5" CssClass="auto-style14" Font-Names="Arial" Font-Size="Medium" style="margin-left: 197px" OnSelectedIndexChanged="wallRadioBtn_SelectedIndexChanged" AutoPostBack="true">
                         <asp:ListItem>Single</asp:ListItem>
                         <asp:ListItem>Double</asp:ListItem>
                           <asp:ListItem>Triple</asp:ListItem>

@@ -15,7 +15,8 @@ namespace ZenithFrontEnd
             {
                 finishRadioBtn.Enabled = false;
             }
-            
+            if (Session["BoxImage"] != null)
+                selectedBox.ImageUrl = Session["BoxImage"].ToString();
         }
 
         protected void sideRadioBtn_SelectedIndexChanged(object sender, EventArgs e)

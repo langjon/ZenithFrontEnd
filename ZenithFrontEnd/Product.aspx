@@ -47,6 +47,7 @@
     <div class="auto-style5">
         <div class="pageTitle">
             <p>PRODUCTS  </p>
+    
         <table style="text-align: center;" class="auto-style7">
 	
         <tr>
@@ -105,7 +106,7 @@
     </table>
             
           
-              
+     </form>          
             
      </div>
      </div>
@@ -182,7 +183,7 @@
             </div>
         </div>
     </footer>
-    </form>
+   
 </body>
 </html>
 

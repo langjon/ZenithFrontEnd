@@ -19,7 +19,9 @@ namespace ZenithFrontEnd
                 else
                     Label1.Text = "You selected: " + Session["Size"].ToString();
             }
-           
+            if (Session["BoxImage"] != null)
+                selectedBox.ImageUrl = Session["BoxImage"].ToString();
+
         }
 
        
@@ -48,14 +50,19 @@ namespace ZenithFrontEnd
                    
                     try
                     {
-                        if (Convert.ToInt32(txtCustom.Text) >= 0 &&
-                            Convert.ToInt32(txtCustom0.Text) >= 0 &&
-                            Convert.ToInt32(txtCustom1.Text) >= 0)
+                        if (Convert.ToDouble(txtCustom.Text) >= 0 &&
+                            Convert.ToDouble(txtCustom0.Text) >= 0 &&
+                            Convert.ToDouble(txtCustom1.Text) >= 0)
                         {
+                            
                             customSize = txtCustom.Text + " x " + txtCustom0.Text + " x " + txtCustom1.Text + " in";
                             Label1.Text = customSize;
                             Session["Size"] = "Custom size:" + customSize;
                             btSize.Text = "Select Standard Size from above list";
+                        }
+                        else
+                        {
+                            Label1.Text = "Invalid input";
                         }
                     }
                     catch

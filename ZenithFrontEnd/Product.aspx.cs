@@ -34,6 +34,7 @@ namespace ZenithFrontEnd
             Session["BoxType"] = "BOX-HSC";
             Session["BoxImage"] = "images/BOX-HSC.jpg";
             Server.Transfer("Size.aspx");
+            //Response.Redirect("Size.aspx");
         }
         protected void box4SidedRolloverTray_Clicked(object sender, EventArgs e)
         {
@@ -88,6 +89,11 @@ namespace ZenithFrontEnd
             Session["BoxType"] = "BOX-Tube";
             Session["BoxImage"] = "images/BOX-Tube.jpg";
             Server.Transfer("Size.aspx");
+        }
+        public override void VerifyRenderingInServerForm(Control control)
+        {
+            /* Confirms that an HtmlForm control is rendered for the specified ASP.NET
+          server control at run time. */
         }
     }
 }

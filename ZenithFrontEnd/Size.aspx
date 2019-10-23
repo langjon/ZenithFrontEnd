@@ -104,13 +104,15 @@
     <div id="errorMessages" runat="server">
     </div>
     <div style="height: 700px">
-
+ <form id="form1" runat="server">
         <div class="pageTitle">
             <p>BUILD YOUR BOX</p>
         </div>
-
+        <div>
+             <asp:ImageButton ID="selectedBox"  class="auto-style1"  runat="server" Height="134px" Width="160px"/>                
+        </div>
         <div id="sizeDiv">
-            <form id="form1" runat="server">
+           
                 <div style="font-size: large; font-weight: bold">
                      <p class="auto-style2">Size<asp:RadioButtonList width= "100%" ID="sizeRadioBtn" runat="server" OnSelectedIndexChanged="sizeRadioBtn_SelectedIndexChanged" AutoPostBack="true" RepeatDirection="Horizontal"  RepeatColumns="3" CellPadding="3" CellSpacing="2" CssClass="auto-style14" Font-Names="Arial" Font-Size="Medium">
                             <asp:ListItem>   6 x 6 x 6 in       </asp:ListItem>
@@ -138,9 +140,15 @@
                      </p>
                      <p class="auto-style4">
                      <br />
-                     <asp:TextBox CssClass="auto-style3" ID="txtCustom" runat="server" Width="34px" MaxLength="5"></asp:TextBox>&nbsp;x
-                     <asp:TextBox CssClass="auto-style3" ID="txtCustom0" runat="server" Width="34px" MaxLength="5"></asp:TextBox>&nbsp;x&nbsp;
-                     <asp:TextBox CssClass="auto-style3" ID="txtCustom1" runat="server" Width="34px" MaxLength="5"></asp:TextBox> in
+                      <label for="txtCustom"> Length
+                         <asp:TextBox CssClass="auto-style3" ID="txtCustom" runat="server" Width="50px" MaxLength="5"></asp:TextBox>&nbsp;x&nbsp;
+                      </label>
+                      <label for="txtCusto0m"> Width
+                         <asp:TextBox CssClass="auto-style3" ID="txtCustom0" runat="server" Width="50px" MaxLength="5"></asp:TextBox>&nbsp;x&nbsp;
+                      </label>
+                      <label for="txtCustom1"> Depth
+                         <asp:TextBox CssClass="auto-style3" ID="txtCustom1" runat="server" Width="52px" MaxLength="5"></asp:TextBox>&nbsp;in
+                      </label>
                    
                          </p>
                      <p class="auto-style9">
