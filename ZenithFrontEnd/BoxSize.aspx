@@ -19,85 +19,76 @@
         <li class="navbar-right"><a href="Product.aspx">
             <img class="nav-icon" src="images/BOX-16.png" />BUILD</a></li>
     </ul>
-
-    <div style="height:400px">
-        <div class="pageTitle">
-            <p>BOX SIZE</p>
-        </div>
- 
-        <table>
-<form>
-<p>Please select the size in inches:</p>
-<tr>
-
-<td>
-  <input type="radio" name="size" value="6x6x6"> 6 x 6 x 6<br>
-  </td>
-  <td>
-  <input type="radio" name="size" value="8x8x8"> 8 x 8 x 8<br>
-  </td>
-  <td>
-  <input type="radio" name="size" value="10x10x10"> 10 x 10 x 10<br>
-  </td>
-  <td>
-  <input type="radio" name="size" value="12x12x8"> 12 x 12 x 8<br>
-  </td>
-  </tr>
-    <tr><td></td></tr>
-    <tr><td></td></tr>
-  
-<tr>
-<td>
-  <input type="radio" name="size" value="12x12x12"> 12 x 12 x 12<br>
-  </td>
-  <td>
-  <input type="radio" name="size" value="12x12x4"> 12 x 12 x 4<br>
-  </td>
-  <td>
-  <input type="radio" name="size" value="12x12x6"> 12 x 12 x 6<br>
-  </td>
-  <td>
-  <input type="radio" name="size" value="12x12x14"> 12 x 12 x 14<br>
- </td>
- </tr>
- 
-    <tr><td></td></tr>
-    <tr><td></td></tr>
-
-<tr>
-<td>
-  <input type="radio" name="size" value="16x16x12"> 16 x 16 x 12<br>
-  </td>
-  <td>
-  <input type="radio" name="size" value="16x16x16"> 16 x 16 x 16<br>
-  </td>
-  <td>
-  <input type="radio" name="size" value="24x12x12"> 24 x 12 x 12<br>
-  </td>
-  <td>
-  <input type="radio" name="size" value="24x16x16"> 24 x 16 x 16<br>
- </td>
- </tr>
-    <tr><td></td></tr>
-    <tr><td></td></tr>
- <tr>
- <td>
- CUSTOM BOX SIZE <input type="text" name="size">
- </td>
- </tr>
- <br />
- <br />
- </table>
- 
-<br /><br />
-	<a href="Options.aspx">NEXT</a>
-</form>
-</td>
-	
-       
+    <div id="errorMessages" runat="server">
     </div>
-    <div>
-        <footer id="contactInfo" role="contentinfo">
+    <div style="height: 700px">
+ <form id="form1" runat="server">
+        <div class="pageTitle">
+            <p>BUILD YOUR BOX</p>
+        </div>
+        <div>
+             <asp:ImageButton ID="selectedBox"  class="auto-style1"  runat="server" Height="134px" Width="160px"/>                
+        </div>
+        <div id="sizeDiv">
+           
+                <div style="font-size: large; font-weight: bold">
+                     <p class="auto-style2">Size
+                      <asp:RadioButtonList width= "100%" ID="sizeRadioBtn" runat="server" OnSelectedIndexChanged="sizeRadioBtn_SelectedIndexChanged" AutoPostBack="true" RepeatDirection="Horizontal"  RepeatColumns="3" CellPadding="3" CellSpacing="2" CssClass="auto-style14" Font-Names="Arial" Font-Size="Medium">
+                            <asp:ListItem>   6 x 6 x 2 in       </asp:ListItem>
+                            <asp:ListItem>   9 x 6 x 3 in       </asp:ListItem>
+                            <asp:ListItem>   9 x 7 x 2.5 in    </asp:ListItem>
+                            <asp:ListItem>   7 x 5 x 1.5 in     </asp:ListItem>
+                            <asp:ListItem>   9 x 7 x 3 in    </asp:ListItem>
+                            <asp:ListItem>   9 x 7 x 4 in     </asp:ListItem>
+                            <asp:ListItem>   10 x 8 x 2 in     </asp:ListItem>
+                            <asp:ListItem>   10 x 8 x 4 in    </asp:ListItem>
+                            <asp:ListItem>   11 x 8 x 2 in    </asp:ListItem>
+                            <asp:ListItem>   12 x 9 x 3 in    </asp:ListItem>
+                            <asp:ListItem>   12 x 9 x 4 in    </asp:ListItem>
+                            <asp:ListItem>   12 x 12 x 2 in    </asp:ListItem>
+                        </asp:RadioButtonList>
+              
+                     </p>
+                    
+                      
+                     <p class="auto-style6">
+                        
+                     <label for="customSize">
+                     Custom Size:</label>
+                     </p>
+                     <p class="auto-style4">
+                     <br />
+                      <label for="txtCustom"> Length
+                         <asp:TextBox CssClass="auto-style3" ID="txtCustom" runat="server" Width="50px" MaxLength="5"></asp:TextBox>&nbsp;x&nbsp;
+                      </label>
+                      <label for="txtCusto0m"> Width
+                         <asp:TextBox CssClass="auto-style3" ID="txtCustom0" runat="server" Width="50px" MaxLength="5"></asp:TextBox>&nbsp;x&nbsp;
+                      </label>
+                      <label for="txtCustom1"> Depth
+                         <asp:TextBox CssClass="auto-style3" ID="txtCustom1" runat="server" Width="52px" MaxLength="5"></asp:TextBox>&nbsp;in
+                      </label>
+                         </p>
+
+                         <asp:Button ID="btSize" runat="server" Text="Select Custom Size" OnClick="btnSelectSize_Click" />
+                   
+                     <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+                     <br />
+                     <br />
+                     <p class="auto-style9">
+                         <a id="btnNext" href="options.aspx" class="auto-style3" style="font-size: large; color: #FFFFFF; font-weight: normal;">NEXT</a> 
+                          
+                         </p>
+                     <p class="auto-style10">
+                         <a id="btnBack" href="Product.aspx" class="textbox" style="font-size: large; color: #FFFFFF; font-weight: normal;">BACK</a>
+                         </p>
+                         <a id="btnHelp" href="Help.aspx"  class="auto-style15" style="padding: inherit; font-size: large; color: #FFFFFF; text-align: center; font-weight: normal; font-family: Arial; ">HELP</a>
+                   
+                     
+                    </div>
+            </div>
+            </form>
+        </div>   
+    <footer id="contactInfo" role="contentinfo">
             <div>
                 <section>
                     <div class="footerList">

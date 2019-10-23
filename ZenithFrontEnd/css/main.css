@@ -185,3 +185,91 @@ label {
         background-color: steelblue;
         text-decoration: underline;
     }
+.auto-style2 {
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-left: 258px;
+}
+
+.auto-style3 {
+    border-radius: 5px;
+    padding-left: 7px;
+}
+
+.auto-style4 {
+    margin-left: 360px;
+}
+
+.auto-style6 {
+    margin-left: 240px;
+}
+
+.auto-style9 {
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    border-radius: 5px;
+    height: 30px;
+    width: 71px;
+    background-color: steelblue;
+    color: white;
+    outline: none;
+    user-select: none;
+    float: right;
+    margin-left: 55px;
+    margin-right: 94px;
+}
+
+.auto-style0 {
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    border-radius: 5px;
+    height: 30px;
+    width: 130px;
+    background-color: steelblue;
+    color: white;
+    outline: none;
+    user-select: none;
+    float: left;
+    margin-left: 57px;
+}
+
+.auto-style10 {
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    border-radius: 5px;
+    height: 30px;
+    width: 61px;
+    background-color: steelblue;
+    color: white;
+    outline: none;
+    user-select: none;
+    float: right;
+    margin-left: 55px;
+    margin-right: 94px;
+}
+
+.auto-style12 {
+    margin-left: 320px;
+}
+
+.auto-style14 {
+    margin-left: 228px;
+}
+
+.auto-style15 {
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    border-radius: 5px;
+    height: 30px;
+    width: 70px;
+    background-color: steelblue;
+    color: white;
+    outline: none;
+    user-select: none;
+    float: left;
+    margin-left: 57px;
+}

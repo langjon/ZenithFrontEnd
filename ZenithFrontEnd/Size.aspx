@@ -151,7 +151,14 @@
                       </label>
                    
                          </p>
-                     <p class="auto-style9">
+                     
+                         <asp:Button ID="btSize" runat="server" Text="Select Custom Size" OnClick="btnSelectSize_Click" />
+                   
+                     <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+                     <br />
+                     <br />
+
+                        <p class="auto-style9">
                          <a id="btnNext" href="options.aspx" class="auto-style3" style="font-size: large; color: #FFFFFF; font-weight: normal;">NEXT</a> 
                           
                          </p>
@@ -160,11 +167,6 @@
                          </p>
                          <a id="btnHelp" href="Help.aspx"  class="auto-style15" style="padding: inherit; font-size: large; color: #FFFFFF; text-align: center; font-weight: normal; font-family: Arial; ">HELP</a>
                    
-                         <asp:Button ID="btSize" runat="server" Text="Select Custom Size" OnClick="btnSelectSize_Click" />
-                   
-                     <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
-                     <br />
-                     <br />
                      </p>
                     </div>
             </form>
