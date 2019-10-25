@@ -11,20 +11,25 @@
             width: 44%;
             height: 196px;
         }
+
         .auto-style2 {
             width: 50%;
             height: 246px;
         }
+
         .auto-style4 {
             width: 613px;
         }
+
         .auto-style5 {
             height: 594px;
         }
+
         .auto-style7 {
             height: 548px;
             width: 701px;
         }
+
         .auto-style8 {
             margin-top: 0px;
         }
@@ -32,87 +37,81 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <img id="logo" src="images/wp-logo.jpg" alt="CB Logo" />
-    <ul class="mainNav">
-        <li><a href="https://cbdisplaypac.ca/">
-            <img class="nav-icon" src="images/house-16.png" />HOME</a></li>
-        <li class="navbar-right"><a href="Cart.aspx">
-            <img class="nav-icon" src="images/cart-16.png" />CART</a></li>
-        <li class="navbar-right"><a href="Login.aspx">
-            <img class="nav-icon" src="images/user-16.png" />LOGIN</a></li>
-        <li class="navbar-right"><a href="Product.aspx">
-            <img class="nav-icon" src="images/BOX-16.png" />BUILD</a></li>
-    </ul>
+        <img id="logo" src="images/wp-logo.jpg" alt="CB Logo" />
+        <ul class="mainNav">
+            <li><a href="https://cbdisplaypac.ca/">
+                <img class="nav-icon" src="images/house-16.png" />HOME</a></li>
+            <li class="navbar-right"><a href="Cart.aspx">
+                <img class="nav-icon" src="images/cart-16.png" />CART</a></li>
+            <li class="navbar-right"><a href="Login.aspx">
+                <img class="nav-icon" src="images/user-16.png" />LOGIN</a></li>
+            <li class="navbar-right"><a href="Product.aspx">
+                <img class="nav-icon" src="images/BOX-16.png" />BUILD</a></li>
+        </ul>
         <div class="pageTitle">
             <p>PRODUCTS</p>
-            </div>
-    <div class="productTable">
-        <div>
-           
-    
-        <table style="text-align: center;" class="pageTitle">
-	
-        <tr>
-            <td class="auto-style4">
-			    <h5>Half Slotted Container</h5>           
-                <asp:ImageButton  ImageUrl="images/BOX-HSC.jpg" runat="server"  onclick="boxHSC_Clicked" AutoPostBack="true" Height="80%" Width="80%"/>                
-            </td>
+        </div>
+        <div class="productTable">
+            <div>
+                <table style="text-align: center;">
+                    <tr>
+                        <td>
+                            <h3>Half Slotted Container</h3>
+                            <asp:ImageButton ImageUrl="images/BOX-HSC.jpg" runat="server" OnClick="boxHSC_Clicked" AutoPostBack="true" Width="80%" />
+                        </td>
 
-            <td class="auto-style4">
-                <h5> Full Overlap Slotted Carton</h5>
-                <asp:ImageButton  ImageUrl="images/BOX-FOL.jpg" runat="server"  onclick="boxFOL_Clicked" AutoPostBack="true" Height="80%" Width="80%"/>                
-            </td>
-       
-            <td class="auto-style4">
-                  <h5>4 Sided Rollover Tray</h5>				
-                  <asp:ImageButton  ImageUrl="images/BOX-4-Sided-Rollover-Tray.jpg" runat="server"  onclick="box4SidedRolloverTray_Clicked" AutoPostBack="true" Height="80%" Width="80%"/>
-            </td>           
-       
-             <td class="auto-style4">
-                 <h5>Regular Slotted Carton</h5>
-                 <asp:ImageButton  ImageUrl="images/BOX-RSC_BT_RS.jpg" runat="server"  onclick="boxRSC_Clicked" AutoPostBack="true" Height="80%" Width="80%"/>                
-             </td>
-        
-             <td class="auto-style4">
-                 <h5> Cut Out Carton</h5>
-                 <asp:ImageButton  ImageUrl="images/BOX-COC.jpg" runat="server"  onclick="boxCOC_Clicked" AutoPostBack="true" Height="80%" Width="80%"/>                
-             </td>
-        </tr>
-        <tr>
-             <td class="auto-style4">
-                 <h5> 5 Panel Wrapper</h5>
-                 <asp:ImageButton  ImageUrl="images/BOX-5PW.jpg" runat="server"  onclick="box5PW_Clicked" AutoPostBack="true" Height="80%" Width="80%"/>                
-             </td>
-       
-             <td class="auto-style4">
-                 <h5> Scored Pad</h5>
-                 <asp:ImageButton  ImageUrl="images/BOX-ScoredPad.jpg" runat="server"  onclick="boxScoredPad_Clicked" AutoPostBack="true" Height="80%" Width="80%"/>                
-             </td>
-        
-             <td class="auto-style4">
-                 <h5> Slit Score Pad</h5>
-                 <asp:ImageButton  ImageUrl="images/BOX-SlitScorePad.jpg" runat="server"  onclick="boxSlitScorePad_Clicked" AutoPostBack="true" Height="80%" Width="80%"/>                
-             </td>
-        
-             <td class="auto-style4">
-                 <h5>Telebox</h5>
-                 <asp:ImageButton  ImageUrl="images/BOX-Telebox.jpg" runat="server"  onclick="boxTelebox_Clicked" AutoPostBack="true" Height="80%" Width="80%"/>                
-             </td>
-         
-             <td class="auto-style4">
-                 <h5>Tube</h5>
-                 <asp:ImageButton  ImageUrl="images/BOX-Tube.jpg" runat="server"  onclick="boxTube_Clicked" AutoPostBack="true" Height="80%" Width="80%"/>                
-             </td>
-           
-        </tr>
-    </table>
+                        <td>
+                            <h3>Full Overlap Slotted Carton</h3>
+                            <asp:ImageButton ImageUrl="images/BOX-FOL.jpg" runat="server" OnClick="boxFOL_Clicked" AutoPostBack="true" Width="80%" />
+                        </td>
+
+                        <td>
+                            <h3>4 Sided Rollover Tray</h3>
+                            <asp:ImageButton ImageUrl="images/BOX-4-Sided-Rollover-Tray.jpg" runat="server" OnClick="box4SidedRolloverTray_Clicked" AutoPostBack="true" Width="80%" />
+                        </td>
+
+                        <td>
+                            <h3>Regular Slotted Carton</h3>
+                            <asp:ImageButton ImageUrl="images/BOX-RSC_BT_RS.jpg" runat="server" OnClick="boxRSC_Clicked" AutoPostBack="true" Width="80%" />
+                        </td>
+
+                        <td>
+                            <h3>Cut Out Carton</h3>
+                            <asp:ImageButton ImageUrl="images/BOX-COC.jpg" runat="server" OnClick="boxCOC_Clicked" AutoPostBack="true" Width="80%" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>5 Panel Wrapper</h3>
+                            <asp:ImageButton ImageUrl="images/BOX-5PW.jpg" runat="server" OnClick="box5PW_Clicked" AutoPostBack="true" Width="80%" />
+                        </td>
+
+                        <td>
+                            <h3>Scored Pad</h3>
+                            <asp:ImageButton ImageUrl="images/BOX-ScoredPad.jpg" runat="server" OnClick="boxScoredPad_Clicked" AutoPostBack="true" Width="80%" />
+                        </td>
+
+                        <td>
+                            <h3>Slit Score Pad</h3>
+                            <asp:ImageButton ImageUrl="images/BOX-SlitScorePad.jpg" runat="server" OnClick="boxSlitScorePad_Clicked" AutoPostBack="true" Width="80%" />
+                        </td>
+
+                        <td>
+                            <h3>Telebox</h3>
+                            <asp:ImageButton ImageUrl="images/BOX-Telebox.jpg" runat="server" OnClick="boxTelebox_Clicked" AutoPostBack="true" Width="80%" />
+                        </td>
+
+                        <td>
+                            <h3>Tube</h3>
+                            <asp:ImageButton ImageUrl="images/BOX-Tube.jpg" runat="server" OnClick="boxTube_Clicked" AutoPostBack="true" Width="80%" />
+                        </td>
+                    </tr>
+                </table>
             </div>
-     </div>
-     </form>          
-            
-     
-    
-     <footer id="contactInfo" role="contentinfo">
+        </div>
+    </form>
+
+    <footer id="contactInfo" role="contentinfo">
         <div>
             <section>
                 <div class="footerList">
@@ -183,7 +182,7 @@
             </div>
         </div>
     </footer>
-   
+
 </body>
 </html>
 
