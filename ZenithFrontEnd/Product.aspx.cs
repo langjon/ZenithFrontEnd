@@ -40,7 +40,7 @@ namespace ZenithFrontEnd
         {
             Session["BoxType"] = "BOX-4-Sided-Rollover-Tray";
             Session["BoxImage"] = "images/BOX-4-Sided-Rollover-Tray.jpg";
-            Server.Transfer("BoxSize.aspx");
+            Server.Transfer("Size.aspx");
         }
         protected void boxRSC_Clicked(object sender, EventArgs e)
         {

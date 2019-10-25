@@ -43,74 +43,74 @@
         <li class="navbar-right"><a href="Product.aspx">
             <img class="nav-icon" src="images/BOX-16.png" />BUILD</a></li>
     </ul>
-
-    <div class="auto-style5">
         <div class="pageTitle">
-            <p>PRODUCTS  </p>
+            <p>PRODUCTS</p>
+            </div>
+    <div class="productTable">
+        <div>
+           
     
-        <table style="text-align: center;" class="auto-style7">
+        <table style="text-align: center;" class="pageTitle">
 	
         <tr>
             <td class="auto-style4">
 			    <h5>Half Slotted Container</h5>           
-                <asp:ImageButton  ImageUrl="images/BOX-HSC.jpg" class="auto-style1"  runat="server"  onclick="boxHSC_Clicked" AutoPostBack="true" Height="134px" Width="160px"/>                
+                <asp:ImageButton  ImageUrl="images/BOX-HSC.jpg" runat="server"  onclick="boxHSC_Clicked" AutoPostBack="true" Height="80%" Width="80%"/>                
             </td>
 
             <td class="auto-style4">
                 <h5> Full Overlap Slotted Carton</h5>
-                <asp:ImageButton  ImageUrl="images/BOX-FOL.jpg" class="auto-style2"  runat="server"  onclick="boxFOL_Clicked" AutoPostBack="true" Height="129px" Width="131px"/>                
+                <asp:ImageButton  ImageUrl="images/BOX-FOL.jpg" runat="server"  onclick="boxFOL_Clicked" AutoPostBack="true" Height="80%" Width="80%"/>                
             </td>
        
             <td class="auto-style4">
                   <h5>4 Sided Rollover Tray</h5>				
-                  <asp:ImageButton  ImageUrl="images/BOX-4-Sided-Rollover-Tray.jpg" class="auto-style3" runat="server"  onclick="box4SidedRolloverTray_Clicked" AutoPostBack="true" Height="110px" Width="121px" CssClass="auto-style8"/>
+                  <asp:ImageButton  ImageUrl="images/BOX-4-Sided-Rollover-Tray.jpg" runat="server"  onclick="box4SidedRolloverTray_Clicked" AutoPostBack="true" Height="80%" Width="80%"/>
             </td>           
        
              <td class="auto-style4">
                  <h5>Regular Slotted Carton</h5>
-                 <asp:ImageButton  ImageUrl="images/BOX-RSC_BT_RS.jpg" class="auto-style1"  runat="server"  onclick="boxRSC_Clicked" AutoPostBack="true" Height="124px" Width="151px"/>                
+                 <asp:ImageButton  ImageUrl="images/BOX-RSC_BT_RS.jpg" runat="server"  onclick="boxRSC_Clicked" AutoPostBack="true" Height="80%" Width="80%"/>                
              </td>
         
              <td class="auto-style4">
                  <h5> Cut Out Carton</h5>
-                 <asp:ImageButton  ImageUrl="images/BOX-COC.jpg" class="auto-style2"  runat="server"  onclick="boxCOC_Clicked" AutoPostBack="true" Height="119px" Width="191px"/>                
+                 <asp:ImageButton  ImageUrl="images/BOX-COC.jpg" runat="server"  onclick="boxCOC_Clicked" AutoPostBack="true" Height="80%" Width="80%"/>                
              </td>
         </tr>
         <tr>
              <td class="auto-style4">
                  <h5> 5 Panel Wrapper</h5>
-                 <asp:ImageButton  ImageUrl="images/BOX-5PW.jpg" class="auto-style3"  runat="server"  onclick="box5PW_Clicked" AutoPostBack="true" Height="132px" Width="132px"/>                
+                 <asp:ImageButton  ImageUrl="images/BOX-5PW.jpg" runat="server"  onclick="box5PW_Clicked" AutoPostBack="true" Height="80%" Width="80%"/>                
              </td>
        
              <td class="auto-style4">
                  <h5> Scored Pad</h5>
-                 <asp:ImageButton  ImageUrl="images/BOX-ScoredPad.jpg" class="auto-style3"  runat="server"  onclick="boxScoredPad_Clicked" AutoPostBack="true" Height="100px" Width="125px"/>                
+                 <asp:ImageButton  ImageUrl="images/BOX-ScoredPad.jpg" runat="server"  onclick="boxScoredPad_Clicked" AutoPostBack="true" Height="80%" Width="80%"/>                
              </td>
         
              <td class="auto-style4">
                  <h5> Slit Score Pad</h5>
-                 <asp:ImageButton  ImageUrl="images/BOX-SlitScorePad.jpg" class="auto-style3"  runat="server"  onclick="boxSlitScorePad_Clicked" AutoPostBack="true" Height="93px" Width="141px"/>                
+                 <asp:ImageButton  ImageUrl="images/BOX-SlitScorePad.jpg" runat="server"  onclick="boxSlitScorePad_Clicked" AutoPostBack="true" Height="80%" Width="80%"/>                
              </td>
         
              <td class="auto-style4">
                  <h5>Telebox</h5>
-                 <asp:ImageButton  ImageUrl="images/BOX-Telebox.jpg" class="auto-style3"  runat="server"  onclick="boxTelebox_Clicked" AutoPostBack="true" Height="88px" Width="136px"/>                
+                 <asp:ImageButton  ImageUrl="images/BOX-Telebox.jpg" runat="server"  onclick="boxTelebox_Clicked" AutoPostBack="true" Height="80%" Width="80%"/>                
              </td>
          
              <td class="auto-style4">
                  <h5>Tube</h5>
-                 <asp:ImageButton  ImageUrl="images/BOX-Tube.jpg" class="auto-style3"  runat="server"  onclick="boxTube_Clicked" AutoPostBack="true" Height="131px" Width="153px"/>                
+                 <asp:ImageButton  ImageUrl="images/BOX-Tube.jpg" runat="server"  onclick="boxTube_Clicked" AutoPostBack="true" Height="80%" Width="80%"/>                
              </td>
            
         </tr>
     </table>
-            
-          
+            </div>
+     </div>
      </form>          
             
-     </div>
-     </div>
-       
+     
     
      <footer id="contactInfo" role="contentinfo">
         <div>
