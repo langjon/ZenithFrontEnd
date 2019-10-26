@@ -6,34 +6,6 @@
 <head runat="server">
     <title>C&B Packaging - Create Account</title>
     <link rel="stylesheet" href="css/main.css" />
-    <style type="text/css">
-        .auto-style1 {
-            width: 44%;
-            height: 196px;
-        }
-
-        .auto-style2 {
-            width: 50%;
-            height: 246px;
-        }
-
-        .auto-style4 {
-            width: 613px;
-        }
-
-        .auto-style5 {
-            height: 594px;
-        }
-
-        .auto-style7 {
-            height: 548px;
-            width: 701px;
-        }
-
-        .auto-style8 {
-            margin-top: 0px;
-        }
-    </style>
 </head>
 <body>
     <form id="form1" runat="server">

@@ -51,7 +51,7 @@
             <p class="subTitle">NEW CUSTOMERS</p>
             <p>By creating an account with us, you will be able to proceed through the checkout process faster for future orders. Account will also allow you to store multiple payment and shipping addresses, view and track your orders and more.</p>
 
-            <a id="btnCreate" href="CreateAccount.aspx">CREATE AN ACCOUNT</a>
+            <a class="btnGeneral" href="CreateAccount.aspx">CREATE AN ACCOUNT</a>
         </div>
 
     </div>

@@ -9,21 +9,7 @@
 
     <link rel="stylesheet" href="css/main.css" />
     <style type="text/css">
-        .auto-style2 {
-            font-weight: bold;
-            font-size: 1.3em;
-            margin-left: 258px;
-        }
-        .auto-style3 {
-            border-radius: 5px;
-            padding-left: 7px;
-        }
-        .auto-style4 {
-            margin-left: 360px;
-        }
-        .auto-style6 {
-            margin-left: 240px;
-        }
+
         .auto-style9 {
             border-style: none;
             border-color: inherit;
@@ -39,6 +25,7 @@
             margin-left: 55px;
             margin-right: 94px;
         }
+
         .auto-style10 {
             border-style: none;
             border-color: inherit;
@@ -54,6 +41,7 @@
             margin-left: 55px;
             margin-right: 94px;
         }
+
         .auto-style0 {
             border-style: none;
             border-color: inherit;
@@ -68,6 +56,7 @@
             float: left;
             margin-left: 57px;
         }
+
         .auto-style11 {
             border-style: none;
             border-color: inherit;
@@ -83,7 +72,7 @@
             margin-left: 57px;
         }
     </style>
-    </head>
+</head>
 <body>
     <img id="logo" src="images/wp-logo.jpg" alt="CB Logo" />
     <ul class="mainNav">
@@ -99,17 +88,17 @@
     <div id="errorMessages" runat="server">
     </div>
     <div style="height: 700px">
-                    <form id="form1" runat="server">
-        <div class="pageTitle">
-            <p>BUILD YOUR BOX</p>
-        </div>
-         <div>
-             <asp:ImageButton ID="selectedBox"  class="auto-style1"  runat="server" Height="134px" Width="160px"/>                
-        </div>
-        <div id="quantityDiv">
-
+        <form id="form1" runat="server">
+            <div class="pageTitle">
+                <p>BUILD YOUR BOX</p>
+            </div>
+            <div>
+                <asp:ImageButton ID="selectedBox" class="auto-style1" runat="server" Height="134px" Width="160px" />
+            </div>
+            <div id="quantityDiv">
                 <div style="font-size: large; font-weight: bold">
-                     <p class="auto-style2">Quantity<asp:RadioButtonList width= "100%" ID="quantityRadioBtn" runat="server" OnSelectedIndexChanged="quantityRadioBtn_SelectedIndexChanged" AutoPostBack="true"  RepeatDirection="Horizontal"  RepeatColumns="3" CellPadding="3" CellSpacing="2" CssClass="auto-style14" Font-Names="Arial" Font-Size="Medium" style="margin-left: 241px">
+                    <p>
+                        Quantity<asp:RadioButtonList Width="30%" ID="quantityRadioBtn" runat="server" OnSelectedIndexChanged="quantityRadioBtn_SelectedIndexChanged" AutoPostBack="true" RepeatDirection="Horizontal" RepeatColumns="3" CellPadding="3" CellSpacing="2" CssClass="auto-style14" Font-Names="Arial" Font-Size="Medium">
                             <asp:ListItem>  1       </asp:ListItem>
                             <asp:ListItem>  50      </asp:ListItem>
                             <asp:ListItem>  1000    </asp:ListItem>
@@ -120,34 +109,30 @@
                             <asp:ListItem>  500     </asp:ListItem>
                             <asp:ListItem>  5000    </asp:ListItem>
                         </asp:RadioButtonList>
-                      
-                     </p>
-                     <p class="auto-style12">
+
+                    </p>
+                    <div class="auto-style12">
                         &nbsp;&nbsp;&nbsp;
                      <p class="auto-style6">
-                     <label for="customQuantity">
-                     Custom Quantity:</label>
+                         <label for="customQuantity">
+                             Custom Quantity:</label>
                      </p>
-                     <p class="auto-style4">
-                     <br />
-                     <asp:TextBox CssClass="auto-style3" ID="txtCustom" runat="server" Width="34px"></asp:TextBox>&nbsp; pcs.</p>
-                     <p class="auto-style8">
-                          <asp:Button ID="BtnSelectQty" class="auto-style11" runat="server" Text="Select Custom Quantity" Width="291px" OnClick="BtnSelectQty_Click" />
-                          <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
-                     </p>
-                     <p class="auto-style9">
-                         <a id="btnNext" href="ProductReview.aspx" class="auto-style3" style="font-size: large; color: #FFFFFF; font-weight: normal;">NEXT</a>
-                         </p>
-                     <p class="auto-style10">
-                         <a id="btnBack" href="options.aspx" class="textbox" style="font-size: large; color: #FFFFFF; font-weight: normal;">BACK</a>
-                         </p>
-                          <a id="btnHelp" href="Help.aspx"  class="auto-style11" style="padding: inherit; font-size: large; color: #FFFFFF; text-align: center; font-weight: normal; font-family: Arial; ">HELP</a>
-                     <br />
-                     <br />
-                     </p>
+                        <p class="auto-style4">
+                            <br />
+                            <asp:TextBox CssClass="auto-style3" ID="txtCustom" runat="server" Width="34px"></asp:TextBox>&nbsp; pcs.
+                        </p>
+                        <p class="auto-style8">
+                            <asp:Button ID="BtnSelectQty" class="auto-style11" runat="server" Text="Select Custom Quantity" Width="291px" OnClick="BtnSelectQty_Click" />
+                            <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+                        </p>
+                        <a class="btnGeneral" href="ProductReview.aspx.aspx">NEXT</a>
+                        <a class="btnGeneral" href="Product.aspx">BACK</a>
+                        <a class="btnGeneral" href="Help.aspx">HELP</a>
                     </div>
-            </form>
-        </div>
+                </div>
+            </div>
+        </form>
+    </div>
     <footer id="contactInfo" role="contentinfo">
         <div>
             <section>

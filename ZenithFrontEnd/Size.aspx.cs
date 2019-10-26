@@ -24,9 +24,6 @@ namespace ZenithFrontEnd
 
         }
 
-       
-     
-
         protected void sizeRadioBtn_SelectedIndexChanged(object sender, EventArgs e)
         {
             Label1.Text = "You selected: " + sizeRadioBtn.SelectedItem.ToString();
@@ -40,7 +37,7 @@ namespace ZenithFrontEnd
             String customSize = null;
             if (btSize.Text == "Select Custom Size")
             {
-                if (txtCustom.Text == "" && txtCustom0.Text == "" && txtCustom1.Text == "")
+                if (txtLength.Text == "" && txtWidth.Text == "" && txtDepth.Text == "")
                 {
                     Label1.Text = "Please enter size";
                    
@@ -50,12 +47,12 @@ namespace ZenithFrontEnd
                    
                     try
                     {
-                        if (Convert.ToDouble(txtCustom.Text) >= 0 &&
-                            Convert.ToDouble(txtCustom0.Text) >= 0 &&
-                            Convert.ToDouble(txtCustom1.Text) >= 0)
+                        if (Convert.ToDouble(txtLength.Text) >= 0 &&
+                            Convert.ToDouble(txtWidth.Text) >= 0 &&
+                            Convert.ToDouble(txtDepth.Text) >= 0)
                         {
                             
-                            customSize = txtCustom.Text + " x " + txtCustom0.Text + " x " + txtCustom1.Text + " in";
+                            customSize = txtLength.Text + " x " + txtWidth.Text + " x " + txtDepth.Text + " in";
                             Label1.Text = customSize;
                             Session["Size"] = "Custom size:" + customSize;
                             btSize.Text = "Select Standard Size from above list";

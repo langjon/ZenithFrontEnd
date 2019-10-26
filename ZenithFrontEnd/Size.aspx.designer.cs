@@ -49,31 +49,31 @@ namespace ZenithFrontEnd {
         protected global::System.Web.UI.WebControls.RadioButtonList sizeRadioBtn;
         
         /// <summary>
-        /// txtCustom control.
+        /// txtLength control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCustom;
+        protected global::System.Web.UI.WebControls.TextBox txtLength;
         
         /// <summary>
-        /// txtCustom0 control.
+        /// txtWidth control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCustom0;
+        protected global::System.Web.UI.WebControls.TextBox txtWidth;
         
         /// <summary>
-        /// txtCustom1 control.
+        /// txtDepth control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCustom1;
+        protected global::System.Web.UI.WebControls.TextBox txtDepth;
         
         /// <summary>
         /// btSize control.
