@@ -20,7 +20,7 @@
             border-width: medium;
             border-radius: 5px;
             height: 34px;
-            width: 104px;
+            width: 127px;
             background-color: steelblue;
             color: white;
             outline: none;
@@ -163,7 +163,7 @@
                     <p class="auto-style2">&nbsp;&nbsp;&nbsp;
                      </p>
                      <p class="auto-style9">
-                         <a id="btnCheckout" href="checkout.aspx"  style="font-size: large; color: #FFFFFF; font-weight: normal; vertical-align: middle; text-align: justify;">  CHECKOUT</a></p>
+                         <a id="btnCheckout" href="checkout.aspx"  style="font-size: large; color: #FFFFFF; font-weight: normal; vertical-align: middle; text-align: justify;"> ADD TO CART</a></p>
                      <p class="auto-style10">
                          <a id="btnBack" href="quantity.aspx" class="textbox" style="font-size: large; color: #FFFFFF; font-weight: normal; vertical-align: middle; text-align: center;">BACK</a>
                          </p>
