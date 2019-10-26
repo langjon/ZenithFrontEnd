@@ -49,17 +49,19 @@
             font-size: 1.3em;
             margin-left: 295px;
             width: 901px;
+            height: 27px;
         }
         .auto-style12 {
             font-weight: bold;
             font-size: 1.3em;
             margin-left: 298px;
-            width: 955px;
+            width: 897px;
         }
         .auto-style13 {
             font-weight: bold;
             font-size: 1.3em;
-            margin-left: 350px;
+            margin-left: 300px;
+            width: 899px;
         }
         .auto-style14 {
             font-weight: bold;
@@ -96,6 +98,16 @@
             margin-left: 57px;
             top: auto;
         }
+        .auto-style16 {
+            height: 700px;
+            width: 1333px;
+        }
+        .auto-style17 {
+            font-weight: bold;
+            font-size: 1.3em;
+            margin-left: 294px;
+            width: 900px;
+        }
     </style>
     </head>
 <body>
@@ -112,7 +124,7 @@
     </ul>
     <div id="errorMessages" runat="server">
     </div>
-    <div style="height: 700px">
+    <div class="auto-style16">
 
         <div class="pageTitle">
             <p>YOUR PRODUCT SPECIFICATION</p>
@@ -126,25 +138,27 @@
                    
                         <asp:ImageButton class="auto-style2" ID="boxType" runat="server" Height="230px" Width="247px"/>
                   
-                    <p class="auto-style11">Size&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <p class="auto-style11">Size&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:Label ID="LabelSize"  runat="server" Text="Please select Size"></asp:Label>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Material&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Label ID="LabelMaterial" runat="server" Text="Please select Material"></asp:Label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </p>
+                        <p class="auto-style11">Material&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Label ID="LabelMaterial" runat="server" Text="Please select Material"></asp:Label>
 &nbsp;&nbsp;
                     </p>
-                    <p class="auto-style14">Printing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <p class="auto-style14">Printing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:Label ID="LabelSides" runat="server" Text="Please select Sides"></asp:Label>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Finish&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                    </p>
+                        <p class="auto-style17">&nbsp;Finish&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
                          <asp:Label ID="LabelFinish" runat="server" Text="Please select Finish"></asp:Label>
 &nbsp;&nbsp;
                     </p>
-                    <p class="auto-style12">Wall Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Label ID="LabelWallType" runat="server" Text="Please select WallType"></asp:Label>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Quantity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Label ID="LabelQuantity" runat="server" Text="Please select Quantity"></asp:Label>
+                    <p class="auto-style12">Wall Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="LabelWallType" runat="server" Text="Please select WallType"></asp:Label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                     </p>
-                    <p class="auto-style13">Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Label ID="LabelPrice" runat="server" Text="Total Price is: "></asp:Label>
+                        <p class="auto-style12">Quantity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:Label ID="LabelQuantity" runat="server" Text="Please select Quantity"></asp:Label>
+                    </p>
+                    <p class="auto-style13">Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Label ID="LabelPrice" runat="server" Text="Total Price: "></asp:Label>
                     </p>
                     <p class="auto-style2">&nbsp;&nbsp;&nbsp;
                      </p>
