@@ -44,7 +44,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.4.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -70,6 +83,10 @@
   <ItemGroup>
     <Content Include="BoxSize.aspx" />
     <Content Include="Checkout.aspx" />
+    <Content Include="CheckoutPages\CheckoutCancel.aspx" />
+    <Content Include="CheckoutPages\CheckoutComplete.aspx" />
+    <Content Include="CheckoutPages\CheckoutError.aspx" />
+    <Content Include="CheckoutPages\CheckoutReview.aspx" />
     <Content Include="CreateAccount.aspx" />
     <Content Include="css\main.css" />
     <Content Include="Help.aspx" />
@@ -99,6 +116,7 @@
     <Content Include="Login.aspx" />
     <Content Include="ProductReview.aspx" />
     <Content Include="Quantity.aspx" />
+    <Content Include="ShoppingCart\Cart.aspx" />
     <Content Include="Size.aspx" />
     <Content Include="ThankYou.aspx" />
     <Content Include="ThankYouHelp.aspx" />
@@ -113,6 +131,34 @@
     </Compile>
     <Compile Include="BoxSize.aspx.designer.cs">
       <DependentUpon>BoxSize.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CheckoutPages\CheckoutCancel.aspx.cs">
+      <DependentUpon>CheckoutCancel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CheckoutPages\CheckoutCancel.aspx.designer.cs">
+      <DependentUpon>CheckoutCancel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CheckoutPages\CheckoutComplete.aspx.cs">
+      <DependentUpon>CheckoutComplete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CheckoutPages\CheckoutComplete.aspx.designer.cs">
+      <DependentUpon>CheckoutComplete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CheckoutPages\CheckoutError.aspx.cs">
+      <DependentUpon>CheckoutError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CheckoutPages\CheckoutError.aspx.designer.cs">
+      <DependentUpon>CheckoutError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CheckoutPages\CheckoutReview.aspx.cs">
+      <DependentUpon>CheckoutReview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CheckoutPages\CheckoutReview.aspx.designer.cs">
+      <DependentUpon>CheckoutReview.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\CartItems.cs" />
     <Compile Include="Checkout.aspx.cs">
@@ -136,6 +182,8 @@
     <Compile Include="Help.aspx.designer.cs">
       <DependentUpon>Help.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderDetail.cs" />
     <Compile Include="Options.aspx.cs">
       <DependentUpon>Options.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -157,6 +205,7 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\ProductContext.cs" />
     <Compile Include="ProductReview.aspx.cs">
       <DependentUpon>ProductReview.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -171,6 +220,13 @@
     </Compile>
     <Compile Include="Quantity.aspx.designer.cs">
       <DependentUpon>Quantity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShoppingCart\Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShoppingCart\Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -202,6 +258,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CheckoutPages\Web.config" />
     <None Include="packages.config" />
     <Content Include="Site.Master" />
     <None Include="Web.Debug.config">
@@ -212,7 +269,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Checkout\" />
+    <Folder Include="App_Start\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

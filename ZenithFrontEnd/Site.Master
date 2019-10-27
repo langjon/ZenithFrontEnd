@@ -13,16 +13,16 @@
 <body>
     <form id="form1" runat="server">
 
-         <img id="logo" src="images/wp-logo.jpg" alt="CB Logo" />
+         <img id="logo" src="../images/wp-logo.jpg" alt="CB Logo" />
     <ul class="mainNav">
         <li><a href="https://cbdisplaypac.ca/">
-            <img class="nav-icon" src="images/house-16.png" />HOME</a></li>
+            <img class="nav-icon" src="../images/house-16.png" />HOME</a></li>
         <li class="navbar-right"><a href="Cart.aspx">
-            <img class="nav-icon" src="images/cart-16.png" />CART</a></li>
+            <img class="nav-icon" src="../images/cart-16.png" />CART</a></li>
         <li class="navbar-right"><a href="Login.aspx">
-            <img class="nav-icon" src="images/user-16.png" />LOGIN</a></li>
+            <img class="nav-icon" src="../images/user-16.png" />LOGIN</a></li>
         <li class="navbar-right"><a href="Product.aspx">
-            <img class="nav-icon" src="images/BOX-16.png" />BUILD</a></li>
+            <img class="nav-icon" src="../images/BOX-16.png" />BUILD</a></li>
     </ul>
     <div id="errorMessages" runat="server">
     </div>
@@ -37,7 +37,7 @@
             <section>
                 <div class="footerList">
                     <div></div>
-                    <img style="padding-top: 20px;" src="images/footer_logo.jpg" />
+                    <img style="padding-top: 20px;" src="../images/footer_logo.jpg" />
                     <div style="margin-top: 10px; margin-bottom: 0px;"></div>
                     <p style="font-size: 0.9em;">We specialize in consumer-focused point of purchase displays, retail packaging and industrial packaging. We have delivered outstanding quality for leading clients across North America for over thirty years.</p>
                     <div></div>
