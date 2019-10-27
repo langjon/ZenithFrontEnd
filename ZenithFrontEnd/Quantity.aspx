@@ -136,7 +136,7 @@
                           <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
                      </p>
                      <p class="auto-style9">
-                         <a id="btnNext" href="ProductReview.aspx" class="auto-style3" style="font-size: large; color: #FFFFFF; font-weight: normal;">NEXT</a>
+                         <a id="btnNext" href="UploadImage.aspx" class="auto-style3" style="font-size: large; color: #FFFFFF; font-weight: normal;">NEXT</a>
                          </p>
                      <p class="auto-style10">
                          <a id="btnBack" href="options.aspx" class="textbox" style="font-size: large; color: #FFFFFF; font-weight: normal;">BACK</a>

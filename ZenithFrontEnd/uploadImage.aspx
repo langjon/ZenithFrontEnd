@@ -1,74 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ProductReview.aspx.cs" Inherits="ZenithFrontEnd.ProductReview" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="uploadImage.aspx.cs" Inherits="ZenithFrontEnd.uploadImage" %>
 
-
-<!DOCTYPE html>
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>C&B Packaging - Specification</title>
+<head>
+    <title>Image Upload</title>
 
     <link rel="stylesheet" href="css/main.css" />
     <style type="text/css">
-        .auto-style2 {
-            font-weight: bold;
-            font-size: 1.3em;
-            margin-left: 258px;
-        }
-        .auto-style9 {
-            border-style: none;
-            border-color: inherit;
-            border-width: medium;
-            border-radius: 5px;
-            height: 34px;
-            width: 127px;
-            background-color: steelblue;
-            color: white;
-            outline: none;
-            user-select: none;
-            float: right;
-            margin-left: 55px;
-            margin-right: 94px;
-        }
-        .auto-style10 {
-            border-style: none;
-            border-color: inherit;
-            border-width: medium;
-            border-radius: 5px;
-            height: 30px;
-            width: 68px;
-            background-color: steelblue;
-            color: white;
-            outline: none;
-            user-select: none;
-            float: right;
-            margin-left: 55px;
-            margin-right: 94px;
-        }
-        .auto-style11 {
-            font-weight: bold;
-            font-size: 1.3em;
-            margin-left: 295px;
-            width: 901px;
-            height: 27px;
-        }
-        .auto-style12 {
-            font-weight: bold;
-            font-size: 1.3em;
-            margin-left: 298px;
-            width: 897px;
-        }
-        .auto-style13 {
-            font-weight: bold;
-            font-size: 1.3em;
-            margin-left: 300px;
-            width: 899px;
-        }
-        .auto-style14 {
-            font-weight: bold;
-            font-size: 1.3em;
-            margin-left: 297px;
-            width: 900px;
-        }
         .auto-style0 {
             border-style: none;
             border-color: inherit;
@@ -83,35 +21,62 @@
             float: left;
             margin-left: 57px;
         }
-        .auto-style15 {
+        .auto-style7 {
+            width: 761px;
+            height: 316px;
+            margin-left: 134px;
+            margin-top: 76px;
+            margin-right: 98px;
+        }
+         .auto-style5 {
             border-style: none;
             border-color: inherit;
             border-width: medium;
             border-radius: 5px;
-            height: 27px;
-            width: 97px;
+            height: 30px;
+            width: 75px;
             background-color: steelblue;
             color: white;
             outline: none;
             user-select: none;
             float: left;
-            margin-left: 57px;
-            top: auto;
+            margin-left: 23px;
         }
-        .auto-style16 {
-            height: 700px;
-            width: 1333px;
+          .auto-style9 {
+            border-style: none;
+            border-color: inherit;
+            border-width: medium;
+            border-radius: 5px;
+            height: 30px;
+            width: 49px;
+            background-color: steelblue;
+            color: white;
+            outline: none;
+            user-select: none;
+            float: right;
+            margin-left: 0px;
+            margin-right: 94px;
+            margin-top: 0px;
         }
-        .auto-style17 {
-            font-weight: bold;
-            font-size: 1.3em;
-            margin-left: 294px;
-            width: 900px;
+           .auto-style10 {
+            border-style: none;
+            border-color: inherit;
+            border-width: medium;
+            border-radius: 5px;
+            height: 30px;
+            width: 66px;
+            background-color: steelblue;
+            color: white;
+            outline: none;
+            user-select: none;
+            float: right;
+            margin-left: 17px;
+            margin-right: 94px;
         }
-    </style>
-    </head>
+        </style>
+</head>
 <body>
-    <img id="logo" src="images/wp-logo.jpg" alt="CB Logo" />
+     <img id="logo" src="images/wp-logo.jpg" alt="CB Logo" />
     <ul class="mainNav">
         <li><a href="https://cbdisplaypac.ca/">
             <img class="nav-icon" src="images/house-16.png" />HOME</a></li>
@@ -122,59 +87,54 @@
         <li class="navbar-right"><a href="Product.aspx">
             <img class="nav-icon" src="images/BOX-16.png" />BUILD</a></li>
     </ul>
-    <div id="errorMessages" runat="server">
+    
+
+
+<form id="Form1" method="post" runat="server" class="auto-style7">
+    <div class="pageTitle">
+            <p>BUILD YOUR BOX</p>
+        </div>
+
+
+    <fieldset>
+    <legend>Upload Your Logo/Image</legend>
+    <div id="div1" runat="server">
+        <br />
+        <input type="file" size="65" runat="server" id="FileUpload1">
     </div>
-    <div class="auto-style16">
+    <br />
+    <asp:Button ID="Button1" runat="server" Text="Upload" OnClick="Button1_Click" />
+    <%--<asp:Button ID="ButtonMore" runat="server" Text="Add 10 Photos" OnClick="ButtonMore_Click" />--%>
+        <br />
+    </fieldset>
+    <br />
 
-        <div class="pageTitle">
-            <p>YOUR PRODUCT SPECIFICATION</p>
-            <p>&nbsp;</p>
-        </div>
+    <div id="div5" runat="server" visible="false">
 
-        <div id="prodSpec">
-            <form id="form1" runat="server">
-                <div style="font-size: large; font-weight: bold">
-                    
-                   
-                        <asp:ImageButton class="auto-style2" ID="boxType" runat="server" Height="230px" Width="247px"/>
-                  
-                    <p class="auto-style11">Size&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Label ID="LabelSize"  runat="server" Text="Please select Size"></asp:Label>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    </p>
-                        <p class="auto-style11">Material&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Label ID="LabelMaterial" runat="server" Text="Please select Material"></asp:Label>
-&nbsp;&nbsp;
-                    </p>
-                    <p class="auto-style14">Printing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Label ID="LabelSides" runat="server" Text="Please select Sides"></asp:Label>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-                    </p>
-                        <p class="auto-style17">&nbsp;Finish&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
-                         <asp:Label ID="LabelFinish" runat="server" Text="Please select Finish"></asp:Label>
-&nbsp;&nbsp;
-                    </p>
-                    <p class="auto-style12">Wall Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="LabelWallType" runat="server" Text="Please select WallType"></asp:Label>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-                    </p>
-                        <p class="auto-style12">Quantity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:Label ID="LabelQuantity" runat="server" Text="Please select Quantity"></asp:Label>
-                    </p>
-                    <p class="auto-style13">Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Label ID="LabelPrice" runat="server" Text="Total Price: "></asp:Label>
-                    </p>
-                    <p class="auto-style2">&nbsp;&nbsp;&nbsp;
-                     </p>
-                     <p class="auto-style9">
-                         <a id="btnCheckout" href="checkout.aspx"  style="font-size: large; color: #FFFFFF; font-weight: normal; vertical-align: middle; text-align: justify;"> ADD TO CART</a></p>
-                     <p class="auto-style10">
-                         <a id="btnBack" href="uploadImage.aspx" class="textbox" style="font-size: large; color: #FFFFFF; font-weight: normal; vertical-align: middle; text-align: center;">BACK</a>
+    <fieldset>
+    <legend>
+        <br />
+        Show Photos<br />
+        </legend>
+    <div id="div3" runat="server">
+        <asp:Image ID="Image1" runat="server" Height="200" Width="200" ImageUrl="~/Image.gif" />
+    </div>
+    <br />
+    </fieldset><br />
+        <br />
+        <br />
+        <a id="btnHelp" class="auto-style5" href="Help.aspx" style="padding: inherit; font-size: large; color: #FFFFFF; text-align: center; font-weight: normal; font-family: Arial; top: auto;">HELP</a><br />
+
+         <p class="auto-style9">
+                         <a id="btnNext" href="ProductReview.aspx" class="auto-style3" style="font-size: large; color: #FFFFFF; font-weight: normal;">NEXT</a>
                          </p>
-                    <a id="btnHelp" href="Help.aspx"  class="auto-style15" style="padding: inherit; font-size: large; color: #FFFFFF; text-align: center; font-weight: normal; font-family: Arial; ">HELP</a><br />
-                     <br />
-                     <br />
-                     </p>
-                    </div>
-            </form>
-        </div>
-    <footer id="contactInfo" role="contentinfo">
+                     <p class="auto-style10">
+                         <a id="btnBack" href="quantity.aspx" class="textbox" style="font-size: large; color: #FFFFFF; font-weight: normal;">BACK</a>
+                         </p>
+&nbsp;</div>
+</form>
+
+     <footer id="contactInfo" role="contentinfo">
         <div>
             <section>
                 <div class="footerList">
