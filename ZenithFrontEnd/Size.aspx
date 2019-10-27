@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>C&B Packaging - Login</title>
+    <title>C&B Packaging - Size</title>
 
     <link rel="stylesheet" href="css/main.css" />
 
