@@ -21,6 +21,21 @@
             float: left;
             margin-left: 57px;
         }
+         .auto-style15 {
+            border-style: none;
+            border-color: inherit;
+            border-width: medium;
+            border-radius: 5px;
+            height: 27px;
+            width: 97px;
+            background-color: steelblue;
+            color: white;
+            outline: none;
+            user-select: none;
+            float: left;
+            margin-left: 57px;
+            top: auto;
+        }
         .auto-style7 {
             width: 761px;
             height: 316px;
@@ -28,7 +43,25 @@
             margin-top: 76px;
             margin-right: 98px;
         }
-         .auto-style5 {
+          .auto-style9 {
+            border-style: none;
+            border-color: inherit;
+            border-width: medium;
+            border-radius: 5px;
+            height: 29px;
+            width: 75px;
+            background-color: steelblue;
+            color: white;
+            outline: none;
+            user-select: none;
+            float: right;
+            margin-left: 0px;
+            margin-right: 90px;
+            margin-top: 0px;
+            font-size: large;
+            vertical-align: middle;
+        }
+           .auto-style10 {
             border-style: none;
             border-color: inherit;
             border-width: medium;
@@ -39,39 +72,15 @@
             color: white;
             outline: none;
             user-select: none;
-            float: left;
-            margin-left: 23px;
-        }
-          .auto-style9 {
-            border-style: none;
-            border-color: inherit;
-            border-width: medium;
-            border-radius: 5px;
-            height: 30px;
-            width: 49px;
-            background-color: steelblue;
-            color: white;
-            outline: none;
-            user-select: none;
-            float: right;
-            margin-left: 0px;
-            margin-right: 94px;
-            margin-top: 0px;
-        }
-           .auto-style10 {
-            border-style: none;
-            border-color: inherit;
-            border-width: medium;
-            border-radius: 5px;
-            height: 30px;
-            width: 66px;
-            background-color: steelblue;
-            color: white;
-            outline: none;
-            user-select: none;
             float: right;
             margin-left: 17px;
             margin-right: 94px;
+        }
+        .auto-style11 {
+            height: 269px;
+        }
+        .auto-style12 {
+            color: #FFFFFF;
         }
         </style>
 </head>
@@ -109,30 +118,47 @@
     </fieldset>
     <br />
 
-    <div id="div5" runat="server" visible="false">
+    <div id="div5" runat="server" visible="false" class="auto-style11">
 
     <fieldset>
     <legend>
         <br />
-        Show Photos<br />
+        Show Logo/Image<br />
         </legend>
     <div id="div3" runat="server">
+        <br />
         <asp:Image ID="Image1" runat="server" Height="200" Width="200" ImageUrl="~/Image.gif" />
     </div>
     <br />
     </fieldset><br />
+        
         <br />
-        <br />
-        <a id="btnHelp" class="auto-style5" href="Help.aspx" style="padding: inherit; font-size: large; color: #FFFFFF; text-align: center; font-weight: normal; font-family: Arial; top: auto;">HELP</a><br />
+        
+<br />
+    </div>
 
-         <p class="auto-style9">
-                         <a id="btnNext" href="ProductReview.aspx" class="auto-style3" style="font-size: large; color: #FFFFFF; font-weight: normal;">NEXT</a>
-                         </p>
-                     <p class="auto-style10">
+    <br />
+    <br />
+
+   <%-- <a id="btnHelp" class="auto-style5" href="Help.aspx" style="padding: inherit; font-size: large; color: #FFFFFF; text-align: center; font-weight: normal; font-family: Arial; top: auto;">HELP</a><br />
+    <br />
+    <br />
+        <p class="auto-style10">
                          <a id="btnBack" href="quantity.aspx" class="textbox" style="font-size: large; color: #FFFFFF; font-weight: normal;">BACK</a>
                          </p>
-&nbsp;</div>
+    <p class="auto-style9" style="text-align: center">
+                         <a id="btnNext" href="ProductReview.aspx" class="auto-style3" style="font-size: large; color: #FFFFFF; font-weight: normal;">NEXT</a>
+                         </p>--%>
+
+     <p class="auto-style9">
+                         <a href="ProductReview.aspx"><span class="auto-style12">NEXT</span></a></p>
+                     <p class="auto-style10">
+                         <a id="btnBack" href="quantity.aspx" class="textbox" style="font-size: large; color: #FFFFFF; font-weight: normal; vertical-align: middle; text-align: center;">BACK</a>
+                         </p>
+                    <a id="btnHelp" href="Help.aspx"  class="auto-style15" style="padding: inherit; font-size: large; color: #FFFFFF; text-align: center; font-weight: normal; font-family: Arial; ">HELP</a><br />
+                     <br />
 </form>
+   
 
      <footer id="contactInfo" role="contentinfo">
         <div>
