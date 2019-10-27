@@ -23,6 +23,7 @@ namespace ZenithFrontEnd
                 Session["Finish"] = "";
                 Session["Wall"] = "";
                 Session["Quantity"] = "";
+                Session["Price"] = "";
             }
             //if (Session["Username"] != null)
             //{

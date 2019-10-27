@@ -125,7 +125,7 @@
                             <asp:Button ID="BtnSelectQty" class="auto-style11" runat="server" Text="Select Custom Quantity" Width="291px" OnClick="BtnSelectQty_Click" />
                             <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
                         </p>
-                        <a class="btnGeneral" href="ProductReview.aspx.aspx">NEXT</a>
+                        <a class="btnGeneral" href="uploadImage.aspx">NEXT</a>
                         <a class="btnGeneral" href="Product.aspx">BACK</a>
                         <a class="btnGeneral" href="Help.aspx">HELP</a>
                     </div>

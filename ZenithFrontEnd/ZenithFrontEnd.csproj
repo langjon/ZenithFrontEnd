@@ -18,9 +18,9 @@
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44308</IISExpressSSLPort>
-    <IISExpressAnonymousAuthentication />
-    <IISExpressWindowsAuthentication />
-    <IISExpressUseClassicPipelineMode />
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -120,6 +120,7 @@
     <Content Include="Size.aspx" />
     <Content Include="ThankYou.aspx" />
     <Content Include="ThankYouHelp.aspx" />
+    <Content Include="uploadImage.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -255,6 +256,13 @@
     </Compile>
     <Compile Include="ThankYouHelp.aspx.designer.cs">
       <DependentUpon>ThankYouHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="uploadImage.aspx.cs">
+      <DependentUpon>uploadImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uploadImage.aspx.designer.cs">
+      <DependentUpon>uploadImage.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
