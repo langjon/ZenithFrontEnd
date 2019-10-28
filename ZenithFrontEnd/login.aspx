@@ -13,7 +13,7 @@
     <ul class="mainNav">
         <li><a href="https://cbdisplaypac.ca/">
             <img class="nav-icon" src="images/house-16.png" />HOME</a></li>
-        <li class="navbar-right"><a href="Cart.aspx">
+        <li class="navbar-right"><a href="ShoppingCart/ViewCart.aspx">
             <img class="nav-icon" src="images/cart-16.png" />CART</a></li>
         <li class="navbar-right"><a href="Login.aspx">
             <img class="nav-icon" src="images/user-16.png" />LOGIN</a></li>
@@ -51,7 +51,7 @@
             <p class="subTitle">NEW CUSTOMERS</p>
             <p>By creating an account with us, you will be able to proceed through the checkout process faster for future orders. Account will also allow you to store multiple payment and shipping addresses, view and track your orders and more.</p>
 
-            <a class="btnGeneral" href="CreateAccount.aspx">CREATE AN ACCOUNT</a>
+            <a class="btnCreate" href="CreateAccount.aspx">CREATE AN ACCOUNT</a>
         </div>
 
     </div>

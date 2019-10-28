@@ -8,72 +8,14 @@
     <title>C&B Packaging - Login</title>
 
     <link rel="stylesheet" href="css/main.css" />
-    <style type="text/css">
-        .auto-style2 {
-            font-weight: bold;
-            font-size: 1.3em;
-            margin-left: 258px;
-        }
-
-        .auto-style3 {
-            border-radius: 5px;
-            padding-left: 7px;
-        }
-
-        .auto-style9 {
-            border-style: none;
-            border-color: inherit;
-            border-width: medium;
-            border-radius: 5px;
-            height: 30px;
-            width: 71px;
-            background-color: steelblue;
-            color: white;
-            outline: none;
-            user-select: none;
-            float: right;
-            margin-left: 55px;
-            margin-right: 94px;
-        }
-
-        .auto-style10 {
-            border-style: none;
-            border-color: inherit;
-            border-width: medium;
-            border-radius: 5px;
-            height: 30px;
-            width: 73px;
-            background-color: steelblue;
-            color: white;
-            outline: none;
-            user-select: none;
-            float: right;
-            margin-left: 55px;
-            margin-right: 94px;
-        }
-
-        .auto-style15 {
-            border-style: none;
-            border-color: inherit;
-            border-width: medium;
-            border-radius: 5px;
-            height: 30px;
-            width: 70px;
-            background-color: steelblue;
-            color: white;
-            outline: none;
-            user-select: none;
-            float: left;
-            margin-left: 57px;
-        }
-    </style>
+    
 </head>
 <body>
     <img id="logo" src="images/wp-logo.jpg" alt="CB Logo" />
     <ul class="mainNav">
         <li><a href="https://cbdisplaypac.ca/">
             <img class="nav-icon" src="images/house-16.png" />HOME</a></li>
-        <li class="navbar-right"><a href="Cart.aspx">
+        <li class="navbar-right"><a href="ShoppingCart/ViewCart.aspx">
             <img class="nav-icon" src="images/cart-16.png" />CART</a></li>
         <li class="navbar-right"><a href="Login.aspx">
             <img class="nav-icon" src="images/user-16.png" />LOGIN</a></li>
@@ -87,49 +29,51 @@
             <div class="pageTitle">
                 <p>BUILD YOUR BOX</p>
             </div>
-            <div>
+            <div id="buildDiv">
                 <asp:ImageButton ID="selectedBox" class="auto-style1" runat="server" Height="134px" Width="160px" />
-            </div>
-            <div id="sidesDiv">
 
-                <div style="font-size: large; font-weight: bold">
-                    <p class="auto-style2">
-                        Printing<asp:RadioButtonList ID="sideRadioBtn" runat="server" RepeatDirection="Horizontal" RepeatColumns="3" CellPadding="4" CellSpacing="5" CssClass="auto-style14" Font-Names="Arial" Font-Size="Medium" Style="margin-left: 189px" OnSelectedIndexChanged="sideRadioBtn_SelectedIndexChanged" AutoPostBack="true">
-                            <asp:ListItem>Outside Only</asp:ListItem>
-                            <asp:ListItem>Inside Only</asp:ListItem>
-                            <asp:ListItem>Both Sides</asp:ListItem>
-                        </asp:RadioButtonList>
-                    </p>
-                    <p class="auto-style2">
-                        Material<asp:RadioButtonList ID="materialRadioBtn" runat="server" RepeatDirection="Horizontal" RepeatColumns="3" CellPadding="4" CellSpacing="5" CssClass="auto-style14" Font-Names="Arial" Font-Size="Medium" Style="margin-left: 194px" OnSelectedIndexChanged="materialRadioBtn_SelectedIndexChanged" AutoPostBack="true">
-                            <asp:ListItem>Premium White</asp:ListItem>
-                            <asp:ListItem>Kraft</asp:ListItem>
-                            <asp:ListItem>White</asp:ListItem>
-                        </asp:RadioButtonList>
-                    </p>
-                    <p class="auto-style2">
-                        Finish<asp:RadioButtonList ID="finishRadioBtn" runat="server" RepeatDirection="Horizontal" RepeatColumns="3" CellPadding="4" CellSpacing="5" CssClass="auto-style14" Font-Names="Arial" Font-Size="Medium" Style="margin-left: 192px" OnSelectedIndexChanged="finishRadioBtn_SelectedIndexChanged" AutoPostBack="true">
-                            <asp:ListItem>Gloss</asp:ListItem>
-                            <asp:ListItem>Matte</asp:ListItem>
-                        </asp:RadioButtonList>
-                    </p>
+                <div>
 
-                    <p class="auto-style2">
-                        Wall Type<asp:RadioButtonList ID="wallRadioBtn" runat="server" RepeatDirection="Horizontal" RepeatColumns="3" CellPadding="4" CellSpacing="5" CssClass="auto-style14" Font-Names="Arial" Font-Size="Medium" Style="margin-left: 197px" OnSelectedIndexChanged="wallRadioBtn_SelectedIndexChanged" AutoPostBack="true">
-                            <asp:ListItem>Single</asp:ListItem>
-                            <asp:ListItem>Double</asp:ListItem>
-                            <asp:ListItem>Triple</asp:ListItem>
-                        </asp:RadioButtonList>
-                    </p>
+                    <div style="font-size: large; font-weight: bold">
+                        <p class="auto-style2">
+                            Printing<asp:RadioButtonList ID="sideRadioBtn" runat="server" RepeatDirection="Horizontal" RepeatColumns="3" Font-Names="Arial" Font-Size="Medium" OnSelectedIndexChanged="sideRadioBtn_SelectedIndexChanged" AutoPostBack="true">
+                                <asp:ListItem>Outside Only</asp:ListItem>
+                                <asp:ListItem>Inside Only</asp:ListItem>
+                                <asp:ListItem>Both Sides</asp:ListItem>
+                            </asp:RadioButtonList>
+                        </p>
+                        <p class="auto-style2">
+                            Material<asp:RadioButtonList ID="materialRadioBtn" runat="server" RepeatDirection="Horizontal" RepeatColumns="3" Font-Names="Arial" Font-Size="Medium" OnSelectedIndexChanged="materialRadioBtn_SelectedIndexChanged" AutoPostBack="true">
+                                <asp:ListItem>Premium White</asp:ListItem>
+                                <asp:ListItem>Kraft</asp:ListItem>
+                                <asp:ListItem>White</asp:ListItem>
+                            </asp:RadioButtonList>
+                        </p>
+                        <p class="auto-style2">
+                            Finish<asp:RadioButtonList ID="finishRadioBtn" runat="server" RepeatDirection="Horizontal" RepeatColumns="2" Font-Names="Arial" Font-Size="Medium" OnSelectedIndexChanged="finishRadioBtn_SelectedIndexChanged" AutoPostBack="true">
+                                <asp:ListItem>Gloss</asp:ListItem>
+                                <asp:ListItem>Matte</asp:ListItem>
+                            </asp:RadioButtonList>
+                        </p>
 
-                    <p class="auto-style12">
-                        &nbsp;&nbsp;&nbsp;
+                        <p class="auto-style2">
+                            Wall Type<asp:RadioButtonList ID="wallRadioBtn" runat="server" RepeatDirection="Horizontal" RepeatColumns="3" Font-Names="Arial" Font-Size="Medium" OnSelectedIndexChanged="wallRadioBtn_SelectedIndexChanged" AutoPostBack="true">
+                                <asp:ListItem>Single</asp:ListItem>
+                                <asp:ListItem>Double</asp:ListItem>
+                                <asp:ListItem>Triple</asp:ListItem>
+                            </asp:RadioButtonList>
+                        </p>
+
+                        <p class="auto-style12">
+                            &nbsp;&nbsp;&nbsp;
      
-                    </p>
-                    <a class="btnGeneral" href="Quantity.aspx">NEXT</a>
-                    <a class="btnGeneral" href="Product.aspx">BACK</a>
-                    <a class="btnGeneral" href="Help.aspx">HELP</a>
+                        </p>
+                        <a class="btnGeneral" href="Quantity.aspx">NEXT</a>
+                        <a class="btnGeneral" href="Product.aspx">BACK</a>
+                        <a class="btnGeneral" href="Help.aspx">HELP</a>
+                    </div>
                 </div>
+            </div>
         </form>
     </div>
     <footer id="contactInfo" role="contentinfo">

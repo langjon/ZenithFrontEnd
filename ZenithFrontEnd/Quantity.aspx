@@ -9,7 +9,6 @@
 
     <link rel="stylesheet" href="css/main.css" />
     <style type="text/css">
-
         .auto-style9 {
             border-style: none;
             border-color: inherit;
@@ -78,7 +77,7 @@
     <ul class="mainNav">
         <li><a href="https://cbdisplaypac.ca/">
             <img class="nav-icon" src="images/house-16.png" />HOME</a></li>
-        <li class="navbar-right"><a href="Cart.aspx">
+        <li class="navbar-right"><a href="ShoppingCart/ViewCart.aspx">
             <img class="nav-icon" src="images/cart-16.png" />CART</a></li>
         <li class="navbar-right"><a href="Login.aspx">
             <img class="nav-icon" src="images/user-16.png" />LOGIN</a></li>
@@ -92,42 +91,43 @@
             <div class="pageTitle">
                 <p>BUILD YOUR BOX</p>
             </div>
-            <div>
+            <div id="buildDiv">
                 <asp:ImageButton ID="selectedBox" class="auto-style1" runat="server" Height="134px" Width="160px" />
-            </div>
-            <div id="quantityDiv">
-                <div style="font-size: large; font-weight: bold">
-                    <p>
-                        Quantity<asp:RadioButtonList Width="30%" ID="quantityRadioBtn" runat="server" OnSelectedIndexChanged="quantityRadioBtn_SelectedIndexChanged" AutoPostBack="true" RepeatDirection="Horizontal" RepeatColumns="3" CellPadding="3" CellSpacing="2" CssClass="auto-style14" Font-Names="Arial" Font-Size="Medium">
-                            <asp:ListItem>  1       </asp:ListItem>
-                            <asp:ListItem>  50      </asp:ListItem>
-                            <asp:ListItem>  1000    </asp:ListItem>
-                            <asp:ListItem>  10      </asp:ListItem>
-                            <asp:ListItem>  100     </asp:ListItem>
-                            <asp:ListItem>  2000    </asp:ListItem>
-                            <asp:ListItem>  25      </asp:ListItem>
-                            <asp:ListItem>  500     </asp:ListItem>
-                            <asp:ListItem>  5000    </asp:ListItem>
-                        </asp:RadioButtonList>
 
-                    </p>
-                    <div class="auto-style12">
-                        &nbsp;&nbsp;&nbsp;
+                <div>
+                    <div style="font-size: large; font-weight: bold">
+                        <p>
+                            Quantity<asp:RadioButtonList Width="30%" ID="quantityRadioBtn" runat="server" OnSelectedIndexChanged="quantityRadioBtn_SelectedIndexChanged" AutoPostBack="true" RepeatDirection="Horizontal" RepeatColumns="3" CellPadding="3" CellSpacing="2" CssClass="auto-style14" Font-Names="Arial" Font-Size="Medium">
+                                <asp:ListItem>  1       </asp:ListItem>
+                                <asp:ListItem>  50      </asp:ListItem>
+                                <asp:ListItem>  1000    </asp:ListItem>
+                                <asp:ListItem>  10      </asp:ListItem>
+                                <asp:ListItem>  100     </asp:ListItem>
+                                <asp:ListItem>  2000    </asp:ListItem>
+                                <asp:ListItem>  25      </asp:ListItem>
+                                <asp:ListItem>  500     </asp:ListItem>
+                                <asp:ListItem>  5000    </asp:ListItem>
+                            </asp:RadioButtonList>
+
+                        </p>
+                        <div class="auto-style12">
+                            &nbsp;&nbsp;&nbsp;
                      <p class="auto-style6">
                          <label for="customQuantity">
                              Custom Quantity:</label>
                      </p>
-                        <p class="auto-style4">
-                            <br />
-                            <asp:TextBox CssClass="auto-style3" ID="txtCustom" runat="server" Width="34px"></asp:TextBox>&nbsp; pcs.
-                        </p>
-                        <p class="auto-style8">
-                            <asp:Button ID="BtnSelectQty" class="auto-style11" runat="server" Text="Select Custom Quantity" Width="291px" OnClick="BtnSelectQty_Click" />
-                            <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
-                        </p>
-                        <a class="btnGeneral" href="ProductReview.aspx.aspx">NEXT</a>
-                        <a class="btnGeneral" href="Product.aspx">BACK</a>
-                        <a class="btnGeneral" href="Help.aspx">HELP</a>
+                            <p class="auto-style4">
+                                <br />
+                                <asp:TextBox CssClass="auto-style3" ID="txtCustom" runat="server" Width="34px"></asp:TextBox>&nbsp; pcs.
+                            </p>
+                            <p class="auto-style8">
+                                <asp:Button ID="BtnSelectQty" class="auto-style11" runat="server" Text="Select Custom Quantity" Width="291px" OnClick="BtnSelectQty_Click" />
+                                <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+                            </p>
+                            <a class="btnGeneral" href="ProductReview.aspx">NEXT</a>
+                            <a class="btnGeneral" href="Product.aspx">BACK</a>
+                            <a class="btnGeneral" href="Help.aspx">HELP</a>
+                        </div>
                     </div>
                 </div>
             </div>

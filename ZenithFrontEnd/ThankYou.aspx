@@ -13,6 +13,7 @@
             border-radius: 5px;
             padding-left: 7px;
         }
+
         .auto-style9 {
             border-style: none;
             border-color: inherit;
@@ -28,17 +29,18 @@
             margin-left: 55px;
             margin-right: 94px;
         }
+
         .auto-style12 {
             margin-left: 320px;
         }
-        </style>
-    </head>
+    </style>
+</head>
 <body>
     <img id="logo" src="images/wp-logo.jpg" alt="CB Logo" />
     <ul class="mainNav">
         <li><a href="https://cbdisplaypac.ca/">
             <img class="nav-icon" src="images/house-16.png" />HOME</a></li>
-        <li class="navbar-right"><a href="Cart.aspx">
+        <li class="navbar-right"><a href="ShoppingCart/ViewCart.aspx">
             <img class="nav-icon" src="images/cart-16.png" />CART</a></li>
         <li class="navbar-right"><a href="Login.aspx">
             <img class="nav-icon" src="images/user-16.png" />LOGIN</a></li>
@@ -49,24 +51,27 @@
     </div>
     <div style="height: 700px">
 
-        <div id="ThankYouDiv">
+        <div id="buildDiv">
             <form id="form1" runat="server">
                 <div style="font-size: large; font-weight: bold">
-                    <p style="font-family: 'Arial Black'; font-size: xx-large; font-weight: bolder; color: #4682B4; text-align: center"> &nbsp;</p>
-                    <p style="font-family: 'Arial Black'; font-size: xx-large; font-weight: bolder; color: #4682B4; text-align: center"> THANK YOU! </p>
-                    <p style="text-align: center; font-size: large; font-family: Arial; font-style: normal">Your Order Has Been Placed</p>
-                    <p class="auto-style12">
-                        &nbsp;&nbsp;&nbsp;
-                      
-                     <p class="auto-style9" style="font-weight: normal; vertical-align: middle; text-align: center">
-                         <a id="btnNext" href="product.aspx" class="auto-style3" style="font-size: large; color: #FFFFFF">MAIN PAGE</a>
-                         </p>
-                     <br />
-                     <br />
-                     </p>
-                    </div>
+                    <p style="font-family: 'Arial Black'; font-size: xx-large; font-weight: bolder; color: #4682B4; text-align: center">&nbsp;</p>
+                    <p style="font-family: 'Arial Black'; font-size: xx-large; font-weight: bolder; color: #4682B4; text-align: center">THANK YOU! </p>
+                    <p style="text-align: center; font-size: large; font-family: Arial; font-style: normal">Item Successfully Added to Cart</p>
+
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <a class="btnGeneral" href="/ShoppingCart/ViewCart.aspx">Checkout</a>
+                      <a class="btnGeneral" href="Product.aspx">Build Another Product</a>
+                    
+
+                    <br />
+
+                </div>
             </form>
         </div>
+    </div>
     <footer id="contactInfo" role="contentinfo">
         <div>
             <section>

@@ -1,0 +1,35 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ViewCart.aspx.cs" Inherits="ZenithFrontEnd.ShoppingCart.ViewCart" %>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <!--<asp:Button ID="loadCart" runat="server" Text="Load Cart" OnClick="loadCart_Click" />-->
+
+    <asp:DataList ID="cartListTable" runat="server">
+        <HeaderTemplate>
+            <td>Image</td>
+            <td>Type</td>
+            <td>Size</td>
+            <td>Material</td>
+            <td>Printing Sides</td>
+            <td>Finish</td>
+            <td>Wall Type</td>
+            <td>Quantity</td>
+            <td>Date</td>
+            <td>Price</td>
+        </HeaderTemplate>
+        <ItemTemplate>
+            <td>placeholder</td>
+            <td><%#Eval("prodType") %></td>
+            <td><%#Eval("prodSize") %></td>
+            <td><%#Eval("prodMaterial") %></td>
+            <td><%#Eval("prodFinish") %></td>
+            <td><%#Eval("prodWallType") %></td>
+            <td><%#Eval("prodPrintSides") %></td>
+            <td><%#Eval("prodQuantity") %></td>
+            <td><%#Eval("prodDateCreated") %></td>
+            <td><%#Eval("prodPrice") %></td>
+        </ItemTemplate>
+    </asp:DataList>
+    <asp:DataList ID="DataList1" runat="server">
+
+    </asp:DataList>
+</asp:Content>
