@@ -14,6 +14,7 @@ namespace ZenithFrontEnd.ShoppingCart
         string prodValue;
         string cartItem;
         string[] cartItemDetails = new string[9];
+        double totalPrice = 0.0;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -39,11 +40,14 @@ namespace ZenithFrontEnd.ShoppingCart
                     cartTable.Rows.Add(cartItemDetails[0].ToString(), cartItemDetails[1].ToString(), cartItemDetails[2].ToString(),
                         cartItemDetails[3].ToString(), cartItemDetails[4].ToString(), cartItemDetails[5].ToString(),
                         cartItemDetails[6].ToString(), cartItemDetails[7].ToString(), cartItemDetails[8].ToString());
+                    totalPrice += Convert.ToDouble(cartItemDetails[8]);
                 }
+                
             }
 
             cartListTable.DataSource = cartTable;
             cartListTable.DataBind();
+            lblTotal.Text = totalPrice.ToString();
         }
 
         protected void loadCart_Click(object sender, EventArgs e)

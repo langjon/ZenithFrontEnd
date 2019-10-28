@@ -85,8 +85,8 @@
         </style>
 </head>
 <body>
-    <div>
-     <img id="logo" src="images/wp-logo.jpg" alt="CB Logo" />
+   
+    <img id="logo" src="images/wp-logo.jpg" alt="CB Logo" />
     <ul class="mainNav">
         <li><a href="https://cbdisplaypac.ca/">
             <img class="nav-icon" src="images/house-16.png" />HOME</a></li>
@@ -97,8 +97,6 @@
         <li class="navbar-right"><a href="Product.aspx">
             <img class="nav-icon" src="images/BOX-16.png" />BUILD</a></li>
     </ul>
-    
-    </div>
 
 <form id="Form1" method="post" runat="server" class="auto-style7">
     <div class="pageTitle">

@@ -15,6 +15,7 @@
             <td>Quantity</td>
             <td>Date</td>
             <td>Price</td>
+            
         </HeaderTemplate>
         <ItemTemplate>
             <td>placeholder</td>
@@ -27,9 +28,15 @@
             <td><%#Eval("prodQuantity") %></td>
             <td><%#Eval("prodDateCreated") %></td>
             <td><%#Eval("prodPrice") %></td>
+           
         </ItemTemplate>
     </asp:DataList>
     <asp:DataList ID="DataList1" runat="server">
 
     </asp:DataList>
+     <strong>
+            <asp:Label ID="LabelTotalText" runat="server" Text="Order Total: "></asp:Label>
+            <asp:Label ID="lblTotal" runat="server" EnableViewState="false"></asp:Label>
+        </strong> 
 </asp:Content>
+

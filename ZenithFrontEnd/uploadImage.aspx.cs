@@ -39,43 +39,8 @@ namespace ZenithFrontEnd
                             {
                                 Image1.ImageUrl = "~/Images/" + fileName;
                             }
-                        //    if (i == 1)
-                        //    {
-                        //        Image2.ImageUrl = "~/Images/" + fileName;
-                        //    }
-                        //    if (i == 2)
-                        //    {
-                        //        Image3.ImageUrl = "~/Images/" + fileName;
-                        //    }
-                        //    if (i == 3)
-                        //    {
-                        //        Image4.ImageUrl = "~/Images/" + fileName;
-                        //    }
-                        //    if (i == 4)
-                        //    {
-                        //        Image5.ImageUrl = "~/Images/" + fileName;
-                        //    }
-                        //    if (i == 5)
-                        //    {
-                        //        Image6.ImageUrl = "~/Images/" + fileName;
-                        //    }
-                        //    if (i == 6)
-                        //    {
-                        //        Image7.ImageUrl = "~/Images/" + fileName;
-                        //    }
-                        //    if (i == 7)
-                        //    {
-                        //        Image8.ImageUrl = "~/Images/" + fileName;
-                        //    }
-                        //    if (i == 8)
-                        //    {
-                        //        Image9.ImageUrl = "~/Images/" + fileName;
-                        //    }
-                        //    if (i == 9)
-                        //    {
-                        //        Image10.ImageUrl = "~/Images/" + fileName;
-                        //    }
-                          }
+                     
+                        }
                     }
                     catch (Exception ex)
                     {
@@ -85,21 +50,7 @@ namespace ZenithFrontEnd
             }
         }
 
-        //protected void ButtonMore_Click(object sender, EventArgs e)
-        //{
-        //    if (ButtonMore.Text == "Only five")
-        //    {
-        //        div2.Visible = false;
-        //        ButtonMore.Text = "Add 10 Photos";
-        //        div4.Visible = false;
-        //    }
+        
 
-        //    else if (ButtonMore.Text == "Add 10 Photos")
-        //    {
-        //        div2.Visible = true;
-        //        ButtonMore.Text = "Only five";
-        //        div4.Visible = true;
-        //    }
-        //}
     }
     }
