@@ -116,21 +116,21 @@
                          <label for="customQuantity">
                              Custom Quantity:</label>
                      </p>
-                            <p class="auto-style4">
-                                <br />
-                                <asp:TextBox CssClass="auto-style3" ID="txtCustom" runat="server" Width="34px"></asp:TextBox>&nbsp; pcs.
-                            </p>
-                            <p class="auto-style8">
-                                <asp:Button ID="BtnSelectQty" class="auto-style11" runat="server" Text="Select Custom Quantity" Width="291px" OnClick="BtnSelectQty_Click" />
-                                <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
-                            </p>
-                            <a class="btnGeneral" href="ProductReview.aspx">NEXT</a>
-                            <a class="btnGeneral" href="Product.aspx">BACK</a>
-                            <a class="btnGeneral" href="Help.aspx">HELP</a>
-                        </div>
+                        <p class="auto-style4">
+                            <br />
+                            <asp:TextBox CssClass="auto-style3" ID="txtCustom" runat="server" Width="34px"></asp:TextBox>&nbsp; pcs.
+                        </p>
+                        <p class="auto-style8">
+                            <asp:Button ID="BtnSelectQty" class="auto-style11" runat="server" Text="Select Custom Quantity" Width="291px" OnClick="BtnSelectQty_Click" />
+                            <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+                        </p>
+                        <a class="btnGeneral" href="ProductReview.aspx">NEXT</a>
+                        <a class="btnGeneral" href="Product.aspx">BACK</a>
+                        <a class="btnGeneral" href="Help.aspx">HELP</a>
                     </div>
                 </div>
             </div>
+         </div>
         </form>
     </div>
     <footer id="contactInfo" role="contentinfo">
