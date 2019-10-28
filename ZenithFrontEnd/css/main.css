@@ -114,10 +114,10 @@ label {
         box-shadow: 0 0 5px rgba(81, 203, 238, 1);
     }
 
-.btnGeneral {
+.btnCreate{
     border-radius: 5px;
-    height: 23px;
-    width: 175px;
+    height: 30px;
+    width: auto;
     background-color: steelblue;
     color: white;
     border: none;
@@ -126,9 +126,30 @@ label {
     float: right;
     text-align: center;
     text-decoration: none;
-    font-size: 0.8em;
     padding-top: 10px;
     cursor: default;
+}
+
+    .btnCreate:focus {
+        box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+        cursor: default;
+    }
+.btnGeneral {
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    border-radius: 5px;
+    background-color: steelblue;
+    color: white;
+    outline: none;
+    user-select: none;
+    float: right;
+    text-align: center;
+    text-decoration: none;
+    cursor: default;
+    padding: 8px;
+    vertical-align: middle;
+    margin-left: 15px;
 }
     .btnGeneral:focus {
         box-shadow: 0 0 5px rgba(81, 203, 238, 1);
@@ -209,3 +230,35 @@ td {
 .sizeField{
     border-radius: 5px;
 }
+
+#buildDiv {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+#MainContent_cartListTable {
+    width: 90%;
+    margin-left: 5%;
+    border: none;
+    border-collapse: collapse;
+    box-shadow: none;
+    margin-top: 70px;
+}
+
+    #MainContent_cartListTable td{
+        width: 10%;
+        border: thin solid gray;
+        border-collapse: collapse;
+        box-shadow: none;
+    }
+
+    #MainContent_cartListTable tr:first-child {
+       background-color: steelblue;
+       color: white;
+       font-weight: bold;
+    }
+
+    #MainContent_cartListTable tr td:first-child{
+        width: 0;
+        visibility:collapse;
+    }

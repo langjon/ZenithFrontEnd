@@ -14,7 +14,7 @@
     <ul class="mainNav">
         <li><a href="https://cbdisplaypac.ca/">
             <img class="nav-icon" src="images/house-16.png" />HOME</a></li>
-        <li class="navbar-right"><a href="Cart.aspx">
+        <li class="navbar-right"><a href="ShoppingCart/ViewCart.aspx">
             <img class="nav-icon" src="images/cart-16.png" />CART</a></li>
         <li class="navbar-right"><a href="Login.aspx">
             <img class="nav-icon" src="images/user-16.png" />LOGIN</a></li>
@@ -28,66 +28,68 @@
             <div class="pageTitle">
                 <p>BUILD YOUR BOX</p>
             </div>
-            <div>
+            <div id="buildDiv">
                 <asp:ImageButton ID="selectedBox" class="auto-style1" runat="server" Height="134px" Width="160px" />
-            </div>
-            <div id="sizeDiv">
 
-                <div style="font-size: large; font-weight: bold">
-                    <p class="auto-style2">
-                        Size<asp:RadioButtonList Width="600px" ID="sizeRadioBtn" runat="server" OnSelectedIndexChanged="sizeRadioBtn_SelectedIndexChanged" AutoPostBack="true" RepeatDirection="Horizontal" RepeatColumns="3" CellPadding="3" CellSpacing="2" CssClass="auto-style14" Font-Names="Arial" Font-Size="Medium">
-                            <asp:ListItem>   6 x 6 x 6 in       </asp:ListItem>
-                            <asp:ListItem>   8 x 8 x 8 in       </asp:ListItem>
-                            <asp:ListItem>   10 x 10 x 10 in    </asp:ListItem>
-                            <asp:ListItem>   12 x 12 x 8 in     </asp:ListItem>
-                            <asp:ListItem>   12 x 12 x 12 in    </asp:ListItem>
-                            <asp:ListItem>   12 x 12 x 4 in     </asp:ListItem>
-                            <asp:ListItem>   12 x 12 x 6 in     </asp:ListItem>
-                            <asp:ListItem>   14 x 14 x 14 in    </asp:ListItem>
-                            <asp:ListItem>   16 x 16 x 12 in    </asp:ListItem>
-                            <asp:ListItem>   16 x 16 x 16 in    </asp:ListItem>
-                            <asp:ListItem>   24 x 12 x 12 in    </asp:ListItem>
-                            <asp:ListItem>   24 x 16 x 16 in    </asp:ListItem>
-                        </asp:RadioButtonList>
+                <div id="sizeDiv">
 
-                    </p>
-                    <div class="auto-style12">
-                        &nbsp;&nbsp;&nbsp;
+                    <div style="font-size: large; font-weight: bold">
+                        <p class="auto-style2">
+                            Size<asp:RadioButtonList Width="600px" ID="sizeRadioBtn" runat="server" OnSelectedIndexChanged="sizeRadioBtn_SelectedIndexChanged" AutoPostBack="true" RepeatDirection="Horizontal" RepeatColumns="3" CellPadding="3" CellSpacing="2" CssClass="auto-style14" Font-Names="Arial" Font-Size="Medium">
+                                <asp:ListItem>   6 x 6 x 6 in       </asp:ListItem>
+                                <asp:ListItem>   8 x 8 x 8 in       </asp:ListItem>
+                                <asp:ListItem>   10 x 10 x 10 in    </asp:ListItem>
+                                <asp:ListItem>   12 x 12 x 8 in     </asp:ListItem>
+                                <asp:ListItem>   12 x 12 x 12 in    </asp:ListItem>
+                                <asp:ListItem>   12 x 12 x 4 in     </asp:ListItem>
+                                <asp:ListItem>   12 x 12 x 6 in     </asp:ListItem>
+                                <asp:ListItem>   14 x 14 x 14 in    </asp:ListItem>
+                                <asp:ListItem>   16 x 16 x 12 in    </asp:ListItem>
+                                <asp:ListItem>   16 x 16 x 16 in    </asp:ListItem>
+                                <asp:ListItem>   24 x 12 x 12 in    </asp:ListItem>
+                                <asp:ListItem>   24 x 16 x 16 in    </asp:ListItem>
+                            </asp:RadioButtonList>
+
+                        </p>
+                        <div class="auto-style12">
+                            &nbsp;&nbsp;&nbsp;
                       
                      <p class="auto-style6">
 
                          <label for="customSize">
                              Custom Size:</label>
                      </p>
-                        <p class="auto-style4">
-                            <br />
-                            <label for="txtLength">
-                                Length
+                            <p class="auto-style4">
+                                <br />
+                                <label for="txtLength">
+                                    Length
                          <asp:TextBox CssClass="sizeField" ID="txtLength" runat="server" Width="50px" MaxLength="5"></asp:TextBox>&nbsp;x&nbsp;
-                            </label>
-                            <label for="txtWidth">
-                                Width
+                                </label>
+                                <label for="txtWidth">
+                                    Width
                          <asp:TextBox CssClass="sizeField" ID="txtWidth" runat="server" Width="50px" MaxLength="5"></asp:TextBox>&nbsp;x&nbsp;
-                            </label>
-                            <label for="txtDepth">
-                                Depth
+                                </label>
+                                <label for="txtDepth">
+                                    Depth
                          <asp:TextBox CssClass="sizeField" ID="txtDepth" runat="server" Width="50px" MaxLength="5"></asp:TextBox>&nbsp;in
-                            </label>
-                        </p>
+                                </label>
+                            </p>
 
-                        <asp:Button ID="btSize" runat="server" Text="Select Custom Size" OnClick="btnSelectSize_Click" />
+                            <asp:Button ID="btSize" runat="server" Text="Select Custom Size" OnClick="btnSelectSize_Click" />
 
-                        <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
-                        <br />
-                        <br />
+                            <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+                            <br />
+                            <br />
 
-                        <a class="btnGeneral" href="options.aspx">NEXT</a>
-                        <a class="btnGeneral" href="Product.aspx">BACK</a>
-                        <a class="btnGeneral" href="Help.aspx">HELP</a>
+                            <a class="btnGeneral" href="options.aspx">NEXT</a>
+                            <a class="btnGeneral" href="Product.aspx">BACK</a>
+                            <a class="btnGeneral" href="Help.aspx">HELP</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </form>
+
     </div>
     <footer id="contactInfo" role="contentinfo">
         <div>

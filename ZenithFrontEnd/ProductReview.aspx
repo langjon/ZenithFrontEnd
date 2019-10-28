@@ -14,6 +14,7 @@
             font-size: 1.3em;
             margin-left: 258px;
         }
+
         .auto-style9 {
             border-style: none;
             border-color: inherit;
@@ -29,6 +30,7 @@
             margin-left: 55px;
             margin-right: 94px;
         }
+
         .auto-style10 {
             border-style: none;
             border-color: inherit;
@@ -44,6 +46,7 @@
             margin-left: 55px;
             margin-right: 94px;
         }
+
         .auto-style11 {
             font-weight: bold;
             font-size: 1.3em;
@@ -51,24 +54,28 @@
             width: 901px;
             height: 27px;
         }
+
         .auto-style12 {
             font-weight: bold;
             font-size: 1.3em;
             margin-left: 298px;
             width: 897px;
         }
+
         .auto-style13 {
             font-weight: bold;
             font-size: 1.3em;
             margin-left: 300px;
             width: 899px;
         }
+
         .auto-style14 {
             font-weight: bold;
             font-size: 1.3em;
             margin-left: 297px;
             width: 900px;
         }
+
         .auto-style0 {
             border-style: none;
             border-color: inherit;
@@ -83,6 +90,7 @@
             float: left;
             margin-left: 57px;
         }
+
         .auto-style15 {
             border-style: none;
             border-color: inherit;
@@ -98,10 +106,12 @@
             margin-left: 57px;
             top: auto;
         }
+
         .auto-style16 {
             height: 700px;
             width: 1333px;
         }
+
         .auto-style17 {
             font-weight: bold;
             font-size: 1.3em;
@@ -109,13 +119,13 @@
             width: 900px;
         }
     </style>
-    </head>
+</head>
 <body>
     <img id="logo" src="images/wp-logo.jpg" alt="CB Logo" />
     <ul class="mainNav">
         <li><a href="https://cbdisplaypac.ca/">
             <img class="nav-icon" src="images/house-16.png" />HOME</a></li>
-        <li class="navbar-right"><a href="Cart.aspx">
+        <li class="navbar-right"><a href="ShoppingCart/ViewCart.aspx">
             <img class="nav-icon" src="images/cart-16.png" />CART</a></li>
         <li class="navbar-right"><a href="Login.aspx">
             <img class="nav-icon" src="images/user-16.png" />LOGIN</a></li>
@@ -134,46 +144,47 @@
         <div id="prodSpec">
             <form id="form1" runat="server">
                 <div style="font-size: large; font-weight: bold">
-                    
-                   
-                        <asp:ImageButton class="auto-style2" ID="boxType" runat="server" Height="230px" Width="247px"/>
-                  
-                    <p class="auto-style11">Size&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Label ID="LabelSize"  runat="server" Text="Please select Size"></asp:Label>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+                    <asp:ImageButton class="auto-style2" ID="boxType" runat="server" Height="230px" Width="247px" />
+
+                    <p class="auto-style11">
+                        Size&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Label ID="LabelSize" runat="server" Text="Please select Size"></asp:Label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </p>
-                        <p class="auto-style11">Material&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Label ID="LabelMaterial" runat="server" Text="Please select Material"></asp:Label>
-&nbsp;&nbsp;
+                    <p class="auto-style11">
+                        Material&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Label ID="LabelMaterial" runat="server" Text="Please select Material"></asp:Label>
+                        &nbsp;&nbsp;
                     </p>
-                    <p class="auto-style14">Printing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <p class="auto-style14">
+                        Printing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:Label ID="LabelSides" runat="server" Text="Please select Sides"></asp:Label>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                     </p>
-                        <p class="auto-style17">&nbsp;Finish&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                    <p class="auto-style17">
+                        &nbsp;Finish&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
                          <asp:Label ID="LabelFinish" runat="server" Text="Please select Finish"></asp:Label>
-&nbsp;&nbsp;
+                        &nbsp;&nbsp;
                     </p>
-                    <p class="auto-style12">Wall Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="LabelWallType" runat="server" Text="Please select WallType"></asp:Label>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                    <p class="auto-style12">
+                        Wall Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="LabelWallType" runat="server" Text="Please select WallType"></asp:Label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                     </p>
-                        <p class="auto-style12">Quantity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:Label ID="LabelQuantity" runat="server" Text="Please select Quantity"></asp:Label>
+                    <p class="auto-style12">
+                        Quantity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:Label ID="LabelQuantity" runat="server" Text="Please select Quantity"></asp:Label>
                     </p>
-                    <p class="auto-style13">Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Label ID="LabelPrice" runat="server" Text="Total Price: "></asp:Label>
+                    <p class="auto-style13">
+                        Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="LabelPrice" runat="server" ></asp:Label>
                     </p>
-                    <p class="auto-style2">&nbsp;&nbsp;&nbsp;
-                     </p>
-                     <p class="auto-style9">
-                         <a id="btnCheckout" href="checkout.aspx"  style="font-size: large; color: #FFFFFF; font-weight: normal; vertical-align: middle; text-align: justify;"> ADD TO CART</a></p>
-                     <p class="auto-style10">
-                         <a id="btnBack" href="uploadImage.aspx" class="textbox" style="font-size: large; color: #FFFFFF; font-weight: normal; vertical-align: middle; text-align: center;">BACK</a>
-                         </p>
-                    <a id="btnHelp" href="Help.aspx"  class="auto-style15" style="padding: inherit; font-size: large; color: #FFFFFF; text-align: center; font-weight: normal; font-family: Arial; ">HELP</a><br />
-                     <br />
-                     <br />
-                     </p>
-                    </div>
+                    <asp:Button CssClass="btnGeneral" ID="addToCart" runat="server" Text="Add to Cart" OnClick="addToCart_Click" Font-Bold="True" Font-Italic="False" Font-Size="Larger" Height="37px" />
+                        <a id="btnBack" href="uploadImage.aspx" class="btnGeneral">BACK</a>
+                        <a id="btnHelp" href="Help.aspx" class="btnGeneral">HELP</a><br />
+                </div>
             </form>
         </div>
+    </div>
     <footer id="contactInfo" role="contentinfo">
         <div>
             <section>

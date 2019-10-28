@@ -116,7 +116,8 @@
     <Content Include="Login.aspx" />
     <Content Include="ProductReview.aspx" />
     <Content Include="Quantity.aspx" />
-    <Content Include="ShoppingCart\Cart.aspx" />
+    <Content Include="ShoppingCart\testing.aspx" />
+    <Content Include="ShoppingCart\ViewCart.aspx" />
     <Content Include="Size.aspx" />
     <Content Include="ThankYou.aspx" />
     <Content Include="ThankYouHelp.aspx" />
@@ -222,12 +223,19 @@
     <Compile Include="Quantity.aspx.designer.cs">
       <DependentUpon>Quantity.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ShoppingCart\Cart.aspx.cs">
-      <DependentUpon>Cart.aspx</DependentUpon>
+    <Compile Include="ShoppingCart\testing.aspx.cs">
+      <DependentUpon>testing.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ShoppingCart\Cart.aspx.designer.cs">
-      <DependentUpon>Cart.aspx</DependentUpon>
+    <Compile Include="ShoppingCart\testing.aspx.designer.cs">
+      <DependentUpon>testing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShoppingCart\ViewCart.aspx.cs">
+      <DependentUpon>ViewCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShoppingCart\ViewCart.aspx.designer.cs">
+      <DependentUpon>ViewCart.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

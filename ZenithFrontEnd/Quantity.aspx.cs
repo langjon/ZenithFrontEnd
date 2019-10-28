@@ -105,43 +105,43 @@ namespace ZenithFrontEnd
             }
             if (qty == 1)
             {
-                unitPrice = 20;               
+                unitPrice = 20.00;               
             }
             else if ( qty < 10)
             {
-                unitPrice = 10;
+                unitPrice = 10.00;
             }
             else if (qty < 25)
             {
-                unitPrice = 8;
+                unitPrice = 8.00;
             }
             else if (qty < 50)
             {
-                unitPrice = 4;
+                unitPrice = 4.00;
             }
             else if (qty < 100)
             {
-                unitPrice = 3;
+                unitPrice = 3.00;
             }
             else if (qty < 500)
             {
-                unitPrice = 2;
+                unitPrice = 2.00;
             }
             else if (qty < 1000)
             {
-                unitPrice = 1.5;
+                unitPrice = 1.50;
             }
             else if (qty < 2000)
             {
-                unitPrice = 1.3;
+                unitPrice = 1.30;
             }
             else if (qty < 5000)
             {
-                unitPrice = 1.2;
+                unitPrice = 1.20;
             }
             else
             {
-                unitPrice = 1.1;
+                unitPrice = 1.10;
             }
             price = unitPrice * qty;
             return price;

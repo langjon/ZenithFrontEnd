@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="uploadImage.aspx.cs" Inherits="ZenithFrontEnd.uploadImage" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Image Upload</title>
@@ -85,11 +85,12 @@
         </style>
 </head>
 <body>
+    <div>
      <img id="logo" src="images/wp-logo.jpg" alt="CB Logo" />
     <ul class="mainNav">
         <li><a href="https://cbdisplaypac.ca/">
             <img class="nav-icon" src="images/house-16.png" />HOME</a></li>
-        <li class="navbar-right"><a href="Cart.aspx">
+        <li class="navbar-right"><a href="ShoppingCart/ViewCart.aspx">
             <img class="nav-icon" src="images/cart-16.png" />CART</a></li>
         <li class="navbar-right"><a href="Login.aspx">
             <img class="nav-icon" src="images/user-16.png" />LOGIN</a></li>
@@ -97,7 +98,7 @@
             <img class="nav-icon" src="images/BOX-16.png" />BUILD</a></li>
     </ul>
     
-
+    </div>
 
 <form id="Form1" method="post" runat="server" class="auto-style7">
     <div class="pageTitle">
