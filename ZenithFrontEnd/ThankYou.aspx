@@ -56,14 +56,14 @@
                 <div style="font-size: large; font-weight: bold">
                     <p style="font-family: 'Arial Black'; font-size: xx-large; font-weight: bolder; color: #4682B4; text-align: center">&nbsp;</p>
                     <p style="font-family: 'Arial Black'; font-size: xx-large; font-weight: bolder; color: #4682B4; text-align: center">THANK YOU! </p>
-                    <p style="text-align: center; font-size: large; font-family: Arial; font-style: normal">Item Successfully Added to Cart</p>
+                    <p style="text-align: center; font-size: large; font-family: Arial; font-style: normal">Order Summary</p>
 
                     <br />
                     <br />
                     <br />
                     <br />
-                    <a class="btnGeneral" href="/ShoppingCart/ViewCart.aspx">View Shopping Cart</a>
-                      <a class="btnGeneral" href="Product.aspx">Build Another Product</a>
+                   
+                      <a class="btnGeneral" href="Product.aspx">View our Products</a>
                     
 
                     <br />

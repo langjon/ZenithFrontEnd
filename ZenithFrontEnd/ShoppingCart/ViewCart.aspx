@@ -40,7 +40,9 @@
             <asp:Label ID="lblTotal" runat="server" EnableViewState="false"></asp:Label>
         </strong> 
    <br />
+   
     <a class="btnGeneral" href="../Checkout.aspx">Checkout</a>
+     <a class="btnGeneral" href="../Product.aspx">Build Another Product</a>
 </asp:Content>
 
 

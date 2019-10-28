@@ -85,7 +85,7 @@ namespace ZenithFrontEnd
                     + prodDateCreated.ToString() + "," + prodPrice.ToString() + "," + prodImage.ToString();
                 Response.Cookies["cartCookie"].Expires = DateTime.Now.AddDays(1);
             }
-            Response.Redirect("ThankYou.aspx");
+            Response.Redirect("/ShoppingCart/ViewCart.aspx");
         }
     }
 }
