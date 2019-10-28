@@ -120,6 +120,7 @@
                             <br />
                             <asp:TextBox CssClass="auto-style3" ID="txtCustom" runat="server" Width="34px"></asp:TextBox>&nbsp; pcs.
                         </p>
+                             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtCustom" ErrorMessage="Quantity should be a positive integer " Font-Size="Smaller" ForeColor="Red" ValidationExpression="^[0-9]{0,10}$"></asp:RegularExpressionValidator>&nbsp;
                         <p class="auto-style8">
                             <asp:Button ID="BtnSelectQty" class="auto-style11" runat="server" Text="Select Custom Quantity" Width="291px" OnClick="BtnSelectQty_Click" />
                             <asp:Label ID="Label1" runat="server" Text=""></asp:Label>

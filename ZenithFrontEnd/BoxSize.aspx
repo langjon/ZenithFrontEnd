@@ -6,6 +6,7 @@
 <head runat="server">
     <title>C&B Packaging - Create Account</title>
     <link rel="stylesheet" href="css/main.css" />
+
 </head>
 <body>
     <img id="logo" src="images/wp-logo.jpg" alt="CB Logo" />
@@ -68,7 +69,8 @@
                          <asp:TextBox CssClass="auto-style3" ID="txtCustom1" runat="server" Width="52px" MaxLength="5"></asp:TextBox>&nbsp;in
                       </label>
                          </p>
-
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtCustom" ErrorMessage="Number with 2 decimal places only" Font-Size="Smaller" ForeColor="Red" ValidationExpression="^[0-9]+(\.[0-9][0-9]?)?$"></asp:RegularExpressionValidator>
+                    <br />
                          <asp:Button ID="btSize" runat="server" Text="Select Custom Size" OnClick="btnSelectSize_Click" />
                    
                      <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
@@ -159,7 +161,7 @@
                 </div>
             </div>
         </footer>
-    </div>
+   
 </body>
 </html>
 

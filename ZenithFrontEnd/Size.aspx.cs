@@ -56,6 +56,8 @@ namespace ZenithFrontEnd
                             Label1.Text = customSize;
                             Session["Size"] = "Custom size:" + customSize;
                             btSize.Text = "Select Standard Size from above list";
+                            sizeRadioBtn.Enabled = false;
+                            sizeRadioBtn.ClearSelection();
                         }
                         else
                         {
@@ -74,7 +76,10 @@ namespace ZenithFrontEnd
 
             else if (btSize.Text == "Select Standard Size from above list")
             {
-
+                sizeRadioBtn.Enabled = true;
+                txtLength.Text = "";
+                txtWidth.Text = "";
+                txtDepth.Text = "";
                 customSize = null;
                 if (sizeRadioBtn.SelectedIndex > -1)
                 {

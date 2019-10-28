@@ -61,6 +61,8 @@ namespace ZenithFrontEnd
                             Session["Quantity"] = customQty;
                             Session["Price"] = price.ToString();
                             BtnSelectQty.Text = "Select Standard Quantity from above list";
+                            quantityRadioBtn.Enabled = false;
+                            quantityRadioBtn.ClearSelection();
                         }
                     }
                     catch
@@ -75,7 +77,8 @@ namespace ZenithFrontEnd
 
             else if (BtnSelectQty.Text == "Select Standard Quantity from above list")
             {
-
+                quantityRadioBtn.Enabled = true;
+                txtCustom.Text = "";
                 customQty = null;
                 if (quantityRadioBtn.SelectedIndex > -1)
                 {
