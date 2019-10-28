@@ -62,7 +62,7 @@
                     <br />
                     <br />
                     <br />
-                    <a class="btnGeneral" href="/ShoppingCart/ViewCart.aspx">Checkout</a>
+                    <a class="btnGeneral" href="/ShoppingCart/ViewCart.aspx">View Shopping Cart</a>
                       <a class="btnGeneral" href="Product.aspx">Build Another Product</a>
                     
 

@@ -13,15 +13,15 @@ namespace ZenithFrontEnd.ShoppingCart
     {
         string prodValue;
         string cartItem;
-        string[] cartItemDetails = new string[9];
+        string[] cartItemDetails = new string[10];
         double totalPrice = 0.0;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             DataTable cartTable = new DataTable();
-            cartTable.Columns.AddRange(new DataColumn[9] { new DataColumn("prodType"), new DataColumn("prodSize"), new DataColumn("prodMaterial"),
+            cartTable.Columns.AddRange(new DataColumn[10] { new DataColumn("prodType"), new DataColumn("prodSize"), new DataColumn("prodMaterial"),
                 new DataColumn("prodFinish"), new DataColumn("prodWallType"), new DataColumn("prodPrintSides"), new DataColumn("prodQuantity"),
-                new DataColumn("prodDateCreated"), new DataColumn("prodPrice")});
+                new DataColumn("prodDateCreated"), new DataColumn("prodPrice"),  new DataColumn("prodImage")});
 
             if (Request.Cookies["cartCookie"] != null)
             {
@@ -39,7 +39,8 @@ namespace ZenithFrontEnd.ShoppingCart
                     }
                     cartTable.Rows.Add(cartItemDetails[0].ToString(), cartItemDetails[1].ToString(), cartItemDetails[2].ToString(),
                         cartItemDetails[3].ToString(), cartItemDetails[4].ToString(), cartItemDetails[5].ToString(),
-                        cartItemDetails[6].ToString(), cartItemDetails[7].ToString(), cartItemDetails[8].ToString());
+                        cartItemDetails[6].ToString(), cartItemDetails[7].ToString(), cartItemDetails[8].ToString(), cartItemDetails[9].ToString());
+                    
                     totalPrice += Convert.ToDouble(cartItemDetails[8]);
                 }
                 

@@ -18,7 +18,7 @@
             
         </HeaderTemplate>
         <ItemTemplate>
-            <td>placeholder</td>
+            <td><asp:Image ID="Image1" runat="server" class="auto-style1" Height="90px" Width="80px" ImageUrl=<%#Eval("prodImage") %> /></td>
             <td><%#Eval("prodType") %></td>
             <td><%#Eval("prodSize") %></td>
             <td><%#Eval("prodMaterial") %></td>
@@ -34,9 +34,13 @@
     <asp:DataList ID="DataList1" runat="server">
 
     </asp:DataList>
+    <br />
      <strong>
             <asp:Label ID="LabelTotalText" runat="server" Text="Order Total: "></asp:Label>
             <asp:Label ID="lblTotal" runat="server" EnableViewState="false"></asp:Label>
         </strong> 
+   <br />
+    <a class="btnGeneral" href="../Checkout.aspx">Checkout</a>
 </asp:Content>
+
 

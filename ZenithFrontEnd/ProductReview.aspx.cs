@@ -70,19 +70,19 @@ namespace ZenithFrontEnd
             prodQuantity = Session["Quantity"].ToString();
             prodPrice = Session["Price"].ToString();
             prodDateCreated = DateTime.Now.ToString();
-            prodImage = Session["BoxImage"].ToString(); 
+            prodImage = "../" + Session["BoxImage"].ToString(); 
 
             if (Request.Cookies["cartCookie"] == null)
             {
                 Response.Cookies["cartCookie"].Value = prodType.ToString() + "," + prodSize.ToString() + "," + prodMaterial.ToString() + "," 
                     + prodPrintSides.ToString() + "," + prodFinish.ToString() + "," + prodWallType.ToString() + "," + prodQuantity.ToString() + "," 
-                    + prodDateCreated.ToString() + "," + prodPrice.ToString() ;
+                    + prodDateCreated.ToString() + "," + prodPrice.ToString() + "," + prodImage.ToString();
                 Response.Cookies["cartCookie"].Expires = DateTime.Now.AddDays(1);
             } else
             {
                 Response.Cookies["cartCookie"].Value = Request.Cookies["cartCookie"].Value.ToString() + "|" + prodType.ToString() + "," + prodSize.ToString() + "," + prodMaterial.ToString() + ","
                     + prodPrintSides.ToString() + "," + prodFinish.ToString() + "," + prodWallType.ToString() + "," + prodQuantity.ToString() + ","
-                    + prodDateCreated.ToString() + "," + prodPrice.ToString() ;
+                    + prodDateCreated.ToString() + "," + prodPrice.ToString() + "," + prodImage.ToString();
                 Response.Cookies["cartCookie"].Expires = DateTime.Now.AddDays(1);
             }
             Response.Redirect("ThankYou.aspx");
