@@ -30,7 +30,7 @@ namespace ZenithFrontEnd
             customQty = quantityRadioBtn.SelectedItem.ToString();
             price = calcPrice(Convert.ToInt32(customQty));
 
-            Label1.Text = "You selected: " + customQty + " Price: CAD " + price;
+            Label1.Text = "You selected: " + customQty + " Price per box: CAD " + price;
             Session["Quantity"] = customQty;
             Session["Price"] = price.ToString();
             BtnSelectQty.Text = "Select Custom Quantity";
@@ -57,7 +57,7 @@ namespace ZenithFrontEnd
                         {
                             customQty = txtCustom.Text ;
                             price = calcPrice(Convert.ToInt32(customQty));
-                            Label1.Text = "Custom Quantity: " + customQty + " Price: CAD " + price;
+                            Label1.Text = "Custom Quantity: " + customQty + " Price per box: CAD " + price;
                             Session["Quantity"] = customQty;
                             Session["Price"] = price.ToString();
                             BtnSelectQty.Text = "Select Standard Quantity from above list";
@@ -84,7 +84,7 @@ namespace ZenithFrontEnd
                 {
                     customQty = quantityRadioBtn.SelectedItem.ToString();
                     price = calcPrice(Convert.ToInt32(customQty));
-                    Label1.Text = "You selected: " + customQty + " Price: CAD " + price;
+                    Label1.Text = "You selected: " + customQty + " Price per box: CAD " + price;
                     Session["Quantity"] = customQty;
                     Session["Price"] = price.ToString();
                     BtnSelectQty.Text = "Select Custom Quantity";
@@ -102,52 +102,55 @@ namespace ZenithFrontEnd
         {
             double price = 0.0;
             double unitPrice = 0.0;
-            if (qty <1)
+            double valuePerQty = 13.30;
+            if (qty < 1)
             {
                 unitPrice = 0;
             }
             if (qty == 1)
             {
-                unitPrice = 20.00;               
+                unitPrice = 28.00;
             }
-            else if ( qty < 10)
+            else if (qty < 10)
             {
-                unitPrice = 10.00;
+                unitPrice = 15;
             }
             else if (qty < 25)
             {
-                unitPrice = 8.00;
+                unitPrice = valuePerQty;
             }
             else if (qty < 50)
             {
-                unitPrice = 4.00;
+                unitPrice = valuePerQty - (valuePerQty * 0.082);
             }
             else if (qty < 100)
             {
-                unitPrice = 3.00;
+                unitPrice = valuePerQty - (valuePerQty * 0.7082);
             }
             else if (qty < 500)
             {
-                unitPrice = 2.00;
+                unitPrice = valuePerQty - (valuePerQty * 0.7444);
             }
             else if (qty < 1000)
             {
-                unitPrice = 1.50;
+                unitPrice = valuePerQty - (valuePerQty * 0.82);
             }
             else if (qty < 2000)
             {
-                unitPrice = 1.30;
+                unitPrice = valuePerQty - (valuePerQty * 0.83);
             }
             else if (qty < 5000)
             {
-                unitPrice = 1.20;
+                unitPrice = valuePerQty - (valuePerQty * 0.84);
             }
             else
             {
-                unitPrice = 1.10;
+                unitPrice = valuePerQty - (valuePerQty * 0.86);
             }
             price = unitPrice * qty;
-            return price;
+            price = Math.Round(price, MidpointRounding.AwayFromZero);
+            //return price;
+            return unitPrice;
         }
     }
 }
