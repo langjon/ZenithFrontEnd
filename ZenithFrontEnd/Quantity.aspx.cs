@@ -25,14 +25,16 @@ namespace ZenithFrontEnd
         protected void quantityRadioBtn_SelectedIndexChanged(object sender, EventArgs e)
         {
             String customQty = null;
-            double price;
+            double price, unitPrice;
 
             customQty = quantityRadioBtn.SelectedItem.ToString();
-            price = calcPrice(Convert.ToInt32(customQty));
-
+            
+            unitPrice = calcUnitPrice(Convert.ToDouble(Session["Length"]), Convert.ToDouble(Session["Width"]), Convert.ToDouble(Session["Depth"]),
+                         Session["Side"].ToString(), Session["Material"].ToString(), Session["Finish"].ToString(), Session["Wall"].ToString());
+            price = calcPrice(Convert.ToInt32(customQty), unitPrice);
             Label1.Text = "You selected: " + customQty + " Price per box: CAD " + price;
             Session["Quantity"] = customQty;
-            Session["Price"] = price.ToString();
+            Session["UnitPrice"] = unitPrice.ToString();
             BtnSelectQty.Text = "Select Custom Quantity";
         }
 
@@ -40,7 +42,7 @@ namespace ZenithFrontEnd
         protected void BtnSelectQty_Click(object sender, EventArgs e)
         {
             String customQty = null;
-            double price;
+            double price, unitPrice;
             if (BtnSelectQty.Text == "Select Custom Quantity")
             {
                 if (txtCustom.Text == "" )
@@ -56,10 +58,12 @@ namespace ZenithFrontEnd
                         if (Convert.ToInt32(txtCustom.Text) >= 0 )
                         {
                             customQty = txtCustom.Text ;
-                            price = calcPrice(Convert.ToInt32(customQty));
+                            unitPrice = calcUnitPrice(Convert.ToDouble(Session["Length"]), Convert.ToDouble(Session["Width"]), Convert.ToDouble(Session["Depth"]),
+                                        Session["Side"].ToString(), Session["Material"].ToString(), Session["Finish"].ToString(), Session["Wall"].ToString());
+                            price = calcPrice(Convert.ToInt32(customQty), unitPrice);
                             Label1.Text = "Custom Quantity: " + customQty + " Price per box: CAD " + price;
                             Session["Quantity"] = customQty;
-                            Session["Price"] = price.ToString();
+                            Session["UnitPrice"] = unitPrice.ToString();
                             BtnSelectQty.Text = "Select Standard Quantity from above list";
                             quantityRadioBtn.Enabled = false;
                             quantityRadioBtn.ClearSelection();
@@ -83,10 +87,12 @@ namespace ZenithFrontEnd
                 if (quantityRadioBtn.SelectedIndex > -1)
                 {
                     customQty = quantityRadioBtn.SelectedItem.ToString();
-                    price = calcPrice(Convert.ToInt32(customQty));
+                    unitPrice = calcUnitPrice(Convert.ToDouble(Session["Length"]), Convert.ToDouble(Session["Width"]), Convert.ToDouble(Session["Depth"]),
+                        Session["Side"].ToString(), Session["Material"].ToString(), Session["Finish"].ToString(), Session["Wall"].ToString());
+                    price = calcPrice(Convert.ToInt32(customQty), unitPrice);
                     Label1.Text = "You selected: " + customQty + " Price per box: CAD " + price;
                     Session["Quantity"] = customQty;
-                    Session["Price"] = price.ToString();
+                    Session["UnitPrice"] = unitPrice.ToString();
                     BtnSelectQty.Text = "Select Custom Quantity";
                 }
                 else
@@ -97,12 +103,60 @@ namespace ZenithFrontEnd
 
 
         }
+        private double calcUnitPrice(double length, double height, double width, string printingSide, string material, string finish, string wall)
+        {
+            double unitPrice = 0.0;
+          
+            //SIZE
+            double l = length * 0.4;
+            double h = height * 0.3;
+            double w = width * 0.5;
+            unitPrice = l + h + w;
 
-        private double calcPrice(int qty)
+            // PRINTING SIDE
+            if (printingSide == "Outside Only" || printingSide == "Inside Only")
+            {
+                unitPrice = unitPrice + 0.50;
+            }
+            else if (printingSide == "Both Sides")
+            {
+                unitPrice = unitPrice + (unitPrice * 0.25);
+            }
+            //MATERIAL
+            if (material == "Premium White")
+            {
+                unitPrice = unitPrice + 1;
+            }
+            else if (material == "White")
+            {
+                unitPrice = unitPrice + 0.5;
+            }
+            //FINISH
+            if (finish == "Gloss")
+            {
+                unitPrice = unitPrice + 1;
+            }
+            else if (finish == "Matte")
+            {
+                unitPrice = unitPrice + 0.5;
+            }
+            //WALL
+            if (wall == "Double")
+            {
+                unitPrice = unitPrice + 0.5;
+            }
+            else if(wall == "Triple")
+            {
+                unitPrice = unitPrice + 1;
+            }
+
+            return unitPrice;
+        }
+        private double calcPrice(int qty, double valuePerQty)
         {
             double price = 0.0;
             double unitPrice = 0.0;
-            double valuePerQty = 13.30;
+           // double valuePerQty = 13.30;
             if (qty < 1)
             {
                 unitPrice = 0;
@@ -148,7 +202,8 @@ namespace ZenithFrontEnd
                 unitPrice = valuePerQty - (valuePerQty * 0.86);
             }
             price = unitPrice * qty;
-            price = Math.Round(price, MidpointRounding.AwayFromZero);
+            price = Math.Round(price,2, MidpointRounding.AwayFromZero);
+            Session["Price"] = price.ToString();
             //return price;
             return unitPrice;
         }

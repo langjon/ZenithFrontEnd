@@ -15,38 +15,6 @@
             margin-left: 258px;
         }
 
-        .auto-style9 {
-            border-style: none;
-            border-color: inherit;
-            border-width: medium;
-            border-radius: 5px;
-            height: 34px;
-            width: 127px;
-            background-color: steelblue;
-            color: white;
-            outline: none;
-            user-select: none;
-            float: right;
-            margin-left: 55px;
-            margin-right: 94px;
-        }
-
-        .auto-style10 {
-            border-style: none;
-            border-color: inherit;
-            border-width: medium;
-            border-radius: 5px;
-            height: 30px;
-            width: 68px;
-            background-color: steelblue;
-            color: white;
-            outline: none;
-            user-select: none;
-            float: right;
-            margin-left: 55px;
-            margin-right: 94px;
-        }
-
         .auto-style11 {
             font-weight: bold;
             font-size: 1.3em;
@@ -89,22 +57,6 @@
             user-select: none;
             float: left;
             margin-left: 57px;
-        }
-
-        .auto-style15 {
-            border-style: none;
-            border-color: inherit;
-            border-width: medium;
-            border-radius: 5px;
-            height: 27px;
-            width: 97px;
-            background-color: steelblue;
-            color: white;
-            outline: none;
-            user-select: none;
-            float: left;
-            margin-left: 57px;
-            top: auto;
         }
 
         .auto-style16 {
@@ -176,7 +128,8 @@
                         Quantity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:Label ID="LabelQuantity" runat="server" Text="Please select Quantity"></asp:Label>
                     </p>
                     <p class="auto-style13">
-                        Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="LabelPrice" runat="server" ></asp:Label>
+                       
+                        Total Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="LabelPrice" runat="server" ></asp:Label>
                     </p>
                     <asp:Button CssClass="btnGeneral" ID="addToCart" runat="server" Text="Add to Cart" OnClick="addToCart_Click" Font-Bold="True" Font-Italic="False" Font-Size="Larger" Height="37px" />
                         <a id="btnBack" href="uploadImage.aspx" class="btnGeneral">BACK</a>

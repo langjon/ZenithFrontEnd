@@ -26,9 +26,15 @@ namespace ZenithFrontEnd
 
         protected void sizeRadioBtn_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Label1.Text = "You selected: " + sizeRadioBtn.SelectedItem.ToString();
+            string size = sizeRadioBtn.SelectedItem.ToString();
+            Label1.Text = "You selected: " + size;
             btSize.Text = "Select Custom Size";
-            Session["Size"] = sizeRadioBtn.SelectedItem.ToString();
+            
+            Session["Size"] = size;
+            string[] sizeArray = size.Split('x');
+            Session["Length"] = sizeArray[0].ToString();
+            Session["Width"] = sizeArray[0].ToString();
+            Session["Depth"] = sizeArray[0].ToString();
         }
 
        
@@ -53,8 +59,11 @@ namespace ZenithFrontEnd
                         {
                             
                             customSize = txtLength.Text + " x " + txtWidth.Text + " x " + txtDepth.Text + " in";
-                            Label1.Text = customSize;
-                            Session["Size"] = "Custom size:" + customSize;
+                            Label1.Text = "Custom size:" + customSize;
+                            Session["Size"] = customSize;
+                            Session["Length"] = txtLength.Text;
+                            Session["Width"] = txtWidth.Text;
+                            Session["Depth"] = txtDepth.Text;
                             btSize.Text = "Select Standard Size from above list";
                             sizeRadioBtn.Enabled = false;
                             sizeRadioBtn.ClearSelection();
@@ -83,9 +92,15 @@ namespace ZenithFrontEnd
                 customSize = null;
                 if (sizeRadioBtn.SelectedIndex > -1)
                 {
-                    Label1.Text = "You selected: " + sizeRadioBtn.SelectedItem.ToString();
-                    Session["Size"] = sizeRadioBtn.SelectedItem.ToString();
+                    string size = sizeRadioBtn.SelectedItem.ToString();
+                    Label1.Text = "You selected: " + size;
                     btSize.Text = "Select Custom Size";
+
+                    Session["Size"] = size;
+                    string[] sizeArray = size.Split('x');
+                    Session["Length"] = sizeArray[0].ToString();
+                    Session["Width"] = sizeArray[0].ToString();
+                    Session["Depth"] = sizeArray[0].ToString();
                 }
                 else
                 {
