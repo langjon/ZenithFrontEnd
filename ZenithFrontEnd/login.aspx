@@ -22,7 +22,7 @@
     </ul>
     <div id="errorMessages" runat="server">
     </div>
-    <div style="height: 700px">
+    <div id="mainBodyDiv">
 
         <div class="pageTitle">
             <p>LOGIN OR CREATE AN ACCOUNT</p>

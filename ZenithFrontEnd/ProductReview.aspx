@@ -96,8 +96,6 @@
         <div id="prodSpec">
             <form id="form1" runat="server">
                 <div style="font-size: large; font-weight: bold">
-
-
                     <asp:ImageButton class="auto-style2" ID="boxType" runat="server" Height="230px" Width="247px" />
 
                     <p class="auto-style11">

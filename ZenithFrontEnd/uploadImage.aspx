@@ -104,65 +104,49 @@
             <img class="nav-icon" src="images/BOX-16.png" />BUILD</a></li>
     </ul>
 
-    <form id="Form1" method="post" runat="server" class="auto-style7">
-        <div class="pageTitle">
-            <p>BUILD YOUR BOX</p>
-        </div>
-
-
-        <fieldset>
-            <legend>Upload Your Logo/Image</legend>
-            <div id="div1" runat="server">
-                <br />
-                <input type="file" size="65" runat="server" id="FileUpload1">
+    <div style="height: 600px" id="buildDiv">
+        <form id="Form1" method="post" runat="server">
+            <div class="pageTitle">
+                <p>BUILD YOUR BOX</p>
             </div>
-            <br />
-            <asp:Button ID="Button1" runat="server" Text="Upload" OnClick="Button1_Click" />
-            <%--<asp:Button ID="ButtonMore" runat="server" Text="Add 10 Photos" OnClick="ButtonMore_Click" />--%>
-            <br />
-        </fieldset>
-        <br />
-
-        <div id="div5" runat="server" visible="false" class="auto-style11">
 
             <fieldset>
-                <legend>
+                <legend>Upload Your Logo/Image</legend>
+                <div id="div1" runat="server">
                     <br />
-                    Show Logo/Image<br />
-                </legend>
-                <div id="div3" runat="server">
-                    <br />
-                    <asp:Image ID="Image1" runat="server" Height="200" Width="200" ImageUrl="~/Image.gif" />
+                    <input type="file" size="65" runat="server" id="FileUpload1">
                 </div>
+                <br />
+                <asp:Button ID="Button1" runat="server" Text="Upload" OnClick="Button1_Click" />
+                <%--<asp:Button ID="ButtonMore" runat="server" Text="Add 10 Photos" OnClick="ButtonMore_Click" />--%>
                 <br />
             </fieldset>
             <br />
 
+            <div id="div5" runat="server" visible="false" class="auto-style11">
+                <fieldset>
+                    <legend>
+                        <br />
+                        Show Logo/Image<br />
+                    </legend>
+                    <div id="div3" runat="server">
+                        <br />
+                        <asp:Image ID="Image1" runat="server" Height="200" Width="200" ImageUrl="~/Image.gif" />
+                    </div>
+                    <br />
+                </fieldset>
+                <br />
+                <br />
+                <br />
+            </div>
+            <br />
             <br />
 
-            <br />
-        </div>
-
-        <br />
-        <br />
-
-        <%-- <a id="btnHelp" class="auto-style5" href="Help.aspx" style="padding: inherit; font-size: large; color: #FFFFFF; text-align: center; font-weight: normal; font-family: Arial; top: auto;">HELP</a><br />
-    <br />
-    <br />
-        <p class="auto-style10">
-                         <a id="btnBack" href="quantity.aspx" class="textbox" style="font-size: large; color: #FFFFFF; font-weight: normal;">BACK</a>
-                         </p>
-    <p class="auto-style9" style="text-align: center">
-                         <a id="btnNext" href="ProductReview.aspx" class="auto-style3" style="font-size: large; color: #FFFFFF; font-weight: normal;">NEXT</a>
-                         </p>--%>
-
-
-        <a href="ProductReview.aspx"><span class="btnGeneral">NEXT</span></a>
-        <a id="btnBack" href="quantity.aspx" class="btnGeneral">BACK</a>
-        <a id="btnHelp" href="Help.aspx" class="btnGeneral">HELP</a><br />
-
-    </form>
-
+            <a href="ProductReview.aspx"><span class="btnGeneral">NEXT</span></a>
+            <a id="btnBack" href="quantity.aspx" class="btnGeneral">BACK</a>
+            <a id="btnHelp" href="Help.aspx" class="btnGeneral">HELP</a><br />
+        </form>
+    </div>
 
     <footer id="contactInfo" role="contentinfo">
         <div>

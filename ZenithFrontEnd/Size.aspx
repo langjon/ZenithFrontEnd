@@ -32,7 +32,6 @@
                 <asp:ImageButton ID="selectedBox" class="auto-style1" runat="server" Height="134px" Width="160px" />
 
                 <div id="sizeDiv">
-
                     <div style="font-size: large; font-weight: bold">
                         <p class="auto-style2">
                             Size<asp:RadioButtonList Width="600px" ID="sizeRadioBtn" runat="server" OnSelectedIndexChanged="sizeRadioBtn_SelectedIndexChanged" AutoPostBack="true" RepeatDirection="Horizontal" RepeatColumns="3" CellPadding="3" CellSpacing="2" CssClass="auto-style14" Font-Names="Arial" Font-Size="Medium">
@@ -92,7 +91,6 @@
                 </div>
             </div>
         </form>
-
     </div>
     <footer id="contactInfo" role="contentinfo">
         <div>
