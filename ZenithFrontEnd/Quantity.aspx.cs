@@ -25,14 +25,16 @@ namespace ZenithFrontEnd
         protected void quantityRadioBtn_SelectedIndexChanged(object sender, EventArgs e)
         {
             String customQty = null;
-            double price;
+            double price, unitPrice;
 
             customQty = quantityRadioBtn.SelectedItem.ToString();
-            price = calcPrice(Convert.ToInt32(customQty));
-
-            Label1.Text = "You selected: " + customQty + " Price: CAD " + price;
+            
+            unitPrice = calcUnitPrice(Convert.ToDouble(Session["Length"]), Convert.ToDouble(Session["Width"]), Convert.ToDouble(Session["Depth"]),
+                         Session["Side"].ToString(), Session["Material"].ToString(), Session["Finish"].ToString(), Session["Wall"].ToString());
+            price = calcPrice(Convert.ToInt32(customQty), unitPrice);
+            Label1.Text = "You selected: " + customQty + " Price per box: CAD " + price;
             Session["Quantity"] = customQty;
-            Session["Price"] = price.ToString();
+            Session["UnitPrice"] = unitPrice.ToString();
             BtnSelectQty.Text = "Select Custom Quantity";
         }
 
@@ -40,7 +42,7 @@ namespace ZenithFrontEnd
         protected void BtnSelectQty_Click(object sender, EventArgs e)
         {
             String customQty = null;
-            double price;
+            double price, unitPrice;
             if (BtnSelectQty.Text == "Select Custom Quantity")
             {
                 if (txtCustom.Text == "" )
@@ -56,10 +58,12 @@ namespace ZenithFrontEnd
                         if (Convert.ToInt32(txtCustom.Text) >= 0 )
                         {
                             customQty = txtCustom.Text ;
-                            price = calcPrice(Convert.ToInt32(customQty));
-                            Label1.Text = "Custom Quantity: " + customQty + " Price: CAD " + price;
+                            unitPrice = calcUnitPrice(Convert.ToDouble(Session["Length"]), Convert.ToDouble(Session["Width"]), Convert.ToDouble(Session["Depth"]),
+                                        Session["Side"].ToString(), Session["Material"].ToString(), Session["Finish"].ToString(), Session["Wall"].ToString());
+                            price = calcPrice(Convert.ToInt32(customQty), unitPrice);
+                            Label1.Text = "Custom Quantity: " + customQty + " Price per box: CAD " + price;
                             Session["Quantity"] = customQty;
-                            Session["Price"] = price.ToString();
+                            Session["UnitPrice"] = unitPrice.ToString();
                             BtnSelectQty.Text = "Select Standard Quantity from above list";
                             quantityRadioBtn.Enabled = false;
                             quantityRadioBtn.ClearSelection();
@@ -83,10 +87,12 @@ namespace ZenithFrontEnd
                 if (quantityRadioBtn.SelectedIndex > -1)
                 {
                     customQty = quantityRadioBtn.SelectedItem.ToString();
-                    price = calcPrice(Convert.ToInt32(customQty));
-                    Label1.Text = "You selected: " + customQty + " Price: CAD " + price;
+                    unitPrice = calcUnitPrice(Convert.ToDouble(Session["Length"]), Convert.ToDouble(Session["Width"]), Convert.ToDouble(Session["Depth"]),
+                        Session["Side"].ToString(), Session["Material"].ToString(), Session["Finish"].ToString(), Session["Wall"].ToString());
+                    price = calcPrice(Convert.ToInt32(customQty), unitPrice);
+                    Label1.Text = "You selected: " + customQty + " Price per box: CAD " + price;
                     Session["Quantity"] = customQty;
-                    Session["Price"] = price.ToString();
+                    Session["UnitPrice"] = unitPrice.ToString();
                     BtnSelectQty.Text = "Select Custom Quantity";
                 }
                 else
@@ -97,57 +103,109 @@ namespace ZenithFrontEnd
 
 
         }
+        private double calcUnitPrice(double length, double height, double width, string printingSide, string material, string finish, string wall)
+        {
+            double unitPrice = 0.0;
+          
+            //SIZE
+            double l = length * 0.4;
+            double h = height * 0.3;
+            double w = width * 0.5;
+            unitPrice = l + h + w;
 
-        private double calcPrice(int qty)
+            // PRINTING SIDE
+            if (printingSide == "Outside Only" || printingSide == "Inside Only")
+            {
+                unitPrice = unitPrice + 0.50;
+            }
+            else if (printingSide == "Both Sides")
+            {
+                unitPrice = unitPrice + (unitPrice * 0.25);
+            }
+            //MATERIAL
+            if (material == "Premium White")
+            {
+                unitPrice = unitPrice + 1;
+            }
+            else if (material == "White")
+            {
+                unitPrice = unitPrice + 0.5;
+            }
+            //FINISH
+            if (finish == "Gloss")
+            {
+                unitPrice = unitPrice + 1;
+            }
+            else if (finish == "Matte")
+            {
+                unitPrice = unitPrice + 0.5;
+            }
+            //WALL
+            if (wall == "Double")
+            {
+                unitPrice = unitPrice + 0.5;
+            }
+            else if(wall == "Triple")
+            {
+                unitPrice = unitPrice + 1;
+            }
+
+            return unitPrice;
+        }
+        private double calcPrice(int qty, double valuePerQty)
         {
             double price = 0.0;
             double unitPrice = 0.0;
-            if (qty <1)
+           // double valuePerQty = 13.30;
+            if (qty < 1)
             {
                 unitPrice = 0;
             }
             if (qty == 1)
             {
-                unitPrice = 20.00;               
+                unitPrice = 28.00;
             }
-            else if ( qty < 10)
+            else if (qty < 10)
             {
-                unitPrice = 10.00;
+                unitPrice = 15;
             }
             else if (qty < 25)
             {
-                unitPrice = 8.00;
+                unitPrice = valuePerQty;
             }
             else if (qty < 50)
             {
-                unitPrice = 4.00;
+                unitPrice = valuePerQty - (valuePerQty * 0.082);
             }
             else if (qty < 100)
             {
-                unitPrice = 3.00;
+                unitPrice = valuePerQty - (valuePerQty * 0.7082);
             }
             else if (qty < 500)
             {
-                unitPrice = 2.00;
+                unitPrice = valuePerQty - (valuePerQty * 0.7444);
             }
             else if (qty < 1000)
             {
-                unitPrice = 1.50;
+                unitPrice = valuePerQty - (valuePerQty * 0.82);
             }
             else if (qty < 2000)
             {
-                unitPrice = 1.30;
+                unitPrice = valuePerQty - (valuePerQty * 0.83);
             }
             else if (qty < 5000)
             {
-                unitPrice = 1.20;
+                unitPrice = valuePerQty - (valuePerQty * 0.84);
             }
             else
             {
-                unitPrice = 1.10;
+                unitPrice = valuePerQty - (valuePerQty * 0.86);
             }
             price = unitPrice * qty;
-            return price;
+            price = Math.Round(price,2, MidpointRounding.AwayFromZero);
+            Session["Price"] = price.ToString();
+            //return price;
+            return unitPrice;
         }
     }
 }

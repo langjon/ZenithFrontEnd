@@ -15,7 +15,7 @@
             <td>Quantity</td>
             <td>Date</td>
             <td>Price</td>
-            <td>&nbsp;</td>
+            <td>Unit Price</td>
             
         </HeaderTemplate>
         <ItemTemplate>
@@ -26,10 +26,10 @@
             <td><%#Eval("prodFinish") %></td>
             <td><%#Eval("prodWallType") %></td>
             <td><%#Eval("prodPrintSides") %></td>
-            <td><%#Eval("prodQuantity") %></td>
+            <td><asp:TextBox ID="txtQty" runat="server" Width="50px" MaxLength="5" Text=<%#Eval("prodQuantity") %> OnTextChanged="qtyChanged"></asp:TextBox></td>
             <td><%#Eval("prodDateCreated") %></td>
             <td><%#Eval("prodPrice") %></td>
-            <td><a href="DeleteCart.aspx?id=<%#Eval("id") %>">Delete</a></td>
+            <td><%#Eval("prodUnitPrice") %></td>
            
         </ItemTemplate>
     </asp:DataList>
