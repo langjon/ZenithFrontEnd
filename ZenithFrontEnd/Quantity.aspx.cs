@@ -149,7 +149,7 @@ namespace ZenithFrontEnd
             {
                 unitPrice = unitPrice + 1;
             }
-
+            unitPrice = Math.Round(unitPrice, 2, MidpointRounding.AwayFromZero);
             return unitPrice;
         }
         private double calcPrice(int qty, double valuePerQty)
