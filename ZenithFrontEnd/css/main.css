@@ -265,6 +265,7 @@ td {
     #MainContent_cartListTable tr td:first-child {
         width: 0;
         visibility: hidden;
+        border: none;
     }
 
 #cartDiv {
@@ -285,7 +286,7 @@ td {
 #cartBtnDiv {
     margin-left: 15%;
     margin-right: 15%;
-    bottom: 0;
+    bottom: 3px;
     right: 0;
     position: absolute;
     float: right;
