@@ -155,7 +155,7 @@ label {
         box-shadow: 0 0 5px rgba(81, 203, 238, 1);
         cursor: default;
     }
-   
+
 #loginError {
     border: thin solid red;
     background-color: white;
@@ -246,7 +246,7 @@ td {
 }
 
     #MainContent_cartListTable td{
-        width: 10%;
+        width: 9%;
         border: thin solid gray;
         border-collapse: collapse;
         box-shadow: none;

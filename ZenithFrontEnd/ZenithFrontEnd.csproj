@@ -18,9 +18,12 @@
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44308</IISExpressSSLPort>
-    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
-    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
-    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <IISExpressAnonymousAuthentication>
+    </IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>
+    </IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>
+    </IISExpressUseClassicPipelineMode>
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -116,6 +119,7 @@
     <Content Include="Login.aspx" />
     <Content Include="ProductReview.aspx" />
     <Content Include="Quantity.aspx" />
+    <Content Include="ShoppingCart\DeleteCart.aspx" />
     <Content Include="ShoppingCart\testing.aspx" />
     <Content Include="ShoppingCart\ViewCart.aspx" />
     <Content Include="Size.aspx" />
@@ -222,6 +226,13 @@
     </Compile>
     <Compile Include="Quantity.aspx.designer.cs">
       <DependentUpon>Quantity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShoppingCart\DeleteCart.aspx.cs">
+      <DependentUpon>DeleteCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShoppingCart\DeleteCart.aspx.designer.cs">
+      <DependentUpon>DeleteCart.aspx</DependentUpon>
     </Compile>
     <Compile Include="ShoppingCart\testing.aspx.cs">
       <DependentUpon>testing.aspx</DependentUpon>

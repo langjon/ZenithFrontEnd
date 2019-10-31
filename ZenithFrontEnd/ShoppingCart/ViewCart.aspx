@@ -15,6 +15,7 @@
             <td>Quantity</td>
             <td>Date</td>
             <td>Price</td>
+            <td>&nbsp;</td>
             
         </HeaderTemplate>
         <ItemTemplate>
@@ -28,6 +29,7 @@
             <td><%#Eval("prodQuantity") %></td>
             <td><%#Eval("prodDateCreated") %></td>
             <td><%#Eval("prodPrice") %></td>
+            <td><a href="DeleteCart.aspx?id=<%#Eval("id") %>">Delete</a></td>
            
         </ItemTemplate>
     </asp:DataList>
