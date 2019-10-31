@@ -84,7 +84,7 @@ namespace ZenithFrontEnd
             }
             else if (qty < 50)
             {
-                unitPrice = valuePerQty - (valuePerQty * 0.082);
+                unitPrice = valuePerQty - (valuePerQty * 0.60);
             }
             else if (qty < 100)
             {
@@ -113,11 +113,11 @@ namespace ZenithFrontEnd
             price = unitPrice * qty;
             price = Math.Round(price, 2, MidpointRounding.AwayFromZero);
             return price;
-           
         }
 
         protected void addToCart_Click(object sender, EventArgs e)
         {
+            prodImage = "../" + Session["BoxImage"].ToString();
             prodType = Session["BoxType"].ToString();
             prodSize = Session["Size"].ToString();
             prodMaterial = Session["Material"].ToString();
@@ -125,22 +125,21 @@ namespace ZenithFrontEnd
             prodFinish = Session["Finish"].ToString();
             prodWallType = Session["Wall"].ToString();
             prodQuantity = Session["Quantity"].ToString();
-            prodPrice = Session["Price"].ToString();
             prodUnitPrice = Session["UnitPrice"].ToString();
+            prodPrice = Session["Price"].ToString();
             prodDateCreated = DateTime.Now.ToString();
-            prodImage = "../" + Session["BoxImage"].ToString(); 
 
             if (Request.Cookies["cartCookie"] == null)
             {
-                Response.Cookies["cartCookie"].Value = prodType.ToString() + "," + prodSize.ToString() + "," + prodMaterial.ToString() + "," 
+                Response.Cookies["cartCookie"].Value = prodImage.ToString() + "," + prodType.ToString() + "," + prodSize.ToString() + "," + prodMaterial.ToString() + "," 
                     + prodPrintSides.ToString() + "," + prodFinish.ToString() + "," + prodWallType.ToString() + "," + prodQuantity.ToString() + "," 
-                    + prodDateCreated.ToString() + "," + prodPrice.ToString() + "," + prodImage.ToString() + "," + prodUnitPrice.ToString();
-                Response.Cookies["cartCookie"].Expires = DateTime.Now.AddDays(1);
+                    + prodUnitPrice.ToString() + "," + prodPrice.ToString() + "," + prodDateCreated.ToString();
+                Response.Cookies["cartCookie"].Expires = DateTime.Now.AddDays(1); 
             } else
             {
-                Response.Cookies["cartCookie"].Value = Request.Cookies["cartCookie"].Value.ToString() + "|" + prodType.ToString() + "," + prodSize.ToString() + "," + prodMaterial.ToString() + ","
+                Response.Cookies["cartCookie"].Value = Request.Cookies["cartCookie"].Value.ToString() + "|" + prodImage.ToString() + "," + prodType.ToString() + "," + prodSize.ToString() + "," + prodMaterial.ToString() + ","
                     + prodPrintSides.ToString() + "," + prodFinish.ToString() + "," + prodWallType.ToString() + "," + prodQuantity.ToString() + ","
-                    + prodDateCreated.ToString() + "," + prodPrice.ToString() + "," + prodImage.ToString() + "," + prodUnitPrice.ToString();
+                    + prodUnitPrice.ToString() + "," + prodPrice.ToString() + "," + prodDateCreated.ToString();
                 Response.Cookies["cartCookie"].Expires = DateTime.Now.AddDays(1);
             }
             Response.Redirect("/ShoppingCart/ViewCart.aspx");
