@@ -112,6 +112,7 @@ namespace ZenithFrontEnd
             }
             price = unitPrice * qty;
             price = Math.Round(price, 2, MidpointRounding.AwayFromZero);
+            //price = Math.Round(price*100)/100;
             return price;
         }
 

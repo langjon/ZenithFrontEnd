@@ -174,7 +174,7 @@ label {
     padding-top: 15px;
     padding-left: 2%;
     position: relative;
-    bottom: -200px;
+    bottom: -150px;
     width: 98%;
     clear:both;
 }
@@ -182,7 +182,7 @@ label {
 #contactInfo {
     clear: both;
     position: relative;
-    bottom: -200px;
+    bottom: -150px;
     width: 100%;
 }
 
@@ -237,19 +237,19 @@ td {
 }
 
 #MainContent_cartListTable {
-    width: 90%;
-    margin-left: 5%;
+    width: 100%;
     border: none;
     border-collapse: collapse;
     box-shadow: none;
-    margin-top: 70px;
+    overflow:scroll;
 }
 
     #MainContent_cartListTable td{
-        width: 9%;
+        width: 8%;
         border: thin solid gray;
         border-collapse: collapse;
         box-shadow: none;
+        text-align: center;
     }
 
     #MainContent_cartListTable tr:first-child {
@@ -258,7 +258,31 @@ td {
        font-weight: bold;
     }
 
-    #MainContent_cartListTable tr td:first-child{
+    #MainContent_cartListTable tr td:first-child {
         width: 0;
-        visibility:collapse;
+        visibility: hidden;
     }
+
+#cartDiv {
+    height: 480px;
+    width: 90%;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin-left: 5%;
+}
+#cartFtrDiv {
+    margin-left: 15%;
+    margin-right: 15%;
+    bottom: 50px;
+    position: absolute;
+    right: 0;
+    text-align: right;
+}
+#cartBtnDiv {
+    margin-left: 15%;
+    margin-right: 15%;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    float: right;
+}

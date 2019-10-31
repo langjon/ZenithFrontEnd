@@ -44,7 +44,7 @@ namespace ZenithFrontEnd.ShoppingCart
                     
                    totalPrice += Convert.ToDouble(cartItemDetails[9]);
                 }
-                
+
             }
 
             cartListTable.DataSource = cartTable;

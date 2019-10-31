@@ -202,9 +202,13 @@ namespace ZenithFrontEnd
                 unitPrice = valuePerQty - (valuePerQty * 0.86);
             }
             price = unitPrice * qty;
-            price = Math.Round(price,2, MidpointRounding.AwayFromZero);
+            //price = Math.Round(price,2, MidpointRounding.AwayFromZero);
+            price = Math.Round(price * 100) / 100;
             Session["Price"] = price.ToString();
             //return price;
+            //unitPrice = Math.Round(unitPrice * 100) / 100;
+            unitPrice = Math.Round(unitPrice, 2);
+            var strUnitPrice = string.Format("{0:0.00}", unitPrice);
             return unitPrice;
         }
     }
