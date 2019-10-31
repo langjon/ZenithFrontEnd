@@ -13,15 +13,15 @@ namespace ZenithFrontEnd.ShoppingCart
     {
         string prodValue;
         string cartItem;
-        string[] cartItemDetails = new string[11];
+        string[] cartItemDetails = new string[12];
         double totalPrice = 0.0;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             DataTable cartTable = new DataTable();
-            cartTable.Columns.AddRange(new DataColumn[11] { new DataColumn("prodType"), new DataColumn("prodSize"), new DataColumn("prodMaterial"),
+            cartTable.Columns.AddRange(new DataColumn[12] { new DataColumn("prodImage"), new DataColumn("prodType"), new DataColumn("prodSize"), new DataColumn("prodMaterial"),
                 new DataColumn("prodFinish"), new DataColumn("prodWallType"), new DataColumn("prodPrintSides"), new DataColumn("prodQuantity"),
-                new DataColumn("prodDateCreated"), new DataColumn("prodPrice"),  new DataColumn("prodImage"), new DataColumn("prodUnitPrice")});
+                new DataColumn("prodUnitPrice"), new DataColumn("prodPrice"), new DataColumn("prodDateCreated"), new DataColumn("id")});
 
             if (Request.Cookies["cartCookie"] != null)
             {
@@ -40,9 +40,9 @@ namespace ZenithFrontEnd.ShoppingCart
                     cartTable.Rows.Add(cartItemDetails[0].ToString(), cartItemDetails[1].ToString(), cartItemDetails[2].ToString(),
                         cartItemDetails[3].ToString(), cartItemDetails[4].ToString(), cartItemDetails[5].ToString(),
                         cartItemDetails[6].ToString(), cartItemDetails[7].ToString(), cartItemDetails[8].ToString(),
-                        cartItemDetails[9].ToString(), cartItemDetails[10].ToString());
+                        cartItemDetails[9].ToString(), cartItemDetails[10].ToString(), i.ToString());
                     
-                   totalPrice += Convert.ToDouble(cartItemDetails[8]);
+                   totalPrice += Convert.ToDouble(cartItemDetails[9]);
                 }
                 
             }
@@ -78,7 +78,7 @@ namespace ZenithFrontEnd.ShoppingCart
             }
             else if (qty < 50)
             {
-                unitPrice = valuePerQty - (valuePerQty * 0.082);
+                unitPrice = valuePerQty - (valuePerQty * 0.600);
             }
             else if (qty < 100)
             {

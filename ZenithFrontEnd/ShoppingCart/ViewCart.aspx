@@ -13,9 +13,11 @@
             <td>Finish</td>
             <td>Wall Type</td>
             <td>Quantity</td>
-            <td>Date</td>
-            <td>Price</td>
             <td>Unit Price</td>
+            <td>Price</td>
+            <td>Date</td>
+            <td>&nbsp</td>
+            
             
         </HeaderTemplate>
         <ItemTemplate>
@@ -27,9 +29,11 @@
             <td><%#Eval("prodWallType") %></td>
             <td><%#Eval("prodPrintSides") %></td>
             <td><asp:TextBox ID="txtQty" runat="server" Width="50px" MaxLength="5" Text=<%#Eval("prodQuantity") %> OnTextChanged="qtyChanged"></asp:TextBox></td>
-            <td><%#Eval("prodDateCreated") %></td>
-            <td><%#Eval("prodPrice") %></td>
             <td><%#Eval("prodUnitPrice") %></td>
+            <td><%#Eval("prodPrice") %></td>
+            <td><%#Eval("prodDateCreated") %></td>
+            <td><a href="DeleteCart.aspx?id=<%#Eval("id") %>">Delete</a></td>
+            
            
         </ItemTemplate>
     </asp:DataList>
