@@ -130,20 +130,64 @@ namespace ZenithFrontEnd
             prodPrice = Session["Price"].ToString();
             prodDateCreated = DateTime.Now.ToString();
 
+            string prodValue;
+            string cartItem;
+            string[] cartItemDetails = new string[12];
+
             if (Request.Cookies["cartCookie"] == null)
             {
-                Response.Cookies["cartCookie"].Value = prodImage.ToString() + "," + prodType.ToString() + "," + prodSize.ToString() + "," + prodMaterial.ToString() + "," 
-                    + prodPrintSides.ToString() + "," + prodFinish.ToString() + "," + prodWallType.ToString() + "," + prodQuantity.ToString() + "," 
+                Response.Cookies["cartCookie"].Value = prodImage.ToString() + "," + prodType.ToString() + "," + prodSize.ToString() + "," + prodMaterial.ToString() + ","
+                    + prodPrintSides.ToString() + "," + prodFinish.ToString() + "," + prodWallType.ToString() + "," + prodQuantity.ToString() + ","
                     + prodUnitPrice.ToString() + "," + prodPrice.ToString() + "," + prodDateCreated.ToString();
-                Response.Cookies["cartCookie"].Expires = DateTime.Now.AddDays(1); 
-            } else
+                Response.Cookies["cartCookie"].Expires = DateTime.Now.AddDays(1);
+            }
+            else
             {
+                /*  prodValue = Convert.ToString(Request.Cookies["cartCookie"].Value);
+
+                string[] cartArray = prodValue.Split('|');
+
+                for (int i = 0; i < cartArray.Length; i++)
+                {
+                    cartItem = Convert.ToString(cartArray[i].ToString());
+                    string[] cartRowArray = cartItem.Split(',');
+                    for (int j = 0; j < cartRowArray.Length; j++)
+                    {
+                        cartItemDetails[j] = cartRowArray[j].ToString();
+                    }
+                    if (cartItemDetails[1].ToString() == Session["BoxType"].ToString() &&
+                        cartItemDetails[2].ToString() == Session["Size"].ToString()  &&
+                        cartItemDetails[3].ToString() == Session["Material"].ToString() && 
+                        cartItemDetails[4].ToString() == Session["Side"].ToString() &&
+                        cartItemDetails[5].ToString() == Session["Finish"].ToString() &&
+                        cartItemDetails[6].ToString() == Session["Wall"].ToString() )
+                    {
+                    //get all the values of cookie in a string, update the value of quantity and price, recreate the cookie withsame name
+                    // Label1.text = server.Htmlencode(Request.Cookies("UserData")("LastVisit"))
+                    // update cartItemDetails[7] with new quantity after adding the quantity
+                    //update cartItemDetails[9] with new price
+                    }
+                    else
+                    {
+                    Response.Cookies["cartCookie"].Value = Request.Cookies["cartCookie"].Value.ToString() + "|" + prodImage.ToString() + "," + prodType.ToString() + "," + prodSize.ToString() + "," + prodMaterial.ToString() + ","
+                      + prodPrintSides.ToString() + "," + prodFinish.ToString() + "," + prodWallType.ToString() + "," + prodQuantity.ToString() + ","
+                      + prodUnitPrice.ToString() + "," + prodPrice.ToString() + "," + prodDateCreated.ToString();
+                    Response.Cookies["cartCookie"].Expires = DateTime.Now.AddDays(1);
+                }
+
+                }
+            */
+
+
+
                 Response.Cookies["cartCookie"].Value = Request.Cookies["cartCookie"].Value.ToString() + "|" + prodImage.ToString() + "," + prodType.ToString() + "," + prodSize.ToString() + "," + prodMaterial.ToString() + ","
                     + prodPrintSides.ToString() + "," + prodFinish.ToString() + "," + prodWallType.ToString() + "," + prodQuantity.ToString() + ","
                     + prodUnitPrice.ToString() + "," + prodPrice.ToString() + "," + prodDateCreated.ToString();
                 Response.Cookies["cartCookie"].Expires = DateTime.Now.AddDays(1);
+               
             }
             Response.Redirect("/ShoppingCart/ViewCart.aspx");
         }
     }
 }
+ 
