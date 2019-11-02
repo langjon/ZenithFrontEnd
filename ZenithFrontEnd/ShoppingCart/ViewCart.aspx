@@ -31,7 +31,9 @@
                 <td><%#Eval("prodWallType") %></td>
                 <td><%#Eval("prodPrintSides") %></td>
                 <td>
-                    <asp:TextBox ID="txtQty" runat="server" Width="50px" MaxLength="5" Text='<%#Eval("prodQuantity") %>' OnTextChanged="qtyChanged"></asp:TextBox></td>
+                   <asp:TextBox ID="txtQty" runat="server" Width="50px" MaxLength="5" Value='<%#Eval("id") %>' Text='<%#Eval("prodQuantity") %>' AutoPostBack="true" OnTextChanged="qtyChanged" ></asp:TextBox> 
+                    <a href="EditCart.aspx?id=<%#Eval("id") %>&qty=1000">Update</a>
+                </td>
                 <td><%#Eval("prodUnitPrice") %></td>
                 <td><%#Eval("prodPrice") %></td>
                 <td><%#Eval("prodDateCreated") %></td>
