@@ -126,7 +126,7 @@
                             <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
                         </p>
                         <a class="btnGeneral" href="uploadImage.aspx">NEXT</a>
-                        <a class="btnGeneral" href="Product.aspx">BACK</a>
+                        <a class="btnGeneral" href="options.aspx">BACK</a>
                         <a class="btnGeneral" href="Help.aspx">HELP</a>
                     </div>
                 </div>

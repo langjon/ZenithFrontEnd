@@ -11,6 +11,20 @@ namespace ZenithFrontEnd
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Session["Side"] = sideRadioBtn.SelectedItem.ToString();
+            Session["Material"] = materialRadioBtn.SelectedItem.ToString();
+            Session["Wall"] = wallRadioBtn.SelectedItem.ToString();
+            if (materialRadioBtn.SelectedIndex == 0)
+            {
+                finishRadioBtn.Enabled = true;
+            }
+            else
+            {
+                finishRadioBtn.Enabled = false;
+                finishRadioBtn.ClearSelection();
+                Session["Finish"] = "N/A";
+            }
+
             if (!IsPostBack)
             {
                 finishRadioBtn.Enabled = false;
@@ -43,7 +57,6 @@ namespace ZenithFrontEnd
 
         }
 
-        
         protected void wallRadioBtn_SelectedIndexChanged(object sender, EventArgs e)
         {
             Session["Wall"] = wallRadioBtn.SelectedItem.ToString();

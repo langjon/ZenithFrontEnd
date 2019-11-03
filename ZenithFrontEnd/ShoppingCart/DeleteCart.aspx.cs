@@ -50,12 +50,19 @@ namespace ZenithFrontEnd.ShoppingCart
 
                     totalPrice += Convert.ToDouble(cartItemDetails[9]);
                 }
+                for (int i = 0; i < cartArray.Length; i++)
+                {
+                    DataRow cartRow = cartTable.Rows[i];
+                    if (i == id)
+                    {
+                        cartRow.Delete();
+                    }
+                }
+                cartTable.AcceptChanges();
             }
 
-            cartTable.Rows.RemoveAt(id);
             Response.Cookies["cartCookie"].Expires = DateTime.Now.AddDays(-1);
-            Response.Cookies["cartCookie"].Expires = DateTime.Now.AddDays(-1);
-
+           
             foreach (DataRow cartRow in cartTable.Rows)
             {
                 prodType = cartRow["prodType"].ToString();
@@ -74,21 +81,21 @@ namespace ZenithFrontEnd.ShoppingCart
 
                 if (count == 1)
                 {
+                    Response.Cookies["cartCookie"].Expires = DateTime.Now.AddDays(1);
                     Response.Cookies["cartCookie"].Value = prodImage.ToString() + "," + prodType.ToString() + "," + prodSize.ToString() + "," + prodMaterial.ToString() + ","
                     + prodPrintSides.ToString() + "," + prodFinish.ToString() + "," + prodWallType.ToString() + "," + prodQuantity.ToString() + ","
-                    + prodUnitPrice.ToString() + "," + prodPrice.ToString() + "," + prodDateCreated.ToString();
-                    Response.Cookies["cartCookie"].Expires = DateTime.Now.AddDays(1);
+                    + prodUnitPrice.ToString() + "," + prodPrice.ToString() + "," + prodDateCreated.ToString(); 
                 }
                 else
                 {
                     Response.Cookies["cartCookie"].Value = Request.Cookies["cartCookie"].Value.ToString() + "|" + prodImage.ToString() + "," + prodType.ToString() + "," + prodSize.ToString() + "," + prodMaterial.ToString() + ","
                     + prodPrintSides.ToString() + "," + prodFinish.ToString() + "," + prodWallType.ToString() + "," + prodQuantity.ToString() + ","
                     + prodUnitPrice.ToString() + "," + prodPrice.ToString() + "," + prodDateCreated.ToString();
-                    Response.Cookies["cartCookie"].Expires = DateTime.Now.AddDays(1);
                 }
             }
             totalPrice = 0.0;
             Response.Redirect("ViewCart.aspx");
+            
         }
     }
 }

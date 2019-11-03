@@ -24,8 +24,6 @@ namespace ZenithFrontEnd
             }
             else
                 addToCart.Enabled = true;
-           
-          
 
             if (Session["BoxImage"] != null)
             {

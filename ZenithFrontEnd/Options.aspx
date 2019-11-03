@@ -36,8 +36,8 @@
 
                     <div style="font-size: large; font-weight: bold">
                         <p class="auto-style2">
-                            Printing<asp:RadioButtonList ID="sideRadioBtn" runat="server" RepeatDirection="Horizontal" RepeatColumns="3" Font-Names="Arial" Font-Size="Medium" OnSelectedIndexChanged="sideRadioBtn_SelectedIndexChanged" AutoPostBack="true">
-                                <asp:ListItem>Outside Only</asp:ListItem>
+                            Printing<asp:RadioButtonList ID="sideRadioBtn" runat="server" RepeatDirection="Horizontal" RepeatColumns="3" Font-Names="Arial" Font-Size="Medium" OnSelectedIndexChanged="sideRadioBtn_SelectedIndexChanged">
+                                <asp:ListItem Selected="True">Outside Only</asp:ListItem>
                                 <asp:ListItem>Inside Only</asp:ListItem>
                                 <asp:ListItem>Both Sides</asp:ListItem>
                             </asp:RadioButtonList>
@@ -45,21 +45,21 @@
                         <p class="auto-style2">
                             Material<asp:RadioButtonList ID="materialRadioBtn" runat="server" RepeatDirection="Horizontal" RepeatColumns="3" Font-Names="Arial" Font-Size="Medium" OnSelectedIndexChanged="materialRadioBtn_SelectedIndexChanged" AutoPostBack="true">
                                 <asp:ListItem>Premium White</asp:ListItem>
-                                <asp:ListItem>Kraft</asp:ListItem>
+                                <asp:ListItem Selected="True">Kraft</asp:ListItem>
                                 <asp:ListItem>White</asp:ListItem>
                             </asp:RadioButtonList>
                         </p>
                         <p class="auto-style2">
-                            Finish<asp:RadioButtonList ID="finishRadioBtn" runat="server" RepeatDirection="Horizontal" RepeatColumns="2" Font-Names="Arial" Font-Size="Medium" OnSelectedIndexChanged="finishRadioBtn_SelectedIndexChanged" AutoPostBack="true">
+                            Finish<asp:RadioButtonList ID="finishRadioBtn" runat="server" RepeatDirection="Horizontal" RepeatColumns="2" Font-Names="Arial" Font-Size="Medium" OnSelectedIndexChanged="finishRadioBtn_SelectedIndexChanged">
                                 <asp:ListItem>Gloss</asp:ListItem>
                                 <asp:ListItem>Matte</asp:ListItem>
                             </asp:RadioButtonList>
                         </p>
 
                         <p class="auto-style2">
-                            Wall Type<asp:RadioButtonList ID="wallRadioBtn" runat="server" RepeatDirection="Horizontal" RepeatColumns="3" Font-Names="Arial" Font-Size="Medium" OnSelectedIndexChanged="wallRadioBtn_SelectedIndexChanged" AutoPostBack="true">
+                            Wall Type<asp:RadioButtonList ID="wallRadioBtn" runat="server" RepeatDirection="Horizontal" RepeatColumns="3" Font-Names="Arial" Font-Size="Medium" OnSelectedIndexChanged="wallRadioBtn_SelectedIndexChanged" >
                                 <asp:ListItem>Single</asp:ListItem>
-                                <asp:ListItem>Double</asp:ListItem>
+                                <asp:ListItem Selected="True">Double</asp:ListItem>
                                 <asp:ListItem>Triple</asp:ListItem>
                             </asp:RadioButtonList>
                         </p>
