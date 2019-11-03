@@ -1,13 +1,41 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Size.aspx.cs" Inherits="ZenithFrontEnd.Size" %>
 
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>C&B Packaging - Size</title>
+    <title>C&B Packaging - size</title>
 
     <link rel="stylesheet" href="css/main.css" />
-
+    <style type="text/css">
+        .auto-style1 {
+            margin-left: 90px;
+        }
+        .auto-style2 {
+            width: 24%;
+        }
+        .auto-style4 {
+            width: 734px;
+        }
+        .auto-style6 {
+            width: 129px;
+        }
+        .auto-style7 {
+            width: 24px;
+            height: 31px;
+        }
+        .auto-style8 {
+            width: 23%;
+        }
+        .auto-style14 {
+            width: 26px;
+            height: 24px;
+        }
+        .auto-style15 {
+            margin-left: 40px;
+        }
+    </style>
 </head>
 <body>
     <img id="logo" src="images/wp-logo.jpg" alt="CB Logo" />
@@ -23,18 +51,32 @@
     </ul>
     <div id="errorMessages" runat="server">
     </div>
-    <div style="height: 700px">
-        <form id="form1" runat="server">
-            <div class="pageTitle">
-                <p>BUILD YOUR BOX</p>
-            </div>
-            <div id="buildDiv">
-                <asp:ImageButton ID="selectedBox" class="auto-style1" runat="server" Height="134px" Width="160px" />
+    <div id="mainBodyDiv">
 
-                <div id="sizeDiv">
-                    <div style="font-size: large; font-weight: bold">
-                        <p class="auto-style2">
-                            Size<asp:RadioButtonList Width="600px" ID="sizeRadioBtn" runat="server" OnSelectedIndexChanged="sizeRadioBtn_SelectedIndexChanged" AutoPostBack="true" RepeatDirection="Horizontal" RepeatColumns="3" CellPadding="3" CellSpacing="2" CssClass="auto-style14" Font-Names="Arial" Font-Size="Medium">
+        <div class="pageTitle">
+                <p>BUILD YOUR BOX</p>
+        </div>
+
+        <div id="panelDiv" class="auto-style8">
+           
+            Your Order Progress:<br />
+            <br />
+            <img alt="" class="auto-style14" src="images/blue%20circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SIZE<br />
+            <img alt="" class="auto-style7" src="images/circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PRINTING<br />
+            <img alt="" class="auto-style7" src="images/circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MATERIAL<br />
+            <img alt="" class="auto-style7" src="images/circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FINISH<br />
+            <img alt="" class="auto-style7" src="images/circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WALL TYPE<br />
+            <img alt="" class="auto-style7" src="images/circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; QUANTITY<br />
+            <img alt="" class="auto-style7" src="images/circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IMAGE UPLOAD</div>
+        <div id="bodyDiv">
+            <form id="form2" runat="server" style="font-family: Arial; font-size: medium; font-style: normal; font-weight: bold;">
+                <div class="auto-style15">
+                    <asp:ImageButton ID="selectedBox" class="auto-style1" runat="server" Height="134px" Width="160px" />
+                </div>
+
+                        <br />
+                Size<p class="auto-style2" style="font-family: Arial; font-size: medium; font-weight: normal;">
+                            <asp:RadioButtonList Width="600px" ID="sizeRadioBtn" runat="server" OnSelectedIndexChanged="sizeRadioBtn_SelectedIndexChanged" AutoPostBack="true" RepeatDirection="Horizontal" RepeatColumns="3" CellPadding="3" CellSpacing="2" CssClass="auto-style14" Font-Names="Arial" Font-Size="Medium">
                                 <asp:ListItem>   6 x 6 x 6 in       </asp:ListItem>
                                 <asp:ListItem>   8 x 8 x 8 in       </asp:ListItem>
                                 <asp:ListItem>   10 x 10 x 10 in    </asp:ListItem>
@@ -50,17 +92,20 @@
                             </asp:RadioButtonList>
 
                         </p>
+
+                <div id="sizeDiv">
+                    <div style="font-size: large; font-weight: bold">
                         <div class="auto-style12">
                             &nbsp;&nbsp;&nbsp;
                       
-                     <p class="auto-style6">
+                     <p class="auto-style6" style="font-family: Arial; font-size: medium; font-weight: normal; font-style: normal;">
 
-                         <label for="customSize">
+                         <label for="customSize" style="font-family: Arial; font-size: medium; font-style: normal;">
                              Custom Size:</label>
                      </p>
-                            <p class="auto-style4">
+                            <p class="auto-style4" style="font-family: Arial; font-size: small">
                                 <br />
-                                <label for="txtLength">
+                                <label for="txtLength" style="font-family: Arial; font-size: small">
                                     Length
                          <asp:TextBox CssClass="sizeField" ID="txtLength" runat="server" Width="50px" MaxLength="5"></asp:TextBox>&nbsp;x&nbsp;
                                 </label>
@@ -68,7 +113,7 @@
                                     Width
                          <asp:TextBox CssClass="sizeField" ID="txtWidth" runat="server" Width="50px" MaxLength="5"></asp:TextBox>&nbsp;x&nbsp;
                                 </label>
-                                <label for="txtDepth">
+                                <label for="txtDepth" style="font-family: Arial; font-size: small">
                                     Depth
                          <asp:TextBox CssClass="sizeField" ID="txtDepth" runat="server" Width="50px" MaxLength="5"></asp:TextBox>&nbsp;in
                                 </label>
@@ -79,7 +124,9 @@
                     <br />
                             <asp:Button ID="btSize" runat="server" Text="Select Custom Size" OnClick="btnSelectSize_Click" />
 
-                            <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+
+                            <asp:Label ID="Label1" runat="server" Font-Names="Arial" Font-Size="Medium"></asp:Label>
                             <br />
                             <br />
 
@@ -91,6 +138,7 @@
                 </div>
             </div>
         </form>
+
     </div>
     <footer id="contactInfo" role="contentinfo">
         <div>

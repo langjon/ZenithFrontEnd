@@ -13,6 +13,69 @@ namespace ZenithFrontEnd {
     public partial class uploadImage {
         
         /// <summary>
+        /// errorMessages control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl errorMessages;
+        
+        /// <summary>
+        /// LabelSize control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelSize;
+        
+        /// <summary>
+        /// LabelSides control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelSides;
+        
+        /// <summary>
+        /// LabelMaterial control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelMaterial;
+        
+        /// <summary>
+        /// LabelFinish control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelFinish;
+        
+        /// <summary>
+        /// LabelWallType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelWallType;
+        
+        /// <summary>
+        /// LabelQuantity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelQuantity;
+        
+        /// <summary>
         /// Form1 control.
         /// </summary>
         /// <remarks>
@@ -20,6 +83,15 @@ namespace ZenithFrontEnd {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm Form1;
+        
+        /// <summary>
+        /// selectedBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton selectedBox;
         
         /// <summary>
         /// div1 control.
@@ -74,5 +146,23 @@ namespace ZenithFrontEnd {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image Image1;
+        
+        /// <summary>
+        /// DropDownList1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        
+        /// <summary>
+        /// TextBox1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox1;
     }
 }

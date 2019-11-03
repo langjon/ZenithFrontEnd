@@ -72,13 +72,13 @@ namespace ZenithFrontEnd
         {
             Session["BoxType"] = "BOX-ScoredPAD";
             Session["BoxImage"] = "images/BOX-ScoredPAD.jpg";
-            Server.Transfer("Size.aspx");
+            Server.Transfer("BoxSize.aspx");
         }
         protected void boxSlitScorePad_Clicked(object sender, EventArgs e)
         {
             Session["BoxType"] = "BOX-SlitScorePad";
             Session["BoxImage"] = "images/BOX-SlitScorePad.jpg";
-            Server.Transfer("Size.aspx");
+            Server.Transfer("BoxSize.aspx");
         }
         protected void boxTelebox_Clicked(object sender, EventArgs e)
         {
