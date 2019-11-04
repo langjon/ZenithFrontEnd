@@ -16,14 +16,14 @@ namespace ZenithFrontEnd.ShoppingCart
         string prodValue;
         string cartItem;
         string[] cartItemDetails = new string[12];
-        int id, qty;
+        string id, qty;
         int count = 0;
         double totalPrice = 0.0;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            id = Convert.ToInt32(Request.QueryString["id"].ToString());
-            qty = Convert.ToInt32(Request.QueryString["qty"].ToString());
+            id = Request.QueryString["id"].ToString();
+            qty = Request.QueryString["qty"].ToString();
 
             DataTable cartTable = new DataTable();
             cartTable.Rows.Clear();
@@ -93,26 +93,29 @@ namespace ZenithFrontEnd.ShoppingCart
 
                     totalPrice += Convert.ToDouble(cartItemDetails[9]);
                 }
-                var myItem = workTable.Rows[id];
-                if (myItem != null)
-                {
-                    workTable.Rows[id]["prodQuantity"] = qty;
+                /*
+                   workTable.Rows[id].SetField("prodQuantity", qty);                        //  workTable.Rows[id]["prodQuantity"] = qty;
                     double valuePerQty = Convert.ToDouble(workTable.Rows[id]["prodUnitPrice"].ToString());
                     double price = calcPrice(qty, valuePerQty);
-                    workTable.Rows[id]["prodPrice"] = price.ToString();
-                    workTable.AcceptChanges();
-                }
-                /* 
-                 foreach (DataRow dr in cartTable.Rows) // search whole table
-                 {
-                    // if (Convert.ToInt32(dr["id"]) == id) // if id==2
-                    if(dr["id"].Contains())
-                     {
-                         dr["prodQuantity"] = qty; //change the name
-                                                     //break; break or not depending on you
-                     }
+                    workTable.Rows[id].SetField("prodPrice", price);                         // workTable.Rows[id]["prodPrice"] = price.ToString();
+                   // workTable.AcceptChanges();
+               */
+               
+                foreach (DataRow dr in workTable.Rows)
+                { 
+                    for (int x = 0; x < workTable.Rows.Count; x++)
+                    {
+                        if (workTable.Rows[x]["ID"].ToString() == id) 
+                        {
+                        workTable.Rows[x]["prodQuantity"] = qty;
+                        double valuePerQty = Convert.ToDouble(workTable.Rows[x]["prodUnitPrice"].ToString());
+                        double price = calcPrice(Convert.ToInt32(qty), valuePerQty);
+                        workTable.Rows[x]["prodPrice"] = price.ToString();
+                        workTable.AcceptChanges();
+                        }
+                    }
                  }
-                 */
+                 
 
                 /*
                 DataRow row = cartTable.Select("id="+id).FirstOrDefault();

@@ -130,9 +130,10 @@ namespace ZenithFrontEnd
             prodPrice = Session["Price"].ToString();
             prodDateCreated = DateTime.Now.ToString();
 
-            string prodValue;
+          /*  string prodValue;
             string cartItem;
-            string[] cartItemDetails = new string[12];
+            string[][] cartItemDetails = new string[50][];
+            bool found = false;
 
             if (Request.Cookies["cartCookie"] == null)
             {
@@ -143,7 +144,7 @@ namespace ZenithFrontEnd
             }
             else
             {
-                /*  prodValue = Convert.ToString(Request.Cookies["cartCookie"].Value);
+                  prodValue = Convert.ToString(Request.Cookies["cartCookie"].Value);
 
                 string[] cartArray = prodValue.Split('|');
 
@@ -153,30 +154,40 @@ namespace ZenithFrontEnd
                     string[] cartRowArray = cartItem.Split(',');
                     for (int j = 0; j < cartRowArray.Length; j++)
                     {
-                        cartItemDetails[j] = cartRowArray[j].ToString();
+                        cartItemDetails[i][j] = cartRowArray[j].ToString();
                     }
-                    if (cartItemDetails[1].ToString() == Session["BoxType"].ToString() &&
-                        cartItemDetails[2].ToString() == Session["Size"].ToString()  &&
-                        cartItemDetails[3].ToString() == Session["Material"].ToString() && 
-                        cartItemDetails[4].ToString() == Session["Side"].ToString() &&
-                        cartItemDetails[5].ToString() == Session["Finish"].ToString() &&
-                        cartItemDetails[6].ToString() == Session["Wall"].ToString() )
+                    if (cartItemDetails[i][1].ToString() == Session["BoxType"].ToString() &&
+                        cartItemDetails[i][2].ToString() == Session["Size"].ToString()  &&
+                        cartItemDetails[i][3].ToString() == Session["Material"].ToString() && 
+                        cartItemDetails[i][4].ToString() == Session["Side"].ToString() &&
+                        cartItemDetails[i][5].ToString() == Session["Finish"].ToString() &&
+                        cartItemDetails[i][6].ToString() == Session["Wall"].ToString() )
                     {
+                    found = true;
                     //get all the values of cookie in a string, update the value of quantity and price, recreate the cookie withsame name
+                     int quantity = Convert.ToInt32(cartItemDetails[i][7]) + Convert.ToInt32(Session["Quantity"]);
+                      // update cartItemDetails[7] with new quantity after adding the quantity
+                     cartItemDetails[i][7] = quantity.ToString();
+                      //update cartItemDetails[9] with new price
+                     double totalPrice = calcPrice(quantity, Convert.ToDouble(cartItemDetails[i][8]));
+                     cartItemDetails[i][9] = totalPrice.ToString();
                     // Label1.text = server.Htmlencode(Request.Cookies("UserData")("LastVisit"))
-                    // update cartItemDetails[7] with new quantity after adding the quantity
-                    //update cartItemDetails[9] with new price
+                   
+                   
                     }
                     else
                     {
+                    found = false;
+                    
                     Response.Cookies["cartCookie"].Value = Request.Cookies["cartCookie"].Value.ToString() + "|" + prodImage.ToString() + "," + prodType.ToString() + "," + prodSize.ToString() + "," + prodMaterial.ToString() + ","
                       + prodPrintSides.ToString() + "," + prodFinish.ToString() + "," + prodWallType.ToString() + "," + prodQuantity.ToString() + ","
                       + prodUnitPrice.ToString() + "," + prodPrice.ToString() + "," + prodDateCreated.ToString();
                     Response.Cookies["cartCookie"].Expires = DateTime.Now.AddDays(1);
-                }
+                    
+                    }
 
                 }
-            */
+           */
 
 
 

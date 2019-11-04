@@ -18,11 +18,12 @@ namespace ZenithFrontEnd.ShoppingCart
         
         protected void Page_Load(object sender, EventArgs e)
         {
-          /*  DataTable cartTable = new DataTable();
-            cartTable.Columns.AddRange(new DataColumn[12] { new DataColumn("prodImage"), new DataColumn("prodType"), new DataColumn("prodSize"), new DataColumn("prodMaterial"),
-                new DataColumn("prodFinish"), new DataColumn("prodWallType"), new DataColumn("prodPrintSides"), new DataColumn("prodQuantity"),
-                new DataColumn("prodUnitPrice"), new DataColumn("prodPrice"), new DataColumn("prodDateCreated"), new DataColumn("id")});
-                */
+           // if (!Page.IsPostBack) { BindData(); }
+            /*  DataTable cartTable = new DataTable();
+              cartTable.Columns.AddRange(new DataColumn[12] { new DataColumn("prodImage"), new DataColumn("prodType"), new DataColumn("prodSize"), new DataColumn("prodMaterial"),
+                  new DataColumn("prodFinish"), new DataColumn("prodWallType"), new DataColumn("prodPrintSides"), new DataColumn("prodQuantity"),
+                  new DataColumn("prodUnitPrice"), new DataColumn("prodPrice"), new DataColumn("prodDateCreated"), new DataColumn("id")});
+                  */
             ////////////////////////////////////////////////////////////////////////
             DataTable workTable = new DataTable("ShoppingCart");
             DataColumn workCol = workTable.Columns.Add("ID", typeof(Int32));

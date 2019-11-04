@@ -1,7 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ViewCart.aspx.cs" Inherits="ZenithFrontEnd.ShoppingCart.ViewCart" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="UpdateTry1.aspx.cs" Inherits="ZenithFrontEnd.ShoppingCart.UpdateTry1" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <!--<asp:Button ID="loadCart" runat="server" Text="Load Cart" OnClick="loadCart_Click" />-->
+  
     <div class="pageTitle">
             <p>SHOPPING CART</p>
         </div>
@@ -31,8 +32,8 @@
                 <td><%#Eval("prodWallType") %></td>
                 <td><%#Eval("prodPrintSides") %></td>
                 <td>
-                   <asp:TextBox ID="txtQty" runat="server" Width="50px" MaxLength="5" Value='<%#Eval("id") %>' Text='<%#Eval("prodQuantity") %>' AutoPostBack="true" OnTextChanged="qtyChanged" ></asp:TextBox> 
-                    <a href="UpdateTry1.aspx?id=<%#Eval("id") %>&qty=1000">Update</a>
+                   <asp:TextBox ID="txtQty" runat="server" Width="50px" MaxLength="5" Value='<%#Eval("id") %>' Text='<%#Eval("prodQuantity") %>' AutoPostBack="true"  ></asp:TextBox> 
+                    <a href="UpdateCart.aspx?id=<%#Eval("id") %>&qty=1000">Update</a>
                 </td>
                 <td><%#Eval("prodUnitPrice") %></td>
                 <td><%#Eval("prodPrice") %></td>
@@ -44,18 +45,15 @@
     <asp:DataList ID="DataList1" runat="server">
     </asp:DataList>
     <br />
-    <div id="cartFtrDiv">
-        <strong>
-            <asp:Label ID="LabelTotalText" runat="server" Text="Order Total: "></asp:Label>
-            <asp:Label ID="lblTotal" runat="server" EnableViewState="false"></asp:Label>
-        </strong>
-        <br />
-    </div>
-
+    
+    <asp:Label ID="lblTotal" runat="server" EnableViewState="false"></asp:Label>
     <div id="cartBtnDiv">
-        <a class="btnGeneral" href="../Checkout.aspx">Checkout</a>
-        <a class="btnGeneral" href="../Product.aspx">Build Another Product</a>
+        <a class="btnGeneral" href="ViewCart.aspx">Update</a>
+        <a class="btnGeneral" href="../Product.aspx">Cancel</a>
     </div>
 </asp:Content>
 
 
+
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+</asp:Content>

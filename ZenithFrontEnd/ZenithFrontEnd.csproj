@@ -119,6 +119,7 @@
     <Content Include="ShoppingCart\DeleteCart.aspx" />
     <Content Include="ShoppingCart\testing.aspx" />
     <Content Include="ShoppingCart\UpdateCart.aspx" />
+    <Content Include="ShoppingCart\UpdateTry1.aspx" />
     <Content Include="ShoppingCart\ViewCart.aspx" />
     <Content Include="Size.aspx" />
     <Content Include="ThankYou.aspx" />
@@ -246,6 +247,13 @@
     </Compile>
     <Compile Include="ShoppingCart\UpdateCart.aspx.designer.cs">
       <DependentUpon>UpdateCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShoppingCart\UpdateTry1.aspx.cs">
+      <DependentUpon>UpdateTry1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShoppingCart\UpdateTry1.aspx.designer.cs">
+      <DependentUpon>UpdateTry1.aspx</DependentUpon>
     </Compile>
     <Compile Include="ShoppingCart\ViewCart.aspx.cs">
       <DependentUpon>ViewCart.aspx</DependentUpon>
