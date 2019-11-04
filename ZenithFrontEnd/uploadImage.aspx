@@ -23,11 +23,7 @@
         }
 
         .auto-style11 {
-            height: 269px;
-        }
-
-        .auto-style12 {
-            margin-left: 160px;
+            height: 170px;
         }
 
         .auto-style13 {
@@ -122,59 +118,36 @@
                     <fieldset>
                         <legend>Upload Your Logo/Image</legend>
                         <div id="div1" runat="server">
-                            <br />
                             <input type="file" size="65" runat="server" id="FileUpload1" />
                         </div>
                         <br />
                         <asp:Button ID="Button1" runat="server" Text="Upload" OnClick="Button1_Click" />
-                        <br />
                         <br />
                     </fieldset>
                     <br />
                     <div id="div5" runat="server" visible="false" class="auto-style11">
                         <fieldset>
                             <legend>
-                                <br />
                                 Show Logo/Image<br />
                             </legend>
                             <div id="div3" runat="server">
-                                <br />
-                                <asp:Image ID="Image1" runat="server" Height="200" Width="200" ImageUrl="~/Image.gif" />
+                                <asp:Image ID="Image1" runat="server" Height="150" Width="150" ImageUrl="~/Image.gif" />
                             </div>
-                            <br />
                         </fieldset>
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        &nbsp;<br />
-                        <br />
-                        <br />
                     </div>
                     <br />
+                    <br />
                     <div class="auto-style16">
-                        <br />
-                        <br />
-                        Image Position:<br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    </div>
-                    <div class="auto-style17">
-                        <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
+                        Image Position:  <br /><asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
                             <asp:ListItem>Right Side</asp:ListItem>
                             <asp:ListItem>Left Side</asp:ListItem>
                             <asp:ListItem>Top</asp:ListItem>
-                            <asp:ListItem>Buttom</asp:ListItem>
+                            <asp:ListItem>Bottom</asp:ListItem>
                         </asp:DropDownList>
                     </div>
-                    <br />
-                    <br />
-                    <br />
-                    <br />
                     Special Instructions:       
                  <asp:TextBox ID="TextBox1" runat="server" CssClass="auto-style12" Height="101px" TextMode="MultiLine" Width="434px"></asp:TextBox>
-                    <br />
-                    <br />
+                    <br /><br />
                     <a href="ProductReview.aspx"><span class="btnGeneral">NEXT</span></a> <a id="btnBack" href="quantity.aspx" class="btnGeneral">BACK</a> <a id="btnHelp" href="Help.aspx" class="btnGeneral">HELP</a><br />
                 </div>
             </form>
