@@ -4,7 +4,7 @@
     font-family: "Arial";
     color: #3C4047;
     background-color: #f0f0f0;
-    height: 1100px;
+    height: 1000px;
 }
 
 .logoDiv{
@@ -217,7 +217,7 @@ label {
     list-style-type: none;
     margin: 0;
     width: 20%;
-    height: 300px;
+    height: 250px;
     float: left;
     background-color: steelblue;
     box-shadow: 1px 0 5px rgb(0, 0, 0);
