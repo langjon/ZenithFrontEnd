@@ -67,15 +67,6 @@ namespace ZenithFrontEnd {
         protected global::System.Web.UI.WebControls.TextBox txtCustom0;
         
         /// <summary>
-        /// txtCustom1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCustom1;
-        
-        /// <summary>
         /// RegularExpressionValidator4 control.
         /// </summary>
         /// <remarks>

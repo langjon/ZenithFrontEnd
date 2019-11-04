@@ -18,13 +18,6 @@
         .auto-style4 {
             width: 734px;
         }
-        .auto-style5 {
-            width: 29px;
-            height: 26px;
-        }
-        .auto-style6 {
-            width: 129px;
-        }
         .auto-style7 {
             width: 24px;
             height: 31px;
@@ -101,10 +94,7 @@
                          <asp:TextBox CssClass="auto-style3" ID="txtCustom" runat="server" Width="50px" MaxLength="5"></asp:TextBox>&nbsp;x&nbsp;
                       </label>
                       <label for="txtCusto0m"> Width
-                         <asp:TextBox CssClass="auto-style3" ID="txtCustom0" runat="server" Width="50px" MaxLength="5"></asp:TextBox>&nbsp;x&nbsp;
-                      </label>
-                      <label for="txtCustom1"> Depth
-                         <asp:TextBox CssClass="auto-style3" ID="txtCustom1" runat="server" Width="52px" MaxLength="5"></asp:TextBox>&nbsp;in
+                         <asp:TextBox CssClass="auto-style3" ID="txtCustom0" runat="server" Width="50px" MaxLength="5"></asp:TextBox>&nbsp;</label><label for="txtCustom1">&nbsp;in
                       </label>
                          </p>
                     <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="txtCustom" ErrorMessage="Number with 2 decimal places only" Font-Size="Smaller" ForeColor="Red" ValidationExpression="^[0-9]+(\.[0-9][0-9]?)?$"></asp:RegularExpressionValidator>
