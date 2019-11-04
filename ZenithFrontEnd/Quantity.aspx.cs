@@ -184,7 +184,9 @@ namespace ZenithFrontEnd
             }
             if (qty == 1)
             {
-                unitPrice = 28.00;
+                //unitPrice = 28.00;
+                //for paypal testing, amount must be less than $11
+                unitPrice = 5;
             }
             else if (qty < 10)
             {
