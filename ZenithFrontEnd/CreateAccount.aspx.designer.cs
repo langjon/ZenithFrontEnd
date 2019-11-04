@@ -121,13 +121,13 @@ namespace ZenithFrontEnd {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator10;
         
         /// <summary>
-        /// RegularExpressionValidator3 control.
+        /// RegularExpressionValidatorPostalCode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator3;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidatorPostalCode;
         
         /// <summary>
         /// Button1 control.
