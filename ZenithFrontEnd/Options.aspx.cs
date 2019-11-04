@@ -17,12 +17,14 @@ namespace ZenithFrontEnd
             if (materialRadioBtn.SelectedIndex == 0)
             {
                 finishRadioBtn.Enabled = true;
+                finishRadioBtn.Attributes["style"] = "color: #3C4047;";
             }
             else
             {
                 finishRadioBtn.Enabled = false;
                 finishRadioBtn.ClearSelection();
                 Session["Finish"] = "N/A";
+                finishRadioBtn.Attributes["style"] = "color: grey;";
             }
 
             if (!IsPostBack)
@@ -48,12 +50,14 @@ namespace ZenithFrontEnd
             if (materialRadioBtn.SelectedIndex == 0 )
             {
                 finishRadioBtn.Enabled = true;
+                finishRadioBtn.Attributes["style"] = "color: #3C4047;";
             }
             else
             {
                 finishRadioBtn.Enabled = false;
                 finishRadioBtn.ClearSelection();
                 Session["Finish"] = "N/A";
+                finishRadioBtn.Attributes["style"] = "color: grey;";
             }
         }
         protected void finishRadioBtn_SelectedIndexChanged(object sender, EventArgs e)

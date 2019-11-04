@@ -2,10 +2,16 @@
     margin: 0;
     padding: 0;
     font-family: "Arial";
-    color:#3C4047;
-    height: 1100px;
+    color: #3C4047;
+    background-color: #f0f0f0;
+    height: 1000px;
 }
 
+.logoDiv{
+    background-color: white;
+    width: 100%;
+    height: 90px;
+}
 #mainBodyDiv {
     height: 600px;
 }
@@ -59,6 +65,7 @@ li a:hover {
     float:left;
     padding-bottom: 5px;
     padding-left: 15%;
+    max-width: 400px;
 }
 
 .nav-icon{
@@ -194,7 +201,7 @@ label {
     padding-top: 15px;
     padding-left: 2%;
     position: relative;
-    bottom: -300px;
+    bottom: 0;
     width: 98%;
     clear:both;
 }
@@ -202,7 +209,7 @@ label {
 #contactInfo {
     clear: both;
     position: relative;
-    bottom: -300px;
+    bottom: 0;
     width: 100%;
 }
 
@@ -210,7 +217,7 @@ label {
     list-style-type: none;
     margin: 0;
     width: 20%;
-    height: 300px;
+    height: 250px;
     float: left;
     background-color: steelblue;
     box-shadow: 1px 0 5px rgb(0, 0, 0);
@@ -236,6 +243,7 @@ td {
     border: thin solid;
     border-color: #acafb5;
     box-shadow: 0 0 5px #acafb5;
+    background-color: white;
 }
 
 .productTable {
@@ -272,11 +280,12 @@ td {
         text-align: center;
     }
 
-    #MainContent_cartListTable tr:first-child {
+    #MainContent_cartListTable tr:first-child td{
        background-color: steelblue;
        color: white;
        font-weight: bold;
     }
+   
 
     #MainContent_cartListTable tr td:first-child {
         width: 0;
@@ -285,7 +294,7 @@ td {
     }
 
 #cartDiv {
-    height: 480px;
+    height: 400px;
     width: 90%;
     overflow: scroll;
     overflow-x: hidden;
@@ -317,6 +326,9 @@ td {
     float: left;
     width: 20%;
     margin-left: 17%;
+    background-color: white;
+    padding-bottom: 2%;
+    padding-top: 2%;
 }
 .customizeDiv{
     float: left;

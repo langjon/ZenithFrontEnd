@@ -68,7 +68,7 @@
 </head>
 <body>
 
-    <img id="logo" src="images/wp-logo.jpg" alt="CB Logo" />
+    <div class="logoDiv"><img id="logo" src="images/wp-logo.jpg" alt="CB Logo" /><asp:Label ID="welcomeLabel" CSSClass="welcomeLabel" runat="server" Text="Welcome, Guest"></asp:Label></div>
     <ul class="mainNav">
         <li><a href="https://cbdisplaypac.ca/">
             <img class="nav-icon" src="images/house-16.png" />HOME</a></li>

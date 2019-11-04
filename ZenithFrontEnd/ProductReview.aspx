@@ -56,7 +56,7 @@
     </style>
 </head>
 <body>
-    <img id="logo" src="images/wp-logo.jpg" alt="CB Logo" />
+    <div class="logoDiv"><img id="logo" src="images/wp-logo.jpg" alt="CB Logo" /><asp:Label ID="welcomeLabel" CSSClass="welcomeLabel" runat="server" Text="Welcome, Guest"></asp:Label></div>
     <ul class="mainNav">
         <li><a href="https://cbdisplaypac.ca/">
             <img class="nav-icon" src="images/house-16.png" />HOME</a></li>
@@ -137,9 +137,8 @@
                     </tr>
                 </table>
 
-                <p class="auto-style13">
-                    &nbsp;
-                </p>
+                <br />
+                <br />
                 <asp:Button CssClass="btnGeneral" ID="addToCart" runat="server" Text="ADD TO CART" OnClick="addToCart_Click" Font-Bold="True" Font-Italic="False" Font-Size="Large" Height="35px" />
                 <a id="btnBack" href="uploadImage.aspx" class="btnGeneral">BACK</a>
                 <a id="btnHelp" href="Help.aspx" class="btnGeneral">HELP</a><br />
