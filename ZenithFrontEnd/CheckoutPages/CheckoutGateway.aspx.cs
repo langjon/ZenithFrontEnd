@@ -15,22 +15,28 @@ namespace ZenithFrontEnd.CheckoutPages
         string orderNo;
         protected void Page_Load(object sender, EventArgs e)
         {
-            orderNo = RNG.GetRandomNumber(6).ToString();
-            Session["orderID"] = orderNo;
+            if (Session["UserName"] == null)
+            {
+                Response.Redirect("../UserLogin/UserLogin.aspx");
+            } else
+            {
+                orderNo = RNG.GetRandomNumber(6).ToString();
+                Session["orderID"] = orderNo;
 
-            Response.Write("<form action='https://www.sandbox.paypal.com/sgi-bin/webscr' method='post' name='checkout' id='checkout'>");
-            Response.Write("<input type='hidden' name='cmd' value='_xclick'>");
-            Response.Write("<input type='hidden' name='business' value='sb-rk8ps467969@business.example.com'>");
-            Response.Write("<input type='hidden' name='currency_mode' value='CAD'>");
-            Response.Write("<input type='hidden' name='item_name' value='Payment for C&B Packaging Order'>");
-            Response.Write("<input type='hidden' name='item_number' value='0'>");
-            Response.Write("<input type='hidden' name='amount' value='" + Session["cartTotal"].ToString() + "'>");
-            Response.Write("<input type='hidden' name='return' value='http://cbpackaging.azurewebsites.net/CheckoutPages/CheckoutSuccess.aspx?order=" + orderNo.ToString() + "'>");
+                Response.Write("<form action='https://www.sandbox.paypal.com/sgi-bin/webscr' method='post' name='checkout' id='checkout'>");
+                Response.Write("<input type='hidden' name='cmd' value='_xclick'>");
+                Response.Write("<input type='hidden' name='business' value='sb-rk8ps467969@business.example.com'>");
+                Response.Write("<input type='hidden' name='currency_mode' value='CAD'>");
+                Response.Write("<input type='hidden' name='item_name' value='Payment for C&B Packaging Order'>");
+                Response.Write("<input type='hidden' name='item_number' value='0'>");
+                Response.Write("<input type='hidden' name='amount' value='" + Session["cartTotal"].ToString() + "'>");
+                Response.Write("<input type='hidden' name='return' value='http://cbpackaging.azurewebsites.net/CheckoutPages/CheckoutSuccess.aspx?order=" + orderNo.ToString() + "'>");
 
 
-            Response.Write("<script type ='text/javascript'>");
-            Response.Write("document.getElementById('checkout').submit();");
-            Response.Write("</script>");
+                Response.Write("<script type ='text/javascript'>");
+                Response.Write("document.getElementById('checkout').submit();");
+                Response.Write("</script>");
+            }
         }
     }
 }

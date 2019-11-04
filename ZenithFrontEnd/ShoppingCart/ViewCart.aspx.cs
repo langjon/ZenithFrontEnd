@@ -19,6 +19,7 @@ namespace ZenithFrontEnd.ShoppingCart
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            Session["page"] = "ViewCart.aspx";
             cartListTable.DataSource = null;
             cartListTable.DataBind();
             DataTable cartTable = new DataTable();

@@ -13,6 +13,11 @@ namespace ZenithFrontEnd
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["UserName"] != null)
+            {
+                navLogin.InnerHtml = "<a href=\"../UserLogin/UserLogout.aspx\"><img class=\"nav-icon\" src=\"../images/user-16.png\" />LOGOUT</a>";
+                welcomeLabel.Text = "Welcome, " + Session["UserName"].ToString();
+            }
             if (!IsPostBack)
             {
                 Session["BoxType"] = "";

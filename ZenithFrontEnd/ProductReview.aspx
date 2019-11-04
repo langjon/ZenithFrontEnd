@@ -2,20 +2,19 @@
 
 
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>C&B Packaging - Specification</title>
 
     <link rel="stylesheet" href="css/main.css" />
     <style type="text/css">
-        
         .auto-style13 {
             font-weight: bold;
             font-size: 1.3em;
             margin-left: 260px;
             width: 899px;
         }
+
         .auto-style15 {
             margin-left: 9px;
             width: 9%;
@@ -40,19 +39,21 @@
         .auto-style18 {
             width: 3%;
         }
+
         .auto-style19 {
             width: 114%;
             margin-left: 0px;
         }
-          
+
         .auto-style5 {
             width: 29px;
             height: 26px;
         }
+
         .auto-style20 {
             width: 58%;
         }
-        </style>
+    </style>
 </head>
 <body>
     <img id="logo" src="images/wp-logo.jpg" alt="CB Logo" />
@@ -71,84 +72,82 @@
 
 
 
-        <div class="pageTitle">
-                <p>YOUR PRODUCT SPECIFICATION</p>
-        </div>
+    <div class="pageTitle">
+        <p>YOUR PRODUCT SPECIFICATION</p>
+    </div>
 
-        <div id="panelDiv" class="auto-style15">
-           
-            Your Order Progress:<br />
-            <br />
-            &nbsp;<img alt="" class="auto-style5" src="images/check.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SIZE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <br />
-            <img alt="" class="auto-style5" src="images/check.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PRINTING&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <br />
-            <img alt="" class="auto-style5" src="images/check.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MATERIAL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <br />
-            <img alt="" class="auto-style5" src="images/check.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FINISH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <br />
-            <img alt="" class="auto-style5" src="images/check.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WALL TYPE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <br />
-            <img alt="" class="auto-style5" src="images/check.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; QUANTITY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <br />
-            <img alt="" class="auto-style5" src="images/check.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IMAGE UPLOAD<br />
-          </div>
-       
-          <div id="bodyDiv" class="auto-style20">
-              <form id="form1" runat="server">
-                    <asp:ImageButton class="auto-style2" ID="boxType" runat="server" Height="203px" Width="222px" />
 
-                         <p class="auto-style2">
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                   
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                             <table class="auto-style19">
-                                 <tr>
-                                     <td class="auto-style18" style="font-family: Arial; font-size: medium; color: #4682B4">Size</td>
-                                     <td>
-                        <asp:Label ID="LabelSize" runat="server" Text="Please select Size" Font-Names="Arial" Font-Size="Medium"></asp:Label>
-                                     </td>
-                                     <td style="font-family: Arial; font-size: medium; color: #4682B4">Finish </td>
-                                     <td>
-                         <asp:Label ID="LabelFinish" runat="server" Text="Please select Finish" Font-Names="Arial" Font-Size="Medium"></asp:Label>
-                                     </td>
-                                 </tr>
-                                 <tr>
-                                     <td class="auto-style18" style="font-family: Arial; color: #3169C6; font-size: medium">Material</td>
-                                     <td>
-                        <asp:Label ID="LabelMaterial" runat="server" Text="Please select Material" Font-Names="Arial" Font-Size="Medium"></asp:Label>
-                                     </td>
-                                     <td style="font-family: Arial; font-size: medium; color: #3169CF">Wall Type</td>
-                                     <td><asp:Label ID="LabelWallType" runat="server" Text="Please select WallType" Font-Names="Arial" Font-Size="Medium"></asp:Label>
-                                     </td>
-                                 </tr>
-                                 <tr>
-                                     <td class="auto-style18" style="font-family: Arial; font-size: medium; color: #3169CF">Printing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
-                                     <td>
-                        <asp:Label ID="LabelSides" runat="server" Text="Please select Sides" Font-Names="Arial" Font-Size="Medium"></asp:Label>
-                                     </td>
-                                     <td style="font-family: Arial; font-size: medium; color: #3169CF">Quantity </td>
-                                     <td><asp:Label ID="LabelQuantity" runat="server" Text="Please select Quantity" Font-Names="Arial" Font-Size="Medium"></asp:Label>
-                                     </td>
-                                 </tr>
-                                 <tr>
-                                     <td colspan="4" style="font-family: Arial; font-size: medium; color: #3169CF; text-align: center;">Total Price:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="LabelPrice" runat="server" Font-Bold="True" ForeColor="Black" ></asp:Label>
-                                     </td>
-                                 </tr>
-                             </table>
-                    </p>
-                    <p class="auto-style13">
-                       
-                        &nbsp;</p>
-                    <asp:Button CssClass="btnGeneral" ID="addToCart" runat="server" Text="ADD TO CART" OnClick="addToCart_Click" Font-Bold="True" Font-Italic="False" Font-Size="Large" Height="37px" />
-                        <a id="btnBack" href="uploadImage.aspx" class="btnGeneral">BACK</a>
-                        <a id="btnHelp" href="Help.aspx" class="btnGeneral">HELP</a><br />
-                </div>
-            </form>
-        </div>
-    
+    <div id="bodyDiv" class="auto-style20">
+        <form id="form1" runat="server">
+            <div id="panelDiv" class="panelDiv">
+                Your Order Progress:<br />
+                <br />
+                <asp:ImageButton class="auto-style2" ID="boxType" runat="server" Height="203px" Width="222px" /> <br>
+                <img alt="" class="auto-style5" src="images/check.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SIZE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <br />
+                <img alt="" class="auto-style5" src="images/check.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PRINTING&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <br />
+                <img alt="" class="auto-style5" src="images/check.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MATERIAL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <br />
+                <img alt="" class="auto-style5" src="images/check.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FINISH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <br />
+                <img alt="" class="auto-style5" src="images/check.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WALL TYPE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <br />
+                <img alt="" class="auto-style5" src="images/check.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; QUANTITY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <br />
+                <img alt="" class="auto-style5" src="images/check.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IMAGE UPLOAD<br />
+            </div>
+
+            <div class="customizeDiv">
+                <h1>Your Selection</h1>
+                <table class="auto-style19">
+                    <tr>
+                        <td class="auto-style18" style="font-family: Arial; font-size: medium; color: #4682B4">Size</td>
+                        <td>
+                            <asp:Label ID="LabelSize" runat="server" Text="Please select Size" Font-Names="Arial" Font-Size="Medium"></asp:Label>
+                        </td>
+                        <td style="font-family: Arial; font-size: medium; color: #4682B4">Finish </td>
+                        <td>
+                            <asp:Label ID="LabelFinish" runat="server" Text="Please select Finish" Font-Names="Arial" Font-Size="Medium"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style18" style="font-family: Arial; color: #3169C6; font-size: medium">Material</td>
+                        <td>
+                            <asp:Label ID="LabelMaterial" runat="server" Text="Please select Material" Font-Names="Arial" Font-Size="Medium"></asp:Label>
+                        </td>
+                        <td style="font-family: Arial; font-size: medium; color: #3169CF">Wall Type</td>
+                        <td>
+                            <asp:Label ID="LabelWallType" runat="server" Text="Please select WallType" Font-Names="Arial" Font-Size="Medium"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style18" style="font-family: Arial; font-size: medium; color: #3169CF">Printing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+                        <td>
+                            <asp:Label ID="LabelSides" runat="server" Text="Please select Sides" Font-Names="Arial" Font-Size="Medium"></asp:Label>
+                        </td>
+                        <td style="font-family: Arial; font-size: medium; color: #3169CF">Quantity </td>
+                        <td>
+                            <asp:Label ID="LabelQuantity" runat="server" Text="Please select Quantity" Font-Names="Arial" Font-Size="Medium"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="font-family: Arial; font-size: medium; color: #3169CF; text-align: center;">Total Price:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="LabelPrice" runat="server" Font-Bold="True" ForeColor="Black"></asp:Label>
+                        </td>
+                    </tr>
+                </table>
+
+                <p class="auto-style13">
+                    &nbsp;
+                </p>
+                <asp:Button CssClass="btnGeneral" ID="addToCart" runat="server" Text="ADD TO CART" OnClick="addToCart_Click" Font-Bold="True" Font-Italic="False" Font-Size="Large" Height="35px" />
+                <a id="btnBack" href="uploadImage.aspx" class="btnGeneral">BACK</a>
+                <a id="btnHelp" href="Help.aspx" class="btnGeneral">HELP</a><br />
+            </div>
+        </form>
+    </div>
+
+
     <footer id="contactInfo" role="contentinfo">
         <div>
             <section>

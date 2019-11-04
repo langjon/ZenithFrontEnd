@@ -13,13 +13,13 @@
 <body>
     <form id="form1" runat="server">
 
-         <img id="logo" src="../images/wp-logo.jpg" alt="CB Logo" />
+         <img id="logo" src="../images/wp-logo.jpg" alt="CB Logo" /><asp:Label ID="welcomeLabel" CSSClass="welcomeLabel" runat="server" Text="Welcome, Guest"></asp:Label>
     <ul class="mainNav">
         <li><a href="https://cbdisplaypac.ca/">
             <img class="nav-icon" src="../images/house-16.png" />HOME</a></li>
         <li class="navbar-right"><a href="../ShoppingCart/ViewCart.aspx">
             <img class="nav-icon" src="../images/cart-16.png" />CART</a></li>
-        <li class="navbar-right"><a href="../Login.aspx">
+        <li class="navbar-right" id="navLogin" runat="server"><a href="../UserLogin/UserLogin.aspx">
             <img class="nav-icon" src="../images/user-16.png" />LOGIN</a></li>
         <li class="navbar-right"><a href="../Product.aspx">
             <img class="nav-icon" src="../images/BOX-16.png" />BUILD</a></li>

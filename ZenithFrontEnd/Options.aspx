@@ -8,48 +8,51 @@
 
     <link rel="stylesheet" href="css/main.css" />
     <style type="text/css">
-        .auto-style1 {
-            width: 14%;
-            height: 34px;
-        }
+    
         .auto-style2 {
             width: 8%;
             height: 31px;
         }
+
         .auto-style7 {
             width: 24px;
             height: 31px;
         }
+
         .auto-style5 {
             width: 29px;
             height: 26px;
         }
+
         .auto-style8 {
             height: 536px;
         }
+
         .auto-style9 {
             width: 18%;
             height: 31px;
         }
-        .auto-style10 {
-            height: 536px;
-            width: 54%;
-        }
+
+
         .auto-style11 {
             width: 20%;
             height: 31px;
         }
+
         .auto-style12 {
             width: 41%;
             height: 31px;
         }
+
         .auto-style13 {
             height: 563px;
         }
+
         .auto-style14 {
             width: 26px;
             height: 24px;
         }
+
         .auto-style15 {
             margin-left: 160px;
         }
@@ -72,43 +75,43 @@
     <div id="mainBodyDiv" class="auto-style13">
 
         <div class="pageTitle">
-                <p>BUILD YOUR BOX</p>
+            <p>BUILD YOUR BOX</p>
         </div>
 
-        <div id="panelDiv" class="auto-style8">
-           
-            Your Order Progress:<br />
-            <br />
-            &nbsp;<img alt="" class="auto-style5" src="images/check.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SIZE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="LabelSize" runat="server" Text="Label"></asp:Label>
-            <br />
-            <img alt="" class="auto-style14" src="images/blue%20circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PRINTING<br />
-            <img alt="" class="auto-style14" src="images/blue%20circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MATERIAL<br />
-            <img alt="" class="auto-style14" src="images/blue%20circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FINISH<br />
-            <img alt="" class="auto-style14" src="images/blue%20circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WALL TYPE<br />
-            <img alt="" class="auto-style7" src="images/circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; QUANTITY<br />
-            <img alt="" class="auto-style7" src="images/circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IMAGE UPLOAD</div>
+        <
         <div id="bodyDiv" class="auto-style10">
             <form id="form1" runat="server">
-                <div class="auto-style15">
-                    <asp:ImageButton ID="selectedBox" class="auto-style1" runat="server" Height="134px" Width="160px" />
+                <div id="panelDiv" class="panelDiv">
+                    Your Order Progress:<br />
+                    <br />
+                    <div>
+                        <asp:ImageButton ID="selectedBox" runat="server" Height="203px" Width="222px" />
+                    </div>
+                    &nbsp;<img alt="" class="auto-style5" src="images/check.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SIZE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="LabelSize" runat="server" Text="Label"></asp:Label>
+                    <br />
+                    <img alt="" class="auto-style14" src="images/blue%20circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PRINTING<br />
+                    <img alt="" class="auto-style14" src="images/blue%20circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MATERIAL<br />
+                    <img alt="" class="auto-style14" src="images/blue%20circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FINISH<br />
+                    <img alt="" class="auto-style14" src="images/blue%20circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WALL TYPE<br />
+                    <img alt="" class="auto-style7" src="images/circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; QUANTITY<br />
+                    <img alt="" class="auto-style7" src="images/circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IMAGE UPLOAD
                 </div>
 
-                <div>
-
+                <div class="customizeDiv">
                     <div style="font-size: large; font-weight: bold">
                         <p class="auto-style9" style="font-family: Arial; font-size: medium">
                             Printing<asp:RadioButtonList ID="sideRadioBtn" runat="server" RepeatDirection="Horizontal" RepeatColumns="3" Font-Names="Arial" Font-Size="Small" OnSelectedIndexChanged="sideRadioBtn_SelectedIndexChanged" AutoPostBack="true" Height="33px" Width="423px">
-                                <asp:ListItem>Outside Only</asp:ListItem>
+                                <asp:ListItem Selected="True">Outside Only</asp:ListItem>
                                 <asp:ListItem>Inside Only</asp:ListItem>
                                 <asp:ListItem>Both Sides</asp:ListItem>
                             </asp:RadioButtonList>
-                            </p>
+                        </p>
                         <p class="auto-style2" style="font-family: Arial; font-size: medium">
                             Material<asp:RadioButtonList ID="materialRadioBtn" runat="server" RepeatDirection="Horizontal" RepeatColumns="3" Font-Names="Arial" Font-Size="Small" OnSelectedIndexChanged="materialRadioBtn_SelectedIndexChanged" AutoPostBack="true" Height="33px" Width="423px">
                                 <asp:ListItem>Premium White</asp:ListItem>
-                                <asp:ListItem>Kraft</asp:ListItem>
                                 <asp:ListItem>White</asp:ListItem>
+                                <asp:ListItem Selected="True">Kraft</asp:ListItem>
                             </asp:RadioButtonList>
                         </p>
                         <p class="auto-style11" style="font-family: Arial; font-size: medium">
@@ -119,7 +122,7 @@
                         </p>
                         <p class="auto-style12" style="font-family: Arial; font-size: medium">
                             Wall Type<asp:RadioButtonList ID="wallRadioBtn" runat="server" RepeatDirection="Horizontal" RepeatColumns="3" Font-Names="Arial" Font-Size="Small" OnSelectedIndexChanged="wallRadioBtn_SelectedIndexChanged" AutoPostBack="true" Height="33px" Width="423px">
-                                <asp:ListItem>Single</asp:ListItem>
+                                <asp:ListItem Selected="True">Single</asp:ListItem>
                                 <asp:ListItem>Double</asp:ListItem>
                                 <asp:ListItem>Triple</asp:ListItem>
                             </asp:RadioButtonList>
@@ -130,16 +133,16 @@
                         <a class="btnGeneral" href="Quantity.aspx">NEXT</a>
                         <a class="btnGeneral" href="Size.aspx">BACK</a>
                         <a class="btnGeneral" href="Help.aspx">HELP</a>
-                        
+
                     </div>
                 </div>
-        </form>
-
+            </form>
+        </div>
     </div>
-        <br/>
-                        <br/>
-        <br />
-        
+    <br />
+    <br />
+    <br />
+
     <footer id="contactInfo" role="contentinfo">
         <div>
             <section>

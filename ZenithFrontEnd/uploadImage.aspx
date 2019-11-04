@@ -29,32 +29,38 @@
         .auto-style12 {
             margin-left: 160px;
         }
+
         .auto-style13 {
             left: 0px;
             bottom: -100px;
             height: 617px;
         }
-      
+
         .auto-style5 {
             width: 29px;
             height: 26px;
         }
+
         .auto-style15 {
             margin-left: 9px;
             width: 9%;
             height: 255px;
         }
+
         .auto-style14 {
             width: 26px;
             height: 24px;
         }
+
         .auto-style16 {
             width: 143px;
             height: 60px;
         }
+
         .auto-style17 {
             margin-left: 120px;
         }
+
         .auto-style18 {
             margin-left: 0px;
         }
@@ -77,97 +83,104 @@
     <div id="errorMessages" runat="server">
     </div>
 
-      <div id="mainBodyDiv" class="auto-style13">
+    <div id="mainBodyDiv" class="auto-style13">
 
         <div class="pageTitle">
-                <p>BUILD YOUR BOX</p>
+            <p>BUILD YOUR BOX</p>
         </div>
 
-        <div id="panelDiv" class="auto-style15">
-           
-            Your Order Progress:<br />
-            <br />
-            &nbsp;<img alt="" class="auto-style5" src="images/check.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SIZE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="LabelSize" runat="server" Text="Label"></asp:Label>
-            <br />
-            <img alt="" class="auto-style5" src="images/check.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PRINTING&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="LabelSides" runat="server" Text="Label"></asp:Label>
-            <br />
-            <img alt="" class="auto-style5" src="images/check.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MATERIAL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-            <asp:Label ID="LabelMaterial" runat="server" Text="Label"></asp:Label>
-            <br />
-            <img alt="" class="auto-style5" src="images/check.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FINISH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="LabelFinish" runat="server" Text="Label"></asp:Label>
-            <br />
-            <img alt="" class="auto-style5" src="images/check.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WALL TYPE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="LabelWallType" runat="server" Text="Label"></asp:Label>
-            <br />
-            <img alt="" class="auto-style5" src="images/check.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; QUANTITY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="LabelQuantity" runat="server" Text="Label"></asp:Label>
-            <br />
-            <img alt="" class="auto-style14" src="images/blue%20circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IMAGE UPLOAD<br />
-            <br />
-          </div>
-       
-          <div id="bodyDiv" class="auto-style18">
+        <div id="bodyDiv" >
             <form id="Form1" method="post" runat="server">
-                 <asp:ImageButton ID="selectedBox" class="auto-style1" runat="server" Height="134px" Width="160px" />
-                 <br />
-                 <br />
-                 <br />
-                 <fieldset>
-                     <legend>Upload Your Logo/Image</legend>
-                     <div id="div1" runat="server">
-                         <br />
-                         <input type="file" size="65" runat="server" id="FileUpload1">
-                     </div>
-                     <br />
-                     <asp:Button ID="Button1" runat="server" Text="Upload" OnClick="Button1_Click" />
-                     <br />
-                     <br />
-                 </fieldset>
-                 <br />
-                 <div id="div5" runat="server" visible="false" class="auto-style11">
-                     <fieldset>
-                         <legend>
-                             <br />Show Logo/Image<br /></legend>
-                         <div id="div3" runat="server">
-                             <br />
-                             <asp:Image ID="Image1" runat="server" Height="200" Width="200" ImageUrl="~/Image.gif" />
-                         </div>
-                         <br />
-                     </fieldset>
-                     <br />
-                     <br />
-                     <br />
-                     <br />
-                     <br />&nbsp;<br />
-                     <br />
-                     <br />
-                 </div>
-                 <br />
-                 <div class="auto-style16">
-                     <br />
-                     <br />Image Position:<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                 </div>
-                 <div class="auto-style17">
-                     <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
-                         <asp:ListItem>Right Side</asp:ListItem>
-                         <asp:ListItem>Left Side</asp:ListItem>
-                         <asp:ListItem>Top</asp:ListItem>
-                         <asp:ListItem>Buttom</asp:ListItem>
-                     </asp:DropDownList>
-                 </div>
-                 <br />
-                 <br />
-                 <br />
-                 <br />Special Instructions:       
+                <div id="panelDiv" class="panelDiv">
+                    Your Order Progress:<br />
+                    <br />
+                    <asp:ImageButton ID="selectedBox" runat="server" Height="203px" Width="222px" />
+                    <br />
+                    &nbsp;<img alt="" class="auto-style5" src="images/check.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SIZE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="LabelSize" runat="server" Text="Label"></asp:Label>
+                    <br />
+                    <img alt="" class="auto-style5" src="images/check.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PRINTING&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="LabelSides" runat="server" Text="Label"></asp:Label>
+                    <br />
+                    <img alt="" class="auto-style5" src="images/check.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MATERIAL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+            <asp:Label ID="LabelMaterial" runat="server" Text="Label"></asp:Label>
+                    <br />
+                    <img alt="" class="auto-style5" src="images/check.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FINISH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="LabelFinish" runat="server" Text="Label"></asp:Label>
+                    <br />
+                    <img alt="" class="auto-style5" src="images/check.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WALL TYPE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="LabelWallType" runat="server" Text="Label"></asp:Label>
+                    <br />
+                    <img alt="" class="auto-style5" src="images/check.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; QUANTITY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="LabelQuantity" runat="server" Text="Label"></asp:Label>
+                    <br />
+                    <img alt="" class="auto-style14" src="images/blue%20circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IMAGE UPLOAD<br />
+                    <br />
+                </div>
+
+                <div class="customizeDiv">
+                    <fieldset>
+                        <legend>Upload Your Logo/Image</legend>
+                        <div id="div1" runat="server">
+                            <br />
+                            <input type="file" size="65" runat="server" id="FileUpload1" />
+                        </div>
+                        <br />
+                        <asp:Button ID="Button1" runat="server" Text="Upload" OnClick="Button1_Click" />
+                        <br />
+                        <br />
+                    </fieldset>
+                    <br />
+                    <div id="div5" runat="server" visible="false" class="auto-style11">
+                        <fieldset>
+                            <legend>
+                                <br />
+                                Show Logo/Image<br />
+                            </legend>
+                            <div id="div3" runat="server">
+                                <br />
+                                <asp:Image ID="Image1" runat="server" Height="200" Width="200" ImageUrl="~/Image.gif" />
+                            </div>
+                            <br />
+                        </fieldset>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        &nbsp;<br />
+                        <br />
+                        <br />
+                    </div>
+                    <br />
+                    <div class="auto-style16">
+                        <br />
+                        <br />
+                        Image Position:<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </div>
+                    <div class="auto-style17">
+                        <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
+                            <asp:ListItem>Right Side</asp:ListItem>
+                            <asp:ListItem>Left Side</asp:ListItem>
+                            <asp:ListItem>Top</asp:ListItem>
+                            <asp:ListItem>Buttom</asp:ListItem>
+                        </asp:DropDownList>
+                    </div>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    Special Instructions:       
                  <asp:TextBox ID="TextBox1" runat="server" CssClass="auto-style12" Height="101px" TextMode="MultiLine" Width="434px"></asp:TextBox>
-                 <br />
-                 <br /><a href="ProductReview.aspx"><span class="btnGeneral">NEXT</span></a> <a id="btnBack" href="quantity.aspx" class="btnGeneral">BACK</a> <a id="btnHelp" href="Help.aspx" class="btnGeneral">HELP</a><br />
-        </form>
+                    <br />
+                    <br />
+                    <a href="ProductReview.aspx"><span class="btnGeneral">NEXT</span></a> <a id="btnBack" href="quantity.aspx" class="btnGeneral">BACK</a> <a id="btnHelp" href="Help.aspx" class="btnGeneral">HELP</a><br />
+                </div>
+            </form>
+        </div>
     </div>
- <footer id="contactInfo" role="contentinfo">
+    <footer id="contactInfo" role="contentinfo">
         <div>
             <section>
                 <div class="footerList">

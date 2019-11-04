@@ -47,6 +47,14 @@ li a:hover {
     float: right;
 }
 
+.welcomeLabel{
+    margin-right: 16%;
+    float:right;
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-top: 60px;
+}
+
 #logo{
     float:left;
     padding-bottom: 5px;
@@ -94,15 +102,9 @@ li a:hover {
 
 #bodyDiv {
     margin-right: 10%;
-    width: 50%;
-    float: right;
+    width: 90%;
 }
 
-#panelDiv {
-    margin-left: 10%;
-    width: 30%;
-    float: left;
-}
 
 #addressDiv {
     margin-right: 15%;
@@ -166,6 +168,10 @@ label {
     padding: 8px;
     vertical-align: middle;
     margin-left: 15px;
+    right: 0;
+    bottom: 0;
+    position: relative;
+    font-weight: bold;
 }
     .btnGeneral:focus {
         box-shadow: 0 0 5px rgba(81, 203, 238, 1);
@@ -290,7 +296,7 @@ td {
 #cartFtrDiv {
     margin-left: 15%;
     margin-right: 15%;
-    bottom: 50px;
+    bottom: 17%;
     position: absolute;
     right: 0;
     text-align: right;
@@ -298,8 +304,25 @@ td {
 #cartBtnDiv {
     margin-left: 15%;
     margin-right: 15%;
-    bottom: 3px;
+    bottom: 12%;
     right: 0;
     position: absolute;
     float: right;
+}
+
+.panelDiv {
+    font-weight: bold;
+    border: thick solid;
+    border-color: darkslateblue;
+    box-shadow: 0 0 10px darkslateblue;
+    padding: 5%;
+    float: left;
+    width: 20%;
+    margin-left: 20%;
+}
+.customizeDiv{
+    float: left;
+    margin-left: 5%;
+    width: 600px;
+    height: 600px;
 }

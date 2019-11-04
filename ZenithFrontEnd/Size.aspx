@@ -1,39 +1,41 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Size.aspx.cs" Inherits="ZenithFrontEnd.Size" %>
 
-
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>C&B Packaging - size</title>
+    <title>C&B Packaging - Size</title>
 
     <link rel="stylesheet" href="css/main.css" />
     <style type="text/css">
         .auto-style1 {
             margin-left: 90px;
         }
+
         .auto-style2 {
             width: 24%;
         }
+
         .auto-style4 {
             width: 734px;
         }
+
         .auto-style6 {
             width: 129px;
         }
+
         .auto-style7 {
             width: 24px;
             height: 31px;
         }
+
         .auto-style8 {
             width: 23%;
         }
+
         .auto-style14 {
             width: 26px;
             height: 24px;
-        }
-        .auto-style15 {
-            margin-left: 40px;
         }
     </style>
 </head>
@@ -54,91 +56,94 @@
     <div id="mainBodyDiv">
 
         <div class="pageTitle">
-                <p>BUILD YOUR BOX</p>
+            <p>BUILD YOUR BOX</p>
         </div>
 
-        <div id="panelDiv" class="auto-style8">
-           
-            Your Order Progress:<br />
-            <br />
-            <img alt="" class="auto-style14" src="images/blue%20circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SIZE<br />
-            <img alt="" class="auto-style7" src="images/circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PRINTING<br />
-            <img alt="" class="auto-style7" src="images/circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MATERIAL<br />
-            <img alt="" class="auto-style7" src="images/circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FINISH<br />
-            <img alt="" class="auto-style7" src="images/circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WALL TYPE<br />
-            <img alt="" class="auto-style7" src="images/circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; QUANTITY<br />
-            <img alt="" class="auto-style7" src="images/circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IMAGE UPLOAD</div>
+
         <div id="bodyDiv">
             <form id="form2" runat="server" style="font-family: Arial; font-size: medium; font-style: normal; font-weight: bold;">
-                <div class="auto-style15">
-                    <asp:ImageButton ID="selectedBox" class="auto-style1" runat="server" Height="134px" Width="160px" />
+                <div id="panelDiv" class="panelDiv">
+                    Your Order Progress:<br />
+                    <br />
+                    <div>
+                        <asp:ImageButton ID="selectedBox" runat="server" Height="203px" Width="222px" />
+                    </div>
+                    <img alt="" class="auto-style14" src="images/blue%20circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SIZE<br />
+                    <img alt="" class="auto-style7" src="images/circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PRINTING<br />
+                    <img alt="" class="auto-style7" src="images/circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MATERIAL<br />
+                    <img alt="" class="auto-style7" src="images/circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FINISH<br />
+                    <img alt="" class="auto-style7" src="images/circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WALL TYPE<br />
+                    <img alt="" class="auto-style7" src="images/circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; QUANTITY<br />
+                    <img alt="" class="auto-style7" src="images/circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IMAGE UPLOAD
                 </div>
 
-                        <br />
-                Size<p class="auto-style2" style="font-family: Arial; font-size: medium; font-weight: normal;">
-                            <asp:RadioButtonList Width="600px" ID="sizeRadioBtn" runat="server" OnSelectedIndexChanged="sizeRadioBtn_SelectedIndexChanged" AutoPostBack="true" RepeatDirection="Horizontal" RepeatColumns="3" CellPadding="3" CellSpacing="2" CssClass="auto-style14" Font-Names="Arial" Font-Size="Medium">
-                                <asp:ListItem>   6 x 6 x 6 in       </asp:ListItem>
-                                <asp:ListItem>   8 x 8 x 8 in       </asp:ListItem>
-                                <asp:ListItem>   10 x 10 x 10 in    </asp:ListItem>
-                                <asp:ListItem>   12 x 12 x 8 in     </asp:ListItem>
-                                <asp:ListItem>   12 x 12 x 12 in    </asp:ListItem>
-                                <asp:ListItem>   12 x 12 x 4 in     </asp:ListItem>
-                                <asp:ListItem>   12 x 12 x 6 in     </asp:ListItem>
-                                <asp:ListItem>   14 x 14 x 14 in    </asp:ListItem>
-                                <asp:ListItem>   16 x 16 x 12 in    </asp:ListItem>
-                                <asp:ListItem>   16 x 16 x 16 in    </asp:ListItem>
-                                <asp:ListItem>   24 x 12 x 12 in    </asp:ListItem>
-                                <asp:ListItem>   24 x 16 x 16 in    </asp:ListItem>
-                            </asp:RadioButtonList>
+                <br />
+                <div class="customizeDiv">
+                    <h2>Size</h2>
+                    <div class="auto-style2" style="font-family: Arial; font-size: medium; font-weight: normal;">
+                        <asp:RadioButtonList Width="600px" ID="sizeRadioBtn" runat="server" OnSelectedIndexChanged="sizeRadioBtn_SelectedIndexChanged" AutoPostBack="true" RepeatDirection="Horizontal" RepeatColumns="3" CellPadding="3" CellSpacing="2" CssClass="auto-style14" Font-Names="Arial" Font-Size="Medium">
+                            <asp:ListItem>   6 x 6 x 6 in       </asp:ListItem>
+                            <asp:ListItem>   8 x 8 x 8 in       </asp:ListItem>
+                            <asp:ListItem>   10 x 10 x 10 in    </asp:ListItem>
+                            <asp:ListItem>   12 x 12 x 8 in     </asp:ListItem>
+                            <asp:ListItem>   12 x 12 x 12 in    </asp:ListItem>
+                            <asp:ListItem>   12 x 12 x 4 in     </asp:ListItem>
+                            <asp:ListItem>   12 x 12 x 6 in     </asp:ListItem>
+                            <asp:ListItem>   14 x 14 x 14 in    </asp:ListItem>
+                            <asp:ListItem>   16 x 16 x 12 in    </asp:ListItem>
+                            <asp:ListItem>   16 x 16 x 16 in    </asp:ListItem>
+                            <asp:ListItem>   24 x 12 x 12 in    </asp:ListItem>
+                            <asp:ListItem>   24 x 16 x 16 in    </asp:ListItem>
+                        </asp:RadioButtonList>
 
-                        </p>
+                    </div>
 
-                <div id="sizeDiv">
-                    <div style="font-size: large; font-weight: bold">
-                        <div class="auto-style12">
-                            &nbsp;&nbsp;&nbsp;
+                    <div id="sizeDiv">
+                        <div style="font-size: large; font-weight: bold">
+                            <div class="auto-style12">
+                                &nbsp;&nbsp;&nbsp;
                       
                      <p class="auto-style6" style="font-family: Arial; font-size: medium; font-weight: normal; font-style: normal;">
 
                          <label for="customSize" style="font-family: Arial; font-size: medium; font-style: normal;">
                              Custom Size:</label>
                      </p>
-                            <p class="auto-style4" style="font-family: Arial; font-size: small">
-                                <br />
-                                <label for="txtLength" style="font-family: Arial; font-size: small">
-                                    Length
+                                <p class="auto-style4" style="font-family: Arial; font-size: small">
+                                    <br />
+                                    <label for="txtLength" style="font-family: Arial; font-size: small">
+                                        Length
                          <asp:TextBox CssClass="sizeField" ID="txtLength" runat="server" Width="50px" MaxLength="5"></asp:TextBox>&nbsp;x&nbsp;
-                                </label>
-                                <label for="txtWidth">
-                                    Width
+                                    </label>
+                                    <label for="txtWidth">
+                                        Width
                          <asp:TextBox CssClass="sizeField" ID="txtWidth" runat="server" Width="50px" MaxLength="5"></asp:TextBox>&nbsp;x&nbsp;
-                                </label>
-                                <label for="txtDepth" style="font-family: Arial; font-size: small">
-                                    Depth
+                                    </label>
+                                    <label for="txtDepth" style="font-family: Arial; font-size: small">
+                                        Depth
                          <asp:TextBox CssClass="sizeField" ID="txtDepth" runat="server" Width="50px" MaxLength="5"></asp:TextBox>&nbsp;in
-                                </label>
-                            </p>
-                            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtLength" ErrorMessage="Length should be a positive number " Font-Size="Smaller" ForeColor="Red" ValidationExpression="^[0-9]+(\.[0-9][0-9]?)?$"></asp:RegularExpressionValidator>&nbsp;
+                                    </label>
+                                </p>
+                                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtLength" ErrorMessage="Length should be a positive number " Font-Size="Smaller" ForeColor="Red" ValidationExpression="^[0-9]+(\.[0-9][0-9]?)?$"></asp:RegularExpressionValidator>&nbsp;
                             <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtWidth" ErrorMessage="Width should be a positive number" Font-Size="Smaller" ForeColor="Red" ValidationExpression="^[0-9]+(\.[0-9][0-9]?)?$"></asp:RegularExpressionValidator>&nbsp;
                             <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="txtDepth" ErrorMessage="Depth should be a positive number" Font-Size="Smaller" ForeColor="Red" ValidationExpression="^[0-9]+(\.[0-9][0-9]?)?$"></asp:RegularExpressionValidator>&nbsp;
                     <br />
-                            <asp:Button ID="btSize" runat="server" Text="Select Custom Size" OnClick="btnSelectSize_Click" />
+                                <asp:Button ID="btSize" runat="server" Text="Select Custom Size" OnClick="btnSelectSize_Click" />
 
-                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
 
                             <asp:Label ID="Label1" runat="server" Font-Names="Arial" Font-Size="Medium"></asp:Label>
-                            <br />
-                            <br />
+                                <br />
+                                <br />
 
-                            <a class="btnGeneral" href="options.aspx">NEXT</a>
-                            <a class="btnGeneral" href="Product.aspx">BACK</a>
-                            <a class="btnGeneral" href="Help.aspx">HELP</a>
+                                <a class="btnGeneral" href="options.aspx">NEXT</a>
+                                <a class="btnGeneral" href="Product.aspx">BACK</a>
+                                <a class="btnGeneral" href="Help.aspx">HELP</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </form>
-
+            </form>
+        </div>
     </div>
     <footer id="contactInfo" role="contentinfo">
         <div>
