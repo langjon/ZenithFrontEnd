@@ -100,7 +100,7 @@ namespace ZenithFrontEnd.ShoppingCart
                 }
             }
             totalPrice = 0.0;
-            //Response.Redirect("ViewCart.aspx");
+            Response.Redirect("ViewCart.aspx");
         }
         private double calcPrice(int qty, double valuePerQty)
         {
