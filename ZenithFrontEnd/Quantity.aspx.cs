@@ -20,6 +20,27 @@ namespace ZenithFrontEnd
             }
             if (Session["BoxImage"] != null)
                 selectedBox.ImageUrl = Session["BoxImage"].ToString();
+           
+            if (Session["Size"] != null)
+                LabelSize.Text = Session["Size"].ToString();
+            else
+                LabelSize.Text = "Please Select Size";
+            if (Session["Material"] != null)
+                LabelMaterial.Text = Session["Material"].ToString();
+            else
+                LabelMaterial.Text = "Please select Material";
+            if (Session["Side"] != null)
+                LabelSides.Text = Session["Side"].ToString();
+            else
+                LabelSides.Text = "Please select printing side";
+            if (Session["Finish"] != null)
+                LabelFinish.Text = Session["Finish"].ToString();
+            else
+                LabelFinish.Text = "Not Applicable";
+            if (Session["Wall"] != null)
+                LabelWallType.Text = Session["Wall"].ToString();
+            else
+                LabelWallType.Text = "Please select Wall type";
         }
 
         protected void quantityRadioBtn_SelectedIndexChanged(object sender, EventArgs e)
@@ -32,7 +53,7 @@ namespace ZenithFrontEnd
             unitPrice = calcUnitPrice(Convert.ToDouble(Session["Length"]), Convert.ToDouble(Session["Width"]), Convert.ToDouble(Session["Depth"]),
                          Session["Side"].ToString(), Session["Material"].ToString(), Session["Finish"].ToString(), Session["Wall"].ToString());
             price = calcPrice(Convert.ToInt32(customQty), unitPrice);
-            Label1.Text = "You selected: " + customQty + " Price per box: CAD " + price;
+            Label1.Text = "You selected: " + customQty + "Pieces," + " Price per box: CAD " + price;
             Session["Quantity"] = customQty;
             Session["UnitPrice"] = unitPrice.ToString();
             BtnSelectQty.Text = "Select Custom Quantity";

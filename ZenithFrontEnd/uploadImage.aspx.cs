@@ -15,6 +15,36 @@ namespace ZenithFrontEnd
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["BoxImage"] != null)
+                selectedBox.ImageUrl = Session["BoxImage"].ToString();
+
+            if (Session["Size"] != null)
+                LabelSize.Text = Session["Size"].ToString();
+            else
+                LabelSize.Text = "Please Select Size";
+            if (Session["Material"] != null)
+                LabelMaterial.Text = Session["Material"].ToString();
+            else
+                LabelMaterial.Text = "Please select Material";
+            if (Session["Side"] != null)
+                LabelSides.Text = Session["Side"].ToString();
+            else
+                LabelSides.Text = "Please select printing side";
+            if (Session["Finish"] != null)
+                LabelFinish.Text = Session["Finish"].ToString();
+            if (Session["Wall"] != null)
+                LabelWallType.Text = Session["Wall"].ToString();
+            else
+                LabelWallType.Text = "Please select Wall type";
+            if (Session["Quantity"] != null && Session["UnitPrice"] != null)
+            {
+                LabelQuantity.Text = Session["Quantity"].ToString();
+                //double price = calcPrice(Convert.ToInt32(Session["Quantity"].ToString()), Convert.ToDouble(Session["UnitPrice"].ToString()));
+                //LabelPrice.Text = price.ToString();
+                //Session["Price"] = price.ToString();
+            }
+            else
+                LabelQuantity.Text = "Please select Quantity";
 
         }
 
@@ -50,7 +80,9 @@ namespace ZenithFrontEnd
             }
         }
 
-        
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
     }
     }

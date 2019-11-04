@@ -18,12 +18,9 @@
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44308</IISExpressSSLPort>
-    <IISExpressAnonymousAuthentication>
-    </IISExpressAnonymousAuthentication>
-    <IISExpressWindowsAuthentication>
-    </IISExpressWindowsAuthentication>
-    <IISExpressUseClassicPipelineMode>
-    </IISExpressUseClassicPipelineMode>
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -91,6 +88,7 @@
     <Content Include="CreateAccount.aspx" />
     <Content Include="css\main.css" />
     <Content Include="Help.aspx" />
+    <Content Include="images\blue circle.png" />
     <Content Include="images\box-16.png" />
     <Content Include="images\BOX-4-Sided-Rollover-Tray.jpg" />
     <Content Include="images\BOX-5PW.jpg" />
@@ -104,6 +102,8 @@
     <Content Include="images\BOX-Tube.jpg" />
     <Content Include="images\cart-16.png" />
     <Content Include="images\cart-24.png" />
+    <Content Include="images\check.jpg" />
+    <Content Include="images\circle.png" />
     <Content Include="images\Display.JPG" />
     <Content Include="images\footer_logo.jpg" />
     <Content Include="images\house-16.png" />
@@ -112,6 +112,7 @@
     <Content Include="images\user-16.png" />
     <Content Include="images\user-24.png" />
     <Content Include="images\wp-logo.jpg" />
+    <Content Include="images\Your Order Progress.jpg" />
     <Content Include="Options.aspx" />
     <Content Include="Product.aspx" />
     <Content Include="Login.aspx" />

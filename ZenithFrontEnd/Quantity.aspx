@@ -9,38 +9,7 @@
 
     <link rel="stylesheet" href="css/main.css" />
     <style type="text/css">
-        .auto-style9 {
-            border-style: none;
-            border-color: inherit;
-            border-width: medium;
-            border-radius: 5px;
-            height: 30px;
-            width: 71px;
-            background-color: steelblue;
-            color: white;
-            outline: none;
-            user-select: none;
-            float: right;
-            margin-left: 55px;
-            margin-right: 94px;
-        }
-
-        .auto-style10 {
-            border-style: none;
-            border-color: inherit;
-            border-width: medium;
-            border-radius: 5px;
-            height: 30px;
-            width: 73px;
-            background-color: steelblue;
-            color: white;
-            outline: none;
-            user-select: none;
-            float: right;
-            margin-left: 55px;
-            margin-right: 94px;
-        }
-
+        
         .auto-style0 {
             border-style: none;
             border-color: inherit;
@@ -56,21 +25,25 @@
             margin-left: 57px;
         }
 
-        .auto-style11 {
-            border-style: none;
-            border-color: inherit;
-            border-width: medium;
-            border-radius: 5px;
-            height: 30px;
-            width: 81px;
-            background-color: steelblue;
-            color: white;
-            outline: none;
-            user-select: none;
-            float: left;
-            margin-left: 57px;
+        .auto-style5 {
+            width: 29px;
+            height: 26px;
         }
-    </style>
+        .auto-style14 {
+            width: 26px;
+            height: 24px;
+        }
+        .auto-style7 {
+            width: 24px;
+            height: 29px;
+        }
+        .auto-style15 {
+            width: 27%;
+        }
+        .auto-style16 {
+            margin-left: 160px;
+        }
+        </style>
 </head>
 <body>
     <img id="logo" src="images/wp-logo.jpg" alt="CB Logo" />
@@ -86,18 +59,46 @@
     </ul>
     <div id="errorMessages" runat="server">
     </div>
-    <div style="height: 700px">
-        <form id="form1" runat="server">
-            <div class="pageTitle">
+
+      <div id="mainBodyDiv" class="auto-style13">
+
+        <div class="pageTitle">
                 <p>BUILD YOUR BOX</p>
-            </div>
-            <div id="buildDiv">
-                <asp:ImageButton ID="selectedBox" class="auto-style1" runat="server" Height="134px" Width="160px" />
+        </div>
+
+        <div id="panelDiv" class="auto-style15">
+           
+            Your Order Progress:<br />
+            <br />
+            &nbsp;<img alt="" class="auto-style5" src="images/check.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SIZE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="LabelSize" runat="server" Text="Label"></asp:Label>
+            <br />
+            <img alt="" class="auto-style5" src="images/check.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PRINTING&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="LabelSides" runat="server" Text="Label"></asp:Label>
+            <br />
+            <img alt="" class="auto-style5" src="images/check.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MATERIAL&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+            <asp:Label ID="LabelMaterial" runat="server" Text="Label"></asp:Label>
+            <br />
+            <img alt="" class="auto-style5" src="images/check.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FINISH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="LabelFinish" runat="server" Text="Label"></asp:Label>
+            <br />
+            <img alt="" class="auto-style5" src="images/check.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WALL TYPE&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <asp:Label ID="LabelWallType" runat="server" Text="Label"></asp:Label>
+            <br />
+            <img alt="" class="auto-style14" src="images/blue%20circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; QUANTITY<br />
+            <img alt="" class="auto-style7" src="images/circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IMAGE UPLOAD<br />
+            <br />
+          </div>
+       
+          <div id="bodyDiv">
+            <form id="form1" runat="server">
+                <div class="auto-style16">
+                    <asp:ImageButton ID="selectedBox" class="auto-style1" runat="server" Height="134px" Width="160px" />
+                </div>
 
                 <div>
                     <div style="font-size: large; font-weight: bold">
                         <p>
-                            Quantity<asp:RadioButtonList Width="30%" ID="quantityRadioBtn" runat="server" OnSelectedIndexChanged="quantityRadioBtn_SelectedIndexChanged" AutoPostBack="true" RepeatDirection="Horizontal" RepeatColumns="3" CellPadding="3" CellSpacing="2" CssClass="auto-style14" Font-Names="Arial" Font-Size="Medium">
+                            Quantity<asp:RadioButtonList Width="98%" ID="quantityRadioBtn" runat="server" OnSelectedIndexChanged="quantityRadioBtn_SelectedIndexChanged" AutoPostBack="true" RepeatDirection="Horizontal" RepeatColumns="3" CellPadding="3" CellSpacing="2" Font-Names="Arial" Font-Size="Medium">
                                 <asp:ListItem>  1       </asp:ListItem>
                                 <asp:ListItem>  50      </asp:ListItem>
                                 <asp:ListItem>  1000    </asp:ListItem>
@@ -110,8 +111,8 @@
                             </asp:RadioButtonList>
 
                         </p>
-                        <div class="auto-style12">
-                            &nbsp;&nbsp;&nbsp;
+                        <%--<div class="auto-style12">
+                            &nbsp;&nbsp;&nbsp;--%>
                      <p class="auto-style6">
                          <label for="customQuantity">
                              Custom Quantity:</label>
@@ -122,11 +123,16 @@
                         </p>
                              <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtCustom" ErrorMessage="Quantity should be a positive integer " Font-Size="Smaller" ForeColor="Red" ValidationExpression="^[0-9]{0,10}$"></asp:RegularExpressionValidator>&nbsp;
                         <p class="auto-style8">
-                            <asp:Button ID="BtnSelectQty" class="auto-style11" runat="server" Text="Select Custom Quantity" Width="291px" OnClick="BtnSelectQty_Click" />
-                            <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+                            <asp:Button ID="BtnSelectQty" runat="server" Text="Select Custom Quantity" OnClick="BtnSelectQty_Click" />
+
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+                            <asp:Label ID="Label1" runat="server" Font-Names="Arial" Font-Size="Medium"></asp:Label>
                         </p>
                         <a class="btnGeneral" href="uploadImage.aspx">NEXT</a>
-                        <a class="btnGeneral" href="options.aspx">BACK</a>
+                        <a class="btnGeneral" href="Options.aspx">BACK</a>
                         <a class="btnGeneral" href="Help.aspx">HELP</a>
                     </div>
                 </div>
@@ -134,6 +140,9 @@
          </div>
         </form>
     </div>
+        <br/>
+                        <br/>
+        <br />
     <footer id="contactInfo" role="contentinfo">
         <div>
             <section>

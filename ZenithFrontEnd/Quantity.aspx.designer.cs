@@ -22,6 +22,51 @@ namespace ZenithFrontEnd {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl errorMessages;
         
         /// <summary>
+        /// LabelSize control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelSize;
+        
+        /// <summary>
+        /// LabelSides control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelSides;
+        
+        /// <summary>
+        /// LabelMaterial control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelMaterial;
+        
+        /// <summary>
+        /// LabelFinish control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelFinish;
+        
+        /// <summary>
+        /// LabelWallType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelWallType;
+        
+        /// <summary>
         /// form1 control.
         /// </summary>
         /// <remarks>

@@ -49,24 +49,6 @@ namespace ZenithFrontEnd {
         protected global::System.Web.UI.WebControls.Label LabelSize;
         
         /// <summary>
-        /// LabelMaterial control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelMaterial;
-        
-        /// <summary>
-        /// LabelSides control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelSides;
-        
-        /// <summary>
         /// LabelFinish control.
         /// </summary>
         /// <remarks>
@@ -76,6 +58,15 @@ namespace ZenithFrontEnd {
         protected global::System.Web.UI.WebControls.Label LabelFinish;
         
         /// <summary>
+        /// LabelMaterial control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelMaterial;
+        
+        /// <summary>
         /// LabelWallType control.
         /// </summary>
         /// <remarks>
@@ -83,6 +74,15 @@ namespace ZenithFrontEnd {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelWallType;
+        
+        /// <summary>
+        /// LabelSides control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelSides;
         
         /// <summary>
         /// LabelQuantity control.

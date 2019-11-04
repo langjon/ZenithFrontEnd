@@ -31,6 +31,11 @@ namespace ZenithFrontEnd
             }
             if (Session["BoxImage"] != null)
                 selectedBox.ImageUrl = Session["BoxImage"].ToString();
+
+            if (Session["Size"] != null)
+                LabelSize.Text = Session["Size"].ToString();
+            else
+                LabelSize.Text = "Please Select Size";
         }
 
         protected void sideRadioBtn_SelectedIndexChanged(object sender, EventArgs e)
