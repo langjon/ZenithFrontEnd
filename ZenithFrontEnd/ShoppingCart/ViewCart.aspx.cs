@@ -56,6 +56,15 @@ namespace ZenithFrontEnd.ShoppingCart
             cartListTable.DataBind();
             lblTotal.Text = totalPrice.ToString();
             Session["cartTotal"] = totalPrice.ToString();
+
+            if(totalPrice != 0)
+            {
+                addToCart.Enabled = true;
+            }
+            else
+            {
+                addToCart.Enabled = false;
+            }
         }
         protected void qtyChanged(object sender, EventArgs e)
         {
@@ -115,7 +124,11 @@ namespace ZenithFrontEnd.ShoppingCart
             return price;
 
         }
-        protected void loadCart_Click(object sender, EventArgs e)
+        protected void Checkout_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("../CheckoutPages/CheckoutGateway.aspx");
+        }
+            protected void loadCart_Click(object sender, EventArgs e)
         {
            
         }
