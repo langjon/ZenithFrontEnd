@@ -68,7 +68,7 @@
                 <br />
                 <label for="txtpwd">PASSWORD</label>
                 <br />
-                <asp:TextBox TextMode="Password" CssClass="textbox" ID="txtPwd" runat="server" ></asp:TextBox>
+                <asp:TextBox TextMode="Password" CssClass="textbox" ID="txtpwd" runat="server" ></asp:TextBox>
                 <br />
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtPwd" ErrorMessage="Password cannot be empty" Font-Size="Smaller" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />

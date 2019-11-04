@@ -89,7 +89,7 @@ namespace ZenithFrontEnd
                         SqlCommand cmdLogin = new SqlCommand("INSERT INTO dbo.CustomerLogin (UserName, UserPass, CusID) VALUES (@username, @password, (SELECT CusID FROM dbo.Customer WHERE CusEmail=@email))");
 
                         cmdLogin.Parameters.AddWithValue("@username", txtUsername.Text);
-                        cmdLogin.Parameters.AddWithValue("@password", txtPwd.Text);
+                        cmdLogin.Parameters.AddWithValue("@password", txtpwd.Text);
                         cmdLogin.Parameters.AddWithValue("@email", txtEmail.Text);
                         cmdLogin.Connection = con;
                         con.Open();
@@ -106,7 +106,36 @@ namespace ZenithFrontEnd
                     Response.Write("Error");
                     Response.Write(ex.ToString());
                 }
-                Response.Redirect("Product.aspx");
+              
+            }
+            using (SqlConnection con = new SqlConnection(@"Server=zenithcapstone.database.windows.net;Database=ZenithCapstoneDB;User=zenith;Password=C@pst0ne!;Trusted_Connection=False;Encrypt=True"))
+            {
+
+                SqlCommand cmd = new SqlCommand("SELECT * FROM CustomerLogin WHERE UserName LIKE @username AND UserPass = @password;");
+                cmd.Parameters.AddWithValue("@username", txtUsername.Text);
+                cmd.Parameters.AddWithValue("@password", txtpwd.Text);
+                cmd.Connection = con;
+                con.Open();
+
+                DataSet ds = new DataSet();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(ds);
+                con.Close();
+
+                bool loginSuccessful = ((ds.Tables.Count > 0) && (ds.Tables[0].Rows.Count > 0));
+
+                if (loginSuccessful)
+                {
+                    Console.WriteLine("Success!");
+                    //textbox value is stored in Session 
+                    Session["UserName"] = txtUsername.Text;
+                    Response.Redirect("Product.aspx");
+                }
+                else
+                {
+                    errorMessages.InnerHtml = "<div id='loginError' runat='server'> <p>Either username or password was incorrect. Please try logging in again. </p> </div> ";
+                    Console.WriteLine("Invalid username or password");
+                }
             }
         }
     }
