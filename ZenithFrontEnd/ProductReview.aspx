@@ -134,7 +134,7 @@
                                      </td>
                                  </tr>
                                  <tr>
-                                     <td colspan="4" style="font-family: Arial; font-size: medium; color: #3169CF; text-align: center;">Total Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="LabelPrice" runat="server" ></asp:Label>
+                                     <td colspan="4" style="font-family: Arial; font-size: medium; color: #3169CF; text-align: center;">Total Price:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="LabelPrice" runat="server" Font-Bold="True" ForeColor="Black" ></asp:Label>
                                      </td>
                                  </tr>
                              </table>
