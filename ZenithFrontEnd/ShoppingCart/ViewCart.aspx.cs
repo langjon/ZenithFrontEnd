@@ -11,13 +11,16 @@ namespace ZenithFrontEnd.ShoppingCart
 {
     public partial class ViewCart : System.Web.UI.Page
     {
+        
         string prodValue;
         string cartItem;
-        string[] cartItemDetails = new string[12];
+        
         double totalPrice = 0.0;
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            cartListTable.DataSource = null;
+            cartListTable.DataBind();
             DataTable cartTable = new DataTable();
             cartTable.Columns.AddRange(new DataColumn[12] { new DataColumn("prodImage"), new DataColumn("prodType"), new DataColumn("prodSize"), new DataColumn("prodMaterial"),
                 new DataColumn("prodFinish"), new DataColumn("prodWallType"), new DataColumn("prodPrintSides"), new DataColumn("prodQuantity"),
@@ -25,6 +28,8 @@ namespace ZenithFrontEnd.ShoppingCart
 
             if (Request.Cookies["cartCookie"] != null)
             {
+                string[] cartItemDetails = new string[12];
+
                 prodValue = Convert.ToString(Request.Cookies["cartCookie"].Value);
 
                 string[] cartArray = prodValue.Split('|');
@@ -44,12 +49,12 @@ namespace ZenithFrontEnd.ShoppingCart
                     
                    totalPrice += Convert.ToDouble(cartItemDetails[9]);
                 }
-
-            }
+            } 
 
             cartListTable.DataSource = cartTable;
             cartListTable.DataBind();
             lblTotal.Text = totalPrice.ToString();
+            Session["cartTotal"] = totalPrice.ToString();
         }
         protected void qtyChanged(object sender, EventArgs e)
         {

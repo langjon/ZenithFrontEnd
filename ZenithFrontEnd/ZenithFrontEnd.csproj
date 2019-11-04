@@ -82,11 +82,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="BoxSize.aspx" />
-    <Content Include="Checkout.aspx" />
-    <Content Include="CheckoutPages\CheckoutCancel.aspx" />
-    <Content Include="CheckoutPages\CheckoutComplete.aspx" />
-    <Content Include="CheckoutPages\CheckoutError.aspx" />
-    <Content Include="CheckoutPages\CheckoutReview.aspx" />
+    <Content Include="CheckoutPages\CheckoutGateway.aspx" />
+    <Content Include="CheckoutPages\CheckoutSuccess.aspx" />
+    <Content Include="GuestCheckout.aspx" />
     <Content Include="CreateAccount.aspx" />
     <Content Include="css\main.css" />
     <Content Include="Help.aspx" />
@@ -121,6 +119,7 @@
     <Content Include="ProductReview.aspx" />
     <Content Include="Quantity.aspx" />
     <Content Include="ShoppingCart\DeleteCart.aspx" />
+    <Content Include="ShoppingCart\EditCart.aspx" />
     <Content Include="ShoppingCart\testing.aspx" />
     <Content Include="ShoppingCart\ViewCart.aspx" />
     <Content Include="Size.aspx" />
@@ -139,41 +138,28 @@
     <Compile Include="BoxSize.aspx.designer.cs">
       <DependentUpon>BoxSize.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CheckoutPages\CheckoutCancel.aspx.cs">
-      <DependentUpon>CheckoutCancel.aspx</DependentUpon>
+    <Compile Include="CheckoutPages\CheckoutGateway.aspx.cs">
+      <DependentUpon>CheckoutGateway.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CheckoutPages\CheckoutCancel.aspx.designer.cs">
-      <DependentUpon>CheckoutCancel.aspx</DependentUpon>
+    <Compile Include="CheckoutPages\CheckoutGateway.aspx.designer.cs">
+      <DependentUpon>CheckoutGateway.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CheckoutPages\CheckoutComplete.aspx.cs">
-      <DependentUpon>CheckoutComplete.aspx</DependentUpon>
+    <Compile Include="CheckoutPages\CheckoutSuccess.aspx.cs">
+      <DependentUpon>CheckoutSuccess.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CheckoutPages\CheckoutComplete.aspx.designer.cs">
-      <DependentUpon>CheckoutComplete.aspx</DependentUpon>
+    <Compile Include="CheckoutPages\CheckoutSuccess.aspx.designer.cs">
+      <DependentUpon>CheckoutSuccess.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CheckoutPages\CheckoutError.aspx.cs">
-      <DependentUpon>CheckoutError.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CheckoutPages\CheckoutError.aspx.designer.cs">
-      <DependentUpon>CheckoutError.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CheckoutPages\CheckoutReview.aspx.cs">
-      <DependentUpon>CheckoutReview.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CheckoutPages\CheckoutReview.aspx.designer.cs">
-      <DependentUpon>CheckoutReview.aspx</DependentUpon>
-    </Compile>
+    <Compile Include="Logic\RNG.cs" />
     <Compile Include="Models\CartItems.cs" />
-    <Compile Include="Checkout.aspx.cs">
-      <DependentUpon>Checkout.aspx</DependentUpon>
+    <Compile Include="GuestCheckout.aspx.cs">
+      <DependentUpon>GuestCheckout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Checkout.aspx.designer.cs">
-      <DependentUpon>Checkout.aspx</DependentUpon>
+    <Compile Include="GuestCheckout.aspx.designer.cs">
+      <DependentUpon>GuestCheckout.aspx</DependentUpon>
     </Compile>
     <Compile Include="CreateAccount.aspx.cs">
       <DependentUpon>CreateAccount.aspx</DependentUpon>
@@ -236,6 +222,13 @@
     <Compile Include="ShoppingCart\DeleteCart.aspx.designer.cs">
       <DependentUpon>DeleteCart.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ShoppingCart\EditCart.aspx.cs">
+      <DependentUpon>EditCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShoppingCart\EditCart.aspx.designer.cs">
+      <DependentUpon>EditCart.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ShoppingCart\testing.aspx.cs">
       <DependentUpon>testing.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -287,7 +280,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CheckoutPages\Web.config" />
     <None Include="packages.config" />
     <Content Include="Site.Master" />
     <None Include="Web.Debug.config">

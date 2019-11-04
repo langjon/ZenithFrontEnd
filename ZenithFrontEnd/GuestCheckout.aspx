@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Checkout.aspx.cs" Inherits="ZenithFrontEnd.Checkout" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GuestCheckout.aspx.cs" Inherits="ZenithFrontEnd.Checkout" %>
 
 <!DOCTYPE html>
 

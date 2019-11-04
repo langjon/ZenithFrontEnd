@@ -11,7 +11,7 @@ namespace ZenithFrontEnd.CheckoutPages
 {
 
 
-    public partial class CheckoutError
+    public partial class CheckoutSuccess
     {
     }
 }

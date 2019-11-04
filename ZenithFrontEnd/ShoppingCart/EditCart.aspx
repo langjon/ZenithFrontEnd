@@ -1,7 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ViewCart.aspx.cs" Inherits="ZenithFrontEnd.ShoppingCart.ViewCart" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditCart.aspx.cs" Inherits="ZenithFrontEnd.ShoppingCart.EditCart" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <!--<asp:Button ID="loadCart" runat="server" Text="Load Cart" OnClick="loadCart_Click" />-->
+   
     <div class="pageTitle">
             <p>SHOPPING CART</p>
         </div>
@@ -30,10 +31,7 @@
                 <td><%#Eval("prodFinish") %></td>
                 <td><%#Eval("prodWallType") %></td>
                 <td><%#Eval("prodPrintSides") %></td>
-                <td>
-                   <asp:TextBox ID="txtQty" runat="server" Width="50px" MaxLength="5" Value='<%#Eval("prodQuantity") %>' Text='<%#Eval("prodQuantity") %>' AutoPostBack="true" OnTextChanged="qtyChanged" ></asp:TextBox> 
-                    <a href="EditCart.aspx?id=<%#Eval("id") %>&qty=1000">Update</a>
-                </td>
+                <td><%#Eval("prodQuantity") %></td>
                 <td><%#Eval("prodUnitPrice") %></td>
                 <td><%#Eval("prodPrice") %></td>
                 <td><%#Eval("prodDateCreated") %></td>
@@ -53,9 +51,9 @@
     </div>
 
     <div id="cartBtnDiv">
-        <a class="btnGeneral" href="../CheckoutPages/CheckoutGateway.aspx">Checkout</a>
+        <a class="btnGeneral" href="../Checkout.aspx">Checkout</a>
         <a class="btnGeneral" href="../Product.aspx">Build Another Product</a>
     </div>
 </asp:Content>
-
-
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+</asp:Content>
