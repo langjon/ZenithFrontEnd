@@ -56,6 +56,7 @@ namespace ZenithFrontEnd.ShoppingCart
                     if (i == id)
                     {
                         cartRow.Delete();
+                        break;
                     }
                 }
                 cartTable.AcceptChanges();

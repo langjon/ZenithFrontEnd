@@ -12,7 +12,7 @@
                 <td>Type</td>
                 <td>Size</td>
                 <td>Material</td>
-                <td>Printing Sides</td>
+                <td>Print Sides</td>
                 <td>Finish</td>
                 <td>Wall Type</td>
                 <td>Quantity</td>
