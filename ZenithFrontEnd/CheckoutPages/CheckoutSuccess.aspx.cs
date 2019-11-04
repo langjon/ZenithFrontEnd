@@ -14,9 +14,7 @@ namespace ZenithFrontEnd.CheckoutPages
         SqlConnection con = new SqlConnection(@"Server=zenithcapstone.database.windows.net;Database=ZenithCapstoneDB;User=zenith;Password=C@pst0ne!;Trusted_Connection=False;Encrypt=True");
 
         string order = "";
-        string orderNo;
-        string s;
-        string t;
+      
         string[] a = new string[12];
 
         protected void Page_Load(object sender, EventArgs e)

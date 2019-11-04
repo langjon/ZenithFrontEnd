@@ -48,73 +48,77 @@
     <div id="mainBodyDiv">
 
         <div class="pageTitle">
-                <p>BUILD YOUR BOX</p>
+            <p>BUILD YOUR BOX</p>
         </div>
 
-        <div id="panelDiv" class="auto-style8">
-           
-            Your Order Progress:<br />
-            <br />
-            <img alt="" class="auto-style14" src="images/blue%20circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SIZE<br />
-            <img alt="" class="auto-style7" src="images/circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PRINTING<br />
-            <img alt="" class="auto-style7" src="images/circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MATERIAL<br />
-            <img alt="" class="auto-style7" src="images/circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FINISH<br />
-            <img alt="" class="auto-style7" src="images/circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WALL TYPE<br />
-            <img alt="" class="auto-style7" src="images/circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; QUANTITY<br />
-            <img alt="" class="auto-style7" src="images/circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IMAGE UPLOAD</div>
+
 
         <div id="bodyDiv">
             <form id="form2" runat="server" style="font-family: Arial; font-size: medium; font-style: normal; font-weight: bold;">
-            <asp:ImageButton ID="selectedBox" class="auto-style1" runat="server" Height="134px" Width="160px" />
 
+                <div id="panelDiv" class="panelDiv">
+                    Your Order Progress:<br />
+                    <br />
+                    <asp:ImageButton ID="selectedBox" runat="server" Height="134px" Width="160px" /> <br />
+                    <img alt="" class="auto-style14" src="images/blue%20circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SIZE<br />
+                    <img alt="" class="auto-style7" src="images/circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PRINTING<br />
+                    <img alt="" class="auto-style7" src="images/circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MATERIAL<br />
+                    <img alt="" class="auto-style7" src="images/circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FINISH<br />
+                    <img alt="" class="auto-style7" src="images/circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WALL TYPE<br />
+                    <img alt="" class="auto-style7" src="images/circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; QUANTITY<br />
+                    <img alt="" class="auto-style7" src="images/circle.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IMAGE UPLOAD
+                </div>
+                <br />
+                <div class="customizeDiv">
+                    <h2>Size</h2>
+                    <p class="auto-style2" style="font-family: Arial; font-size: medium; font-weight: normal;">
+                        <asp:RadioButtonList Width="600px" ID="sizeRadioBtn" runat="server" OnSelectedIndexChanged="sizeRadioBtn_SelectedIndexChanged" AutoPostBack="true" RepeatDirection="Horizontal" RepeatColumns="3" CellPadding="3" CellSpacing="2" CssClass="auto-style14" Font-Names="Arial" Font-Size="Medium">
+                            <asp:ListItem>   6 x 6 in       </asp:ListItem>
+                            <asp:ListItem>   8 x 8 in       </asp:ListItem>
+                            <asp:ListItem>   10 x 10 in     </asp:ListItem>
+                            <asp:ListItem>   12 x 12 in     </asp:ListItem>
+                            <asp:ListItem>   14 x 14 in     </asp:ListItem>
+                            <asp:ListItem>   16 x 16 in       </asp:ListItem>
+                            <asp:ListItem>   24 x 24 in       </asp:ListItem>
+                            <asp:ListItem>   28 x 28 in       </asp:ListItem>
+                            <asp:ListItem>  32 x 32 in       </asp:ListItem>
+                        </asp:RadioButtonList>
+
+                    </p>
+
+
+
+                    <label for="customSize">
+                        Custom Size:</label>
+
+                    <p class="auto-style4">
                         <br />
-                Size<p class="auto-style2" style="font-family: Arial; font-size: medium; font-weight: normal;">
-                            <asp:RadioButtonList Width="600px" ID="sizeRadioBtn" runat="server" OnSelectedIndexChanged="sizeRadioBtn_SelectedIndexChanged" AutoPostBack="true" RepeatDirection="Horizontal" RepeatColumns="3" CellPadding="3" CellSpacing="2" CssClass="auto-style14" Font-Names="Arial" Font-Size="Medium">
-                                <asp:ListItem>   6 x 6 in       </asp:ListItem>
-                                <asp:ListItem>   8 x 8 in       </asp:ListItem>
-                                <asp:ListItem>   10 x 10 in     </asp:ListItem>
-                                <asp:ListItem>   12 x 12 in     </asp:ListItem>
-                                <asp:ListItem>   14 x 14 in     </asp:ListItem>
-                                <asp:ListItem>   16 x 16 in       </asp:ListItem>
-                                <asp:ListItem>   24 x 24 in       </asp:ListItem>
-                                <asp:ListItem>   28 x 28 in       </asp:ListItem>
-                                <asp:ListItem>  32 x 32 in       </asp:ListItem>
-                            </asp:RadioButtonList>
-
-                        </p>
-
-
-
-                 <label for="customSize">
-                     Custom Size:</label>
-                     </p>
-                     <p class="auto-style4">
-                     <br />
-                      <label for="txtCustom"> Length
+                        <label for="txtCustom">
+                            Length
                          <asp:TextBox CssClass="auto-style3" ID="txtCustom" runat="server" Width="50px" MaxLength="5"></asp:TextBox>&nbsp;x&nbsp;
-                      </label>
-                      <label for="txtCusto0m"> Width
+                        </label>
+                        <label for="txtCusto0m">
+                            Width
                          <asp:TextBox CssClass="auto-style3" ID="txtCustom0" runat="server" Width="50px" MaxLength="5"></asp:TextBox>&nbsp;</label><label for="txtCustom1">&nbsp;in
-                      </label>
-                         </p>
+                         </label>
+                    </p>
                     <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="txtCustom" ErrorMessage="Number with 2 decimal places only" Font-Size="Smaller" ForeColor="Red" ValidationExpression="^[0-9]+(\.[0-9][0-9]?)?$"></asp:RegularExpressionValidator>
                     <br />
-                         <asp:Button ID="btSize" runat="server" Text="Select Custom Size" OnClick="btnSelectSize_Click" />
-                   
-                     <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
-                     <br />
-                     <br />
-                    
+                    <asp:Button ID="btSize" runat="server" Text="Select Custom Size" OnClick="btnSelectSize_Click" />
 
-                
+                    <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+                    <br />
+                    <br />
 
-                            <a class="btnGeneral" href="options.aspx">NEXT</a>
-                            <a class="btnGeneral" href="Product.aspx">BACK</a>
-                            <a class="btnGeneral" href="Help.aspx">HELP</a>
-                        </div>
-                    </div>
-                
-        </form>
+
+
+
+                    <a class="btnGeneral" href="options.aspx">NEXT</a>
+                    <a class="btnGeneral" href="Product.aspx">BACK</a>
+                    <a class="btnGeneral" href="Help.aspx">HELP</a>
+                </div>
+            </form>
+        </div>
 
     </div>
     <footer id="contactInfo" role="contentinfo">

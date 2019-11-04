@@ -15,7 +15,7 @@ namespace ZenithFrontEnd.ShoppingCart
         string prodValue;
         string cartItem;
         string[] cartItemDetails = new string[12];
-        int id1, qty;
+        int id1;
         int count = 0;
         double totalPrice = 0.0;
 
