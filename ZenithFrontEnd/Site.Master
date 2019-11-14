@@ -20,12 +20,12 @@
             <img class="nav-icon" src="../images/cart-16.png" />CART</a></li>
         <li class="navbar-right" id="navLogin" runat="server"><a href="../UserLogin/UserLogin.aspx">
             <img class="nav-icon" src="../images/user-16.png" />LOGIN</a></li>
-        <li class="navbar-right"><a href="../Product.aspx">
+        <li class="navbar-right"><a href="../CustomizationPages/Products.aspx">
             <img class="nav-icon" src="../images/BOX-16.png" />BUILD</a></li>
     </ul>
     <div id="errorMessages" runat="server">
     </div>
-    <div style="height: 600px">
+    <div style="height: 700px">
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
