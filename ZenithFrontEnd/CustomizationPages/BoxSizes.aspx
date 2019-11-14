@@ -146,8 +146,8 @@
                         <br />
                         <br />
 
-                        <a class="btnGeneral" href="options.aspx">NEXT</a>
-                        <a class="btnGeneral" href="Product.aspx">BACK</a>
+                        <a class="btnGeneral" href="Options.aspx">NEXT</a>
+                        <a class="btnGeneral" href="Products.aspx">BACK</a>
                         <a class="btnGeneral" href="Help.aspx">HELP</a>
                     </div>
                 </div>
