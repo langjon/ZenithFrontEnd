@@ -327,13 +327,19 @@ td {
     background-color: white;
     padding-bottom: 2%;
     padding-top: 2%;
+    border-radius: 9px;
 }
 .panelContents td{
     border: none;
     box-shadow: none;
+    height: 39px;
 }
 .panelContents tr td:first-child {
     width: 1%;
+    text-align: center;
+}
+.panelContents tr td:first-child img {
+    width: 26px;
 }
     .customizeDiv{
     float: left;

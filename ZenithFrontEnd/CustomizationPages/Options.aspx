@@ -9,11 +9,6 @@
             height: 31px;
         }
 
-        .auto-style7 {
-            width: 24px;
-            height: 31px;
-        }
-
         .auto-style5 {
             width: 29px;
             height: 26px;
@@ -60,40 +55,40 @@
             <asp:ImageButton ID="selectedBox" runat="server" Height="134px" Width="160px" />
 
             <table class="panelContents">
-                <tr">
+                <tr>
                     <td>
                         <img alt="" class="auto-style14" src="../images/blue%20circle.png" /></td>
                     <td>SIZE: <asp:Label ID="LabelSize" runat="server" Text="Label"></asp:Label></td>
                 </tr>
                 <tr>
                     <td>
-                        <img alt="" class="auto-style7" src="../images/circle.png" /></td>
-                    <td>PRINTING</td>
+                        <img alt="" src="../images/circle.png" /></td>
+                    <td>PRINTING:</td>
                 </tr>
                 <tr>
                     <td>
-                        <img alt="" class="auto-style7" src="../images/circle.png" /></td>
-                    <td>MATERIAL</td>
+                        <img alt="" src="../images/circle.png" /></td>
+                    <td>MATERIAL:</td>
                 </tr>
                 <tr>
                     <td>
-                        <img alt="" class="auto-style7" src="../images/circle.png" /></td>
-                    <td>FINISH</td>
+                        <img alt="" src="../images/circle.png" /></td>
+                    <td>FINISH:</td>
                 </tr>
                 <tr>
                     <td>
-                        <img alt="" class="auto-style7" src="../images/circle.png" /></td>
-                    <td>WALL TYPE</td>
+                        <img alt="" src="../images/circle.png" /></td>
+                    <td>WALL TYPE:</td>
                 </tr>
                 <tr>
                     <td>
-                        <img alt="" class="auto-style7" src="../images/circle.png" /></td>
-                    <td>QUANTITY</td>
+                        <img alt="" src="../images/circle.png" /></td>
+                    <td>QUANTITY:</td>
                 </tr>
                 <tr>
                     <td>
-                        <img alt="" class="auto-style7" src="../images/circle.png" /></td>
-                    <td>IMAGE UPLOAD</td>
+                        <img alt="" src="../images/circle.png" /></td>
+                    <td>IMAGE UPLOAD:</td>
                 </tr>
             </table>
 
@@ -131,7 +126,7 @@
                 <%--<p class="auto-style12" style="font-family: Arial; font-size: medium">
                             &nbsp;</p>--%>
 
-                <a class="btnGeneral" href="../Quantity.aspx">NEXT</a>
+                <a class="btnGeneral" href="Quantity.aspx">NEXT</a>
                 <a class="btnGeneral" href="BoxSizes.aspx">BACK</a>
                 <a class="btnGeneral" href="../Help.aspx">HELP</a>
 

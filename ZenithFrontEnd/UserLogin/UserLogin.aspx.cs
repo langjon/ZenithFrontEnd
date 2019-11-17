@@ -40,7 +40,7 @@ namespace ZenithFrontEnd.UserLogin
                     Console.WriteLine("Success!");
                     //textbox value is stored in Session 
                     Session["UserName"] = txtUsername.Text;
-                    Response.Redirect("../Product.aspx");
+                    Response.Redirect("../CustomizationPages/Products.aspx");
                 }
                 else
                 {

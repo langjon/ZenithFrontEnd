@@ -84,6 +84,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CustomizationPages\ImageUpload.aspx" />
+    <Content Include="CustomizationPages\ProductReview.aspx" />
+    <Content Include="CustomizationPages\Quantity.aspx" />
     <Content Include="Old\BoxSize.aspx" />
     <Content Include="CheckoutPages\CheckoutGateway.aspx" />
     <Content Include="CheckoutPages\CheckoutSuccess.aspx" />
@@ -123,7 +126,7 @@
     <Content Include="Old\Options.aspx" />
     <Content Include="Old\Product.aspx" />
     <Content Include="Old\Login.aspx" />
-    <Content Include="ProductReview.aspx" />
+    <Content Include="Old\ProductReview.aspx" />
     <Content Include="Old\Quantity.aspx" />
     <Content Include="ShoppingCart\DeleteCart.aspx" />
     <Content Include="ShoppingCart\EditCart.aspx" />
@@ -132,7 +135,7 @@
     <Content Include="Old\Size.aspx" />
     <Content Include="ThankYou.aspx" />
     <Content Include="ThankYouHelp.aspx" />
-    <Content Include="uploadImage.aspx" />
+    <Content Include="Old\uploadImage.aspx" />
     <Content Include="UserLogin\NewAccount.aspx" />
     <Content Include="UserLogin\UserLogin.aspx" />
     <Content Include="UserLogin\UserLogout.aspx" />
@@ -141,6 +144,27 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomizationPages\ImageUpload.aspx.cs">
+      <DependentUpon>ImageUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomizationPages\ImageUpload.aspx.designer.cs">
+      <DependentUpon>ImageUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomizationPages\ProductReview.aspx.cs">
+      <DependentUpon>ProductReview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomizationPages\ProductReview.aspx.designer.cs">
+      <DependentUpon>ProductReview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomizationPages\Quantity.aspx.cs">
+      <DependentUpon>Quantity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomizationPages\Quantity.aspx.designer.cs">
+      <DependentUpon>Quantity.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Old\BoxSize.aspx.cs">
       <DependentUpon>BoxSize.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -238,11 +262,11 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\ProductContext.cs" />
-    <Compile Include="ProductReview.aspx.cs">
+    <Compile Include="Old\ProductReview.aspx.cs">
       <DependentUpon>ProductReview.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ProductReview.aspx.designer.cs">
+    <Compile Include="Old\ProductReview.aspx.designer.cs">
       <DependentUpon>ProductReview.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -309,11 +333,11 @@
     <Compile Include="ThankYouHelp.aspx.designer.cs">
       <DependentUpon>ThankYouHelp.aspx</DependentUpon>
     </Compile>
-    <Compile Include="uploadImage.aspx.cs">
+    <Compile Include="Old\uploadImage.aspx.cs">
       <DependentUpon>uploadImage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="uploadImage.aspx.designer.cs">
+    <Compile Include="Old\uploadImage.aspx.designer.cs">
       <DependentUpon>uploadImage.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserLogin\NewAccount.aspx.cs">

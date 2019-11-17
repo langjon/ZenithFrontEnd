@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace ZenithFrontEnd
+namespace ZenithFrontEnd.CustomizationPages
 {
     public partial class Quantity : System.Web.UI.Page
     {
@@ -20,7 +20,7 @@ namespace ZenithFrontEnd
             }
             if (Session["BoxImage"] != null)
                 selectedBox.ImageUrl = Session["BoxImage"].ToString();
-           
+
             if (Session["Size"] != null)
                 LabelSize.Text = Session["Size"].ToString();
             else
@@ -42,14 +42,13 @@ namespace ZenithFrontEnd
             else
                 LabelWallType.Text = "Please select Wall type";
         }
-
         protected void quantityRadioBtn_SelectedIndexChanged(object sender, EventArgs e)
         {
             String customQty = null;
             double price, unitPrice;
 
             customQty = quantityRadioBtn.SelectedItem.ToString();
-            
+
             unitPrice = calcUnitPrice(Convert.ToDouble(Session["Length"]), Convert.ToDouble(Session["Width"]), Convert.ToDouble(Session["Depth"]),
                          Session["Side"].ToString(), Session["Material"].ToString(), Session["Finish"].ToString(), Session["Wall"].ToString());
             price = calcPrice(Convert.ToInt32(customQty), unitPrice);
@@ -66,7 +65,7 @@ namespace ZenithFrontEnd
             double price, unitPrice;
             if (BtnSelectQty.Text == "Select Custom Quantity")
             {
-                if (txtCustom.Text == "" )
+                if (txtCustom.Text == "")
                 {
                     Label1.Text = "Please enter quantity";
 
@@ -76,9 +75,9 @@ namespace ZenithFrontEnd
 
                     try
                     {
-                        if (Convert.ToInt32(txtCustom.Text) >= 0 )
+                        if (Convert.ToInt32(txtCustom.Text) >= 0)
                         {
-                            customQty = txtCustom.Text ;
+                            customQty = txtCustom.Text;
                             unitPrice = calcUnitPrice(Convert.ToDouble(Session["Length"]), Convert.ToDouble(Session["Width"]), Convert.ToDouble(Session["Depth"]),
                                         Session["Side"].ToString(), Session["Material"].ToString(), Session["Finish"].ToString(), Session["Wall"].ToString());
                             price = calcPrice(Convert.ToInt32(customQty), unitPrice);
@@ -127,7 +126,7 @@ namespace ZenithFrontEnd
         private double calcUnitPrice(double length, double height, double width, string printingSide, string material, string finish, string wall)
         {
             double unitPrice = 0.0;
-          
+
             //SIZE
             double l = length * 0.4;
             double h = height * 0.3;
@@ -166,7 +165,7 @@ namespace ZenithFrontEnd
             {
                 unitPrice = unitPrice + 0.5;
             }
-            else if(wall == "Triple")
+            else if (wall == "Triple")
             {
                 unitPrice = unitPrice + 1;
             }
@@ -177,7 +176,7 @@ namespace ZenithFrontEnd
         {
             double price = 0.0;
             double unitPrice = 0.0;
-           // double valuePerQty = 13.30;
+            // double valuePerQty = 13.30;
             if (qty < 1)
             {
                 unitPrice = 0;
@@ -232,5 +231,6 @@ namespace ZenithFrontEnd
             var strUnitPrice = string.Format("{0:0.00}", unitPrice);
             return unitPrice;
         }
+
     }
 }

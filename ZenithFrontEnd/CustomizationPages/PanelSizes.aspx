@@ -19,11 +19,6 @@
             width: 734px;
         }
 
-        .auto-style7 {
-            width: 24px;
-            height: 31px;
-        }
-
         .auto-style8 {
             width: 23%;
         }
@@ -45,40 +40,40 @@
             <asp:ImageButton ID="selectedBox" runat="server" Height="134px" Width="160px" />
 
             <table class="panelContents">
-                <tr">
+                <tr>
                     <td>
                         <img alt="" class="auto-style14" src="../images/blue%20circle.png" /></td>
-                    <td>SIZE</td>
+                    <td>SIZE:</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img alt="" src="../images/circle.png" /></td>
+                    <td>PRINTING:</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img alt="" src="../images/circle.png" /></td>
+                    <td>MATERIAL:</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img alt="" src="../images/circle.png" /></td>
+                    <td>FINISH:</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img alt="" src="../images/circle.png" /></td>
+                    <td>WALL TYPE:</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img alt="" src="../images/circle.png" /></td>
+                    <td>QUANTITY:</td>
                 </tr>
                 <tr>
                     <td>
                         <img alt="" class="auto-style7" src="../images/circle.png" /></td>
-                    <td>PRINTING</td>
-                </tr>
-                <tr>
-                    <td>
-                        <img alt="" class="auto-style7" src="../images/circle.png" /></td>
-                    <td>MATERIAL</td>
-                </tr>
-                <tr>
-                    <td>
-                        <img alt="" class="auto-style7" src="../images/circle.png" /></td>
-                    <td>FINISH</td>
-                </tr>
-                <tr>
-                    <td>
-                        <img alt="" class="auto-style7" src="../images/circle.png" /></td>
-                    <td>WALL TYPE</td>
-                </tr>
-                <tr>
-                    <td>
-                        <img alt="" class="auto-style7" src="../images/circle.png" /></td>
-                    <td>QUANTITY</td>
-                </tr>
-                <tr>
-                    <td>
-                        <img alt="" class="auto-style7" src="../images/circle.png" /></td>
-                    <td>IMAGE UPLOAD</td>
+                    <td>IMAGE UPLOAD:</td>
                 </tr>
             </table>
 
