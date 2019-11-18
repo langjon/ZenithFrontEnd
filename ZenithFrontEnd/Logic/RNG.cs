@@ -10,7 +10,7 @@ namespace ZenithFrontEnd.Logic
         public static string GetRandomNumber(int length)
         {
             char[] chars = "abcdefghijklmnopqrstyvABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890".ToCharArray();
-            string id = "O_";
+            string id = "";
             Random random = new Random();
 
             for (int i = 0; i<length; i++)

@@ -14,6 +14,7 @@ namespace ZenithFrontEnd.UserLogin
            if (Session["UserName"] != null)
             {
                 Session["UserName"] = null;
+                Session["UserID"] = null;
                 Response.Redirect("../CustomizationPages/Products.aspx");
             }
         }

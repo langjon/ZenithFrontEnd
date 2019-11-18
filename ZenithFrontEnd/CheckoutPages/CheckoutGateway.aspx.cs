@@ -20,7 +20,7 @@ namespace ZenithFrontEnd.CheckoutPages
                 Response.Redirect("../UserLogin/UserLogin.aspx");
             } else
             {
-                orderNo = RNG.GetRandomNumber(6).ToString();
+                orderNo = "ORD_" + RNG.GetRandomNumber(12).ToString();
                 Session["orderID"] = orderNo;
 
                 Response.Write("<form action='https://www.sandbox.paypal.com/sgi-bin/webscr' method='post' name='checkout' id='checkout'>");

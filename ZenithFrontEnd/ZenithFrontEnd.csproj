@@ -130,7 +130,6 @@
     <Content Include="Old\Quantity.aspx" />
     <Content Include="ShoppingCart\DeleteCart.aspx" />
     <Content Include="ShoppingCart\EditCart.aspx" />
-    <Content Include="ShoppingCart\testing.aspx" />
     <Content Include="ShoppingCart\ViewCart.aspx" />
     <Content Include="Old\Size.aspx" />
     <Content Include="ThankYou.aspx" />
@@ -290,13 +289,6 @@
     </Compile>
     <Compile Include="ShoppingCart\EditCart.aspx.designer.cs">
       <DependentUpon>EditCart.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ShoppingCart\testing.aspx.cs">
-      <DependentUpon>testing.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ShoppingCart\testing.aspx.designer.cs">
-      <DependentUpon>testing.aspx</DependentUpon>
     </Compile>
     <Compile Include="ShoppingCart\ViewCart.aspx.cs">
       <DependentUpon>ViewCart.aspx</DependentUpon>

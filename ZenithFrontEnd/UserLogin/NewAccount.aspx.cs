@@ -94,6 +94,7 @@ namespace ZenithFrontEnd.UserLogin
                 con.Open();
 
                 DataSet ds = new DataSet();
+                DataRow dRow;
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(ds);
                 con.Close();
@@ -102,10 +103,13 @@ namespace ZenithFrontEnd.UserLogin
 
                 if (loginSuccessful)
                 {
+                    int inc = 0;
                     Console.WriteLine("Success!");
-                    //textbox value is stored in Session 
                     Session["UserName"] = txtUsername.Text;
-                    Response.Redirect("../Product.aspx");
+                    dRow = ds.Tables[0].Rows[inc];
+                    Session["UserID"] = dRow.ItemArray.GetValue(2).ToString();
+
+                    Response.Redirect("../CustomizationPages/Products.aspx");
                 }
                 else
                 {
