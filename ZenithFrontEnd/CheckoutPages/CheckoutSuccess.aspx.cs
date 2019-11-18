@@ -31,6 +31,7 @@ namespace ZenithFrontEnd.CheckoutPages
             if (Request.Cookies["cartCookie"] != null)
             {
                 string[] cartItemDetails = new string[12];
+                string prodID;
 
                 prodValue = Convert.ToString(Request.Cookies["cartCookie"].Value);
 
@@ -38,11 +39,12 @@ namespace ZenithFrontEnd.CheckoutPages
 
                 for (int i = 0; i < cartArray.Length; i++)
                 {
-                    string prodID = "PrID_" + RNG.GetRandomNumber(15).ToString();
+                    
                     cartItem = Convert.ToString(cartArray[i].ToString());
                     string[] cartRowArray = cartItem.Split(',');
                     for (int j = 0; j < cartRowArray.Length; j++)
                     {
+                        prodID = "PrID_" + RNG.GetRandomNumber(15).ToString();
                         cartItemDetails[j] = cartRowArray[j].ToString();
                     }
                     cartTable.Rows.Add(cartItemDetails[0].ToString(), cartItemDetails[1].ToString(), cartItemDetails[2].ToString(),
