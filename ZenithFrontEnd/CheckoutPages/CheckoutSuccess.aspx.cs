@@ -38,6 +38,7 @@ namespace ZenithFrontEnd.CheckoutPages
 
                 for (int i = 0; i < cartArray.Length; i++)
                 {
+                    string prodID = "PrID_" + RNG.GetRandomNumber(15).ToString();
                     cartItem = Convert.ToString(cartArray[i].ToString());
                     string[] cartRowArray = cartItem.Split(',');
                     for (int j = 0; j < cartRowArray.Length; j++)
@@ -56,7 +57,6 @@ namespace ZenithFrontEnd.CheckoutPages
 
                     if (order == Session["orderID"].ToString())
                     {
-                        string prodID = "PrID_" + RNG.GetRandomNumber(15).ToString();
                         SqlCommand cmd = con.CreateCommand();
                         cmd.CommandType = CommandType.Text;
                         cmd.CommandText = "INSERT INTO dbo.Product(ProductID, OrderId, ProdType, ProdSize, ProdMaterial, ProdQuantity, ProdBriefDescription," +
