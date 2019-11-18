@@ -61,9 +61,20 @@ namespace ZenithFrontEnd.CheckoutPages
                         cmd.CommandType = CommandType.Text;
                         cmd.CommandText = "INSERT INTO dbo.Product(ProductID, OrderId, ProdType, ProdSize, ProdMaterial, ProdQuantity, ProdBriefDescription," +
                             "ProdSideID, ProdFinish, ProdWall, ProdUnitPrice, ProdImagePath, ProdTotalPrice) VALUES(@productId, @orderId, @prodType, @prodSize, @prodMaterial, @prodQuantity, @prodBrief," +
-                            "@prodSide, @prodFinish, @prodUnitPrice, @prodImagePath, @totalPrice)";
+                            "@prodSide, @prodFinish, @prodWall, @prodUnitPrice, @prodImagePath, @totalPrice)";
                         cmd.Parameters.AddWithValue("@productId", prodID.ToString());
                         cmd.Parameters.AddWithValue("@orderId", Session["orderID"].ToString());
+                        cmd.Parameters.AddWithValue("@prodType", cartItemDetails[1].ToString());
+                        cmd.Parameters.AddWithValue("@prodSize", cartItemDetails[2].ToString());
+                        cmd.Parameters.AddWithValue("@prodMaterial", cartItemDetails[3].ToString());
+                        cmd.Parameters.AddWithValue("@prodFinish", cartItemDetails[4].ToString());
+                        cmd.Parameters.AddWithValue("@prodWall", cartItemDetails[5].ToString());
+                        cmd.Parameters.AddWithValue("@prodSide", cartItemDetails[6].ToString());
+                        cmd.Parameters.AddWithValue("@prodBrief", cartItemDetails[7].ToString());
+                        cmd.Parameters.AddWithValue("@prodQuantity", cartItemDetails[8].ToString());
+                        cmd.Parameters.AddWithValue("@prodUnitPrice", cartItemDetails[9].ToString());
+                        cmd.Parameters.AddWithValue("@prodImagePath", cartItemDetails[0].ToString());
+                        cmd.Parameters.AddWithValue("@totalPrice", totalPrice.ToString());
 
                         cmd.ExecuteNonQuery();
                         DataTable dt = new DataTable();
