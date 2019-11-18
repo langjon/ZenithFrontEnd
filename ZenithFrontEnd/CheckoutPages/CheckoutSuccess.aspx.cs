@@ -19,6 +19,7 @@ namespace ZenithFrontEnd.CheckoutPages
         string cartItem;
         double totalPrice = 0.0;
         string[] a = new string[12];
+        string prodID;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -31,7 +32,7 @@ namespace ZenithFrontEnd.CheckoutPages
             if (Request.Cookies["cartCookie"] != null)
             {
                 string[] cartItemDetails = new string[12];
-                string prodID;
+               
 
                 prodValue = Convert.ToString(Request.Cookies["cartCookie"].Value);
 
