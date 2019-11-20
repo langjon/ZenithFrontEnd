@@ -13,8 +13,6 @@
     <div class="pageTitle">
       <p >New Orders</p>
     </div>
- 
-  
     <div id="bodyDiv">
         
     <asp:GridView  class="auto-style1" ID="GridView1" runat="server" AllowPaging="true" PageSize="10"  AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="ProductId" DataSourceID="SqlDataSource1" Width="80%" Height="80%">
