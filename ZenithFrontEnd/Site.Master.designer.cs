@@ -40,6 +40,15 @@ namespace ZenithFrontEnd {
         protected global::System.Web.UI.WebControls.Label welcomeLabel;
         
         /// <summary>
+        /// navCart control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl navCart;
+        
+        /// <summary>
         /// navLogin control.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,15 @@ namespace ZenithFrontEnd {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl navLogin;
+        
+        /// <summary>
+        /// navBuild control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl navBuild;
         
         /// <summary>
         /// errorMessages control.
