@@ -70,9 +70,9 @@ namespace ZenithFrontEnd.CheckoutPages
                         cmd.Parameters.AddWithValue("@prodType", cartItemDetails[1].ToString());
                         cmd.Parameters.AddWithValue("@prodSize", cartItemDetails[2].ToString());
                         cmd.Parameters.AddWithValue("@prodMaterial", cartItemDetails[3].ToString());
-                        cmd.Parameters.AddWithValue("@prodFinish", cartItemDetails[4].ToString());
-                        cmd.Parameters.AddWithValue("@prodWall", cartItemDetails[5].ToString());
-                        cmd.Parameters.AddWithValue("@prodSide", cartItemDetails[6].ToString());
+                        cmd.Parameters.AddWithValue("@prodSide", cartItemDetails[4].ToString());
+                        cmd.Parameters.AddWithValue("@prodFinish", cartItemDetails[5].ToString());
+                        cmd.Parameters.AddWithValue("@prodWall", cartItemDetails[6].ToString());
                         cmd.Parameters.AddWithValue("@prodBrief", cartItemDetails[7].ToString());
                         cmd.Parameters.AddWithValue("@prodQuantity", cartItemDetails[8].ToString());
                         cmd.Parameters.AddWithValue("@prodUnitPrice", cartItemDetails[9].ToString());

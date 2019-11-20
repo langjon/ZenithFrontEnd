@@ -13,7 +13,7 @@
         <div id="loginDiv">
             
                 <div>
-                    <p class="subTitle">RETURNING CUSTOMERS</p>
+                    <p class="subTitle">RETURNING USERS</p>
                     <p>If you already have an account with us, please log in below.</p>
                     <label for="txtUsername">USERNAME</label>
                     <br />

@@ -18,12 +18,9 @@
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44308</IISExpressSSLPort>
-    <IISExpressAnonymousAuthentication>
-    </IISExpressAnonymousAuthentication>
-    <IISExpressWindowsAuthentication>
-    </IISExpressWindowsAuthentication>
-    <IISExpressUseClassicPipelineMode>
-    </IISExpressUseClassicPipelineMode>
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -87,6 +84,10 @@
     <Content Include="CustomizationPages\ImageUpload.aspx" />
     <Content Include="CustomizationPages\ProductReview.aspx" />
     <Content Include="CustomizationPages\Quantity.aspx" />
+    <Content Include="EmployeeDashboard\Dashboard.aspx" />
+    <Content Include="images\icon_containers.jpg" />
+    <Content Include="images\icon_design.jpg" />
+    <Content Include="images\icon_packaging.jpg" />
     <Content Include="Old\BoxSize.aspx" />
     <Content Include="CheckoutPages\CheckoutGateway.aspx" />
     <Content Include="CheckoutPages\CheckoutSuccess.aspx" />
@@ -163,6 +164,13 @@
     </Compile>
     <Compile Include="CustomizationPages\Quantity.aspx.designer.cs">
       <DependentUpon>Quantity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeDashboard\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmployeeDashboard\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="Old\BoxSize.aspx.cs">
       <DependentUpon>BoxSize.aspx</DependentUpon>
