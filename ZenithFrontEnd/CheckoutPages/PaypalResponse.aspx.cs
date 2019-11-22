@@ -15,9 +15,21 @@ namespace ZenithFrontEnd.CheckoutPages
 {
     public partial class PaypalResponse : System.Web.UI.Page
     {
+        string payerEmail;
+        string paymentStatus;
+        string receiverEmail;
+        string amount;
+        string transactionID
+            ;
         protected void Page_Load(object sender, EventArgs e)
         {
             ProcessPayPalIPNNotification();
+
+            txnID.Text = transactionID.ToString();
+            payerEmailText.Text = payerEmail.ToString();
+            statusText.Text = paymentStatus.ToString();
+            receiverEmailText.Text = receiverEmail.ToString();
+            amountText.Text = amount.ToString();
         }
 
         private void ProcessPayPalIPNNotification()
@@ -53,19 +65,15 @@ namespace ZenithFrontEnd.CheckoutPages
                 // paypal has verified the data, it is safe for us to perform processing now
 
                 // extract the form fields expected: buyer and seller email, payment status, amount
-                string payerEmail = Request.Form["payer_email"];
-                string paymentStatus = Request.Form["payment_status"];
-                string receiverEmail = Request.Form["receiver_email"];
-                string amount = Request.Form["mc_gross"];
-                string transactionID = Request.Form["txn_id"];
+                payerEmail = Request.Form["payer_email"];
+                paymentStatus = Request.Form["payment_status"];
+                receiverEmail = Request.Form["receiver_email"];
+                amount = Request.Form["mc_gross"];
+                transactionID = Request.Form["txn_id"];
 
                 Session["transactionID"] = transactionID.ToString();
 
-                txnID.Text = transactionID.ToString();
-                payerEmailText.Text = payerEmail.ToString();
-                statusText.Text = paymentStatus.ToString();
-                receiverEmailText.Text = receiverEmail.ToString();
-                amountText.Text = amount.ToString();
+
             }
         }
     }
