@@ -22,15 +22,10 @@ namespace ZenithFrontEnd.CheckoutPages
         string transactionID;
         protected void Page_Load(object sender, EventArgs e)
         {
-            ProcessPayPalIPNNotification();
-        }
-
-        private void ProcessPayPalIPNNotification()
-        {
             // receive PayPal ipn data
 
             // extract ipn data into a string
-            byte[] param = Request.BinaryRead(Request.ContentLength);
+            byte[] param = Request.BinaryRead(HttpContext.Current.Request.ContentLength);
             string strRequest = Encoding.ASCII.GetString(param);
 
             // append PayPal verification code to end of string
@@ -64,15 +59,13 @@ namespace ZenithFrontEnd.CheckoutPages
                 amount = Request.Form["mc_gross"];
                 transactionID = Request.Form["txn_id"];
 
-                txnID.Text = transactionID.ToString();
+                Session["transactionID"] = transactionID.ToString();
+
+                txnID.Text = Session["transactionID"].ToString();
                 payerEmailText.Text = payerEmail.ToString();
                 statusText.Text = paymentStatus.ToString();
                 receiverEmailText.Text = receiverEmail.ToString();
                 amountText.Text = amount.ToString();
-
-                //Session["transactionID"] = transactionID.ToString();
-
-
             }
         }
     }

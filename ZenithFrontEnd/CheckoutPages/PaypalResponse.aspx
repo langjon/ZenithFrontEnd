@@ -7,6 +7,7 @@
     <asp:Label ID="statusText" runat="server" Text="Label"></asp:Label>
     <asp:Label ID="receiverEmailText" runat="server" Text="Label"></asp:Label>
     <asp:Label ID="amountText" runat="server" Text="Label"></asp:Label>
+    <p><%#Eval("transactionID") %></p>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 </asp:Content>
