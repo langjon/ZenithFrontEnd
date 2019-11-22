@@ -44,7 +44,7 @@ namespace ZenithFrontEnd.CheckoutPages
             strRequest += "&cmd=_notify-validate";
 
             // create an HttpRequest channel to perform handshake with PayPal
-            HttpWebRequest req = (HttpWebRequest)WebRequest.Create(@"https://www.paypal.com/cgi-bin/webscr");
+            HttpWebRequest req = (HttpWebRequest)WebRequest.Create(@"https://www.sandbox.paypal.com/cgi-bin/webscr");
             req.Method = "POST";
             req.ContentType = "application/x-www-form-urlencoded";
             req.ContentLength = strRequest.Length;
