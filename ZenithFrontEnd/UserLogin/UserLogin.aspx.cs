@@ -21,7 +21,7 @@ namespace ZenithFrontEnd.UserLogin
         {
             using (SqlConnection con = new SqlConnection(@"Server=zenithcapstone.database.windows.net;Database=ZenithCapstoneDB;User=zenith;Password=C@pst0ne!;Trusted_Connection=False;Encrypt=True"))
             {
-
+                //customer login
                 SqlCommand cmd = new SqlCommand("SELECT * FROM CustomerLogin WHERE UserName LIKE @username AND UserPass = @password;");
                 cmd.Parameters.AddWithValue("@username", txtUsername.Text);
                 cmd.Parameters.AddWithValue("@password", txtpwd.Text);
@@ -34,9 +34,40 @@ namespace ZenithFrontEnd.UserLogin
                 da.Fill(ds);
                 con.Close();
 
-                bool loginSuccessful = ((ds.Tables.Count > 0) && (ds.Tables[0].Rows.Count > 0));
+                bool custLoginSuccessful = ((ds.Tables.Count > 0) && (ds.Tables[0].Rows.Count > 0));
 
-                if (loginSuccessful)
+                //employee login
+                SqlCommand cmd2 = new SqlCommand("SELECT * FROM EmployeeLogin WHERE EmployeeLoginId LIKE @username AND Pass = @password;");
+                cmd2.Parameters.AddWithValue("@username", txtUsername.Text);
+                cmd2.Parameters.AddWithValue("@password", txtpwd.Text);
+                cmd2.Connection = con;
+                con.Open();
+
+                DataSet ds2 = new DataSet();
+                DataRow dRow2;
+                SqlDataAdapter da2 = new SqlDataAdapter(cmd2);
+                da2.Fill(ds2);
+                con.Close();
+
+                bool empLoginSuccessful = ((ds2.Tables.Count > 0) && (ds2.Tables[0].Rows.Count > 0));
+
+                if (empLoginSuccessful)
+                {
+                    int inc = 0;
+
+                    Console.WriteLine("Success!");
+                    //textbox value is stored in Session 
+                    Session["UserName"] = txtUsername.Text;
+                    dRow2 = ds2.Tables[0].Rows[inc];
+                    string role = dRow2.ItemArray.GetValue(3).ToString();
+                    if (role.Equals("admin"))
+                    {
+                        Session["EmpID"] = dRow2.ItemArray.GetValue(1).ToString();
+                        Response.Redirect("../EmployeeDashboard/Dashboard.aspx");
+                    }
+                }
+
+               if (custLoginSuccessful)
                 {
                     int inc = 0;
 
