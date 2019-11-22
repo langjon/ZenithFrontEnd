@@ -132,5 +132,11 @@ namespace ZenithFrontEnd.ShoppingCart
         {
            
         }
+
+        protected void cartListTable_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string str = cartListTable.SelectedItem.FindControl("txtQty").ToString();
+            Response.Write(str);
+        }
     }
 }
