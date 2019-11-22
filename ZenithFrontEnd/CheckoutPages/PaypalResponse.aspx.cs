@@ -70,7 +70,7 @@ namespace ZenithFrontEnd.CheckoutPages
                 }
             } else if (strResponse == "INVALID")
             {
-                txnID.Text = "Not Verfied";
+                txnID.Text = strResponse.ToString() + " Not Verfied";
             }
         }
     }
