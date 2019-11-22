@@ -76,7 +76,7 @@ namespace ZenithFrontEnd.ShoppingCart
                 prodDateCreated = cartRow["prodDateCreated"].ToString();
                 prodUnitPrice = cartRow["prodUnitPrice"].ToString();
                 prodPrice = cartRow["prodPrice"].ToString();
-                prodImage = "../" + cartRow["prodImage"].ToString();
+                prodImage = cartRow["prodImage"].ToString();
 
                 count = count + 1;
 

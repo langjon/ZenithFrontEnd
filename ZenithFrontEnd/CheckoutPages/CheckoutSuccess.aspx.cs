@@ -40,12 +40,11 @@ namespace ZenithFrontEnd.CheckoutPages
 
                 for (int i = 0; i < cartArray.Length; i++)
                 {
-                    
+                    prodID = "PrID_" + RNG.GetRandomNumber(15).ToString();
                     cartItem = Convert.ToString(cartArray[i].ToString());
                     string[] cartRowArray = cartItem.Split(',');
                     for (int j = 0; j < cartRowArray.Length; j++)
                     {
-                        prodID = "PrID_" + RNG.GetRandomNumber(15).ToString();
                         cartItemDetails[j] = cartRowArray[j].ToString();
                     }
                     cartTable.Rows.Add(cartItemDetails[0].ToString(), cartItemDetails[1].ToString(), cartItemDetails[2].ToString(),
@@ -55,16 +54,20 @@ namespace ZenithFrontEnd.CheckoutPages
 
                     totalPrice += Convert.ToDouble(cartItemDetails[9]);
 
-                    con.Open();
+                    //con.Open();
                     order = Request.QueryString["order"].ToString();
 
                     if (order == Session["orderID"].ToString())
                     {
-                        SqlCommand cmd = con.CreateCommand();
-                        cmd.CommandType = CommandType.Text;
-                        cmd.CommandText = "INSERT INTO dbo.Product(ProductID, OrderId, ProdType, ProdSize, ProdMaterial, ProdQuantity, ProdBriefDescription," +
+                        //SqlCommand cmd = con.CreateCommand();
+                        //cmd.CommandType = CommandType.Text;
+                        //cmd.CommandText = "INSERT INTO dbo.Product(ProductID, OrderId, ProdType, ProdSize, ProdMaterial, ProdQuantity, ProdBriefDescription," +
+                        //    "ProdSideID, ProdFinish, ProdWall, ProdUnitPrice, ProdImagePath, ProdTotalPrice) VALUES(@productId, @orderId, @prodType, @prodSize, @prodMaterial, @prodQuantity, @prodBrief," +
+                        //    "@prodSide, @prodFinish, @prodWall, @prodUnitPrice, @prodImagePath, @totalPrice)";
+                        SqlCommand cmd = new SqlCommand("INSERT INTO dbo.Product(ProductID, OrderId, ProdType, ProdSize, ProdMaterial, ProdQuantity, ProdBriefDescription," +
                             "ProdSideID, ProdFinish, ProdWall, ProdUnitPrice, ProdImagePath, ProdTotalPrice) VALUES(@productId, @orderId, @prodType, @prodSize, @prodMaterial, @prodQuantity, @prodBrief," +
-                            "@prodSide, @prodFinish, @prodWall, @prodUnitPrice, @prodImagePath, @totalPrice)";
+                            "@prodSide, @prodFinish, @prodWall, @prodUnitPrice, @prodImagePath, @totalPrice)");
+
                         cmd.Parameters.AddWithValue("@productId", prodID.ToString());
                         cmd.Parameters.AddWithValue("@orderId", Session["orderID"].ToString());
                         cmd.Parameters.AddWithValue("@prodType", cartItemDetails[1].ToString());
@@ -79,17 +82,22 @@ namespace ZenithFrontEnd.CheckoutPages
                         cmd.Parameters.AddWithValue("@prodImagePath", cartItemDetails[0].ToString());
                         cmd.Parameters.AddWithValue("@totalPrice", totalPrice.ToString());
 
-                        cmd.ExecuteNonQuery();
-                        DataTable dt = new DataTable();
-                        SqlDataAdapter da = new SqlDataAdapter(cmd);
-                        da.Fill(dt);
+                        cmd.Connection = con;
+                        con.Open();
+                        SqlDataAdapter da = new SqlDataAdapter();
+                        da.InsertCommand = cmd;
+                        da.InsertCommand.ExecuteNonQuery();
+                        con.Close();
 
-                        foreach (DataRow dr in dt.Rows)
-                        {
-                            SqlCommand cmd1 = con.CreateCommand();
-                            cmd1.CommandType = CommandType.Text;
+                        //DataTable dt = new DataTable();
+                        //SqlDataAdapter da = new SqlDataAdapter(cmd);
+                        //da.Fill(dt);
 
-                        }
+                        //foreach (DataRow dr in dt.Rows)
+                        //{
+                        //    SqlCommand cmd1 = con.CreateCommand();
+                        //    cmd1.CommandType = CommandType.Text;
+                        //}
                     }
                 }
             }

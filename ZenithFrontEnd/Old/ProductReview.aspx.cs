@@ -116,7 +116,7 @@ namespace ZenithFrontEnd
 
         protected void addToCart_Click(object sender, EventArgs e)
         {
-            prodImage = "../" + Session["BoxImage"].ToString();
+            prodImage = Session["BoxImage"].ToString();
             prodType = Session["BoxType"].ToString();
             prodSize = Session["Size"].ToString();
             prodMaterial = Session["Material"].ToString();
