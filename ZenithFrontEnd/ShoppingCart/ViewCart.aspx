@@ -6,7 +6,7 @@
             <p>SHOPPING CART</p>
         </div>
     <div id="cartDiv">
-        <asp:DataList ID="cartListTable" runat="server">
+        <asp:DataList ID="cartListTable" runat="server" OnSelectedIndexChanged="cartListTable_SelectedIndexChanged">
             <HeaderTemplate>
                 <td>Image</td>
                 <td>Type</td>

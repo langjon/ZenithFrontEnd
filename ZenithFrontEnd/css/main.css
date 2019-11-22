@@ -252,6 +252,10 @@ td {
 .productTable table{
     width: 80%;
 }
+.DashboardTable table {
+    width: 20%;
+    float: left;
+}
 
 .sizeField{
     border-radius: 5px;

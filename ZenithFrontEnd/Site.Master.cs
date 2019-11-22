@@ -20,6 +20,9 @@ namespace ZenithFrontEnd
             {
                 navCart.InnerHtml = "";
                 navBuild.InnerHtml = "";
+                navOrder.InnerHtml = "<a href=\"../EmployeeDashboard/Dashboard.aspx\">ORDERS</a>";
+                navCust.InnerHtml = "CUSTOMERS";
+                navEmp.InnerHtml = "EMPLOYEES";
                 welcomeLabel.Text = Session["UserName"].ToString().ToUpper() + "'S DASHBAORD";
             }
         }

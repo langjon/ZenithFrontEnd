@@ -85,9 +85,12 @@
     <Content Include="CustomizationPages\ProductReview.aspx" />
     <Content Include="CustomizationPages\Quantity.aspx" />
     <Content Include="EmployeeDashboard\Dashboard.aspx" />
+    <Content Include="EmployeeDashboard\Orders.aspx" />
     <Content Include="images\icon_containers.jpg" />
     <Content Include="images\icon_design.jpg" />
+    <Content Include="images\icon_laptop.jpg" />
     <Content Include="images\icon_packaging.jpg" />
+    <Content Include="images\icon_pos.jpg" />
     <Content Include="Old\BoxSize.aspx" />
     <Content Include="CheckoutPages\CheckoutGateway.aspx" />
     <Content Include="CheckoutPages\CheckoutSuccess.aspx" />
@@ -171,6 +174,13 @@
     </Compile>
     <Compile Include="EmployeeDashboard\Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeDashboard\Orders.aspx.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmployeeDashboard\Orders.aspx.designer.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
     </Compile>
     <Compile Include="Old\BoxSize.aspx.cs">
       <DependentUpon>BoxSize.aspx</DependentUpon>
