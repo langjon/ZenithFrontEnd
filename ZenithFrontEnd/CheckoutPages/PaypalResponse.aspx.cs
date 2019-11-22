@@ -43,7 +43,7 @@ namespace ZenithFrontEnd.CheckoutPages
             streamIn.Close();
 
             // if PayPal response is successful / verified
-            if (strResponse.Equals("VERIFIED"))
+            if (strResponse == "VERIFIED")
             {
                 // paypal has verified the data, it is safe for us to perform processing now
 
@@ -68,7 +68,7 @@ namespace ZenithFrontEnd.CheckoutPages
                 {
                     txnID.Text = "it was null x_x";
                 }
-            } else if (strResponse.Equals("INVALID"))
+            } else if (strResponse == "INVALID")
             {
                 txnID.Text = "Not Verfied";
             }
