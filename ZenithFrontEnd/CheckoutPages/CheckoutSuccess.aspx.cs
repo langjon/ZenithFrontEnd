@@ -24,6 +24,8 @@ namespace ZenithFrontEnd.CheckoutPages
         protected void Page_Load(object sender, EventArgs e)
         {
             Session["page"] = "ViewCart.aspx";
+            trxID.Text = Session["transactionID"].ToString();
+
             DataTable cartTable = new DataTable();
             cartTable.Columns.AddRange(new DataColumn[12] { new DataColumn("prodImage"), new DataColumn("prodType"), new DataColumn("prodSize"), new DataColumn("prodMaterial"),
                 new DataColumn("prodFinish"), new DataColumn("prodWallType"), new DataColumn("prodPrintSides"), new DataColumn("prodQuantity"),
