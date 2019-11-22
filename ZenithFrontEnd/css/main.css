@@ -301,17 +301,15 @@ td {
 #cartFtrDiv {
     margin-left: 15%;
     margin-right: 15%;
-    bottom: 17%;
-    position: absolute;
+    top: -450px;
     right: 0;
     text-align: right;
 }
 #cartBtnDiv {
     margin-left: 15%;
     margin-right: 15%;
-    bottom: 12%;
+    top: -465px;
     right: 0;
-    position: absolute;
     float: right;
 }
 
