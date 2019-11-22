@@ -20,17 +20,23 @@ namespace ZenithFrontEnd.CheckoutPages
             // receive PayPal ipn data
 
             // extract ipn data into a string
-            byte[] param = Request.BinaryRead(HttpContext.Current.Request.ContentLength);
-            string strRequest = Encoding.ASCII.GetString(param);
+
 
             // append PayPal verification code to end of string
-            strRequest += "&cmd=_notify-validate";
+
 
             // create an HttpRequest channel to perform handshake with PayPal
-            HttpWebRequest req = (HttpWebRequest)WebRequest.Create(@"https://www.sandbox.paypal.com/cgi-bin/webscr");
+            string strSandbox = "https://www.sandbox.paypal.com/cgi-bin/webscr";
+            HttpWebRequest req = (HttpWebRequest)WebRequest.Create(strSandbox);
+            //Set values for the request back
             req.Method = "POST";
             req.ContentType = "application/x-www-form-urlencoded";
+            byte[] param = Request.BinaryRead(HttpContext.Current.Request.ContentLength);
+            string strRequest = Encoding.ASCII.GetString(param);
+            string strResponse_copy = strRequest;  //Save a copy of the initial info sent by PayPal
+            strRequest += "&cmd=_notify-validate";
             req.ContentLength = strRequest.Length;
+
 
             // send data back to PayPal to request verification
             StreamWriter streamOut = new StreamWriter(req.GetRequestStream(), Encoding.ASCII);
