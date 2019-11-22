@@ -61,11 +61,19 @@ namespace ZenithFrontEnd.CheckoutPages
 
                 Session["transactionID"] = transactionID.ToString();
 
-                txnID.Text = Session["transactionID"].ToString();
+                
                 payerEmailText.Text = payerEmail.ToString();
                 statusText.Text = paymentStatus.ToString();
                 receiverEmailText.Text = receiverEmail.ToString();
                 amountText.Text = amount.ToString();
+
+                if (Session["transactionID"] != null)
+                {
+                    txnID.Text = Session["transactionID"].ToString();
+                } else
+                {
+                    txnID.Text = "it was null x_x";
+                }
             }
         }
     }
