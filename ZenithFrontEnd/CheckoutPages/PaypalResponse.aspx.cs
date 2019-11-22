@@ -17,15 +17,7 @@ namespace ZenithFrontEnd.CheckoutPages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // receive PayPal ipn data
-
-            // extract ipn data into a string
-
-
-            // append PayPal verification code to end of string
-
-
-            // create an HttpRequest channel to perform handshake with PayPal
+            //Post back to either sandbox or live
             string strSandbox = "https://www.sandbox.paypal.com/cgi-bin/webscr";
             HttpWebRequest req = (HttpWebRequest)WebRequest.Create(strSandbox);
             //Set values for the request back
@@ -37,35 +29,27 @@ namespace ZenithFrontEnd.CheckoutPages
             strRequest += "&cmd=_notify-validate";
             req.ContentLength = strRequest.Length;
 
-
-            // send data back to PayPal to request verification
-            StreamWriter streamOut = new StreamWriter(req.GetRequestStream(), Encoding.ASCII);
+            //for proxy
+            //WebProxy proxy = new WebProxy(new Uri("http://url:port#"));
+            //req.Proxy = proxy;
+            //Send the request to PayPal and get the response
+            StreamWriter streamOut = new StreamWriter(req.GetRequestStream(), System.Text.Encoding.ASCII);
             streamOut.Write(strRequest);
             streamOut.Close();
-
-            // receive response from PayPal
             StreamReader streamIn = new StreamReader(req.GetResponse().GetResponseStream());
             string strResponse = streamIn.ReadToEnd();
             streamIn.Close();
 
-            // if PayPal response is successful / verified
+
             if (strResponse == "VERIFIED")
             {
                 // paypal has verified the data, it is safe for us to perform processing now
 
                 // extract the form fields expected: buyer and seller email, payment status, amount
-                string payerEmail = Request.Form["payer_email"];
-                string paymentStatus = Request.Form["payment_status"];
-                string receiverEmail = Request.Form["receiver_email"];
-                string amount = Request.Form["mc_gross"];
+ 
                 string transactionID = Request.Form["txn_id"];
 
                 Session["transactionID"] = transactionID.ToString();
-
-                payerEmailText.Text = payerEmail.ToString();
-                statusText.Text = paymentStatus.ToString();
-                receiverEmailText.Text = receiverEmail.ToString();
-                amountText.Text = amount.ToString();
 
                 if (Session["transactionID"] != null)
                 {
