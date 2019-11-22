@@ -19,17 +19,10 @@ namespace ZenithFrontEnd.CheckoutPages
         string paymentStatus;
         string receiverEmail;
         string amount;
-        string transactionID
-            ;
+        string transactionID;
         protected void Page_Load(object sender, EventArgs e)
         {
             ProcessPayPalIPNNotification();
-
-            txnID.Text = transactionID.ToString();
-            payerEmailText.Text = payerEmail.ToString();
-            statusText.Text = paymentStatus.ToString();
-            receiverEmailText.Text = receiverEmail.ToString();
-            amountText.Text = amount.ToString();
         }
 
         private void ProcessPayPalIPNNotification()
@@ -71,7 +64,13 @@ namespace ZenithFrontEnd.CheckoutPages
                 amount = Request.Form["mc_gross"];
                 transactionID = Request.Form["txn_id"];
 
-                Session["transactionID"] = transactionID.ToString();
+                txnID.Text = transactionID.ToString();
+                payerEmailText.Text = payerEmail.ToString();
+                statusText.Text = paymentStatus.ToString();
+                receiverEmailText.Text = receiverEmail.ToString();
+                amountText.Text = amount.ToString();
+
+                //Session["transactionID"] = transactionID.ToString();
 
 
             }
