@@ -68,7 +68,7 @@ namespace ZenithFrontEnd.CheckoutPages
                 {
                     txnID.Text = "it was null x_x";
                 }
-            } else
+            } else if (strResponse.Equals("INVALID"))
             {
                 txnID.Text = "Not Verfied";
             }
