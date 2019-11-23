@@ -96,10 +96,10 @@
                    </td>    
                </tr>
                <tr>    
-                   <td style="text-align:center">    
+                   <td class="center">    
                         <asp:Button ID="btnUpdate" runat="server" Text="Update" OnClick="btnUpdate_Click" />    
                    </td>    
-                   <td style="text-align:center">    
+                   <td class="center">    
                        <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" />    
                    </td>    
                </tr>    

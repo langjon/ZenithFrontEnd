@@ -35,19 +35,19 @@
          </div>
        <table class="orderTable">    
                <tr>    
-                   <td style="text-align:center">    
+                   <td class="center">    
                         <asp:Button ID="btnApprove" runat="server" Text="Approve" OnClick="btnApprove_Click" />    
                    </td> 
-                   <td style="text-align:center">    
+                   <td class="center">    
                         <asp:Button ID="btnSendToProduction" runat="server" Text="Send to Production" OnClick="btnSendToProduction_Click" />    
                    </td> 
-                   <td style="text-align:center">    
+                   <td class="center">    
                         <asp:Button ID="btnProductionComplete" runat="server" Text="Production Complete" OnClick="btnProductionComplete_Click" />    
                    </td> 
-                   <td style="text-align:center">    
+                   <td class="center">    
                         <asp:Button ID="btnShipped" runat="server" Text="Shipped" OnClick="btnShipped_Click" />    
                    </td> 
-                   <td style="text-align:center">    
+                   <td class="center">    
                        <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" />    
                    </td>    
                </tr>    

@@ -11,7 +11,21 @@ namespace ZenithFrontEnd.EmployeeDashboard
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["EmpID"] == null)
+            {
+                Response.Redirect("../UserLogin/UserLogin.aspx");
+            }
+        }
 
+        protected void btnInsert_Click(object sender, EventArgs e)
+        {
+            SqlDataSource1.Insert();
+            tbId.Text = "";
+            tbName.Text = "";
+            tbPhone.Text = "";
+            tbEmail.Text = "";
+            tbAddress.Text = "";
+            tbPostalCode.Text = "";
         }
     }
 }
