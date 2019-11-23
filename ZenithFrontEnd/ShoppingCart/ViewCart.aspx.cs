@@ -126,7 +126,7 @@ namespace ZenithFrontEnd.ShoppingCart
         }
         protected void Checkout_Click(object sender, EventArgs e)
         {
-            Response.Redirect("../CheckoutPages/CheckoutGateway.aspx");
+            Response.Redirect("../CheckoutPages/ConfirmShipping.aspx");
         }
             protected void loadCart_Click(object sender, EventArgs e)
         {

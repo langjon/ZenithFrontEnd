@@ -54,17 +54,11 @@ namespace ZenithFrontEnd.CheckoutPages
                         cartItemDetails[9].ToString(), cartItemDetails[10].ToString(), i.ToString());
 
                     totalPrice += Convert.ToDouble(cartItemDetails[9]);
-
-                    //con.Open();
+                    
                     order = Request.QueryString["order"].ToString();
 
                     if (order == Session["orderID"].ToString())
                     {
-                        //SqlCommand cmd = con.CreateCommand();
-                        //cmd.CommandType = CommandType.Text;
-                        //cmd.CommandText = "INSERT INTO dbo.Product(ProductID, OrderId, ProdType, ProdSize, ProdMaterial, ProdQuantity, ProdBriefDescription," +
-                        //    "ProdSideID, ProdFinish, ProdWall, ProdUnitPrice, ProdImagePath, ProdTotalPrice) VALUES(@productId, @orderId, @prodType, @prodSize, @prodMaterial, @prodQuantity, @prodBrief," +
-                        //    "@prodSide, @prodFinish, @prodWall, @prodUnitPrice, @prodImagePath, @totalPrice)";
                         SqlCommand cmd = new SqlCommand("INSERT INTO dbo.Product(ProductID, OrderId, ProdType, ProdSize, ProdMaterial, ProdQuantity, ProdBriefDescription," +
                             "ProdSideID, ProdFinish, ProdWall, ProdUnitPrice, ProdImagePath, ProdTotalPrice) VALUES(@productId, @orderId, @prodType, @prodSize, @prodMaterial, @prodQuantity, @prodBrief," +
                             "@prodSide, @prodFinish, @prodWall, @prodUnitPrice, @prodImagePath, @totalPrice)");
@@ -90,15 +84,18 @@ namespace ZenithFrontEnd.CheckoutPages
                         da.InsertCommand.ExecuteNonQuery();
                         con.Close();
 
-                        //DataTable dt = new DataTable();
-                        //SqlDataAdapter da = new SqlDataAdapter(cmd);
-                        //da.Fill(dt);
 
-                        //foreach (DataRow dr in dt.Rows)
-                        //{
-                        //    SqlCommand cmd1 = con.CreateCommand();
-                        //    cmd1.CommandType = CommandType.Text;
-                        //}
+                        SqlCommand cmd1 = new SqlCommand("INSERT INTO Orders(OrderId, CusId, Status ) VALUES(@orderID, @cusID, @status)");
+                        cmd1.Parameters.AddWithValue("@orderID", Session["orderID"].ToString());
+                        cmd1.Parameters.AddWithValue("@cusID", Session["UserID"].ToString());
+                        cmd1.Parameters.AddWithValue("@status", "New");
+
+                        cmd1.Connection = con;
+                        con.Open();
+                        SqlDataAdapter da1 = new SqlDataAdapter();
+                        da.InsertCommand = cmd1;
+                        da.InsertCommand.ExecuteNonQuery();
+                        con.Close();
                     }
                 }
             }

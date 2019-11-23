@@ -9,27 +9,27 @@
             <p>ACCOUNT CREATION</p>
         </div>
             <div id="addressDiv">
-                <label for="txtpwd">COMPANY NAME</label>
+                <label for="txtCompany">COMPANY NAME</label>
                 <br />
                 <asp:TextBox CssClass="textbox" ID="txtCompany" runat="server" ></asp:TextBox>
                 <br />
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="txtCompany" ErrorMessage="Company name cannot be empty" Font-Size="Smaller" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
-                <label for="txtpwd">STREET ADDRESS</label>
+                <label for="txtStAddress">STREET ADDRESS</label>
                 <br />
                 <asp:TextBox CssClass="textbox" ID="txtStAddress" runat="server" ></asp:TextBox>
                 <br />
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="txtStAddress" ErrorMessage="Street Address cannot be empty" Font-Size="Smaller" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
-                <label for="txtpwd">PROVINCE/STATE</label>
+                <label for="dropProvince">PROVINCE/STATE</label>
                 <asp:DropDownList ID="dropProvince" runat="server" required="required" DataSourceID="ZenithProvSqlDataSource" DataTextField="StateProvCode" DataValueField="StateProvCode"></asp:DropDownList>
                 <asp:SqlDataSource ID="ZenithProvSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:ZenithCapstoneDBConnectionString %>" SelectCommand="SELECT DISTINCT [StateProvCode] FROM [StateProv] ORDER BY [StateProvCode]"></asp:SqlDataSource>
-                <label for="txtpwd">COUNTRY</label>
+                <label for="dropCountry">COUNTRY</label>
                 <asp:DropDownList ID="dropCountry" runat="server" required="required" DataSourceID="ZenithCountrySqlDataSource" DataTextField="CountryShortName" DataValueField="CountryShortName"></asp:DropDownList>
                 <asp:SqlDataSource ID="ZenithCountrySqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:ZenithCapstoneDBConnectionString %>" SelectCommand="SELECT [CountryShortName] FROM [Countries]"></asp:SqlDataSource>
                 <br />
                 <br />
-                <label for="txtpwd">POSTAL/ZIP</label>
+                <label for="txtPostal">POSTAL/ZIP</label>
                 <br />
                 <asp:TextBox CssClass="textbox" ID="txtPostal" runat="server" ></asp:TextBox>
                 <br />
@@ -54,25 +54,25 @@
                 <br />
                 <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="textConfirmpwd" ControlToValidate="txtPwd" ErrorMessage="Password doesn't match" Font-Size="Smaller" ForeColor="Red"></asp:CompareValidator>
                 <br />
-                <label for="txtpwd">CONFIRM PASSWORD</label>
+                <label for="textConfirmpwd">CONFIRM PASSWORD</label>
                 <br />
                 <asp:TextBox TextMode="Password" CssClass="textbox" ID="textConfirmpwd" runat="server" ></asp:TextBox>
                 <br />
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="textConfirmpwd" ErrorMessage="Password cannot be empty" Font-Size="Smaller" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
-                <label for="txtpwd">FIRST NAME</label>
+                <label for="txtFirstName">FIRST NAME</label>
                 <br />
                 <asp:TextBox CssClass="textbox" ID="txtFirstName" runat="server" ></asp:TextBox>
                 <br />
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtFirstName" ErrorMessage="First name cannot be empty" Font-Size="Smaller" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
-                <label for="txtpwd">LAST NAME</label>
+                <label for="txtLastName">LAST NAME</label>
                 <br />
                 <asp:TextBox CssClass="textbox" ID="txtLastName" runat="server" ></asp:TextBox>
                 <br />
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtLastName" ErrorMessage="Last name cannot be empty" Font-Size="Smaller" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
-                <label for="txtpwd">PHONE NUMBER</label>
+                <label for="txtPhone">PHONE NUMBER</label>
                 <br />
                 <asp:TextBox CssClass="textbox" ID="txtPhone" runat="server" ></asp:TextBox>
                 <br />
@@ -80,7 +80,7 @@
                 <br />
                 <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtPhone" ErrorMessage="Improper Phone number format" Font-Size="Smaller" ForeColor="Red" ValidationExpression="^[0-9]{1,10}$"></asp:RegularExpressionValidator>
                 <br />
-                <label for="txtpwd">EMAIL</label>
+                <label for="txtEmail">EMAIL</label>
                 <br />
                 <asp:TextBox CssClass="textbox" ID="txtEmail" runat="server"></asp:TextBox>
                 <br />
