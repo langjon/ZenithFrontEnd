@@ -2,13 +2,21 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>C&B Packaging - Dashboard</title>
     <link rel="stylesheet" href="css/main.css" />
+    
+    </style>
+    <style type="text/css">
+        .auto-style1 {
+            width: 16%;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
      <div class="pageTitle">
       <p >Employees Details</p>
     </div>
     <div id="bodyDiv">
-        <asp:GridView class="orderGrid" ID="EmpGridView" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="EmpId" DataSourceID="SqlDataSource1">
+        
+        <asp:GridView class="orderGrid" ID="EmpGridView" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="EmpId" DataSourceID="SqlDataSource1" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4">
             <Columns>
                 <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
                 <asp:BoundField DataField="EmpId" HeaderText="Id" ReadOnly="True" SortExpression="EmpId" />
@@ -18,38 +26,47 @@
                 <asp:BoundField DataField="EmpAddress" HeaderText="Address" SortExpression="EmpAddress" />
                 <asp:BoundField DataField="EmpPostalCode" HeaderText="PostalCode" SortExpression="EmpPostalCode" />
             </Columns>
+            <FooterStyle BackColor="#99CCCC" ForeColor="#003399" />
+            <HeaderStyle BackColor="#003399" Font-Bold="True" ForeColor="#CCCCFF" />
+            <PagerStyle BackColor="#99CCCC" ForeColor="#003399" HorizontalAlign="Left" />
+            <RowStyle BackColor="White" ForeColor="#003399" />
+            <SelectedRowStyle BackColor="#009999" Font-Bold="True" ForeColor="#CCFF99" />
+            <SortedAscendingCellStyle BackColor="#EDF6F6" />
+            <SortedAscendingHeaderStyle BackColor="#0D4AC4" />
+            <SortedDescendingCellStyle BackColor="#D6DFDF" />
+            <SortedDescendingHeaderStyle BackColor="#002876" />
         </asp:GridView>
         <div class="pageTitle">
             <p >New Employee</p>
          </div>
         <table  class="orderGrid">
             <tr>
-                <td class="headingCol">ID</td>
+                <td class="headingCol" >ID</td>
                 <td class="headingCol">Name</td>
                 <td class="headingCol">Phone</td>
                 <td class="headingCol">Email</td>
-                <td class="headingCol">Address</td>
+                <td class="headingCol" >Address</td>
                 <td class="headingCol">Postal Code</td>
             </tr>
             
             <tr>
-                 <td>
-                    <asp:TextBox ID="tbId" runat="server"></asp:TextBox>
+                 <td  >
+                    <asp:TextBox ID="tbId" runat="server" class="wideTextBox"></asp:TextBox>
                 </td>
                 <td>
-                    <asp:TextBox ID="tbName" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="tbName" runat="server" class="wideTextBox"></asp:TextBox>
                 </td>
                 <td>
-                    <asp:TextBox ID="tbPhone" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="tbPhone" runat="server" class="wideTextBox"></asp:TextBox>
                 </td>
                 <td>
-                    <asp:TextBox ID="tbEmail" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="tbEmail" runat="server" class="wideTextBox"></asp:TextBox>
+                </td>
+                <td >
+                    <asp:TextBox ID="tbAddress" runat="server" class="wideTextBox"></asp:TextBox>
                 </td>
                 <td>
-                    <asp:TextBox ID="tbAddress" runat="server"></asp:TextBox>
-                </td>
-                <td>
-                    <asp:TextBox ID="tbPostalCode" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="tbPostalCode" runat="server" class="wideTextBox"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -95,6 +112,7 @@
                 <asp:Parameter Name="original_EmpPostalCode" Type="String" />
             </UpdateParameters>
         </asp:SqlDataSource>
+        
     </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
