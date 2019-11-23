@@ -18,9 +18,12 @@
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44308</IISExpressSSLPort>
-    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
-    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
-    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <IISExpressAnonymousAuthentication>
+    </IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>
+    </IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>
+    </IISExpressUseClassicPipelineMode>
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -84,10 +87,13 @@
     <Content Include="CustomizationPages\ImageUpload.aspx" />
     <Content Include="CustomizationPages\ProductReview.aspx" />
     <Content Include="CustomizationPages\Quantity.aspx" />
+    <Content Include="EmployeeDashboard\CustomersDetails.aspx" />
     <Content Include="EmployeeDashboard\Dashboard.aspx" />
     <Content Include="EmployeeDashboard\EditOrder.aspx" />
+    <Content Include="EmployeeDashboard\EmployeesDetails.aspx" />
     <Content Include="EmployeeDashboard\OrderDetails.aspx" />
     <Content Include="EmployeeDashboard\Orders.aspx" />
+    <Content Include="Global.asax" />
     <Content Include="images\icon_containers.jpg" />
     <Content Include="images\icon_design.jpg" />
     <Content Include="images\icon_laptop.jpg" />
@@ -170,6 +176,13 @@
     <Compile Include="CustomizationPages\Quantity.aspx.designer.cs">
       <DependentUpon>Quantity.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EmployeeDashboard\CustomersDetails.aspx.cs">
+      <DependentUpon>CustomersDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmployeeDashboard\CustomersDetails.aspx.designer.cs">
+      <DependentUpon>CustomersDetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="EmployeeDashboard\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -184,6 +197,13 @@
     <Compile Include="EmployeeDashboard\EditOrder.aspx.designer.cs">
       <DependentUpon>EditOrder.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EmployeeDashboard\EmployeesDetails.aspx.cs">
+      <DependentUpon>EmployeesDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmployeeDashboard\EmployeesDetails.aspx.designer.cs">
+      <DependentUpon>EmployeesDetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="EmployeeDashboard\OrderDetails.aspx.cs">
       <DependentUpon>OrderDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -197,6 +217,9 @@
     </Compile>
     <Compile Include="EmployeeDashboard\Orders.aspx.designer.cs">
       <DependentUpon>Orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Old\BoxSize.aspx.cs">
       <DependentUpon>BoxSize.aspx</DependentUpon>

@@ -14,9 +14,11 @@ namespace ZenithFrontEnd.UserLogin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            /*
             if (Request.UrlReferrer.AbsoluteUri.ToLower().Contains("viewcart.aspx") && Session["UserName"] == null){
                 errorMessages.InnerHtml = "<p id='loginError'>Please log in or create an account to proceed with checkout.</p>";
             }
+            */
         }
         protected void Login_Click(object sender, EventArgs e)
         {
