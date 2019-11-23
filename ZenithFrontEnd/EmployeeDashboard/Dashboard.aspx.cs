@@ -11,12 +11,15 @@ namespace ZenithFrontEnd.EmployeeDashboard
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+            if (Session["EmpID"] == null)
+            {
+                Response.Redirect("../UserLogin/UserLogin.aspx");
+            }
         }
 
         protected void GridViewOrder_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Response.Write(GridViewOrder.SelectedRow.Cells[0].Text);
+           // Response.Write(GridViewOrder.SelectedRow.Cells[0].Text);
         }
     }
 }

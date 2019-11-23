@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace ZenithFrontEnd.UserLogin
 {
@@ -19,7 +20,8 @@ namespace ZenithFrontEnd.UserLogin
         }
         protected void Login_Click(object sender, EventArgs e)
         {
-            using (SqlConnection con = new SqlConnection(@"Server=zenithcapstone.database.windows.net;Database=ZenithCapstoneDB;User=zenith;Password=C@pst0ne!;Trusted_Connection=False;Encrypt=True"))
+            string constr = ConfigurationManager.ConnectionStrings["ZenithCapstoneDBConnectionString"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(constr))
             {
                 //customer login
                 SqlCommand cmd = new SqlCommand("SELECT * FROM CustomerLogin WHERE UserName LIKE @username AND UserPass = @password;");

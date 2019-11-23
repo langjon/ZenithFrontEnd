@@ -14,14 +14,14 @@
     </div>
           <div id="bodyDiv">
 
-              <asp:GridView ID="GridViewOrder"  class="auto-style1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="OrderId" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridViewOrder_SelectedIndexChanged">
+              <asp:GridView ID="GridViewOrder"  class="orderGrid" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="OrderId" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridViewOrder_SelectedIndexChanged">
                   <Columns>
                       <asp:BoundField DataField="OrderId" HeaderText="OrderId" ReadOnly="True" SortExpression="OrderId" />
                       <asp:BoundField DataField="CusId" HeaderText="CusId" SortExpression="CusId" />
                       <asp:BoundField DataField="OrderDate" HeaderText="OrderDate" SortExpression="OrderDate" />
                       <asp:BoundField DataField="Status" HeaderText="Status" SortExpression="Status" />
-                      <asp:HyperLinkField Text="Get Order Details" DataNavigateUrlFields="OrderId,CusId,Status"
-                          DataNavigateUrlFormatString="Orders.aspx?OrderId={0}&CusId={1}&Status={2}" />
+                      <asp:HyperLinkField Text="Select" DataNavigateUrlFields="OrderId,CusId,Status"
+                          DataNavigateUrlFormatString="OrderDetails.aspx?OrderId={0}&CusId={1}&Status={2}" />
                   </Columns>
               </asp:GridView>
               <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ZenithCapstoneDBConnectionString %>" 

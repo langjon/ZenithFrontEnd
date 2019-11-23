@@ -85,6 +85,8 @@
     <Content Include="CustomizationPages\ProductReview.aspx" />
     <Content Include="CustomizationPages\Quantity.aspx" />
     <Content Include="EmployeeDashboard\Dashboard.aspx" />
+    <Content Include="EmployeeDashboard\EditOrder.aspx" />
+    <Content Include="EmployeeDashboard\OrderDetails.aspx" />
     <Content Include="EmployeeDashboard\Orders.aspx" />
     <Content Include="images\icon_containers.jpg" />
     <Content Include="images\icon_design.jpg" />
@@ -174,6 +176,20 @@
     </Compile>
     <Compile Include="EmployeeDashboard\Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeDashboard\EditOrder.aspx.cs">
+      <DependentUpon>EditOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmployeeDashboard\EditOrder.aspx.designer.cs">
+      <DependentUpon>EditOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeDashboard\OrderDetails.aspx.cs">
+      <DependentUpon>OrderDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmployeeDashboard\OrderDetails.aspx.designer.cs">
+      <DependentUpon>OrderDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="EmployeeDashboard\Orders.aspx.cs">
       <DependentUpon>Orders.aspx</DependentUpon>
