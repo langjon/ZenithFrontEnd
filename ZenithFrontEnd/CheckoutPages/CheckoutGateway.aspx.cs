@@ -31,8 +31,8 @@ namespace ZenithFrontEnd.CheckoutPages
                 Response.Write("<input type='hidden' name='item_number' value='0'>");
                 Response.Write("<input type='hidden' name='amount' value='" + Session["cartTotal"].ToString() + "'>");
                 Response.Write("<input type='hidden' name='no_shipping' value='1'>");
-                //Response.Write("<input type='hidden' name='return' value='http://cbpackaging.azurewebsites.net/CheckoutPages/CheckoutSuccess.aspx?order=" + orderNo.ToString() + "'>");
-                Response.Write("<input type='hidden' name='return' value='https://localhost:44308/CheckoutPages/CheckoutSuccess.aspx?order=" + orderNo.ToString() + "'>"); 
+                Response.Write("<input type='hidden' name='return' value='http://cbpackaging.azurewebsites.net/CheckoutPages/CheckoutSuccess.aspx?order=" + orderNo.ToString() + "'>");
+                //Response.Write("<input type='hidden' name='return' value='https://localhost:44308/CheckoutPages/CheckoutSuccess.aspx?order=" + orderNo.ToString() + "'>"); 
                 //Response.Write("<input type='hidden' name='return' value='https://localhost:44308/CheckoutPages/PaypalResponse.aspx'>");
                 //Response.Write("<input type='hidden' name='return' value='https://cbpackaging.azurewebsites.net/CheckoutPages/PaypalResponse.aspx'>");   
                 Response.Write("<script type ='text/javascript'>");
