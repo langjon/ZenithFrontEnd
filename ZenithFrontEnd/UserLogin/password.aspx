@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="password.aspx.cs" Inherits="ZenithFrontEnd.UserLogin.password" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-</asp:Content>
+</asp:Content> 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     
