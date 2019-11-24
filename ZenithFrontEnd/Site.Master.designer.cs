@@ -67,6 +67,42 @@ namespace ZenithFrontEnd {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl navBuild;
         
         /// <summary>
+        /// navProfile control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl navProfile;
+        
+        /// <summary>
+        /// navOrder control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl navOrder;
+        
+        /// <summary>
+        /// navCust control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl navCust;
+        
+        /// <summary>
+        /// navEmp control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl navEmp;
+        
+        /// <summary>
         /// errorMessages control.
         /// </summary>
         /// <remarks>

@@ -19,9 +19,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <p class="auto-style1">
         &nbsp;</p>
-    <p class="auto-style2" style="font-family: Arial; font-size: large; font-weight: bold; text-align: center;">
+    <p class="orderGrid" style="font-family: Arial; font-size: large; font-weight: bold; text-align: center;">
         UPDATE PROFILE</p>
-        <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="CusID" DataSourceID="SqlDataSource1" Height="50px" Width="911px" Font-Bold="True" Font-Size="Medium" CssClass="auto-style4">
+        <asp:DetailsView class="orderGrid" ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="CusID" DataSourceID="SqlDataSource1" Height="50px" Width="911px" Font-Bold="True" Font-Size="Medium" CssClass="auto-style4">
             <Fields>
                 <asp:BoundField DataField="CusID" HeaderText="Customer ID" InsertVisible="False" ReadOnly="True" SortExpression="CusID" />
                 <asp:TemplateField HeaderText="First Name" SortExpression="CusFirstName">
