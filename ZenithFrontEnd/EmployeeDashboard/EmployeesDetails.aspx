@@ -3,7 +3,7 @@
     <title>C&B Packaging - Dashboard</title>
     <link rel="stylesheet" href="css/main.css" />
     
-    </style>
+    
     <style type="text/css">
         .auto-style1 {
             width: 16%;
