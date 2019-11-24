@@ -146,7 +146,7 @@
         </asp:DetailsView>
     <br />
     <br />
-    <a class="btnGeneral" href="password.aspx">change password</a><p class="auto-style3">
+    <a class="btnGeneral" href="password.aspx">RESET PASSWORD</a><p class="auto-style3">
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ZenithCapstoneDBConnectionString %>" DeleteCommand="DELETE FROM [Customer] WHERE [CusID] = @CusID" InsertCommand="INSERT INTO [Customer] ([CusFirstName], [CusLastName], [CusPhone], [CusEmail], [CusCompany], [CusStreetAddress], [CusProvince], [CusCountry], [CusPostalCode]) VALUES (@CusFirstName, @CusLastName, @CusPhone, @CusEmail, @CusCompany, @CusStreetAddress, @CusProvince, @CusCountry, @CusPostalCode)" SelectCommand="SELECT * FROM [Customer] WHERE ([CusID] = @CusID)" UpdateCommand="UPDATE [Customer] SET [CusFirstName] = @CusFirstName, [CusLastName] = @CusLastName, [CusPhone] = @CusPhone, [CusEmail] = @CusEmail, [CusCompany] = @CusCompany, [CusStreetAddress] = @CusStreetAddress, [CusProvince] = @CusProvince, [CusCountry] = @CusCountry, [CusPostalCode] = @CusPostalCode WHERE [CusID] = @CusID">
             <DeleteParameters>
                 <asp:Parameter Name="CusID" Type="Decimal" />
