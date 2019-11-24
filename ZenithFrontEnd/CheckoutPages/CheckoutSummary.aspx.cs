@@ -52,6 +52,11 @@ namespace ZenithFrontEnd.CheckoutPages
                 summaryDate.InnerText = "DATE: " + (myReader1["OrderDate"].ToString().Trim());
             }
             con.Close();
-        }   
+        }
+
+        protected void Return_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("../CustomizationPages/Products.aspx");
+        }
     }
 }

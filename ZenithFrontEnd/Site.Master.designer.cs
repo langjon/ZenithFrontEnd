@@ -67,6 +67,15 @@ namespace ZenithFrontEnd {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl navLogin;
         
         /// <summary>
+        /// navHistory control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl navHistory;
+        
+        /// <summary>
         /// navBuild control.
         /// </summary>
         /// <remarks>
