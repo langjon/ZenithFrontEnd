@@ -15,6 +15,7 @@ namespace ZenithFrontEnd.UserLogin
             {
                 Session["UserName"] = null;
                 Session["UserID"] = null;
+                Session["orderID"] = null;
                 if (Session["EmpID"] != null)
                 {
                     Session["EmpID"] = null;

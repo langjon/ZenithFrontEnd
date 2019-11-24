@@ -55,7 +55,7 @@
     <div id="cartBtnDiv">
         <asp:Button CssClass="btnGeneral" ID="addToCart" runat="server" Text="Checkout" OnClick="Checkout_Click" Font-Bold="True" Font-Italic="False" Font-Size="Large" Height="35px" />
         
-        <a class="btnGeneral" href="../Product.aspx">Build Another Product</a>
+        <a class="btnGeneral" href="../CustomizationPages/Products.aspx">Build Another Product</a>
     </div>
 </asp:Content>
 

@@ -50,7 +50,7 @@
     </div>
     <div>
         <div id="orderSummary" style="background-color:steelblue">
-            <div style="background-color:steelblue">
+            <div>
                 <h2>ORDER SUMMARY</h2>
                 <p id="summaryOrderID" runat="server"></p>
                 <p id="summaryDate" runat="server"></p>
@@ -94,7 +94,9 @@
                 </SelectParameters>
             </asp:SqlDataSource>
         </div>
+        <asp:Button ID="btnReturn" CssClass="btnGeneral" OnClick="Return_Click" runat="server" Text="RETURN" style="margin-right: 5%; margin-top: 20px;"/>
     </div>
+
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 </asp:Content>

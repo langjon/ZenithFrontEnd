@@ -52,7 +52,7 @@
 
     <div id="cartBtnDiv">
         <a class="btnGeneral" href="../Checkout.aspx">Checkout</a>
-        <a class="btnGeneral" href="../Product.aspx">Build Another Product</a>
+        <a class="btnGeneral" href="../CustomizationPages/Products.aspx">Build Another Product</a>
     </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
