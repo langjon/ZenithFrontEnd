@@ -5,8 +5,8 @@
     
     
     <style type="text/css">
-        .auto-style1 {
-            width: 16%;
+        .auto-style2 {
+            width: 10%;
         }
     </style>
 </asp:Content>
@@ -16,41 +16,53 @@
     </div>
     <div id="bodyDiv">
         
-        <asp:GridView class="orderGrid" ID="EmpGridView" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="EmpId" DataSourceID="SqlDataSource1" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4">
+      <asp:GridView ID="EmpGridView" class="orderGrid" runat="server" AutoGenerateColumns="False" DataKeyNames="EmpId,EmployeeLoginId" DataSourceID="SqlDataSource2" AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Horizontal" OnRowCommand="EmpGridView_RowCommand">
+            <AlternatingRowStyle BackColor="#F7F7F7" />
             <Columns>
-                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
-                <asp:BoundField DataField="EmpId" HeaderText="Id" ReadOnly="True" SortExpression="EmpId" />
+                <asp:BoundField DataField="EmpId" HeaderText="Employee ID" ReadOnly="True" SortExpression="EmpId" />
                 <asp:BoundField DataField="EmpName" HeaderText="Name" SortExpression="EmpName" />
                 <asp:BoundField DataField="EmpPhone" HeaderText="Phone" SortExpression="EmpPhone" />
                 <asp:BoundField DataField="EmpEmail" HeaderText="Email" SortExpression="EmpEmail" />
                 <asp:BoundField DataField="EmpAddress" HeaderText="Address" SortExpression="EmpAddress" />
-                <asp:BoundField DataField="EmpPostalCode" HeaderText="PostalCode" SortExpression="EmpPostalCode" />
+                <asp:BoundField DataField="EmpPostalCode" HeaderText="Postal Code" SortExpression="EmpPostalCode" />
+                <asp:BoundField DataField="EmployeeLoginId" HeaderText="Login Username" ReadOnly="True" SortExpression="EmployeeLoginId" />
+                <asp:BoundField DataField="Pass" HeaderText="Password" SortExpression="Pass" />
+                <asp:BoundField DataField="Role" HeaderText="Role" SortExpression="Role" />
+                <asp:ButtonField CommandName="Delete Row" Text="Delete" />
+                <asp:HyperLinkField Text="Edit" DataNavigateUrlFields="EmpId"
+                          DataNavigateUrlFormatString="EditEmployee.aspx?EmpId={0}" />          
             </Columns>
-            <FooterStyle BackColor="#99CCCC" ForeColor="#003399" />
-            <HeaderStyle BackColor="#003399" Font-Bold="True" ForeColor="#CCCCFF" />
-            <PagerStyle BackColor="#99CCCC" ForeColor="#003399" HorizontalAlign="Left" />
-            <RowStyle BackColor="White" ForeColor="#003399" />
-            <SelectedRowStyle BackColor="#009999" Font-Bold="True" ForeColor="#CCFF99" />
-            <SortedAscendingCellStyle BackColor="#EDF6F6" />
-            <SortedAscendingHeaderStyle BackColor="#0D4AC4" />
-            <SortedDescendingCellStyle BackColor="#D6DFDF" />
-            <SortedDescendingHeaderStyle BackColor="#002876" />
+            <FooterStyle BackColor="#B5C7DE" ForeColor="#4A3C8C" />
+            <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#F7F7F7" />
+            <PagerStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" HorizontalAlign="Right" />
+            <RowStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" />
+            <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="#F7F7F7" />
+            <SortedAscendingCellStyle BackColor="#F4F4FD" />
+            <SortedAscendingHeaderStyle BackColor="#5A4C9D" />
+            <SortedDescendingCellStyle BackColor="#D8D8F0" />
+            <SortedDescendingHeaderStyle BackColor="#3E3277" />
         </asp:GridView>
-        <div class="pageTitle">
+ <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ZenithCapstoneDBConnectionString %>" 
+            SelectCommand="SELECT Employee.EmpId, Employee.EmpName, Employee.EmpPhone, Employee.EmpEmail, Employee.EmpAddress, Employee.EmpPostalCode, EmployeeLogin.EmployeeLoginId, EmployeeLogin.Pass, EmployeeLogin.Role FROM Employee INNER JOIN EmployeeLogin ON Employee.EmpId = EmployeeLogin.EmpId">
+
+        </asp:SqlDataSource>  <div class="pageTitle">
             <p >New Employee</p>
          </div>
         <table  class="orderGrid">
             <tr>
-                <td class="headingCol" >ID</td>
+                <td class="headingCol2" style="width: 10%" >ID</td>
                 <td class="headingCol">Name</td>
                 <td class="headingCol">Phone</td>
                 <td class="headingCol">Email</td>
                 <td class="headingCol" >Address</td>
                 <td class="headingCol">Postal Code</td>
+                <td class="headingCol">Login Username</td>
+                <td class="headingCol">Password</td>
+                <td class="headingCol">Role</td>
             </tr>
             
             <tr>
-                 <td  >
+                 <td class="auto-style2"  >
                     <asp:TextBox ID="tbId" runat="server" class="wideTextBox"></asp:TextBox>
                 </td>
                 <td>
@@ -68,9 +80,29 @@
                 <td>
                     <asp:TextBox ID="tbPostalCode" runat="server" class="wideTextBox"></asp:TextBox>
                 </td>
+                <td>
+                    <asp:TextBox ID="tbEmpLogin" runat="server" class="wideTextBox"></asp:TextBox>
+                </td>
+                <td>
+                    <asp:TextBox ID="tbPass" runat="server" class="wideTextBox"></asp:TextBox>
+                </td>
+                <td>
+                    <asp:TextBox ID="tbRole" runat="server" class="wideTextBox"></asp:TextBox>
+                </td>
             </tr>
             <tr>
-                <td colspan="6" class="center">
+                <td class="validation" style="width: 10%" ></td>
+                <td class="validation"></td>
+                <td class="validation"></td>
+                <td class="validation"></td>
+                <td class="validation" ></td>
+                <td class="validation"></td>
+                <td class="validation"></td>
+                <td class="validation"></td>
+                <td class="validation"></td>
+            </tr>
+            <tr>
+                <td colspan="9" class="center">
                     <asp:Button ID="btnInsert" runat="server" Text="Insert" OnClick="btnInsert_Click" />
                 </td>
             </tr>

@@ -22,6 +22,15 @@ namespace ZenithFrontEnd.EmployeeDashboard {
         protected global::System.Web.UI.WebControls.GridView EmpGridView;
         
         /// <summary>
+        /// SqlDataSource2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
+        
+        /// <summary>
         /// tbId control.
         /// </summary>
         /// <remarks>
@@ -74,6 +83,33 @@ namespace ZenithFrontEnd.EmployeeDashboard {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbPostalCode;
+        
+        /// <summary>
+        /// tbEmpLogin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbEmpLogin;
+        
+        /// <summary>
+        /// tbPass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbPass;
+        
+        /// <summary>
+        /// tbRole control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbRole;
         
         /// <summary>
         /// btnInsert control.
