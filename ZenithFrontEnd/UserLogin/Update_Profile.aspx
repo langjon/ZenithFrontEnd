@@ -4,6 +4,10 @@
         .auto-style1 {
             margin-left: 80px;
         }
+        .auto-style2 {
+            margin-left: 10px;
+            width: 908px;
+        }
         .auto-style3 {
             margin-left: 22px;
         }
@@ -15,9 +19,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <p class="auto-style1">
         &nbsp;</p>
-    <p class="orderGrid" style="font-family: Arial; font-size: large; font-weight: bold; text-align: center;">
+    <p class="auto-style2" style="font-family: Arial; font-size: large; font-weight: bold; text-align: center;">
         UPDATE PROFILE</p>
-        <asp:DetailsView class="orderGrid" ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="CusID" DataSourceID="SqlDataSource1" Height="50px" Width="911px" Font-Bold="True" Font-Size="Medium" CssClass="auto-style4">
+        <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="CusID" DataSourceID="SqlDataSource1" Height="50px" Width="911px" Font-Bold="True" Font-Size="Medium" CssClass="auto-style4">
             <Fields>
                 <asp:BoundField DataField="CusID" HeaderText="Customer ID" InsertVisible="False" ReadOnly="True" SortExpression="CusID" />
                 <asp:TemplateField HeaderText="First Name" SortExpression="CusFirstName">
@@ -140,7 +144,9 @@
                 <asp:CommandField ShowEditButton="True" ButtonType="Button" />
             </Fields>
         </asp:DetailsView>
-    <p class="auto-style3">
+    <br />
+    <br />
+    <a class="btnGeneral" href="password.aspx">RESET PASSWORD</a><p class="auto-style3">
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ZenithCapstoneDBConnectionString %>" DeleteCommand="DELETE FROM [Customer] WHERE [CusID] = @CusID" InsertCommand="INSERT INTO [Customer] ([CusFirstName], [CusLastName], [CusPhone], [CusEmail], [CusCompany], [CusStreetAddress], [CusProvince], [CusCountry], [CusPostalCode]) VALUES (@CusFirstName, @CusLastName, @CusPhone, @CusEmail, @CusCompany, @CusStreetAddress, @CusProvince, @CusCountry, @CusPostalCode)" SelectCommand="SELECT * FROM [Customer] WHERE ([CusID] = @CusID)" UpdateCommand="UPDATE [Customer] SET [CusFirstName] = @CusFirstName, [CusLastName] = @CusLastName, [CusPhone] = @CusPhone, [CusEmail] = @CusEmail, [CusCompany] = @CusCompany, [CusStreetAddress] = @CusStreetAddress, [CusProvince] = @CusProvince, [CusCountry] = @CusCountry, [CusPostalCode] = @CusPostalCode WHERE [CusID] = @CusID">
             <DeleteParameters>
                 <asp:Parameter Name="CusID" Type="Decimal" />
@@ -174,7 +180,7 @@
         </asp:SqlDataSource>
     </p>
     <p>
-        <a class="btnGeneral" href="password.aspx">RESET PASSWORD</a></p>
+    </p>
     <p>
     </p>
 </asp:Content>
