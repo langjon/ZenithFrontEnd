@@ -18,12 +18,9 @@
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44308</IISExpressSSLPort>
-    <IISExpressAnonymousAuthentication>
-    </IISExpressAnonymousAuthentication>
-    <IISExpressWindowsAuthentication>
-    </IISExpressWindowsAuthentication>
-    <IISExpressUseClassicPipelineMode>
-    </IISExpressUseClassicPipelineMode>
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -93,7 +90,9 @@
     <Content Include="EmployeeDashboard\Dashboard.aspx" />
     <Content Include="EmployeeDashboard\EditEmployee.aspx" />
     <Content Include="EmployeeDashboard\EditOrder.aspx" />
+    <Content Include="EmployeeDashboard\EmployeeProfile.aspx" />
     <Content Include="EmployeeDashboard\EmployeesDetails.aspx" />
+    <Content Include="EmployeeDashboard\EmpPassword.aspx" />
     <Content Include="EmployeeDashboard\OrderDetails.aspx" />
     <Content Include="EmployeeDashboard\Orders.aspx" />
     <Content Include="Global.asax" />
@@ -226,12 +225,26 @@
     <Compile Include="EmployeeDashboard\EditOrder.aspx.designer.cs">
       <DependentUpon>EditOrder.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EmployeeDashboard\EmployeeProfile.aspx.cs">
+      <DependentUpon>EmployeeProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmployeeDashboard\EmployeeProfile.aspx.designer.cs">
+      <DependentUpon>EmployeeProfile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="EmployeeDashboard\EmployeesDetails.aspx.cs">
       <DependentUpon>EmployeesDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="EmployeeDashboard\EmployeesDetails.aspx.designer.cs">
       <DependentUpon>EmployeesDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeDashboard\EmpPassword.aspx.cs">
+      <DependentUpon>EmpPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmployeeDashboard\EmpPassword.aspx.designer.cs">
+      <DependentUpon>EmpPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="EmployeeDashboard\OrderDetails.aspx.cs">
       <DependentUpon>OrderDetails.aspx</DependentUpon>
