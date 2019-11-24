@@ -85,7 +85,7 @@
                     <td>
                         <asp:Label ID="ProdQuantityLabel" runat="server" Text='<%# Eval("ProdQuantity") %>' /></td>
                     <td>
-                        <asp:Label ID="ProdTotalPriceLabel" runat="server" Text='<%# Eval("ProdTotalPrice") %>' /></td>
+                        <asp:Label ID="ProdTotalPriceLabel" runat="server" Text='<%# Eval("ProdTotalPrice", "{0:C}") %>' /></td>
                 </ItemTemplate>
             </asp:DataList>
             <asp:SqlDataSource ID="ProductDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:ZenithCapstoneDBConnectionString %>" SelectCommand="SELECT * FROM Product WHERE OrderId = @OrderID;">

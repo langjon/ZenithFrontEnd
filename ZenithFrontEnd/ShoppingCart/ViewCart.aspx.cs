@@ -54,7 +54,7 @@ namespace ZenithFrontEnd.ShoppingCart
 
             cartListTable.DataSource = cartTable;
             cartListTable.DataBind();
-            lblTotal.Text = totalPrice.ToString();
+            lblTotal.Text =  String.Format("{0:C}", totalPrice);
             Session["cartTotal"] = totalPrice.ToString();
 
             if(totalPrice != 0)
