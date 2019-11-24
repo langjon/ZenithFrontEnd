@@ -174,25 +174,7 @@
         </asp:SqlDataSource>
     </p>
     <p>
-        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ZenithCapstoneDBConnectionString %>" DeleteCommand="DELETE FROM [CustomerLogin] WHERE [UserName] = @UserName" InsertCommand="INSERT INTO [CustomerLogin] ([UserName], [UserPass], [CusID]) VALUES (@UserName, @UserPass, @CusID)" SelectCommand="SELECT * FROM [CustomerLogin] WHERE ([UserName] = @UserName)" UpdateCommand="UPDATE [CustomerLogin] SET [UserPass] = @UserPass, [CusID] = @CusID WHERE [UserName] = @UserName">
-            <DeleteParameters>
-                <asp:Parameter Name="UserName" Type="String" />
-            </DeleteParameters>
-            <InsertParameters>
-                <asp:Parameter Name="UserName" Type="String" />
-                <asp:Parameter Name="UserPass" Type="String" />
-                <asp:Parameter Name="CusID" Type="Decimal" />
-            </InsertParameters>
-            <SelectParameters>
-                <asp:SessionParameter Name="UserName" SessionField="UserName" Type="String" />
-            </SelectParameters>
-            <UpdateParameters>
-                <asp:Parameter Name="UserPass" Type="String" />
-                <asp:Parameter Name="CusID" Type="Decimal" />
-                <asp:Parameter Name="UserName" Type="String" />
-            </UpdateParameters>
-        </asp:SqlDataSource>
-    </p>
+        <a class="btnGeneral" href="password.aspx">RESET PASSWORD</a></p>
     <p>
     </p>
 </asp:Content>
