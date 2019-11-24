@@ -18,9 +18,12 @@
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44308</IISExpressSSLPort>
-    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
-    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
-    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <IISExpressAnonymousAuthentication>
+    </IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>
+    </IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>
+    </IISExpressUseClassicPipelineMode>
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -88,6 +91,7 @@
     <Content Include="CustomizationPages\Quantity.aspx" />
     <Content Include="EmployeeDashboard\CustomersDetails.aspx" />
     <Content Include="EmployeeDashboard\Dashboard.aspx" />
+    <Content Include="EmployeeDashboard\EditEmployee.aspx" />
     <Content Include="EmployeeDashboard\EditOrder.aspx" />
     <Content Include="EmployeeDashboard\EmployeesDetails.aspx" />
     <Content Include="EmployeeDashboard\OrderDetails.aspx" />
@@ -203,6 +207,13 @@
     </Compile>
     <Compile Include="EmployeeDashboard\Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeDashboard\EditEmployee.aspx.cs">
+      <DependentUpon>EditEmployee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmployeeDashboard\EditEmployee.aspx.designer.cs">
+      <DependentUpon>EditEmployee.aspx</DependentUpon>
     </Compile>
     <Compile Include="EmployeeDashboard\EditOrder.aspx.cs">
       <DependentUpon>EditOrder.aspx</DependentUpon>
