@@ -45,16 +45,17 @@
  <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ZenithCapstoneDBConnectionString %>" 
             SelectCommand="SELECT Employee.EmpId, Employee.EmpName, Employee.EmpPhone, Employee.EmpEmail, Employee.EmpAddress, Employee.EmpPostalCode, EmployeeLogin.EmployeeLoginId, EmployeeLogin.Pass, EmployeeLogin.Role FROM Employee INNER JOIN EmployeeLogin ON Employee.EmpId = EmployeeLogin.EmpId">
 
-        </asp:SqlDataSource>  <div class="pageTitle">
+        </asp:SqlDataSource>
+       <div class="pageTitle">
             <p >New Employee</p>
          </div>
-        <table  class="orderGrid">
+        <table  class="orderTable">
             <tr>
-                <td class="headingCol2" style="width: 10%" >ID</td>
+                <td class="headingCol2">ID</td>
                 <td class="headingCol">Name</td>
                 <td class="headingCol">Phone</td>
                 <td class="headingCol">Email</td>
-                <td class="headingCol" >Address</td>
+                <td class="headingCol">Address</td>
                 <td class="headingCol">Postal Code</td>
                 <td class="headingCol">Login Username</td>
                 <td class="headingCol">Password</td>
@@ -62,8 +63,8 @@
             </tr>
             
             <tr>
-                 <td class="auto-style2"  >
-                    <asp:TextBox ID="tbId" runat="server" class="wideTextBox"></asp:TextBox>
+                 <td>
+                    <asp:TextBox TextMode="Number" ID="tbId" runat="server" class="wideTextBox"></asp:TextBox>
                 </td>
                 <td>
                     <asp:TextBox ID="tbName" runat="server" class="wideTextBox"></asp:TextBox>
@@ -72,7 +73,7 @@
                     <asp:TextBox ID="tbPhone" runat="server" class="wideTextBox"></asp:TextBox>
                 </td>
                 <td>
-                    <asp:TextBox ID="tbEmail" runat="server" class="wideTextBox"></asp:TextBox>
+                    <asp:TextBox TextMode="Email" ID="tbEmail" runat="server" class="wideTextBox"></asp:TextBox>
                 </td>
                 <td >
                     <asp:TextBox ID="tbAddress" runat="server" class="wideTextBox"></asp:TextBox>
@@ -84,22 +85,46 @@
                     <asp:TextBox ID="tbEmpLogin" runat="server" class="wideTextBox"></asp:TextBox>
                 </td>
                 <td>
-                    <asp:TextBox ID="tbPass" runat="server" class="wideTextBox"></asp:TextBox>
+                    <asp:TextBox TextMode="Password" ID="tbPass" runat="server" class="wideTextBox"></asp:TextBox>
                 </td>
                 <td>
                     <asp:TextBox ID="tbRole" runat="server" class="wideTextBox"></asp:TextBox>
                 </td>
             </tr>
             <tr>
-                <td class="validation" style="width: 10%" ></td>
-                <td class="validation"></td>
-                <td class="validation"></td>
-                <td class="validation"></td>
-                <td class="validation" ></td>
-                <td class="validation"></td>
-                <td class="validation"></td>
-                <td class="validation"></td>
-                <td class="validation"></td>
+                <td class="validation">
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="tbId" ErrorMessage="Employee ID cannot be empty" Font-Size="Smaller" ForeColor="Red"></asp:RequiredFieldValidator>
+                </td>
+                <td class="validation">
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tbName" ErrorMessage="Name cannot be empty" Font-Size="Smaller" ForeColor="Red"></asp:RequiredFieldValidator>
+                </td>
+                <td class="validation">
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="tbPhone" ErrorMessage="Phone cannot be empty" Font-Size="Smaller" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <br />
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="tbPhone" ErrorMessage="Improper Phone number format" Font-Size="Smaller" ForeColor="Red" ValidationExpression="^[0-9]{1,10}$"></asp:RegularExpressionValidator>
+                </td>
+                <td class="validation">
+                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="tbEmail" ErrorMessage="Email cannot be empty" Font-Size="Smaller" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <br /> 
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="tbEmail" ErrorMessage="Email format is not valid." Font-Size="Smaller" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                </td>
+                <td class="validation" >
+                     <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="tbAddress" ErrorMessage="Address cannot be empty" Font-Size="Smaller" ForeColor="Red"></asp:RequiredFieldValidator>
+                </td>
+                <td class="validation">
+                     <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="tbPostalCode" ErrorMessage="Postal Code cannot be empty" Font-Size="Smaller" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <br />
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidatorPostalCode" runat="server" ControlToValidate="tbPostalCode" ErrorMessage="That postal code is not a valid US or Canadian postal code." Font-Size="Smaller" ForeColor="Red" ValidationExpression="(^\d{5}(-\d{4})?$)|(^[ABCEGHJKLMNPRSTVXYabceghjklmnprstvxy]{1}\d{1}[ABCEGHJKLMNPRSTVWXYZabceghjklmnprstv‌​xy]{1} *\d{1}[ABCEGHJKLMNPRSTVWXYZabceghjklmnprstvxy]{1}\d{1}$)"></asp:RegularExpressionValidator>
+                </td>
+                <td class="validation">
+                     <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="tbEmpLogin" ErrorMessage="Login username cannot be empty" Font-Size="Smaller" ForeColor="Red"></asp:RequiredFieldValidator>
+                </td>
+                <td class="validation">
+                     <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="tbPass" ErrorMessage="Password cannot be empty" Font-Size="Smaller" ForeColor="Red"></asp:RequiredFieldValidator>
+                </td>
+                <td class="validation">
+                      <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="tbRole" ErrorMessage="Role cannot be empty" Font-Size="Smaller" ForeColor="Red"></asp:RequiredFieldValidator>
+                </td>
             </tr>
             <tr>
                 <td colspan="9" class="center">
@@ -107,43 +132,6 @@
                 </td>
             </tr>
         </table>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConflictDetection="CompareAllValues" 
-            ConnectionString="<%$ ConnectionStrings:ZenithCapstoneDBConnectionString %>" 
-            DeleteCommand="DELETE FROM [Employee] WHERE [EmpId] = @original_EmpId AND (([EmpName] = @original_EmpName) OR ([EmpName] IS NULL AND @original_EmpName IS NULL)) AND (([EmpPhone] = @original_EmpPhone) OR ([EmpPhone] IS NULL AND @original_EmpPhone IS NULL)) AND (([EmpEmail] = @original_EmpEmail) OR ([EmpEmail] IS NULL AND @original_EmpEmail IS NULL)) AND (([EmpAddress] = @original_EmpAddress) OR ([EmpAddress] IS NULL AND @original_EmpAddress IS NULL)) AND (([EmpPostalCode] = @original_EmpPostalCode) OR ([EmpPostalCode] IS NULL AND @original_EmpPostalCode IS NULL))" 
-            InsertCommand="INSERT INTO [Employee] ([EmpId], [EmpName], [EmpPhone], [EmpEmail], [EmpAddress], [EmpPostalCode]) VALUES (@EmpId, @EmpName, @EmpPhone, @EmpEmail, @EmpAddress, @EmpPostalCode)" 
-            OldValuesParameterFormatString="original_{0}" 
-            SelectCommand="SELECT * FROM [Employee]" 
-            UpdateCommand="UPDATE [Employee] SET [EmpName] = @EmpName, [EmpPhone] = @EmpPhone, [EmpEmail] = @EmpEmail, [EmpAddress] = @EmpAddress, [EmpPostalCode] = @EmpPostalCode WHERE [EmpId] = @original_EmpId AND (([EmpName] = @original_EmpName) OR ([EmpName] IS NULL AND @original_EmpName IS NULL)) AND (([EmpPhone] = @original_EmpPhone) OR ([EmpPhone] IS NULL AND @original_EmpPhone IS NULL)) AND (([EmpEmail] = @original_EmpEmail) OR ([EmpEmail] IS NULL AND @original_EmpEmail IS NULL)) AND (([EmpAddress] = @original_EmpAddress) OR ([EmpAddress] IS NULL AND @original_EmpAddress IS NULL)) AND (([EmpPostalCode] = @original_EmpPostalCode) OR ([EmpPostalCode] IS NULL AND @original_EmpPostalCode IS NULL))">
-            <DeleteParameters>
-                <asp:Parameter Name="original_EmpId" Type="Decimal" />
-                <asp:Parameter Name="original_EmpName" Type="String" />
-                <asp:Parameter Name="original_EmpPhone" Type="String" />
-                <asp:Parameter Name="original_EmpEmail" Type="String" />
-                <asp:Parameter Name="original_EmpAddress" Type="String" />
-                <asp:Parameter Name="original_EmpPostalCode" Type="String" />
-            </DeleteParameters>
-            <InsertParameters>
-                <asp:ControlParameter Name="EmpId" Type="Decimal" ControlID="tbId"/>
-                <asp:ControlParameter Name="EmpName" Type="String" ControlID="tbName"/>
-                <asp:ControlParameter Name="EmpPhone" Type="String" ControlID="tbPhone"/>
-                <asp:ControlParameter Name="EmpEmail" Type="String" ControlID="tbEmail"/>
-                <asp:ControlParameter Name="EmpAddress" Type="String" ControlID="tbAddress"/>
-                <asp:ControlParameter Name="EmpPostalCode" Type="String" ControlID="tbPostalCode"/>
-            </InsertParameters>
-            <UpdateParameters>
-                <asp:Parameter Name="EmpName" Type="String" />
-                <asp:Parameter Name="EmpPhone" Type="String" />
-                <asp:Parameter Name="EmpEmail" Type="String" />
-                <asp:Parameter Name="EmpAddress" Type="String" />
-                <asp:Parameter Name="EmpPostalCode" Type="String" />
-                <asp:Parameter Name="original_EmpId" Type="Decimal" />
-                <asp:Parameter Name="original_EmpName" Type="String" />
-                <asp:Parameter Name="original_EmpPhone" Type="String" />
-                <asp:Parameter Name="original_EmpEmail" Type="String" />
-                <asp:Parameter Name="original_EmpAddress" Type="String" />
-                <asp:Parameter Name="original_EmpPostalCode" Type="String" />
-            </UpdateParameters>
-        </asp:SqlDataSource>
         
     </div>
 </asp:Content>
