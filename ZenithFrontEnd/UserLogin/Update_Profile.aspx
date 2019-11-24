@@ -141,18 +141,6 @@
             </Fields>
         </asp:DetailsView>
     <p class="auto-style3">
-        <asp:DetailsView ID="DetailsView2" runat="server" AutoGenerateRows="False" DataKeyNames="UserName" DataSourceID="SqlDataSource2" Height="50px" Width="465px">
-            <Fields>
-                <asp:BoundField DataField="UserName" HeaderText="UserName" ReadOnly="True" SortExpression="UserName" />
-                <asp:BoundField DataField="UserPass" HeaderText="UserPass" SortExpression="UserPass" />
-                <asp:BoundField DataField="CusID" HeaderText="CusID" SortExpression="CusID" />
-                <asp:CommandField ShowEditButton="True" />
-            </Fields>
-        </asp:DetailsView>
-    </p>
-    <p class="auto-style3">
-        &nbsp;</p>
-    <p class="auto-style3">
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ZenithCapstoneDBConnectionString %>" DeleteCommand="DELETE FROM [Customer] WHERE [CusID] = @CusID" InsertCommand="INSERT INTO [Customer] ([CusFirstName], [CusLastName], [CusPhone], [CusEmail], [CusCompany], [CusStreetAddress], [CusProvince], [CusCountry], [CusPostalCode]) VALUES (@CusFirstName, @CusLastName, @CusPhone, @CusEmail, @CusCompany, @CusStreetAddress, @CusProvince, @CusCountry, @CusPostalCode)" SelectCommand="SELECT * FROM [Customer] WHERE ([CusID] = @CusID)" UpdateCommand="UPDATE [Customer] SET [CusFirstName] = @CusFirstName, [CusLastName] = @CusLastName, [CusPhone] = @CusPhone, [CusEmail] = @CusEmail, [CusCompany] = @CusCompany, [CusStreetAddress] = @CusStreetAddress, [CusProvince] = @CusProvince, [CusCountry] = @CusCountry, [CusPostalCode] = @CusPostalCode WHERE [CusID] = @CusID">
             <DeleteParameters>
                 <asp:Parameter Name="CusID" Type="Decimal" />
