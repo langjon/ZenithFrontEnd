@@ -11,7 +11,8 @@
                
           
          <div class="orderGrid">
-             <asp:GridView ID="gvOrderDetails" runat="server" AutoGenerateColumns="false" >
+             <asp:GridView ID="gvOrderDetails" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Horizontal" >
+                 <AlternatingRowStyle BackColor="#F7F7F7" />
                  <Columns>
                     <asp:BoundField DataField="ProductId" HeaderText="Product ID" ReadOnly="True" SortExpression="ProductId" />
                     <asp:BoundField DataField="OrderId" HeaderText="Order ID" SortExpression="OrderId" />
@@ -30,25 +31,34 @@
                      <asp:HyperLinkField Text="Edit" DataNavigateUrlFields="OrderId,ProductId"
                           DataNavigateUrlFormatString="EditOrder.aspx?OrderId={0}&ProductId={1}" />                                     
                  </Columns>
+                 <FooterStyle BackColor="#B5C7DE" ForeColor="#4A3C8C" />
+                 <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#F7F7F7" />
+                 <PagerStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" HorizontalAlign="Right" />
+                 <RowStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" />
+                 <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="#F7F7F7" />
+                 <SortedAscendingCellStyle BackColor="#F4F4FD" />
+                 <SortedAscendingHeaderStyle BackColor="#5A4C9D" />
+                 <SortedDescendingCellStyle BackColor="#D8D8F0" />
+                 <SortedDescendingHeaderStyle BackColor="#3E3277" />
              </asp:GridView>
               
          </div>
        <table class="orderTable">    
                <tr>    
                    <td class="center">    
-                        <asp:Button ID="btnApprove" runat="server" Text="Approve" OnClick="btnApprove_Click" />    
+                        <asp:Button  class="btnInsert" ID="btnApprove" runat="server" Text="Approve" OnClick="btnApprove_Click" />    
                    </td> 
                    <td class="center">    
-                        <asp:Button ID="btnSendToProduction" runat="server" Text="Send to Production" OnClick="btnSendToProduction_Click" />    
+                        <asp:Button  class="btnInsert" ID="btnSendToProduction" runat="server" Text="Send to Production" OnClick="btnSendToProduction_Click" />    
                    </td> 
                    <td class="center">    
-                        <asp:Button ID="btnProductionComplete" runat="server" Text="Production Complete" OnClick="btnProductionComplete_Click" />    
+                        <asp:Button  class="btnInsert" ID="btnProductionComplete" runat="server" Text="Production Complete" OnClick="btnProductionComplete_Click" />    
                    </td> 
                    <td class="center">    
-                        <asp:Button ID="btnShipped" runat="server" Text="Shipped" OnClick="btnShipped_Click" />    
+                        <asp:Button  class="btnInsert" ID="btnShipped" runat="server" Text="Shipped" OnClick="btnShipped_Click" />    
                    </td> 
                    <td class="center">    
-                       <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" />    
+                       <asp:Button  class="btnInsert" ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" />    
                    </td>    
                </tr>    
            </table>    

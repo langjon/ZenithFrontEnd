@@ -97,10 +97,10 @@
                </tr>
                <tr>    
                    <td class="center">    
-                        <asp:Button ID="btnUpdate" runat="server" Text="Update" OnClick="btnUpdate_Click" />    
+                        <asp:Button  class="btnInsert" ID="btnUpdate" runat="server" Text="Update" OnClick="btnUpdate_Click" />    
                    </td>    
                    <td class="center">    
-                       <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" />    
+                       <asp:Button  class="btnInsert" ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" />    
                    </td>    
                </tr>    
            </table> 

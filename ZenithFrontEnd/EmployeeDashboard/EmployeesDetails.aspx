@@ -61,12 +61,13 @@
                     <asp:TextBox TextMode="Number" ID="tbId" runat="server" class="wideTextBox"></asp:TextBox>
                      <br />
                      <asp:RequiredFieldValidator ID="RequiredFieldValidator13" runat="server" ControlToValidate="tbId" ErrorMessage="Employee ID cannot be empty" Font-Size="Smaller" ForeColor="Red"></asp:RequiredFieldValidator>
-                </td>
+                    <br />
+                 </td>
                 <td>
                     <asp:TextBox ID="tbName" runat="server" class="wideTextBox"></asp:TextBox>
                      <br />
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator14" runat="server" ControlToValidate="tbName" ErrorMessage="Name cannot be empty" Font-Size="Smaller" ForeColor="Red"></asp:RequiredFieldValidator>
-                  
+                    <br />
                 </td>
                 <td>
                     <asp:TextBox ID="tbPhone" runat="server" class="wideTextBox"></asp:TextBox>
@@ -99,6 +100,7 @@
                     <asp:TextBox ID="tbAddress" runat="server" class="wideTextBox"></asp:TextBox>
                      <br />
                      <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ControlToValidate="tbAddress" ErrorMessage="Address cannot be empty" Font-Size="Smaller" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <br />
                 </td>
                 <td>
                     <asp:TextBox ID="tbPostalCode" runat="server" class="wideTextBox"></asp:TextBox>
@@ -141,7 +143,7 @@
             </tr>
             <tr>
                 <td colspan="3" class="center">
-                    <asp:Button ID="btnInsert" runat="server" Text="Insert" OnClick="btnInsert_Click" />
+                    <asp:Button class="btnInsert" ID="btnInsert" runat="server" Text="Insert" OnClick="btnInsert_Click" />
                 </td>
             </tr>
         </table>
