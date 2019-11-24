@@ -41,7 +41,24 @@ namespace ZenithFrontEnd.CheckoutPages
 
                 for (int i = 0; i < cartArray.Length; i++)
                 {
+
                     prodID = "PrID_" + RNG.GetRandomNumber(16).ToString();
+                    SqlCommand cmdCheck = new SqlCommand("SELECT * FROM Product WHERE ProductId LIKE @prodID");
+                    con.Open();
+                    string cmdstring = "SELECT count(*) FROM Product WHERE ProductId= '" + prodID.ToString() + "'";
+
+                    SqlCommand userexist = new SqlCommand(cmdstring, con);
+
+                    int temp = Convert.ToInt32(userexist.ExecuteScalar().ToString());
+
+                    con.Close();
+                    while (temp == 1)
+                    {
+                        prodID = "PrID_" + RNG.GetRandomNumber(16).ToString();
+                        userexist = new SqlCommand(cmdstring, con);
+                        temp = Convert.ToInt32(userexist.ExecuteScalar().ToString());
+                    }
+
                     cartItem = Convert.ToString(cartArray[i].ToString());
                     string[] cartRowArray = cartItem.Split(',');
                     for (int j = 0; j < cartRowArray.Length; j++)
