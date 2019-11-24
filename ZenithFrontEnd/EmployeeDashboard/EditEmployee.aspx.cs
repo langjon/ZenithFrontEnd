@@ -20,7 +20,10 @@ namespace ZenithFrontEnd.EmployeeDashboard
             {
                 Response.Redirect("../UserLogin/UserLogin.aspx");
             }
-            
+            if (Session["Role"] == null)
+            {
+                Response.Redirect("../UserLogin/UserLogin.aspx");
+            }
 
             if (!IsPostBack)
             {

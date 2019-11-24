@@ -18,6 +18,11 @@ namespace ZenithFrontEnd.EmployeeDashboard
             {
                 Response.Redirect("../UserLogin/UserLogin.aspx");
             }
+            if (Session["Role"] == null)
+            {
+                Response.Redirect("../UserLogin/UserLogin.aspx");
+            }
+
         }
 
         protected void btnInsert_Click(object sender, EventArgs e)

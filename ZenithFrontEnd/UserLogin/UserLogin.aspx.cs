@@ -66,14 +66,16 @@ namespace ZenithFrontEnd.UserLogin
                     Session["UserName"] = txtUsername.Text;
                     dRow2 = ds2.Tables[0].Rows[inc];
                     string role = dRow2.ItemArray.GetValue(3).ToString();
+                    Session["EmpID"] = dRow2.ItemArray.GetValue(1).ToString();
                     if (role.Equals("admin"))
                     {
-                        Session["EmpID"] = dRow2.ItemArray.GetValue(1).ToString();
-                        Response.Redirect("../EmployeeDashboard/Dashboard.aspx");
+                        Session["Role"] = role;
                     }
+                    Response.Redirect("../EmployeeDashboard/Dashboard.aspx");
+                   
                 }
 
-               if (custLoginSuccessful)
+                if (custLoginSuccessful)
                 {
                     int inc = 0;
 

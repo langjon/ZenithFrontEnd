@@ -20,6 +20,10 @@ namespace ZenithFrontEnd.UserLogin
                 {
                     Session["EmpID"] = null;
                 }
+                if (Session["Role"] != null)
+                {
+                    Session["Role"] = null;
+                }
                 Response.Redirect("../CustomizationPages/Products.aspx");
             }
           
