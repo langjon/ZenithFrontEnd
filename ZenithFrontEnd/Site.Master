@@ -22,9 +22,6 @@
             <img class="nav-icon" src="../images/user-16.png" />LOGIN</a></li>
         <li class="navbar-right" id="navBuild" runat="server"><a href="../CustomizationPages/Products.aspx">
             <img class="nav-icon" src="../images/BOX-16.png" />BUILD</a></li>
-        <li class="navbar-right" id="navEmp" runat="server"></li>
-        <li class="navbar-right" id="navCust" runat="server"></li>
-        <li class="navbar-right" id="navOrder" runat="server"></li>
     </ul>
     <div id="errorMessages" runat="server">
     </div>
