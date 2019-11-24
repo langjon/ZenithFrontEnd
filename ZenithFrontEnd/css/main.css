@@ -391,7 +391,9 @@ td {
     margin-left: 5%;
     overflow: scroll;
 }
-
+.wideTextBox{
+    width:100%;
+}
 #orderSummary {
     width: 62%;
     float: right;

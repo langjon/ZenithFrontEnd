@@ -38,10 +38,20 @@ namespace ZenithFrontEnd.EmployeeDashboard
 {
     public partial class EmpPassword : System.Web.UI.Page
     {
+       
         string strConnString = ConfigurationManager.ConnectionStrings["ZenithCapstoneDBConnectionString"].ConnectionString;
         string str = null;
         SqlCommand com;
         byte up;
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (Session["EmpID"] == null)
+            {
+                Response.Redirect("../UserLogin/UserLogin.aspx");
+            }
+        }
+
         protected void btn_update_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(strConnString);

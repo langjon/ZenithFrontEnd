@@ -11,7 +11,10 @@ namespace ZenithFrontEnd.EmployeeDashboard
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["EmpID"] == null)
+            {
+                Response.Redirect("../UserLogin/UserLogin.aspx");
+            }
         }
     }
 }

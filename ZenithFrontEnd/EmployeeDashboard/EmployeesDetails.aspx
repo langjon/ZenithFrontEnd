@@ -26,7 +26,7 @@
                 <asp:BoundField DataField="EmpAddress" HeaderText="Address" SortExpression="EmpAddress" />
                 <asp:BoundField DataField="EmpPostalCode" HeaderText="Postal Code" SortExpression="EmpPostalCode" />
                 <asp:BoundField DataField="EmployeeLoginId" HeaderText="Login Username" ReadOnly="True" SortExpression="EmployeeLoginId" />
-                <asp:BoundField DataField="Pass" HeaderText="Password" SortExpression="Pass" />
+               
                 <asp:BoundField DataField="Role" HeaderText="Role" SortExpression="Role" />
                 <asp:ButtonField CommandName="Delete Row" Text="Delete" />
                 <asp:HyperLinkField Text="Edit" DataNavigateUrlFields="EmpId"
@@ -51,83 +51,96 @@
          </div>
         <table  class="orderTable">
             <tr>
-                <td class="headingCol2">ID</td>
+                <td class="headingCol">ID</td>
                 <td class="headingCol">Name</td>
                 <td class="headingCol">Phone</td>
-                <td class="headingCol">Email</td>
-                <td class="headingCol">Address</td>
-                <td class="headingCol">Postal Code</td>
-                <td class="headingCol">Login Username</td>
-                <td class="headingCol">Password</td>
-                <td class="headingCol">Role</td>
+             
             </tr>
-            
             <tr>
                  <td>
                     <asp:TextBox TextMode="Number" ID="tbId" runat="server" class="wideTextBox"></asp:TextBox>
+                     <br />
+                     <asp:RequiredFieldValidator ID="RequiredFieldValidator13" runat="server" ControlToValidate="tbId" ErrorMessage="Employee ID cannot be empty" Font-Size="Smaller" ForeColor="Red"></asp:RequiredFieldValidator>
                 </td>
                 <td>
                     <asp:TextBox ID="tbName" runat="server" class="wideTextBox"></asp:TextBox>
+                     <br />
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator14" runat="server" ControlToValidate="tbName" ErrorMessage="Name cannot be empty" Font-Size="Smaller" ForeColor="Red"></asp:RequiredFieldValidator>
+                  
                 </td>
                 <td>
                     <asp:TextBox ID="tbPhone" runat="server" class="wideTextBox"></asp:TextBox>
+                     <br />
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator15" runat="server" ControlToValidate="tbPhone" ErrorMessage="Phone cannot be empty" Font-Size="Smaller" ForeColor="Red"></asp:RequiredFieldValidator>
+                     <br />
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ControlToValidate="tbPhone" ErrorMessage="Improper Phone number format" Font-Size="Smaller" ForeColor="Red" ValidationExpression="^[0-9]{1,10}$"></asp:RegularExpressionValidator>
+                
                 </td>
-                <td>
+                
+
+
+            </tr>
+            <tr>
+                <td class="headingCol">Email</td>
+                <td class="headingCol">Address</td>
+                <td class="headingCol">Postal Code</td>
+              
+            </tr>
+            <tr>
+                 <td>
                     <asp:TextBox TextMode="Email" ID="tbEmail" runat="server" class="wideTextBox"></asp:TextBox>
+                     <br />
+                      <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate="tbEmail" ErrorMessage="Email cannot be empty" Font-Size="Smaller" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <br />
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="tbEmail" ErrorMessage="Email format is not valid." Font-Size="Smaller" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                  
                 </td>
                 <td >
                     <asp:TextBox ID="tbAddress" runat="server" class="wideTextBox"></asp:TextBox>
+                     <br />
+                     <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ControlToValidate="tbAddress" ErrorMessage="Address cannot be empty" Font-Size="Smaller" ForeColor="Red"></asp:RequiredFieldValidator>
                 </td>
                 <td>
                     <asp:TextBox ID="tbPostalCode" runat="server" class="wideTextBox"></asp:TextBox>
+                     <br />
+                     <asp:RequiredFieldValidator ID="RequiredFieldValidator12" runat="server" ControlToValidate="tbPostalCode" ErrorMessage="Postal Code cannot be empty" Font-Size="Smaller" ForeColor="Red"></asp:RequiredFieldValidator>
+                   <br />
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="tbPostalCode" ErrorMessage="That postal code is not a valid US or Canadian postal code." Font-Size="Smaller" ForeColor="Red" ValidationExpression="(^\d{5}(-\d{4})?$)|(^[ABCEGHJKLMNPRSTVXYabceghjklmnprstvxy]{1}\d{1}[ABCEGHJKLMNPRSTVWXYZabceghjklmnprstv‌​xy]{1} *\d{1}[ABCEGHJKLMNPRSTVWXYZabceghjklmnprstvxy]{1}\d{1}$)"></asp:RegularExpressionValidator>
                 </td>
+               
+               
+            </tr>
+            <tr>
+                <td class="headingCol">Login Username</td>
+                <td class="headingCol">Password</td>
+                <td class="headingCol">Role</td>
+               
+            </tr>
+            
+           <tr>
                 <td>
                     <asp:TextBox ID="tbEmpLogin" runat="server" class="wideTextBox"></asp:TextBox>
+                    <br />
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator16" runat="server" ControlToValidate="tbEmpLogin" ErrorMessage="Login username cannot be empty" Font-Size="Smaller" ForeColor="Red"></asp:RequiredFieldValidator>
                 </td>
                 <td>
                     <asp:TextBox TextMode="Password" ID="tbPass" runat="server" class="wideTextBox"></asp:TextBox>
+                     <br />
+                     <asp:RequiredFieldValidator ID="RequiredFieldValidator17" runat="server" ControlToValidate="tbPass" ErrorMessage="Password cannot be empty" Font-Size="Smaller" ForeColor="Red"></asp:RequiredFieldValidator>
+                   
                 </td>
                 <td>
                     <asp:TextBox ID="tbRole" runat="server" class="wideTextBox"></asp:TextBox>
+                          <br />
+                      <asp:RequiredFieldValidator ID="RequiredFieldValidator18" runat="server" ControlToValidate="tbRole" ErrorMessage="Role cannot be empty" Font-Size="Smaller" ForeColor="Red"></asp:RequiredFieldValidator>
+             
                 </td>
+            
+               
+              
             </tr>
             <tr>
-                <td class="validation">
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="tbId" ErrorMessage="Employee ID cannot be empty" Font-Size="Smaller" ForeColor="Red"></asp:RequiredFieldValidator>
-                </td>
-                <td class="validation">
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tbName" ErrorMessage="Name cannot be empty" Font-Size="Smaller" ForeColor="Red"></asp:RequiredFieldValidator>
-                </td>
-                <td class="validation">
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="tbPhone" ErrorMessage="Phone cannot be empty" Font-Size="Smaller" ForeColor="Red"></asp:RequiredFieldValidator>
-                    <br />
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="tbPhone" ErrorMessage="Improper Phone number format" Font-Size="Smaller" ForeColor="Red" ValidationExpression="^[0-9]{1,10}$"></asp:RegularExpressionValidator>
-                </td>
-                <td class="validation">
-                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="tbEmail" ErrorMessage="Email cannot be empty" Font-Size="Smaller" ForeColor="Red"></asp:RequiredFieldValidator>
-                    <br /> 
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="tbEmail" ErrorMessage="Email format is not valid." Font-Size="Smaller" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
-                </td>
-                <td class="validation" >
-                     <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="tbAddress" ErrorMessage="Address cannot be empty" Font-Size="Smaller" ForeColor="Red"></asp:RequiredFieldValidator>
-                </td>
-                <td class="validation">
-                     <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="tbPostalCode" ErrorMessage="Postal Code cannot be empty" Font-Size="Smaller" ForeColor="Red"></asp:RequiredFieldValidator>
-                    <br />
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidatorPostalCode" runat="server" ControlToValidate="tbPostalCode" ErrorMessage="That postal code is not a valid US or Canadian postal code." Font-Size="Smaller" ForeColor="Red" ValidationExpression="(^\d{5}(-\d{4})?$)|(^[ABCEGHJKLMNPRSTVXYabceghjklmnprstvxy]{1}\d{1}[ABCEGHJKLMNPRSTVWXYZabceghjklmnprstv‌​xy]{1} *\d{1}[ABCEGHJKLMNPRSTVWXYZabceghjklmnprstvxy]{1}\d{1}$)"></asp:RegularExpressionValidator>
-                </td>
-                <td class="validation">
-                     <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="tbEmpLogin" ErrorMessage="Login username cannot be empty" Font-Size="Smaller" ForeColor="Red"></asp:RequiredFieldValidator>
-                </td>
-                <td class="validation">
-                     <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="tbPass" ErrorMessage="Password cannot be empty" Font-Size="Smaller" ForeColor="Red"></asp:RequiredFieldValidator>
-                </td>
-                <td class="validation">
-                      <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="tbRole" ErrorMessage="Role cannot be empty" Font-Size="Smaller" ForeColor="Red"></asp:RequiredFieldValidator>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="9" class="center">
+                <td colspan="3" class="center">
                     <asp:Button ID="btnInsert" runat="server" Text="Insert" OnClick="btnInsert_Click" />
                 </td>
             </tr>

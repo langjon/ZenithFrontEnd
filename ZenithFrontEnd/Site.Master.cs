@@ -22,6 +22,7 @@ namespace ZenithFrontEnd
             {
                 navCart.InnerHtml = "";
                 navBuild.InnerHtml = "";
+                navHistory.InnerHtml = "";
                 navProfile.InnerHtml = "<a href=\"../EmployeeDashboard/EmployeeProfile.aspx\">PROFILE</a>";
                 navOrder.InnerHtml = "<a href=\"../EmployeeDashboard/Dashboard.aspx\">ORDERS</a>";
                 navCust.InnerHtml = "<a href=\"../EmployeeDashboard/CustomersDetails.aspx\">CUSTOMERS</a>";

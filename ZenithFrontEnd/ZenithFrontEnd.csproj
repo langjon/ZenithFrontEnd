@@ -18,9 +18,12 @@
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44308</IISExpressSSLPort>
-    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
-    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
-    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <IISExpressAnonymousAuthentication>
+    </IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>
+    </IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>
+    </IISExpressUseClassicPipelineMode>
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -94,7 +97,6 @@
     <Content Include="EmployeeDashboard\EmployeesDetails.aspx" />
     <Content Include="EmployeeDashboard\EmpPassword.aspx" />
     <Content Include="EmployeeDashboard\OrderDetails.aspx" />
-    <Content Include="EmployeeDashboard\Orders.aspx" />
     <Content Include="Global.asax" />
     <Content Include="images\clipboard.png" />
     <Content Include="images\door.png" />
@@ -252,13 +254,6 @@
     </Compile>
     <Compile Include="EmployeeDashboard\OrderDetails.aspx.designer.cs">
       <DependentUpon>OrderDetails.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="EmployeeDashboard\Orders.aspx.cs">
-      <DependentUpon>Orders.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="EmployeeDashboard\Orders.aspx.designer.cs">
-      <DependentUpon>Orders.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
