@@ -50,7 +50,7 @@
     </div>
     <div>
         <div id="orderSummary" style="background-color:steelblue">
-            <div style="background-color:steelblue">
+            <div>
                 <h2>ORDER SUMMARY</h2>
                 <p id="summaryOrderID" runat="server"></p>
                 <p id="summaryDate" runat="server"></p>
