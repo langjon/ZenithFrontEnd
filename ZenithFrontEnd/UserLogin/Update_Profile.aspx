@@ -1,27 +1,41 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Update_Profile.aspx.cs" Inherits="ZenithFrontEnd.UserLogin.Update_Profile" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
-        .auto-style1 {
-            margin-left: 80px;
-        }
-        .auto-style2 {
-            margin-left: 10px;
-            width: 908px;
-        }
         .auto-style3 {
             margin-left: 22px;
         }
         .auto-style4 {
             margin-left: 0px;
         }
+        .auto-style5 {
+            border-style: none;
+            border-color: inherit;
+            border-width: medium;
+            border-radius: 5px;
+            background-color: steelblue;
+            color: white;
+            outline: none;
+            user-select: none;
+            float: right;
+            text-align: center;
+            text-decoration: none;
+            cursor: default;
+            padding: 8px;
+            vertical-align: middle;
+            margin-left: 15px;
+            position: relative;
+            font-weight: bold;
+            left: -474px;
+            top: -13px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <p class="auto-style1">
-        &nbsp;</p>
-    <p class="auto-style2" style="font-family: Arial; font-size: large; font-weight: bold; text-align: center;">
-        UPDATE PROFILE</p>
-        <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="CusID" DataSourceID="SqlDataSource1" Height="50px" Width="911px" Font-Bold="True" Font-Size="Medium" CssClass="auto-style4">
+    <div class="pageTitle">
+            <p>UPDATE PROFILE</p>
+        </div>
+   <div id="updateDiv" style="float:none; margin-left: 25%;">
+        <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="CusID" DataSourceID="SqlDataSource1" Height="104px" Width="911px" Font-Bold="True" Font-Size="Medium" CssClass="auto-style4" OnPageIndexChanging="DetailsView1_PageIndexChanging">
             <Fields>
                 <asp:BoundField DataField="CusID" HeaderText="Customer ID" InsertVisible="False" ReadOnly="True" SortExpression="CusID" />
                 <asp:TemplateField HeaderText="First Name" SortExpression="CusFirstName">
@@ -141,12 +155,14 @@
                         <asp:Label ID="Label9" runat="server" Text='<%# Bind("CusPostalCode") %>'></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
-                <asp:CommandField ShowEditButton="True" ButtonType="Button" />
+                <asp:CommandField ShowEditButton="True" ButtonType="Button" EditText="EDIT PROFILE" />
             </Fields>
         </asp:DetailsView>
     <br />
     <br />
-    <a class="btnGeneral" href="password.aspx">RESET PASSWORD</a><p class="auto-style3">
+        <div style="margin-left: 25%;">
+    <a class="auto-style5" href="password.aspx">RESET PASSWORD</a><p class="auto-style3">
+        </div>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ZenithCapstoneDBConnectionString %>" DeleteCommand="DELETE FROM [Customer] WHERE [CusID] = @CusID" InsertCommand="INSERT INTO [Customer] ([CusFirstName], [CusLastName], [CusPhone], [CusEmail], [CusCompany], [CusStreetAddress], [CusProvince], [CusCountry], [CusPostalCode]) VALUES (@CusFirstName, @CusLastName, @CusPhone, @CusEmail, @CusCompany, @CusStreetAddress, @CusProvince, @CusCountry, @CusPostalCode)" SelectCommand="SELECT * FROM [Customer] WHERE ([CusID] = @CusID)" UpdateCommand="UPDATE [Customer] SET [CusFirstName] = @CusFirstName, [CusLastName] = @CusLastName, [CusPhone] = @CusPhone, [CusEmail] = @CusEmail, [CusCompany] = @CusCompany, [CusStreetAddress] = @CusStreetAddress, [CusProvince] = @CusProvince, [CusCountry] = @CusCountry, [CusPostalCode] = @CusPostalCode WHERE [CusID] = @CusID">
             <DeleteParameters>
                 <asp:Parameter Name="CusID" Type="Decimal" />
