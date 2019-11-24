@@ -5,9 +5,9 @@
 //using System.Web.UI;
 //using System.Web.UI.WebControls;
 
-//namespace ZenithFrontEnd.UserLogin
+//namespace ZenithFrontEnd.EmployeeDashboard
 //{
-//    public partial class password : System.Web.UI.Page
+//    public partial class EmpPassword : System.Web.UI.Page
 //    {
 //        protected void Page_Load(object sender, EventArgs e)
 //        {
@@ -15,6 +15,7 @@
 //        }
 //    }
 //}
+
 
 
 
@@ -33,9 +34,9 @@ using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 using System.Data.SqlClient;
 
-namespace ZenithFrontEnd.UserLogin
+namespace ZenithFrontEnd.EmployeeDashboard
 {
-    public partial class password : System.Web.UI.Page
+    public partial class EmpPassword : System.Web.UI.Page
     {
         string strConnString = ConfigurationManager.ConnectionStrings["ZenithCapstoneDBConnectionString"].ConnectionString;
         string str = null;
@@ -45,12 +46,12 @@ namespace ZenithFrontEnd.UserLogin
         {
             SqlConnection con = new SqlConnection(strConnString);
             con.Open();
-            str = "select * from CustomerLogin ";
+            str = "select * from EmployeeLogin ";
             com = new SqlCommand(str, con);
             SqlDataReader reader = com.ExecuteReader();
             while (reader.Read())
             {
-                if (txt_cpassword.Text == reader["UserPass"].ToString())
+                if (txt_cpassword.Text == reader["pass"].ToString())
                 {
                     up = 1;
                 }
@@ -60,7 +61,7 @@ namespace ZenithFrontEnd.UserLogin
             if (up == 1)
             {
                 con.Open();
-                str = "update CustomerLogin set UserPass=@Password where UserName='" + Session["UserName"].ToString() + "'";
+                str = "update EmployeeLogin set Pass=@Password where EmployeeLoginId='" + Session["EmpID"].ToString() + "'";
                 com = new SqlCommand(str, con);
                 com.Parameters.Add(new SqlParameter("@Password", SqlDbType.VarChar, 50));
                 com.Parameters["@Password"].Value = txt_npassword.Text;
@@ -72,11 +73,6 @@ namespace ZenithFrontEnd.UserLogin
             {
                 lbl_msg.Text = "Please enter correct Current password";
             }
-        }
-
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

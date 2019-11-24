@@ -22,10 +22,11 @@ namespace ZenithFrontEnd
             {
                 navCart.InnerHtml = "";
                 navBuild.InnerHtml = "";
-                navProfile.InnerHtml = "";
+                navProfile.InnerHtml = "<a href=\"../EmployeeDashboard/EmployeeProfile.aspx\">PROFILE</a>";
                 navOrder.InnerHtml = "<a href=\"../EmployeeDashboard/Dashboard.aspx\">ORDERS</a>";
                 navCust.InnerHtml = "<a href=\"../EmployeeDashboard/CustomersDetails.aspx\">CUSTOMERS</a>";
                 navEmp.InnerHtml = "<a href=\"../EmployeeDashboard/EmployeesDetails.aspx\">EMPLOYEES</a>";
+                
                 welcomeLabel.Text = Session["UserName"].ToString().ToUpper() + "'S DASHBAORD";
             }
         }
