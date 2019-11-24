@@ -150,7 +150,6 @@
     <Content Include="Old\uploadImage.aspx" />
     <Content Include="UserLogin\NewAccount.aspx" />
     <Content Include="UserLogin\OrderHistory.aspx" />
-    <Content Include="UserLogin\password.aspx" />
     <Content Include="UserLogin\Update_Profile.aspx" />
     <Content Include="UserLogin\UserLogin.aspx" />
     <Content Include="UserLogin\UserLogout.aspx" />
@@ -420,13 +419,6 @@
     </Compile>
     <Compile Include="UserLogin\OrderHistory.aspx.designer.cs">
       <DependentUpon>OrderHistory.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="UserLogin\password.aspx.cs">
-      <DependentUpon>password.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UserLogin\password.aspx.designer.cs">
-      <DependentUpon>password.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserLogin\Update_Profile.aspx.cs">
       <DependentUpon>Update_Profile.aspx</DependentUpon>
