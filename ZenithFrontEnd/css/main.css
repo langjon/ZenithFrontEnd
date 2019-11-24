@@ -394,6 +394,9 @@ td.center {
         column-count: 9;
         column-span: all;
     }
+    #orderSummary table tr td {
+        width: 6.5%;
+    }
 #shippingSummary {
     width: 20%;
     float: left;
@@ -412,3 +415,44 @@ td.center {
 #shippingSummary table tr td:first-child{
     width: 15%;
 }
+
+#orderHistory {
+    margin-left: 10%;
+    width: 80%;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 550px;
+    box-shadow: 0 0 12px darkslateblue;
+    padding: 3%;
+    padding-top: 0;
+    margin-top: 50px;
+    background-color: steelblue;
+}
+#orderHistory td{
+    width: 7%;
+    text-align: center;
+}
+    #orderHistory th {
+        width: 7%;
+        background-color: darkslateblue;
+        color: white;
+    }
+    #orderHistory table tr:first-child td{
+        font-weight: bold;
+        font-size: 1.2em;
+        background-color: darkslateblue;
+        color: white;
+    }
+
+    #orderHistory tr td:first-child img {
+        width: 100%;
+        height: 100%;
+        background-color: darkslateblue;
+        font-weight: bold;
+        color: white;
+    }
+    #orderHistory tr td:first-child {
+        background-color: darkslateblue;
+        font-weight: bold;
+        color: white;
+    }

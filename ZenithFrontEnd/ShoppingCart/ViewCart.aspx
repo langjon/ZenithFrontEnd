@@ -34,8 +34,8 @@
                    <asp:TextBox ID="txtQty" runat="server" Width="50px" MaxLength="5" Value='<%#Eval("prodQuantity") %>' Text='<%#Eval("prodQuantity") %>' AutoPostBack="true" OnTextChanged="qtyChanged" ></asp:TextBox> 
                     <a href="EditCart.aspx?id=<%#Eval("id") %>&qty=1000">Update</a>
                 </td>
-                <td><%#Eval("prodUnitPrice") %></td>
-                <td><%#Eval("prodPrice") %></td>
+                <td><%# Eval("prodUnitPrice") %></td>
+                <td><%# Eval("prodPrice") %></td>
                 <td><%#Eval("prodDateCreated") %></td>
                 <td><a href="DeleteCart.aspx?id=<%#Eval("id") %>">Delete</a></td>
             </ItemTemplate>

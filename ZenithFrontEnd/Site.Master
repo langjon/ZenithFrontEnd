@@ -16,7 +16,6 @@
     <ul class="mainNav">
         <li><a href="https://cbdisplaypac.ca/">
             <img class="nav-icon" src="../images/house-16.png" />HOME</a></li>
-        <li class="navbar-right" id="navProfile" runat="server"></li>
         <li class="navbar-right" id="navCart" runat="server"><a href="../ShoppingCart/ViewCart.aspx">
             <img class="nav-icon" src="../images/cart-16.png" />CART</a></li>
         <li class="navbar-right" id="navLogin" runat="server"><a href="../UserLogin/UserLogin.aspx">

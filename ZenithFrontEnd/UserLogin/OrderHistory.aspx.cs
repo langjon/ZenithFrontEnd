@@ -13,5 +13,10 @@ namespace ZenithFrontEnd.UserLogin
         {
 
         }
+
+        protected void orderHistoryTable_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
