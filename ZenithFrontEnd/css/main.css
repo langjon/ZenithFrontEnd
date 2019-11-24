@@ -252,6 +252,10 @@ td {
 .productTable table{
     width: 80%;
 }
+.DashboardTable table {
+    width: 20%;
+    float: left;
+}
 
 .sizeField{
     border-radius: 5px;
@@ -344,4 +348,30 @@ td {
     margin-left: 5%;
     width: 40%;
     height: 600px;
+}
+.orderTable {
+    float: left;
+    margin-left: 5%;
+    width: 60%;
+    border: 0;
+}
+td.headingCol {
+    width: 20%;
+    font-weight: bold;
+    background : #003399;
+    color : #CCCCFF;
+}
+td.valCol{
+    width: 80%;
+}
+td.center {
+    text-align: center;
+}
+.orderGrid {
+    margin-left: 5%;
+    overflow: scroll;
+}
+.wideTextBox
+{
+    width : 100%;
 }

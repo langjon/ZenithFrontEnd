@@ -5,21 +5,22 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace ZenithFrontEnd.EmployeeDashboard
+namespace ZenithFrontEnd.Employee_Dashboard
 {
     public partial class Dashboard : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["EmpID"] == null)
+            if (Session["EmpID"] ==null)
             {
                 Response.Redirect("../UserLogin/UserLogin.aspx");
             }
+            Response.Write(Request.QueryString["OrderId"]);
         }
 
-        protected void GridViewOrder_SelectedIndexChanged(object sender, EventArgs e)
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-           // Response.Write(GridViewOrder.SelectedRow.Cells[0].Text);
+            Response.Write(GridView1.SelectedRow.Cells[1].Text);
         }
     }
 }

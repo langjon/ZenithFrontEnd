@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace ZenithFrontEnd.EmployeeDashboard
 {
-    public partial class Dashboard : System.Web.UI.Page
+    public partial class CustomersDetails : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -15,11 +15,6 @@ namespace ZenithFrontEnd.EmployeeDashboard
             {
                 Response.Redirect("../UserLogin/UserLogin.aspx");
             }
-        }
-
-        protected void GridViewOrder_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           // Response.Write(GridViewOrder.SelectedRow.Cells[0].Text);
         }
     }
 }

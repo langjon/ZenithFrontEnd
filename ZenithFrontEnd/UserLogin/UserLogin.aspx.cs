@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace ZenithFrontEnd.UserLogin
 {
@@ -13,13 +14,16 @@ namespace ZenithFrontEnd.UserLogin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            /*
             if (Request.UrlReferrer.AbsoluteUri.ToLower().Contains("viewcart.aspx") && Session["UserName"] == null){
                 errorMessages.InnerHtml = "<p id='loginError'>Please log in or create an account to proceed with checkout.</p>";
             }
+            */
         }
         protected void Login_Click(object sender, EventArgs e)
         {
-            using (SqlConnection con = new SqlConnection(@"Server=zenithcapstone.database.windows.net;Database=ZenithCapstoneDB;User=zenith;Password=C@pst0ne!;Trusted_Connection=False;Encrypt=True"))
+            string constr = ConfigurationManager.ConnectionStrings["ZenithCapstoneDBConnectionString"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(constr))
             {
                 //customer login
                 SqlCommand cmd = new SqlCommand("SELECT * FROM CustomerLogin WHERE UserName LIKE @username AND UserPass = @password;");

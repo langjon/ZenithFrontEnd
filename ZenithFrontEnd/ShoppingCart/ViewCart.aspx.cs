@@ -126,11 +126,17 @@ namespace ZenithFrontEnd.ShoppingCart
         }
         protected void Checkout_Click(object sender, EventArgs e)
         {
-            Response.Redirect("../CheckoutPages/CheckoutGateway.aspx");
+            Response.Redirect("../CheckoutPages/ConfirmShipping.aspx");
         }
             protected void loadCart_Click(object sender, EventArgs e)
         {
            
+        }
+
+        protected void cartListTable_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string str = cartListTable.SelectedItem.FindControl("txtQty").ToString();
+            Response.Write(str);
         }
     }
 }

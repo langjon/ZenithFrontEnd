@@ -7,54 +7,63 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ZenithFrontEnd.CheckoutPages {
+namespace ZenithFrontEnd.EmployeeDashboard {
     
     
-    public partial class PaypalResponse {
+    public partial class OrderDetails {
         
         /// <summary>
-        /// txnID control.
+        /// gvOrderDetails control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txnID;
+        protected global::System.Web.UI.WebControls.GridView gvOrderDetails;
         
         /// <summary>
-        /// payerEmailText control.
+        /// btnApprove control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label payerEmailText;
+        protected global::System.Web.UI.WebControls.Button btnApprove;
         
         /// <summary>
-        /// statusText control.
+        /// btnSendToProduction control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label statusText;
+        protected global::System.Web.UI.WebControls.Button btnSendToProduction;
         
         /// <summary>
-        /// receiverEmailText control.
+        /// btnProductionComplete control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label receiverEmailText;
+        protected global::System.Web.UI.WebControls.Button btnProductionComplete;
         
         /// <summary>
-        /// amountText control.
+        /// btnShipped control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label amountText;
+        protected global::System.Web.UI.WebControls.Button btnShipped;
+        
+        /// <summary>
+        /// btnCancel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCancel;
     }
 }
