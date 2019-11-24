@@ -13,8 +13,9 @@ namespace ZenithFrontEnd
         {
             if(Session["UserName"] != null)
             {
-                navLogin.InnerHtml = "<a href=\"../UserLogin/UserLogout.aspx\"><img class=\"nav-icon\" src=\"../images/user-16.png\" />LOGOUT</a>";
+                navLogin.InnerHtml = "<a href=\"../UserLogin/UserLogout.aspx\"><img class=\"nav-icon\" src=\"../images/door.png\" />LOGOUT</a>";
                 navProfile.InnerHtml= "<a href=\"../UserLogin/Update_Profile.aspx\"><img class=\"nav-icon\" src=\"../images/user-16.png\" />PROFILE</a>";
+                navHistory.InnerHtml = "<a href=\"../UserLogin/OrderHistory.aspx\"><img class=\"nav-icon\" src=\"../images/clipboard.png\" />ORDERS</a>";
                 welcomeLabel.Text = "Welcome, " + Session["UserName"].ToString();
             } 
             if (Session["EmpID"] != null)

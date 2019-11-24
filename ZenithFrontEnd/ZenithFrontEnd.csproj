@@ -18,9 +18,12 @@
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44308</IISExpressSSLPort>
-    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
-    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
-    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <IISExpressAnonymousAuthentication>
+    </IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>
+    </IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>
+    </IISExpressUseClassicPipelineMode>
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -93,6 +96,8 @@
     <Content Include="EmployeeDashboard\OrderDetails.aspx" />
     <Content Include="EmployeeDashboard\Orders.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="images\clipboard.png" />
+    <Content Include="images\door.png" />
     <Content Include="images\icon_containers.jpg" />
     <Content Include="images\icon_design.jpg" />
     <Content Include="images\icon_laptop.jpg" />
@@ -147,6 +152,7 @@
     <Content Include="ThankYouHelp.aspx" />
     <Content Include="Old\uploadImage.aspx" />
     <Content Include="UserLogin\NewAccount.aspx" />
+    <Content Include="UserLogin\OrderHistory.aspx" />
     <Content Include="UserLogin\Update_Profile.aspx" />
     <Content Include="UserLogin\UserLogin.aspx" />
     <Content Include="UserLogin\UserLogout.aspx" />
@@ -409,6 +415,13 @@
     </Compile>
     <Compile Include="UserLogin\NewAccount.aspx.designer.cs">
       <DependentUpon>NewAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserLogin\OrderHistory.aspx.cs">
+      <DependentUpon>OrderHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserLogin\OrderHistory.aspx.designer.cs">
+      <DependentUpon>OrderHistory.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserLogin\Update_Profile.aspx.cs">
       <DependentUpon>Update_Profile.aspx</DependentUpon>
