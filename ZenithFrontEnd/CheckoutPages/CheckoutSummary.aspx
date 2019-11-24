@@ -54,6 +54,8 @@
                 <h2>ORDER SUMMARY</h2>
                 <p id="summaryOrderID" runat="server"></p>
                 <p id="summaryDate" runat="server"></p>
+                <p style="font-weight: bold; font-size: 1.2em;"><asp:Label ID="lblTotal" runat="server" EnableViewState="false"></asp:Label></p>
+        <br />
             </div>
 
             <asp:DataList ID="orderSummaryTable" runat="server" DataKeyField="ProductId" DataSourceID="ProductDataSource">
@@ -94,7 +96,8 @@
                 </SelectParameters>
             </asp:SqlDataSource>
         </div>
-        <asp:Button ID="btnReturn" CssClass="btnGeneral" OnClick="Return_Click" runat="server" Text="RETURN" style="margin-right: 5%; margin-top: 20px;"/>
+       
+        <asp:Button ID="btnReturn" CssClass="btnGeneral" OnClick="Return_Click" runat="server" Text="RETURN" style="margin-right: 5%; margin-top: 20px;clear:both;"/>
     </div>
 
 </asp:Content>
