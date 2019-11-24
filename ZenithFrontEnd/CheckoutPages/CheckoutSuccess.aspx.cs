@@ -71,8 +71,8 @@ namespace ZenithFrontEnd.CheckoutPages
                         cmd.Parameters.AddWithValue("@prodSide", cartItemDetails[4].ToString());
                         cmd.Parameters.AddWithValue("@prodFinish", cartItemDetails[5].ToString());
                         cmd.Parameters.AddWithValue("@prodWall", cartItemDetails[6].ToString());
-                        cmd.Parameters.AddWithValue("@prodBrief", cartItemDetails[7].ToString());
-                        cmd.Parameters.AddWithValue("@prodQuantity", cartItemDetails[8].ToString());
+                        cmd.Parameters.AddWithValue("@prodQuantity", cartItemDetails[7].ToString());
+                        cmd.Parameters.AddWithValue("@prodBrief", cartItemDetails[8].ToString());
                         cmd.Parameters.AddWithValue("@prodUnitPrice", cartItemDetails[9].ToString());
                         cmd.Parameters.AddWithValue("@prodImagePath", cartItemDetails[0].ToString());
                         cmd.Parameters.AddWithValue("@totalPrice", totalPrice.ToString());
@@ -99,6 +99,7 @@ namespace ZenithFrontEnd.CheckoutPages
                     }
                 }
             }
+            Response.Redirect("CheckoutSummary.aspx");
         }
     }
 }

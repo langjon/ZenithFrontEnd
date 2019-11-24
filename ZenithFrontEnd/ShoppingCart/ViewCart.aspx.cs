@@ -19,7 +19,7 @@ namespace ZenithFrontEnd.ShoppingCart
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["page"] = "ViewCart.aspx";
+            
             cartListTable.DataSource = null;
             cartListTable.DataBind();
             DataTable cartTable = new DataTable();
@@ -126,7 +126,15 @@ namespace ZenithFrontEnd.ShoppingCart
         }
         protected void Checkout_Click(object sender, EventArgs e)
         {
-            Response.Redirect("../CheckoutPages/ConfirmShipping.aspx");
+            if(Session["UserID"] != null && Session["UserName"] != null)
+            {
+                Response.Redirect("../CheckoutPages/ConfirmShipping.aspx");
+            } else
+            {
+                Response.Redirect("../UserLogin/UserLogin.aspx");
+                Session["page"] = "ViewCart.aspx";
+            }
+            
         }
             protected void loadCart_Click(object sender, EventArgs e)
         {

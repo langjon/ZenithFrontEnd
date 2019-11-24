@@ -375,3 +375,40 @@ td.center {
 {
     width : 100%;
 }
+
+#orderSummary {
+    width: 62%;
+    float: right;
+    padding: 2%;
+    margin-right: 5%;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 450px;
+    box-shadow: 0 0 10px darkslateblue;
+}
+
+#orderSummary table tr:first-child{
+    width: 81px;
+}
+    #orderSummary table tr:first-child td {
+        column-count: 9;
+        column-span: all;
+    }
+#shippingSummary {
+    width: 20%;
+    float: left;
+    padding: 2%;
+    background-color: white;
+    box-shadow: 0 0 10px darkslateblue;
+    margin-left: 5%;
+    height: 450px;
+}
+#shippingSummary table td{
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    height: 35px;
+}
+#shippingSummary table tr td:first-child{
+    width: 15%;
+}

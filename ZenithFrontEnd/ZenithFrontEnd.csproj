@@ -84,6 +84,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CheckoutPages\CheckoutSummary.aspx" />
+    <Content Include="CheckoutPages\ConfirmShipping.aspx" />
     <Content Include="CustomizationPages\ImageUpload.aspx" />
     <Content Include="CustomizationPages\ProductReview.aspx" />
     <Content Include="CustomizationPages\Quantity.aspx" />
@@ -155,6 +157,20 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CheckoutPages\CheckoutSummary.aspx.cs">
+      <DependentUpon>CheckoutSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CheckoutPages\CheckoutSummary.aspx.designer.cs">
+      <DependentUpon>CheckoutSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CheckoutPages\ConfirmShipping.aspx.cs">
+      <DependentUpon>ConfirmShipping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CheckoutPages\ConfirmShipping.aspx.designer.cs">
+      <DependentUpon>ConfirmShipping.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CustomizationPages\ImageUpload.aspx.cs">
       <DependentUpon>ImageUpload.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

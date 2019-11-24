@@ -14,11 +14,11 @@ namespace ZenithFrontEnd.UserLogin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            /*
-            if (Request.UrlReferrer.AbsoluteUri.ToLower().Contains("viewcart.aspx") && Session["UserName"] == null){
-                errorMessages.InnerHtml = "<p id='loginError'>Please log in or create an account to proceed with checkout.</p>";
-            }
-            */
+            
+            //if (Session["page"].ToString == "ViewCart.aspx" && Session["UserName"] == null){
+            //    errorMessages.InnerHtml = "<p id='loginError'>Please log in or create an account to proceed with checkout.</p>";
+            //}
+            
         }
         protected void Login_Click(object sender, EventArgs e)
         {
@@ -60,7 +60,9 @@ namespace ZenithFrontEnd.UserLogin
                     int inc = 0;
 
                     Console.WriteLine("Success!");
-                    //textbox value is stored in Session 
+                    //textbox value is stored in 
+                    
+
                     Session["UserName"] = txtUsername.Text;
                     dRow2 = ds2.Tables[0].Rows[inc];
                     string role = dRow2.ItemArray.GetValue(3).ToString();
