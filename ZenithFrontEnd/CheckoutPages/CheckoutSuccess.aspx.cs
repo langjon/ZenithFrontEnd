@@ -41,7 +41,7 @@ namespace ZenithFrontEnd.CheckoutPages
 
                 for (int i = 0; i < cartArray.Length; i++)
                 {
-                    prodID = "PrID_" + RNG.GetRandomNumber(15).ToString();
+                    prodID = "PrID_" + RNG.GetRandomNumber(16).ToString();
                     cartItem = Convert.ToString(cartArray[i].ToString());
                     string[] cartRowArray = cartItem.Split(',');
                     for (int j = 0; j < cartRowArray.Length; j++)
@@ -85,19 +85,20 @@ namespace ZenithFrontEnd.CheckoutPages
                         con.Close();
 
 
-                        SqlCommand cmd1 = new SqlCommand("INSERT INTO Orders(OrderId, CusId, Status ) VALUES(@orderID, @cusID, @status)");
-                        cmd1.Parameters.AddWithValue("@orderID", Session["orderID"].ToString());
-                        cmd1.Parameters.AddWithValue("@cusID", Session["UserID"].ToString());
-                        cmd1.Parameters.AddWithValue("@status", "New");
-
-                        cmd1.Connection = con;
-                        con.Open();
-                        SqlDataAdapter da1 = new SqlDataAdapter();
-                        da.InsertCommand = cmd1;
-                        da.InsertCommand.ExecuteNonQuery();
-                        con.Close();
+                       
                     }
                 }
+                SqlCommand cmd1 = new SqlCommand("INSERT INTO Orders(OrderId, CusId, Status ) VALUES(@orderID, @cusID, @status)");
+                cmd1.Parameters.AddWithValue("@orderID", Session["orderID"].ToString());
+                cmd1.Parameters.AddWithValue("@cusID", Session["UserID"].ToString());
+                cmd1.Parameters.AddWithValue("@status", "New");
+
+                cmd1.Connection = con;
+                con.Open();
+                SqlDataAdapter da1 = new SqlDataAdapter();
+                da1.InsertCommand = cmd1;
+                da1.InsertCommand.ExecuteNonQuery();
+                con.Close();
             }
             Response.Redirect("CheckoutSummary.aspx");
         }

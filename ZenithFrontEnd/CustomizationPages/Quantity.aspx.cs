@@ -52,7 +52,7 @@ namespace ZenithFrontEnd.CustomizationPages
             unitPrice = calcUnitPrice(Convert.ToDouble(Session["Length"]), Convert.ToDouble(Session["Width"]), Convert.ToDouble(Session["Depth"]),
                          Session["Side"].ToString(), Session["Material"].ToString(), Session["Finish"].ToString(), Session["Wall"].ToString());
             price = calcPrice(Convert.ToInt32(customQty), unitPrice);
-            Label1.Text = "You selected: " + customQty + "Pieces," + " Price per box: CAD " + price;
+            Label1.Text = "You selected: " + customQty + "Pieces," + " Price per box: CAD " + String.Format("{0:C2}", price); 
             Session["Quantity"] = customQty;
             Session["UnitPrice"] = unitPrice.ToString();
             BtnSelectQty.Text = "Select Custom Quantity";

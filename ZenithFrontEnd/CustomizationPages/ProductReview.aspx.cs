@@ -52,7 +52,7 @@ namespace ZenithFrontEnd.CustomizationPages
             {
                 LabelQuantity.Text = Session["Quantity"].ToString();
                 double price = calcPrice(Convert.ToInt32(Session["Quantity"].ToString()), Convert.ToDouble(Session["UnitPrice"].ToString()));
-                LabelPrice.Text = price.ToString();
+                LabelPrice.Text = String.Format("{0:C2}", price);
                 //Session["Price"] = price.ToString();
             }
             else

@@ -1,15 +1,15 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="password.aspx.cs" Inherits="ZenithFrontEnd.UserLogin.password" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EmpPassword.aspx.cs" Inherits="ZenithFrontEnd.EmployeeDashboard.EmpPassword" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .auto-style1 {
             float: none;
-            width: 705px;
+            width: 532px;
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="pageTitle">
-            <p>RESET CUSTOMER PASSWORD</p>
+     <div class="pageTitle">
+            <p>RESET EMPLOYEE PASSWORD</p>
         </div>
     <div id="passwordDiv" style="margin-left: 35%;" class="auto-style1">
 
@@ -65,7 +65,11 @@
      <br />
      <br />
      <br />
-    
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 </asp:Content>
+
+
+
+
+

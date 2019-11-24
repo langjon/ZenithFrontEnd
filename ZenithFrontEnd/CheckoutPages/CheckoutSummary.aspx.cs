@@ -14,6 +14,10 @@ namespace ZenithFrontEnd.CheckoutPages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //set sessions for testing purposes.
+            //Session["UserID"] = 110032;
+            //Session["orderID"] = "ORD_ZEGloUeW08hP";
+            //Session["cartTotal"] = 28;
             SqlConnection con = new SqlConnection(@"Server=zenithcapstone.database.windows.net;Database=ZenithCapstoneDB;User=zenith;Password=C@pst0ne!;Trusted_Connection=False;Encrypt=True");
 
             SqlDataReader myReader = null;
@@ -52,8 +56,9 @@ namespace ZenithFrontEnd.CheckoutPages
                 summaryDate.InnerText = "DATE: " + (myReader1["OrderDate"].ToString().Trim());
             }
             con.Close();
+            lblTotal.Text = "Order Total: " + String.Format("{0:C}", Session["cartTotal"]);
         }
-
+        
         protected void Return_Click(object sender, EventArgs e)
         {
             Response.Redirect("../CustomizationPages/Products.aspx");

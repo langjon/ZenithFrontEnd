@@ -7,27 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ZenithFrontEnd.UserLogin {
+namespace ZenithFrontEnd.EmployeeDashboard {
     
     
-    public partial class OrderHistory {
+    public partial class EmployeeProfile {
         
         /// <summary>
-        /// orderHistoryTable control.
+        /// DetailsView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList orderHistoryTable;
+        protected global::System.Web.UI.WebControls.DetailsView DetailsView1;
         
         /// <summary>
-        /// OrderHistoryQuery control.
+        /// SqlDataSource1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource OrderHistoryQuery;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
     }
 }

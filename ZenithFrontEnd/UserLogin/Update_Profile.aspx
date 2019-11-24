@@ -32,7 +32,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="pageTitle">
-            <p>UPDATE PROFILE</p>
+            <p>UPDATE CUSTOMER PROFILE</p>
         </div>
    <div id="updateDiv" style="float:none; margin-left: 25%;">
         <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="CusID" DataSourceID="SqlDataSource1" Height="104px" Width="911px" Font-Bold="True" Font-Size="Medium" CssClass="auto-style4" OnPageIndexChanging="DetailsView1_PageIndexChanging">
@@ -158,6 +158,7 @@
                 <asp:CommandField ShowEditButton="True" ButtonType="Button" EditText="EDIT PROFILE" />
             </Fields>
         </asp:DetailsView>
+       </div>
     <br />
     <br />
         <div style="margin-left: 25%;">
