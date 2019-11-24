@@ -9,7 +9,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
      <div class="pageTitle">
-            <p>RESET CUSTOMER PASSWORD</p>
+            <p>RESET EMPLOYEE PASSWORD</p>
         </div>
     <div id="passwordDiv" style="margin-left: 35%;" class="auto-style1">
 
