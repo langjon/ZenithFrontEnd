@@ -45,8 +45,8 @@ namespace ZenithFrontEnd.ShoppingCart
                     }
                     cartTable.Rows.Add(cartItemDetails[0].ToString(), cartItemDetails[1].ToString(), cartItemDetails[2].ToString(),
                         cartItemDetails[3].ToString(), cartItemDetails[4].ToString(), cartItemDetails[5].ToString(),
-                        cartItemDetails[6].ToString(), cartItemDetails[7].ToString(), cartItemDetails[8].ToString(),
-                        cartItemDetails[9].ToString(), cartItemDetails[10].ToString(), i.ToString());
+                        cartItemDetails[6].ToString(), cartItemDetails[7].ToString(), String.Format("{0:C2}", Convert.ToDouble(cartItemDetails[8])),
+                        String.Format("{0:C2}", Convert.ToDouble(cartItemDetails[9])), cartItemDetails[10].ToString(), i.ToString());
                     
                    totalPrice += Convert.ToDouble(cartItemDetails[9]);
                 }
