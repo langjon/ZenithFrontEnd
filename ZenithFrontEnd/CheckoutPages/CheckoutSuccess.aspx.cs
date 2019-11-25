@@ -117,6 +117,7 @@ namespace ZenithFrontEnd.CheckoutPages
                 da1.InsertCommand.ExecuteNonQuery();
                 con.Close();
             }
+            Session["cartCookie"] = null;
             Response.Redirect("CheckoutSummary.aspx");
         }
     }
