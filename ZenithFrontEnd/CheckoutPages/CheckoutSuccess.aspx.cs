@@ -51,7 +51,7 @@ namespace ZenithFrontEnd.CheckoutPages
 
                     int temp = Convert.ToInt32(userexist.ExecuteScalar().ToString());
 
-                    con.Close();
+                   
                     while (temp == 1)
                     {
                         prodID = "PrID_" + RNG.GetRandomNumber(16).ToString();
@@ -59,6 +59,7 @@ namespace ZenithFrontEnd.CheckoutPages
                         temp = Convert.ToInt32(userexist.ExecuteScalar().ToString());
                     }
 
+                    con.Close();
                     cartItem = Convert.ToString(cartArray[i].ToString());
                     string[] cartRowArray = cartItem.Split(',');
                     for (int j = 0; j < cartRowArray.Length; j++)
@@ -101,8 +102,7 @@ namespace ZenithFrontEnd.CheckoutPages
                         da.InsertCommand.ExecuteNonQuery();
                         con.Close();
 
-
-                       
+                     
                     }
                 }
                 SqlCommand cmd1 = new SqlCommand("INSERT INTO Orders(OrderId, CusId, Status ) VALUES(@orderID, @cusID, @status)");
